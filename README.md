@@ -29,15 +29,16 @@ fir-risk-intelligence/
 ### FIR Risk Tuesday
 Weekly intelligence brief covering emerging threats, vulnerability trends, and risk insights.
 
-Subscribe: [Coming Soon]
+Subscribe: [Follow on LinkedIn](https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7190764674668265472)
 
 ## Try FIR Risk Platform
 
 Want this analysis capability for your organization?
 
-- **Knowledge Base**: MITRE ATT&CK, CISA KEV, CWE, CAPEC, SEC filings
+- **Knowledge Base**: MITRE ATT&CK, CISA KEV, CWE, CAPEC, SEC filings, Research & Reports, Frameworks, Regulatory Standards, curated cybersecurity news feeds
 - **AI Agent**: Ask questions, get sourced answers
-- **Risk Workspace**: Track and prioritize risks
+- **Risk Workspace**: Track and prioritize enterprise risks
+- **Fraud Investigation Workbench**: AI-assisted fraud case analysis
 
 Request access: [Contact Us](mailto:hello@firriskadvisory.com)
 
