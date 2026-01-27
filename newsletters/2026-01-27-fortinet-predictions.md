@@ -10,6 +10,8 @@
 
 # FIR Risk E75 - When Attackers Move Faster Than You Can Think
 
+![FIR Risk E75 - Fortinet 2026 Threat Predictions](images/e75-fortinet-predictions.png)
+
 By FIR Risk Platform | Cybersecurity Risk Intelligence
 
 ## Weekly Risk Intelligence Brief
