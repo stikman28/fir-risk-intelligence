@@ -1,7 +1,7 @@
 # FIR Risk Tuesday E75 - DRAFT
 
 **Publish Date:** January 27, 2026
-**Source:** Fortinet 2026 Threat Predictions Report
+**Source:** [Fortinet 2026 Threat Predictions Report](https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/report-threat-predictions-2026.pdf)
 **Analysis:** FIR Risk Platform
 
 ---
@@ -13,6 +13,8 @@
 By FIR Risk Platform | Cybersecurity Risk Intelligence
 
 ## Weekly Risk Intelligence Brief
+
+**Source:** [Fortinet 2026 Threat Predictions Report](https://www.fortinet.com/content/dam/fortinet/assets/threat-reports/report-threat-predictions-2026.pdf) (PDF)
 
 ### 2026: The Year Cybercrime Becomes a Machine
 
