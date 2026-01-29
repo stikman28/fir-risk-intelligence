@@ -10,7 +10,7 @@
 
 ## The INTEL
 
-Law firms paid ransoms at a **41% rate in 2025**—that's 50% higher than the cross-sector average of 36%.
+Law firms paid ransoms at a **41% rate in 2025**—about 14% more often than the cross-sector average of 36%.
 
 Ransomware groups have noticed. According to GuidePoint's 2026 Ransomware Report:
 
@@ -66,7 +66,7 @@ Full analysis available Friday in **FIR Risk E76 — Special Friday Edition**: *
 
 Law firms paid ransoms at a 41% rate in 2025.
 
-That's 50% higher than the cross-sector average.
+That's about 14% more often than the cross-sector average.
 
 Ransomware groups have noticed.
 
