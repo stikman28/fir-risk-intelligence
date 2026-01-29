@@ -1,46 +1,68 @@
 # FIR Risk Intelligence
 
-Public prompts and methodology for threat intelligence analysis powered by the [FIR Risk Platform](https://firrisk.com).
+Public prompts, methodology, and intelligence content powered by the [FIR Risk Platform](https://firrisk.com).
 
-## What This Is
+## Content Types
 
-This repo contains the prompts, personas, and templates we use to extract actionable intelligence from security reports, threat research, and government advisories.
+### 📰 FIR Risk Tuesday (Newsletter)
 
-**Our philosophy:** Facts over hype. Every insight is sourced, verified, and tied to real business impact.
+Weekly deep-dive analysis of security reports, threat research, and government publications.
 
-## How We Use It
+- **Frequency:** Weekly (Tuesdays)
+- **Length:** 1,500-2,000 words
+- **Location:** [`/newsletters`](./newsletters)
 
-```
-Report/Data → FIR Risk Agent + Prompts → Intelligence Analysis → FIR Risk Tuesday Newsletter
-```
+### ⚡ FIR Risk INTEL (Quick Reads)
+
+Bite-sized threat intelligence for executives. Single actionable insights surfaced from our platform.
+
+- **Frequency:** 2-3x per week
+- **Length:** 200-400 words
+- **Location:** [`/intel`](./intel)
 
 ## Repository Structure
 
 ```
 fir-risk-intelligence/
-├── personas/           # Agent personas for different analysis types
-├── prompts/            # Reusable prompts for intelligence extraction
-├── templates/          # Output formats for newsletters/briefs
-└── newsletters/        # Published FIR Risk Tuesday editions
+├── newsletters/        # FIR Risk Tuesday editions
+│   └── images/
+├── intel/              # FIR Risk INTEL posts
+│   └── images/
+├── personas/           # Agent personas for analysis
+├── prompts/            # Reusable intelligence prompts
+└── templates/          # Output format templates
 ```
 
-## Featured Content
+## Platform Sources
 
-### FIR Risk Tuesday
-Weekly intelligence brief covering emerging threats, vulnerability trends, and risk insights.
+Our intelligence is extracted from the FIR Risk Platform knowledge base:
 
-Subscribe: [Follow on LinkedIn](https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7190764674668265472)
+| Source | Content |
+|--------|---------|
+| **MITRE ATT&CK** | Adversary tactics, techniques, procedures |
+| **CISA KEV** | Known Exploited Vulnerabilities |
+| **MITRE CWE** | Common Weakness Enumeration |
+| **MITRE CAPEC** | Common Attack Pattern Enumeration |
+| **SEC Filings** | 10-K, 10-Q, 8-K cyber risk disclosures |
+| **RSS Intelligence** | Curated security news feeds |
+| **Research Reports** | Vendor and government publications |
+
+## Subscribe
+
+**FIR Risk Tuesday Newsletter:** [LinkedIn Newsletter](https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7190764674668265472)
+
+**FIR Risk INTEL:** Follow us on [LinkedIn](https://www.linkedin.com/company/fir-risk-advisory)
 
 ## Try FIR Risk Platform
 
 Want this analysis capability for your organization?
 
-- **Knowledge Base**: MITRE ATT&CK, CISA KEV, CWE, CAPEC, SEC filings, Research & Reports, Frameworks, Regulatory Standards, curated cybersecurity news feeds
-- **AI Agent**: Ask questions, get sourced answers
-- **Risk Workspace**: Track and prioritize enterprise risks
-- **Fraud Investigation Workbench**: AI-assisted fraud case analysis
+- **Knowledge Base:** MITRE ATT&CK, CISA KEV, CWE, CAPEC, SEC filings, curated feeds
+- **AI Agent:** Ask questions, get sourced answers
+- **Risk Workspace:** Track and prioritize enterprise risks
+- **Fraud Investigation Workbench:** AI-assisted fraud case analysis
 
-Request access: [Contact Us](mailto:hello@firriskadvisory.com)
+**Request access:** [hello@firriskadvisory.com](mailto:hello@firriskadvisory.com)
 
 ---
 
