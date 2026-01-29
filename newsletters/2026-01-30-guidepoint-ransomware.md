@@ -115,7 +115,7 @@ Why are law firms so attractive? They're the perfect extortion target:
 - **MFA fatigue attacks**: Session hijacking to bypass authentication (T1078)
 - **Backup destruction**: LockBit specifically targeting offsite/cloud backups (T1489)
 
-> **INTEL [SECTOR ALERT]:** Law firms paid ransoms at a 41% rate in 2025—50% higher than the cross-sector average. With average demands up 60% year-over-year, legal services are now a premium target. Firms handling M&A, IP, or high-profile litigation face elevated risk in 2026.
+> **INTEL [SECTOR ALERT]:** Law firms paid ransoms at a 41% rate in 2025—about 14% more often than the cross-sector average. With average demands up 60% year-over-year, legal services are now a premium target. Firms handling M&A, IP, or high-profile litigation face elevated risk in 2026.
 
 **2026 outlook:** GuidePoint predicts LLMs will analyze stolen legal documents to identify high-value matters (active M&A, pending litigation) and prioritize extortion accordingly. IP law firms in tech hubs are expected to see increased RaaS affiliate targeting.
 
