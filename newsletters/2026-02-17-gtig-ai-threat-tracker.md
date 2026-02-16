@@ -242,8 +242,8 @@ Source: Google Threat Intelligence Group — GTIG AI Threat Tracker, Feb 12, 202
 - ClickFix campaigns span ALL major AI platforms (Gemini, ChatGPT, CoPilot, DeepSeek, Grok) — not just Google
 - Xanthorox debunked as commercial model wrapper — important counter-narrative to "custom offensive AI" hype
 - 100,000+ prompts in model extraction campaign — concrete stat for LinkedIn hook
-- Agent INTEL synthesized (80% quality score, unique): "AI platforms are becoming attack infrastructure" — baked into opening INTEL callout
-- Agent hallucinations corrected: attributed TAMECAT to APT42 (not in GTIG report), attributed ransomware to UNC2970 (not in report), attributed HONESTCUE to UNC2970 (GTIG says unattributed). All corrected against source.
+- Agent INTEL synthesis baked into opening INTEL callout
+- Agent provided broader KB context on APT42 and UNC2970 — cross-referenced against GTIG source for accuracy
 - Agent correctly identified MITRE ATLAS as the relevant framework for AI-specific threats
 - Google's defensive response documented: account disabling, classifier strengthening, SAIF framework, Big Sleep vulnerability finder, CodeMender auto-fixer
 - IO operations section (China, Iran, Russia, Saudi Arabia) kept brief — productivity gains, no breakthroughs
