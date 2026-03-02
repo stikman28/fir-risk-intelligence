@@ -5,7 +5,6 @@
 **Platform Source:** Unit 42 Global Incident Response Report 2026 | MITRE ATT&CK
 
 ![FIR Risk INTEL-4 - Your Cloud APIs Are the Attack Infrastructure](images/intel-4-muddled-libra-cloud-api-abuse.png)
-
 ---
 
 ## The INTEL
