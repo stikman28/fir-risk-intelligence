@@ -1,7 +1,7 @@
 # FIR Risk Tuesday E82
 
 **Publish Date:** March 9, 2026
-**Source:** [2026 Cloudflare Threat Report](https://blog.cloudflare.com/2026-cloudflare-threat-report) (March 2026)
+**Source:** [2026 Cloudflare Threat Report](https://www.cloudflare.com/lp/threat-report-2026/) (March 3, 2026)
 **Analysis:** FIR Risk Platform
 
 ---
@@ -188,9 +188,11 @@ Source: [GitHub - FIR Risk Intelligence](https://github.com/stikman28/fir-risk-i
 
 ## LINKEDIN POST
 
-Cloudflare just dropped their inaugural threat report. They process 20% of global internet traffic and block 230 billion threats daily. This isn't theory — it's what they see hitting the wire.
+94% of login attempts are bots. 63% of human logins use compromised credentials. Your perimeter isn't being breached — it's being bypassed.
 
-The headline finding: Attackers have stopped breaking in. They're blending in.
+Cloudflare published their inaugural threat report this week. They process 20% of global internet traffic and block 230 billion threats daily. This isn't theory — it's what they see hitting the wire.
+
+The core finding: Attackers have stopped breaking in. They're blending in.
 
 The numbers are staggering:
 → 47.1 million DDoS attacks in 2025 (doubled YoY)
@@ -206,7 +208,7 @@ The old model — build walls, detect intrusions — is being outrun by attacker
 
 The question isn't whether you'll be targeted. It's whether you can tell the difference between a legitimate user and an attacker who looks exactly like one.
 
-Full analysis in this week's FIR Risk Tuesday → [link]
+Full analysis in this week's FIR Risk Tuesday — see below.
 
 #cybersecurity #threatintelligence #cloudflare #identitysecurity #DDoS #supplychainsecurity #riskmanagement #CISO
 
@@ -215,7 +217,7 @@ Full analysis in this week's FIR Risk Tuesday → [link]
 ## SOURCE DATA
 
 **Primary Source:**
-- 2026 Cloudflare Threat Report, Cloudflare / Cloudforce One (March 2026) — [Full Report](https://blog.cloudflare.com/2026-cloudflare-threat-report)
+- 2026 Cloudflare Threat Report, Cloudflare / Cloudforce One (March 3, 2026) — [Full Report](https://www.cloudflare.com/lp/threat-report-2026/) (registration required)
 
 **FIR Risk Platform KB Sources:**
 - Document: "Cloudflare Threat Report 2026" (threat_report, ingested 2026-03-09, 84 chunks)
