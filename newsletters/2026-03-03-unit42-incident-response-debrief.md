@@ -171,6 +171,34 @@ Full debrief in this week's FIR Risk Tuesday → [link]
 
 ---
 
+## X POST
+
+Unit 42 analyzed 750+ major cyber incidents from 2025 across 50 countries. The number that should concern every executive: 72 minutes. That's how fast the top 25% of attackers now reach data exfiltration, down from 285 minutes last year. With AI-assisted attacks it drops to 25 minutes. Threat actors start scanning for new vulnerabilities within 15 minutes of disclosure. The math for defenders no longer works.
+
+Here's what makes this worse — 90% of those breaches were preventable. Not zero-days. Not nation-state sophistication. Misconfigurations, excessive permissions, and gaps in basic security coverage. Familiar problems executed at unfamiliar speed. Identity was the attack vector in 90% of incidents. When attackers compromise Active Directory, everything falls. Your SSO becomes their skeleton key. Cloud admin credentials get reset through the front door. SSO tokens grant access to every connected SaaS app. Group Policy becomes a malware distribution system. 87% of intrusions spanned multiple attack surfaces simultaneously — cloud, endpoint, SaaS, and identity hit at the same time.
+
+Then there's the supply chain. Nation-state actors figured out the economics — why hack 1,000 companies when you can compromise their shared vendor and reach all of them at once? 39% of cases used remote management platforms as command-and-control highways. 60% of cloud-native vulnerabilities sit in transitive libraries nobody audits. One compromised OAuth app cascades access to thousands of downstream customers. The most insidious part is how they weaponize uncertainty itself — when a major vendor is compromised, thousands of organizations enter assessment mode simultaneously. Operations pause. Security teams are overwhelmed. The real target continues operating while everyone else is distracted.
+
+What should organizations do? Stop buying more security tools — this is a speed problem, not a coverage problem. If containment requires human approval, it's too slow. Treat identity as your perimeter, not just another control. Audit every admin account this week and assume some are already compromised. Build breakglass procedures for vendor isolation, test them quarterly, and be ready to disconnect in minutes not days.
+
+If you're a CEO or board director, this report is your mandate to ask one question — how fast can we contain a breach? If nobody can answer in minutes, your security investment is misaligned. Authorize autonomous containment. Fund identity infrastructure. The 72-minute window is a board-level metric now.
+
+If you're a CISO, stop adding tools and start measuring speed. Your mean time to contain is the only number that matters against AI-accelerated attacks. Audit every privileged identity this week, not next quarter. Build automated playbooks that execute without waiting for human approval. Your job is shifting from prevention architect to speed architect.
+
+If you lead a SOC team, the sequential detect-analyze-escalate-contain workflow is broken. Attackers move in parallel across every surface while you work one alert at a time. Push for autonomous containment triggers. Map your visibility gaps across cloud, SaaS, and identity — the 87% multi-surface stat means single-surface monitoring is blind by design.
+
+If you lead fraud or financial crime, identity compromise at this scale means account takeover, synthetic identity, and insider threat vectors are all accelerating. When attackers own credentials in 90% of cases, your fraud detection models need to account for legitimate-looking access. Watch for anomalous identity behavior, not just anomalous transactions.
+
+If you're in risk or compliance, third-party risk assessments based on annual questionnaires are obsolete. Nation-states are using your vendor relationships as highways. Demand real-time security posture visibility from critical vendors. Build contractual breakglass provisions. Identity and supply chain aren't supporting risks anymore — they are primary risks.
+
+Looking ahead, organizations deploying autonomous detection and containment will separate from those still running manual IR playbooks. That gap becomes measurable this year. Expect accelerated investment in identity threat detection, continuous verification, and privilege-on-demand architectures. Regulatory pressure will force vendors to demonstrate security posture in real time, not through annual questionnaires. And the browser as an attack surface is growing fast — 48% of incidents involved browser activity intersecting with routine workflows. That vector is underdefended.
+
+This report confirms what many suspected but few have acted on — the threat landscape has fundamentally shifted. Attackers operate at machine speed, exploit identity as a master key, orchestrate across every surface simultaneously, and weaponize your own infrastructure against you. And 90% of it is preventable. The organizations that survive the next wave won't be the ones with the most security tools. They'll be the ones that can match machine-speed attacks with machine-speed defense. The window is 72 minutes. The clock is already running.
+
+#cybersecurity #incidentresponse #threatintelligence #identitysecurity #AI #riskmanagement #CISO
+
+---
+
 ## SOURCE DATA
 
 **Primary Source:**
