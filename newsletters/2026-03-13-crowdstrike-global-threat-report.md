@@ -6,9 +6,9 @@
 
 ---
 
-# FIR Risk E83 — 27 Seconds
+# FIR Risk E83 — The Convergence
 
-![FIR Risk E83 - 27 Seconds](images/e83-crowdstrike-global-threat-report.png)
+![FIR Risk E83 - The Convergence](images/e83-crowdstrike-global-threat-report.png)
 
 By FIR Risk Platform | Cybersecurity Risk Intelligence
 
