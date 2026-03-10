@@ -195,7 +195,7 @@ Looking ahead, organizations deploying autonomous detection and containment will
 
 This report confirms what many suspected but few have acted on — the threat landscape has fundamentally shifted. Attackers operate at machine speed, exploit identity as a master key, orchestrate across every surface simultaneously, and weaponize your own infrastructure against you. And 90% of it is preventable. The organizations that survive the next wave won't be the ones with the most security tools. They'll be the ones that can match machine-speed attacks with machine-speed defense. The window is 72 minutes. The clock is already running.
 
-#cybersecurity #incidentresponse #threatintelligence #identitysecurity #AI #riskmanagement #CISO
+#cybersecurity #incidentresponse
 
 ---
 
