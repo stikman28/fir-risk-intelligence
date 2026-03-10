@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+*.secret
+
+# Source documents (copyrighted third-party reports)
+newsletters/sources/
+reports/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Claude (internal workflow)
+CLAUDE.md
