@@ -214,6 +214,32 @@ Full analysis in this week's FIR Risk Tuesday — see below.
 
 ---
 
+## X POST
+
+Cloudflare processes over 20% of global internet traffic and blocks 230 billion threats daily. They just published their inaugural threat report — not based on surveys or projections, but on what they actually see hitting the wire across 50 countries. The core finding should concern every enterprise leader: attackers have stopped breaking in. They're blending in. They weaponize your cloud services, your SaaS integrations, your legitimate credentials. Traditional perimeter security is defending against an attack model that no longer exists.
+
+Cloudflare introduces a framework called Living off XaaS — the evolution of living off the land for cloud environments. Attackers no longer need malware. They coordinate command-and-control through paste sites like teletype.in. They host credential harvesting on Azure Web Apps, which your security tools trust by default. They deliver payloads via Google Drive and Dropbox. They weaponize developer tools to tunnel through your egress filtering. The result is malicious activity that looks identical to normal business operations. When attackers operate as authorized users within your own platforms, the threat isn't external anymore — it's architectural.
+
+The GRUB1 campaign is the case study that makes this real. Relatively unsophisticated actors used TruffleHog to scan code repositories for credentials, then used LLMs in real-time to navigate unfamiliar SaaS environments. They pivoted from Salesloft Drift into Salesforce through a single trusted integration and exposed hundreds of corporate tenants. They didn't need to be sophisticated — over-privileged SaaS integrations did the work for them. Your security is now defined by your weakest third-party integration, not your perimeter.
+
+Then there's North Korea's insider factory. They've industrialized employment placement, not espionage. AI-generated deepfakes pass video interviews. US-based laptop farms host corporate hardware while operators work from abroad. Fabricated LinkedIn and GitHub profiles establish credibility. Rented credentials from complicit US citizens handle identity verification. The goal isn't intelligence — it's revenue, hundreds of millions funneled to the regime through legitimate paychecks. The detection signatures exist — impossible travel alerts, mouse-jiggling software, deepfake rendering artifacts — but most organizations aren't looking for them.
+
+The numbers tell the rest of the story. 47.1 million DDoS attacks in 2025, doubled from the year before. The largest DDoS attack ever recorded hit 31.4 terabits per second — six times the 2024 record. 30% of all HTTP traffic comes from bots. 94% of login attempts are automated. And here's the number that should keep every security leader awake — 63% of human logins use already-compromised credentials. Traditional authentication is operating on borrowed time. On the email front, 43% fail SPF, 44% lack DKIM, and 46% fail DMARC. Nearly half your inbound email lacks basic authentication. $123 million in business email compromise attempts were intercepted, averaging $49,225 per attempt. And 54% of ransomware cases traced back to infostealers — that's now the primary attack chain.
+
+The nation-state landscape has shifted. Russia integrates cyber operations with kinetic military campaigns — wiper malware and hacktivism as force multipliers. China's DazedToad, which maps to Volt Typhoon, is pre-positioning in US critical infrastructure — not stealing data, preparing for disruption. North Korea combines AI-enhanced social engineering with industrial-scale financial theft. Iran coordinates cyber reconnaissance with kinetic operations targeting aerospace, defense, and energy. The Americas remain the most targeted region globally, with manufacturing and critical infrastructure absorbing over 50% of targeted attacks.
+
+What should organizations do? Move past MFA to identity-first zero trust — infostealers like LummaC2 harvest session tokens after MFA completes. Deploy FIDO2 and passkeys. Audit every SaaS integration this week — GRUB1 proved one over-privileged API connection can expose your entire tenant ecosystem. Secure AI usage before employees create data leakage vectors your DLP wasn't designed for. And accept that humans can't respond fast enough — most 2025 DDoS attacks lasted under 10 minutes. The 31.4 terabit record was over before a human could pick up the phone.
+
+If you're a CEO or board director, ask two questions — how fast can we contain a credential compromise, and do we know every SaaS integration with admin access? If nobody can answer both, your risk posture has blind spots at the architectural level. If you're a CISO, the LotX framework changes your detection model. You can't block Google Drive or Azure Web Apps — your business runs on them. Shift investment from perimeter tools to behavioral analytics that distinguish normal usage from weaponization. If you lead a SOC team, 94% of login attempts being automated means your alert queue is mostly noise. Focus on the 63% of human logins using compromised credentials — that's where the real intrusions hide. If you're in risk or compliance, the email authentication failure rates are a governance gap, not just a technical one.
+
+Looking ahead, GRUB1 will accelerate demand for SaaS integration audit standards. The infostealer-to-ransomware pipeline is now confirmed as the primary attack chain — blocking infostealers at browser and endpoint materially reduces ransomware exposure. DDoS has been democratized with botnets controlling 1-4 million hosts. And North Korean IT worker detection through biometric verification and deepfake detection will become standard in hiring workflows.
+
+Cloudflare sees 20% of the internet. What they're telling us is that the fundamental model of cybersecurity — build walls, detect intrusions, respond to alerts — is being outrun by attackers who don't intrude at all. They log in. They use your tools. They look like you. The organizations that navigate this shift won't be the ones with the highest walls. They'll be the ones that can tell the difference between a legitimate user and an attacker who looks exactly like one. The threat isn't at the gate anymore. It's already inside, wearing a badge.
+
+#cybersecurity #identitysecurity
+
+---
+
 ## SOURCE DATA
 
 **Primary Source:**
