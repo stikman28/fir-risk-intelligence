@@ -91,6 +91,18 @@ Full INTEL: [link]
 
 ---
 
+## X POST
+
+Muddled Libra doesn't bring malware. They call your help desk, reset a password, and use Microsoft Graph API to own your entire cloud environment from the inside. Unit 42's 2026 Incident Response Report flags this group as a top threat across aerospace, financial services, high technology, and telecommunications. Their playbook is simple — social-engineer a credential, then pivot to cloud infrastructure using your own APIs and admin consoles as attack tools. They don't need exploits. They need credentials.
+
+What makes Muddled Libra dangerous is that every action they take looks legitimate. Azure resource enumeration, M365 data access, role escalation — all of it uses cloud services doing exactly what they were designed to do. Your SIEM won't flag it. Your EDR won't catch it. Your firewall never sees it. The detection gap isn't in your tools, it's in what you're monitoring. And once they have what they want, they partner with DragonForce ransomware-as-a-service for the encryption phase — making them a dual threat of data exfiltration followed by ransomware.
+
+What should organizations do? Monitor Microsoft Graph API usage patterns and flag anomalies like bulk resource enumeration, cross-region queries, and M365 storage exfiltration sequences. Harden help desk identity verification — this is their primary entry point, and no credential reset should happen without multi-factor verification. Audit cloud role assignments weekly — any new admin role outside change management should trigger an immediate investigation. And alert on cloud cost and usage API queries, because attackers use them to map your highest-value assets before they strike.
+
+#cybersecurity #cloudsecurity
+
+---
+
 # SOURCE DATA
 
 **Platform Queries:**
