@@ -212,38 +212,20 @@ CrowdStrike's seven recommendations, distilled for the board:
 
 ```
 Three reports. Three weeks. One picture.
-
-We just finished our third consecutive deep dive into a 2026 annual threat report — CrowdStrike following Unit 42 and Cloudflare.
-
-The convergence is extraordinary.
-
-27 seconds. That's the fastest observed breakout time from initial access to lateral movement. The average is 29 minutes (down from 98 minutes five years ago). Unit 42 measured 72-minute exfiltration timelines.
-
-The window to detect and respond has collapsed by 70%.
-
+We just finished our third consecutive deep dive into a 2026 annual threat report — CrowdStrike following Unit 42 and Cloudflare. The convergence is extraordinary.
+27 seconds. That's the fastest observed breakout time from initial access to lateral movement. The average is 29 minutes (down from 98 minutes five years ago). Unit 42 measured 72-minute exfiltration timelines. The window to detect and respond has collapsed by 70%.
 But the speed isn't even the most important finding. Here's what all three reports agree on:
-
 → Identity IS the perimeter. 90% of incidents involve identity compromise (Unit 42). 63% of human logins use already-compromised credentials (Cloudflare). 35% of cloud intrusions use valid accounts (CrowdStrike).
-
 → Cloud is the battlefield. 266% increase in named adversary cloud intrusions. Attackers weaponize your own SaaS services, cloud APIs, and hybrid identity solutions as attack infrastructure.
-
-→ Supply chain is the multiplier. The $1.46B Bybit heist — largest single financial theft in history — was a supply chain attack through a compromised developer at Safe{Wallet}. One npm package (ShaiHulud) self-propagated to 2M+ downloads.
-
+→ Supply chain is the multiplier. The $1.46B Bybit heist — largest single financial theft in history — was a supply chain attack through a compromised developer. One npm package self-propagated to 2M+ downloads.
 → AI is accelerating everything. 89% increase in AI social engineering. But CrowdStrike adds a dimension the others didn't — threats TO AI systems. LLM-embedded malware. Malicious MCP servers. Prompt injection against security workflows.
-
 What struck me most:
-
 Attackers dumped an organization's entire Active Directory — every credential — by operating exclusively on a decommissioned VM. Three hours. One managed endpoint touched. Your EDR never saw it.
-
 A nation-state ran a 31-day phishing campaign using only legitimate Microsoft login pages. No suspicious domains. No misspelled URLs. Just trusted colleagues asking targets to authenticate on Microsoft's own infrastructure.
-
 Iran deployed the same identity exploitation technique against Israeli M365 users. The toolkit is language-agnostic — swap Hebrew lures for English, and it works against any M365 tenant. There's nothing stopping it from targeting US organizations tomorrow.
-
 This isn't the future. This is now.
-
-Full analysis: [link]
-
-#cybersecurity #threatintelligence
+Full E83 newsletter breakdown below — The Convergence.
+#cybersecurity #threatintelligence #identitysecurity #cloudsecurity #fraudprevention #CISO #riskmanagement #supplychainsecurity #infosec
 ```
 
 ---
