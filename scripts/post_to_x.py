@@ -15,6 +15,8 @@ import argparse
 import os
 import re
 import subprocess
+import time
+from datetime import datetime, timedelta
 
 import requests
 from requests_oauthlib import OAuth1
@@ -109,6 +111,8 @@ def main():
     parser.add_argument("file", help="Path to newsletter markdown file")
     parser.add_argument("--dry-run", action="store_true", help="Preview post without publishing")
     parser.add_argument("--no-image", action="store_true", help="Post without image")
+    parser.add_argument("--schedule", type=int, metavar="MINUTES",
+                        help="Schedule post to go out in N minutes")
     args = parser.parse_args()
 
     print(f"Reading: {args.file}")
@@ -128,15 +132,26 @@ def main():
         print(x_post_text)
         print(f"\n{'='*50}")
         print(f"{len(x_post_text)} characters")
-    else:
-        auth = get_auth()
-        media_id = None
-        if image_path:
-            media_id = upload_image(image_path, auth)
-        print("Posting to X...")
-        data = post_to_x(x_post_text, auth, media_id)
-        tweet_id = data["id"]
-        print(f"Posted! https://x.com/stikman28/status/{tweet_id}")
+        if args.schedule:
+            target = datetime.now() + timedelta(minutes=args.schedule)
+            print(f"\nWould be scheduled for: {target:%I:%M %p}")
+        return
+
+    if args.schedule:
+        target = datetime.now() + timedelta(minutes=args.schedule)
+        print(f"\nScheduled for {target:%I:%M %p} ({args.schedule} min)")
+        print("Leave this running. Ctrl+C to cancel.\n")
+        time.sleep(args.schedule * 60)
+        print(f"[{datetime.now():%H:%M:%S}] Executing scheduled post...")
+
+    auth = get_auth()
+    media_id = None
+    if image_path:
+        media_id = upload_image(image_path, auth)
+    print("Posting to X...")
+    data = post_to_x(x_post_text, auth, media_id)
+    tweet_id = data["id"]
+    print(f"Posted! https://x.com/stikman28/status/{tweet_id}")
 
 
 if __name__ == "__main__":

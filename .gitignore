@@ -12,6 +12,9 @@
 newsletters/sources/
 reports/
 
+# Data (SQLite, local state)
+data/
+
 # Python
 __pycache__/
 *.pyc
