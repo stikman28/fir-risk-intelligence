@@ -26,13 +26,13 @@ Picus calls this the **"Digital Parasite"** — an adversary that inhabits the h
 
 ## Key Judgments
 
-**1. The risk profile has inverted.** The primary threat is no longer business interruption from ransomware. It's undetected long-term access. Ransomware encryption (T1486) dropped 38% while stealth techniques dominate 8 of the top 10 positions. Organizations optimized for ransomware response are fighting yesterday's war. *High confidence — based on 1.1M sample analysis.*
+**1. The risk profile has inverted.** The primary threat is no longer business interruption from ransomware. It's undetected long-term access. Ransomware encryption dropped 38% while stealth techniques dominate 8 of the top 10 positions. Organizations optimized for ransomware response are fighting yesterday's war. *High confidence.*
 
-**2. Your security tools may be compromised without alerting.** Adversaries now disable defenses as a standard first step (T1562, Rank #8), and self-aware malware (T1497, Rank #4) refuses to execute when being analyzed. A green dashboard may indicate successful evasion, not the absence of threats. *High confidence — multiple malware families confirmed.*
+**2. Your security tools may be compromised without alerting.** Adversaries now disable defenses as a standard first step, and self-aware malware refuses to execute when being analyzed. A green dashboard may indicate successful evasion, not the absence of threats. *High confidence.*
 
-**3. Identity theft has become the primary objective, not a preliminary step.** Credential theft (T1555) at 23% prevalence is now double ransomware encryption at 13%. Malware like SantaStealer bypasses browser encryption by calling legitimate APIs — no exploit required. *High confidence — consistent across all four 2026 threat reports.*
+**3. Identity theft has become the primary objective, not a preliminary step.** Credential theft at 23% prevalence is now double ransomware encryption at 13%. Malware like SantaStealer bypasses browser encryption by calling legitimate APIs — no exploit required. *High confidence — consistent across all four 2026 threat reports.*
 
-**4. Cloud APIs are the new command-and-control infrastructure.** The SesameOp backdoor routes C2 through OpenAI's API. Storm-0501 queries AWS Secrets Manager directly. Traditional firewall rules and blocklists are ineffective against C2 channels that use your own trusted services. *High confidence — confirmed by Picus, Cloudflare (E82), and CrowdStrike (E83).*
+**4. Cloud APIs are the new command-and-control infrastructure.** The SesameOp backdoor routes C2 through OpenAI's API. Storm-0501 queries AWS Secrets Manager directly. Traditional firewall rules and blocklists are ineffective against C2 channels that use your own trusted services. *High confidence — confirmed across three 2026 reports.*
 
 **5. The attack surface now extends below the operating system.** North Korean operatives deployed IP-KVM hardware for BIOS-level access — invisible to every software-based security control. Software-only visibility is no longer sufficient. *Moderate confidence — limited to DPRK operations, but technique is replicable.*
 
@@ -56,24 +56,19 @@ The data reveals three fundamental changes in adversary behavior that explain wh
 
 ### The Stealth Shift: 80% Evasion, 38% Ransomware Decline
 
-The Top 10 most prevalent MITRE ATT&CK techniques tell the story:
+When you analyze the ten most common attack techniques observed across 1.1 million malicious files, **eight of them are designed to hide.** Not to steal. Not to encrypt. Not to destroy. To remain invisible inside your environment for as long as possible.
 
-**#1 T1055 Process Injection — 30%** (stable, #1 for 3rd year)
-**#2 T1059 Command & Scripting — 27%** (stable)
-**#3 T1555 Credentials from Password Stores — 23%** (stable)
-**#4 T1497 Sandbox Evasion — 20%** (NEW — explosive growth)
-**#5 T1071 Application Layer Protocol — 19%** (stable)
-**#6 T1036 Masquerading — 17%** (NEW to Top 10)
-**#7 T1547 Boot/Logon Autostart — 15%** (rising)
-**#8 T1562 Impair Defenses — 14%** (stable)
-**#9 T1219 Remote Access Tools — 13%** (NEW to Top 10)
-**#10 T1486 Data Encrypted for Impact — 13%** (down 38%)
+The #1 technique — for the third year running — is injecting malicious code into trusted applications. Your legitimate software becomes the weapon. The attacker walks in wearing your uniform.
 
-**Eight of ten** are evasion, persistence, or stealthy C2 techniques. Only T1059 (execution) and T1486 (encryption) serve direct operational purposes — and T1486 is in freefall. The adversary's playbook is now built around one principle: **don't get caught.**
+Three techniques entered the top 10 for the first time this year: **sandbox evasion** (malware that detects when it's being analyzed and refuses to execute), **masquerading** (disguising malicious files as legitimate system processes), and **remote access tool abuse** (weaponizing AnyDesk, VS Code Tunnels, and hardware KVMs for persistent access).
 
-Where Picus's rankings align with Mandiant's M-Trends 2025 — both show T1486 declining and credential-focused techniques rising — the convergence validates the shift. Where they diverge — Picus leads with Process Injection (stealth), Mandiant leads with Command and Scripting (speed) — it suggests **technique specialization by adversary type.** Some prioritize invisibility, others prioritize velocity. Both are winning.
+Meanwhile, ransomware encryption **dropped 38% in one year** — falling from a dominant position to the bottom of the list. Ransomware hasn't disappeared. But the economics have shifted. Long-term access and silent data extraction are now more profitable than locking systems and demanding payment.
 
-> **INTEL [GLOBAL] [TREND]:** The 2026 MITRE ATT&CK technique rankings confirm a strategic pivot from disruption to inhabitation. Ransomware encryption (T1486) declined 38% while evasion techniques (T1497 Sandbox Evasion, T1036 Masquerading) surged into the Top 10 for the first time. 80% of the top techniques are now stealth-focused.
+Mandiant's M-Trends 2025 data tells a complementary story — both Picus and Mandiant show ransomware declining and credential-focused techniques rising. Where they diverge is instructive: Picus leads with stealth techniques, Mandiant leads with speed techniques. This suggests **adversary specialization** — some groups optimize for invisibility, others for velocity. Both approaches are succeeding against traditional defenses.
+
+*(Full technique rankings with MITRE ATT&CK IDs and specific malware attributions in the [Technical Reference](#mitre-attck-reference) below.)*
+
+> **INTEL [GLOBAL] [TREND]:** The 2026 technique rankings confirm a strategic pivot from disruption to inhabitation. Ransomware encryption declined 38% while evasion and masquerading techniques surged into the Top 10 for the first time. 80% of the top techniques are now stealth-focused. The adversary's primary success metric is dwell time, not impact.
 
 ---
 
@@ -83,9 +78,9 @@ Where Picus's rankings align with Mandiant's M-Trends 2025 — both show T1486 d
 
 Your sandbox passes the file as clean. Your SOC closes the ticket. **The file that executed and did nothing isn't safe. It's waiting.**
 
-This is T1497 (Virtualization/Sandbox Evasion) surging to Rank #4 — the year's most explosive growth. Modern malware has developed survival instincts. It studies its environment before acting and only activates in production, on real machines, with real users. Adversaries aren't just evading current defenses — they're **anticipating future ones**, studying how defenders work and engineering around it.
+Sandbox evasion had the year's most explosive growth — surging into the top 5 for the first time. Modern malware has developed survival instincts. It studies its environment before acting and only activates in production, on real machines, with real users. Adversaries aren't just evading current defenses — they're **anticipating future ones**, studying how defenders work and engineering around it.
 
-> **INTEL [GLOBAL] [TECHNIQUE]:** Self-aware malware (T1497) has surged to #4, with LummaC2 using trigonometric analysis of mouse movements to distinguish human users from automated sandboxes. If the threat detects it is being watched, it plays dead. Automated analysis verdicts can no longer be trusted at face value.
+> **INTEL [GLOBAL] [TECHNIQUE]:** Self-aware malware has surged into the top 5, with LummaC2 using trigonometric analysis of mouse movements to distinguish human users from automated sandboxes. If the threat detects it is being watched, it plays dead. Automated analysis verdicts can no longer be trusted at face value.
 
 ---
 
@@ -97,7 +92,7 @@ The **SesameOp backdoor** routes all command-and-control traffic through **OpenA
 
 Similarly, **Storm-0501** queries **AWS Secrets Manager** directly using stolen cloud credentials — extracting API keys, database passwords, and service tokens without touching an endpoint. No file dropped. No process injected. Just legitimate API calls to a legitimate service. **Phantom Taurus** went further — bypassing email espionage entirely to target databases and web servers directly using NET-STAR malware. They've cut out the middleman. Instead of stealing emails about data, they go straight to the data.
 
-E82 covered Cloudflare's "Living off XaaS" framework. E83 documented CrowdStrike's 266% increase in cloud intrusions. Picus quantifies the technique: **Application Layer Protocol (T1071) now appears in 19% of all samples**, and the channels of choice are the services you trust most.
+E82 covered Cloudflare's "Living off XaaS" framework. E83 documented CrowdStrike's 266% increase in cloud intrusions. Picus quantifies the trend: **nearly 1 in 5 malware samples now uses legitimate cloud services for command-and-control**, and the channels of choice are the services you trust most.
 
 > **INTEL [GLOBAL] [THREAT ALERT]:** SesameOp routes C2 through OpenAI APIs, Storm-0501 steals secrets directly from AWS, and Phantom Taurus targets databases directly — making malicious traffic indistinguishable from legitimate business operations. The perimeter has moved from the firewall to the identity provider.
 
@@ -109,9 +104,9 @@ E82 covered Cloudflare's "Living off XaaS" framework. E83 documented CrowdStrike
 
 Every password your employees have saved in Chrome, Edge, or Firefox — email, SaaS, VPN, banking — is accessible to malware that knows the right API call. No brute force. No cryptographic attack. Just a polite request through the front door.
 
-T1555 (Credentials from Password Stores) is now at 23% prevalence — **double the rate of ransomware encryption.** Meanwhile, noisy credential dumping (T1003, Mimikatz-style) has vanished from the Top 10. The Digital Parasite doesn't need to break down the door when it can simply log in.
+Credential theft from browsers is now at 23% prevalence — **double the rate of ransomware encryption.** Meanwhile, the old noisy approach of dumping credentials from memory (Mimikatz-style) has vanished from the Top 10. The Digital Parasite doesn't need to break down the door when it can simply log in.
 
-> **INTEL [GLOBAL] [TECHNIQUE]:** Credential theft (T1555) at 23% is now double ransomware encryption (T1486) at 13%. SantaStealer bypasses Chrome encryption by calling legitimate browser APIs. Identity theft has become the primary attack objective, not a preliminary step.
+> **INTEL [GLOBAL] [TECHNIQUE]:** Credential theft at 23% is now double ransomware encryption at 13%. SantaStealer bypasses Chrome encryption by calling legitimate browser APIs. Identity theft has become the primary attack objective, not a preliminary step.
 
 ---
 
@@ -235,29 +230,17 @@ This is our fourth consecutive deep dive into a 2026 annual threat report. The c
 
 ```
 Adversaries have stopped trying to destroy your environment. They're moving in.
-
 Picus Labs just released the Red Report 2026 — analyzing 1.1 million malicious files and 15.5 million adversarial actions mapped to MITRE ATT&CK. This is the fourth consecutive annual threat report we've analyzed, following Unit 42, Cloudflare, and CrowdStrike.
-
-The headline: 80% of the top 10 attack techniques are now dedicated to evasion and persistence. Not destruction. Not ransomware. Stealth. Ransomware encryption dropped 38% in one year — but ransomware hasn't disappeared. The business model inverted. Long-term access is now worth more than a one-time ransom payment.
-
-Picus calls this the "Digital Parasite." The data backs it up.
-
+The headline: 80% of the top 10 attack techniques are now dedicated to evasion and persistence. Not destruction. Not ransomware. Stealth.
+Ransomware encryption dropped 38% in one year — but ransomware hasn't disappeared. The business model inverted. Long-term access is now worth more than a one-time ransom payment. Picus calls this the "Digital Parasite." The data backs it up.
 The risk profile has inverted. For a decade, the primary CISO concern was business interruption — ransomware locks systems, operations stop, you pay. In 2026, the real risk is the adversary who's been inside your environment for months, mapping your identity systems, understanding your data flows, positioning for maximum extraction — while your security tools report everything is clean.
-
-Credential theft (T1555) at 23% is now DOUBLE ransomware encryption at 13%. SantaStealer bypasses Chrome's encryption by calling the browser's own APIs — it asks for your passwords politely, and the browser hands them over. The Digital Parasite doesn't break down the door. It logs in.
-
+Credential theft at 23% is now DOUBLE ransomware encryption at 13%. SantaStealer bypasses Chrome's encryption by calling the browser's own APIs — it asks for your passwords politely, and the browser hands them over. The Digital Parasite doesn't break down the door. It logs in.
 LummaC2 uses trigonometry to detect humans. It measures mouse cursor angles and Euclidean distances. Sandbox? Plays dead. Real user? Activates. Self-aware malware that refuses to execute when watched. Your automated analysis passes it as clean.
-
 The SesameOp backdoor routes C2 through OpenAI's Assistants API. Every command looks like legitimate AI development. Your firewall passes it. Your DLP ignores it. The adversary has weaponized the trust relationships you can't afford to break.
-
 DPRK operatives deployed IP-KVM hardware directly into corporate laptops — BIOS-level access below the operating system where every software-based security control is blind.
-
 The shift is permanent: from predator to parasite. From smash-and-grab to digital landlord — establishing long-term presence, collecting ongoing value through credential access, maintaining the property through defense impairment, using legitimate channels to avoid suspicion.
-
 Four reports. Four vendors. One conclusion: the adversary is no longer at the gate. They are already logged in.
-
 Full analysis — FIR Risk Tuesday E84: The Digital Parasite.
-
 #cybersecurity #threatintelligence #MITREATTACK #identitysecurity #riskmanagement #CISO #infosec #fraudprevention #cloudsecurity
 ```
 
