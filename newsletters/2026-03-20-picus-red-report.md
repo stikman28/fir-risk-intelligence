@@ -1,6 +1,6 @@
 # FIR Risk Tuesday E84
 
-**Publish Date:** March 20, 2026
+**Publish Date:** March 17, 2026
 **Source:** [Picus Red Report 2026](https://www.picussecurity.com/red-report) (March 2026)
 **Analysis:** FIR Risk Platform
 
@@ -38,6 +38,20 @@ Picus calls this the **"Digital Parasite"** — an adversary that inhabits the h
 
 ---
 
+## Three Critical Shifts
+
+The data reveals three fundamental changes in adversary behavior that explain why traditional defenses are failing:
+
+**From Disruption to Infiltration.** Adversaries have realized that staying hidden is more valuable than causing immediate chaos. They're building long-term access to organizational infrastructure, identity systems, and data — becoming digital parasites that feed off their host while remaining undetected. The dominance of Process Injection (T1055) at #1 for three consecutive years signals that **blending in is now more critical to attackers than breaking in.**
+
+**From Hunting Files to Weaponizing Trust.** The rise of Application Layer Protocol (T1071) and abuse of trusted services like OpenAI and AWS shows adversaries hiding in the spaces organizations can't afford to restrict. Security teams face an impossible choice: block OpenAI and cripple AI development, or allow it and accept the C2 risk. Adversaries have systematically mapped these blind spots — trust relationships you can't break, hardware layers you don't monitor, encrypted traffic you can't inspect.
+
+**From Predator to Digital Landlord.** The technique rankings reveal adversaries have adopted a landlord mentality — establish long-term presence through process injection (#1), collect ongoing rent through credential access (#3), maintain the property through defense impairment (#8), and use legitimate channels to avoid suspicion (#5). **BRICKSTORM** demonstrated this model in practice — maintaining year-long persistence campaigns against IT and SaaS organizations, concealing C2 within encrypted web sessions while continuously extracting value.
+
+> **INTEL [GLOBAL] [FINDING]:** The old risk was business interruption — ransomware locks your systems, operations stop, you pay to recover. The new risk is the adversary who's been in your environment for months, mapping your identity systems, understanding your data flows, and positioning for maximum extraction — all while your security tools report everything is clean. Security programs must shift from "hunting files" to "hunting behavior."
+
+---
+
 ## Evidence
 
 ### The Stealth Shift: 80% Evasion, 38% Ransomware Decline
@@ -57,6 +71,8 @@ The Top 10 most prevalent MITRE ATT&CK techniques tell the story:
 
 **Eight of ten** are evasion, persistence, or stealthy C2 techniques. Only T1059 (execution) and T1486 (encryption) serve direct operational purposes — and T1486 is in freefall. The adversary's playbook is now built around one principle: **don't get caught.**
 
+Where Picus's rankings align with Mandiant's M-Trends 2025 — both show T1486 declining and credential-focused techniques rising — the convergence validates the shift. Where they diverge — Picus leads with Process Injection (stealth), Mandiant leads with Command and Scripting (speed) — it suggests **technique specialization by adversary type.** Some prioritize invisibility, others prioritize velocity. Both are winning.
+
 > **INTEL [GLOBAL] [TREND]:** The 2026 MITRE ATT&CK technique rankings confirm a strategic pivot from disruption to inhabitation. Ransomware encryption (T1486) declined 38% while evasion techniques (T1497 Sandbox Evasion, T1036 Masquerading) surged into the Top 10 for the first time. 80% of the top techniques are now stealth-focused.
 
 ---
@@ -67,7 +83,7 @@ The Top 10 most prevalent MITRE ATT&CK techniques tell the story:
 
 Your sandbox passes the file as clean. Your SOC closes the ticket. **The file that executed and did nothing isn't safe. It's waiting.**
 
-This is T1497 (Virtualization/Sandbox Evasion) surging to Rank #4 — the year's most explosive growth. Modern malware has developed survival instincts. It studies its environment before acting and only activates in production, on real machines, with real users.
+This is T1497 (Virtualization/Sandbox Evasion) surging to Rank #4 — the year's most explosive growth. Modern malware has developed survival instincts. It studies its environment before acting and only activates in production, on real machines, with real users. Adversaries aren't just evading current defenses — they're **anticipating future ones**, studying how defenders work and engineering around it.
 
 > **INTEL [GLOBAL] [TECHNIQUE]:** Self-aware malware (T1497) has surged to #4, with LummaC2 using trigonometric analysis of mouse movements to distinguish human users from automated sandboxes. If the threat detects it is being watched, it plays dead. Automated analysis verdicts can no longer be trusted at face value.
 
@@ -79,9 +95,11 @@ The **SesameOp backdoor** routes all command-and-control traffic through **OpenA
 
 **The malicious traffic is indistinguishable from your AI development workflow because it IS your AI development workflow** — just with a different operator.
 
-Similarly, **Storm-0501** queries **AWS Secrets Manager** directly using stolen cloud credentials — extracting API keys, database passwords, and service tokens without touching an endpoint. No file dropped. No process injected. Just legitimate API calls to a legitimate service.
+Similarly, **Storm-0501** queries **AWS Secrets Manager** directly using stolen cloud credentials — extracting API keys, database passwords, and service tokens without touching an endpoint. No file dropped. No process injected. Just legitimate API calls to a legitimate service. **Phantom Taurus** went further — bypassing email espionage entirely to target databases and web servers directly using NET-STAR malware. They've cut out the middleman. Instead of stealing emails about data, they go straight to the data.
 
-> **INTEL [GLOBAL] [THREAT ALERT]:** SesameOp routes C2 through OpenAI APIs and Storm-0501 steals secrets directly from AWS, making malicious traffic indistinguishable from legitimate business operations. The perimeter has moved from the firewall to the identity provider.
+E82 covered Cloudflare's "Living off XaaS" framework. E83 documented CrowdStrike's 266% increase in cloud intrusions. Picus quantifies the technique: **Application Layer Protocol (T1071) now appears in 19% of all samples**, and the channels of choice are the services you trust most.
+
+> **INTEL [GLOBAL] [THREAT ALERT]:** SesameOp routes C2 through OpenAI APIs, Storm-0501 steals secrets directly from AWS, and Phantom Taurus targets databases directly — making malicious traffic indistinguishable from legitimate business operations. The perimeter has moved from the firewall to the identity provider.
 
 ---
 
@@ -167,7 +185,7 @@ This is our fourth consecutive deep dive into a 2026 annual threat report. The c
 
 ## Recommended Actions
 
-1. **Validate your defenses against the 2026 Top 10.** Simulate Process Injection, Sandbox Evasion, and Defense Impairment against your actual controls. If LummaC2's trigonometry check can fool your sandbox, you need to know before an adversary does.
+1. **Shift from hunting files to hunting behavior.** Static defenses are failing — 80% of top techniques are designed to evade them. Continuously simulate the Top 10 techniques (Process Injection, Sandbox Evasion, Defense Impairment) against your actual controls. If LummaC2's trigonometry check can fool your sandbox, you need to know before the adversary does.
 
 2. **Hunt for silence.** A device that stops sending telemetry is not a connectivity issue — it's a potential defense impairment operation. Build detection for EDR agents that go quiet, logs that stop flowing, and dashboards that stay green for too long.
 
@@ -218,27 +236,27 @@ This is our fourth consecutive deep dive into a 2026 annual threat report. The c
 ```
 Adversaries have stopped trying to destroy your environment. They're moving in.
 
-Picus Labs just released the Red Report 2026 — analyzing 1.1 million malicious files and 15.5 million adversarial actions mapped to MITRE ATT&CK. This is the fourth consecutive annual threat report we've analyzed, following Unit 42 (E81), Cloudflare (E82), and CrowdStrike (E83).
+Picus Labs just released the Red Report 2026 — analyzing 1.1 million malicious files and 15.5 million adversarial actions mapped to MITRE ATT&CK. This is the fourth consecutive annual threat report we've analyzed, following Unit 42, Cloudflare, and CrowdStrike.
 
-The headline finding: 80% of the top 10 attack techniques are now dedicated to evasion and persistence. Not destruction. Not ransomware. Stealth.
+The headline: 80% of the top 10 attack techniques are now dedicated to evasion and persistence. Not destruction. Not ransomware. Stealth. Ransomware encryption dropped 38% in one year — but ransomware hasn't disappeared. The business model inverted. Long-term access is now worth more than a one-time ransom payment.
 
-Ransomware encryption dropped 38% in one year. But ransomware hasn't disappeared — it's evolved. The adversary's primary success metric has shifted from impact to dwell time. They want to live inside your environment for months, feeding on your identity systems, weaponizing your own infrastructure, and remaining invisible.
+Picus calls this the "Digital Parasite." The data backs it up.
 
-Picus calls this the "Digital Parasite." The data backs it up:
+The risk profile has inverted. For a decade, the primary CISO concern was business interruption — ransomware locks systems, operations stop, you pay. In 2026, the real risk is the adversary who's been inside your environment for months, mapping your identity systems, understanding your data flows, positioning for maximum extraction — while your security tools report everything is clean.
 
-Process Injection (T1055) leads at 30% — #1 for the third consecutive year. The adversary walks in wearing your uniform, injecting into trusted processes, operating as a legitimate application.
+Credential theft (T1555) at 23% is now DOUBLE ransomware encryption at 13%. SantaStealer bypasses Chrome's encryption by calling the browser's own APIs — it asks for your passwords politely, and the browser hands them over. The Digital Parasite doesn't break down the door. It logs in.
 
-Credential theft (T1555) at 23% is now DOUBLE ransomware encryption at 13%. SantaStealer bypasses Chrome's encryption by calling the browser's own APIs — it asks for your passwords politely, and the browser hands them over.
+LummaC2 uses trigonometry to detect humans. It measures mouse cursor angles and Euclidean distances. Sandbox? Plays dead. Real user? Activates. Self-aware malware that refuses to execute when watched. Your automated analysis passes it as clean.
 
-LummaC2 uses trigonometry to detect humans. It calculates the Euclidean distance and angles of mouse cursor paths. If the geometry says "sandbox," the malware plays dead. Your analysis tools pass it as clean. It only activates on real machines with real users.
+The SesameOp backdoor routes C2 through OpenAI's Assistants API. Every command looks like legitimate AI development. Your firewall passes it. Your DLP ignores it. The adversary has weaponized the trust relationships you can't afford to break.
 
-The SesameOp backdoor routes C2 through OpenAI's Assistants API. Every command looks like a legitimate AI development request. Your firewall passes it. Your DLP ignores it. The malicious traffic IS your AI development workflow — just with a different operator.
+DPRK operatives deployed IP-KVM hardware directly into corporate laptops — BIOS-level access below the operating system where every software-based security control is blind.
 
-And DPRK operatives deployed IP-KVM hardware plugged directly into corporate laptops — BIOS-level access below the operating system where EDR, antivirus, and every software-based security control is completely blind.
+The shift is permanent: from predator to parasite. From smash-and-grab to digital landlord — establishing long-term presence, collecting ongoing value through credential access, maintaining the property through defense impairment, using legitimate channels to avoid suspicion.
 
 Four reports. Four vendors. One conclusion: the adversary is no longer at the gate. They are already logged in.
 
-Full analysis in this week's FIR Risk Tuesday E84 — The Digital Parasite.
+Full analysis — FIR Risk Tuesday E84: The Digital Parasite.
 
 #cybersecurity #threatintelligence #MITREATTACK #identitysecurity #riskmanagement #CISO #infosec #fraudprevention #cloudsecurity
 ```
@@ -251,17 +269,17 @@ Full analysis in this week's FIR Risk Tuesday E84 — The Digital Parasite.
 
 Picus Labs analyzed 1.1 million malicious files for their Red Report 2026. The finding that should change how your board thinks about cybersecurity: adversaries have stopped trying to break your systems. They're moving in.
 
-This is the "Digital Parasite" — malware that inhabits the host, feeds on its identity systems, weaponizes its own infrastructure, and remains undetected for months.
+This is the "Digital Parasite" — and the risk profile has inverted. For a decade, the primary concern was business interruption from ransomware. In 2026, the real risk is the adversary who's been inside your environment for months, invisible, feeding on your identity systems. Ransomware encryption dropped 38%. But credential theft is at 23% — now double encryption. They don't need to lock your data when they can simply log in and take it.
 
-The numbers tell the story. Ransomware encryption dropped 38% in one year. But credential theft is at 23% — now double encryption. The adversary doesn't need to lock your data when they can simply log in and take it.
+The most unsettling finding: LummaC2 malware uses trigonometry to detect humans. It calculates mouse cursor angles and Euclidean distances. If the geometry says "automated sandbox," it plays dead. Self-aware malware that refuses to execute when watched. Your analysis tools pass it as clean. It only activates on real machines, with real users.
 
-The most unsettling finding: LummaC2 malware uses trigonometry to detect humans. It calculates mouse cursor angles and Euclidean distances. If the geometry says "automated sandbox," it plays dead. Your analysis tools pass it as clean. It only activates on real machines, with real users. Self-aware malware that refuses to execute when watched.
-
-The SesameOp backdoor routes all C2 traffic through OpenAI's Assistants API. Every attacker command looks like a legitimate AI development request. Your firewall sees traffic to api.openai.com and passes it. The malicious traffic is indistinguishable from your AI workflow because it IS your AI workflow — just with a different operator.
+The SesameOp backdoor routes all C2 traffic through OpenAI's Assistants API. Every attacker command looks like a legitimate AI development request. They've weaponized trust — the services you can't afford to block are the services they use to control your infrastructure.
 
 North Korean operatives went physical — IP-KVM devices plugged directly into laptop HDMI and USB ports. BIOS-level access below the operating system. EDR can't see it. Antivirus can't scan it. Your entire visibility stack is blind.
 
-This is our fourth consecutive deep dive into a 2026 annual threat report. Unit 42 showed the speed (72 minutes). Cloudflare showed the infrastructure (living off the cloud). CrowdStrike showed the convergence (27-second breakout). Picus shows exactly how they're hiding — and why your defenses may not be seeing them.
+The adversary has evolved from predator to digital landlord. Establish presence through process injection (#1). Collect rent through credential access (#3). Maintain the property through defense impairment (#8). Use legitimate channels (#5). Stay forever.
+
+This is our fourth consecutive 2026 threat report deep dive. Unit 42 showed the speed. Cloudflare showed the infrastructure. CrowdStrike showed the convergence. Picus shows exactly how they're hiding — and why your defenses aren't seeing them.
 
 Four reports, one conclusion: the adversary is no longer at the gate. They are already logged in.
 
@@ -281,5 +299,5 @@ Full E84 — The Digital Parasite — linked below.
 5. "Based on what the Picus Red Report reveals about current adversary techniques, what defensive approaches are failing and what needs to change?"
 
 **KB Sources:**
-- Picus Red Report 2026 (March 2026) — 302 chunks ingested
-- FIR Risk Tuesday E81-E83 (cross-referenced manually — FIR Intelligence not yet ingested at time of analysis)
+- Picus Red Report 2026 (March 2026)
+- FIR Risk Tuesday E81-E83
