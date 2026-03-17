@@ -1,10 +1,10 @@
-# FIR Risk INTEL-8 — A New Risk Has Entered the Top 5
+# FIR Risk INTEL-7 — A New Risk Has Entered the Top 5
 
 **Type:** `TREND`
 **Date:** March 19, 2026
 **Platform Source:** Picus Red Report 2026 | Unit 42 | Cloudflare | CrowdStrike
 
-![FIR Risk INTEL-8 - Risk Profile Inversion](images/intel-8-risk-profile-inversion.png)
+![FIR Risk INTEL-7 - Risk Profile Inversion](images/intel-7-risk-profile-inversion.png)
 
 ---
 
@@ -64,7 +64,7 @@ The new top-tier risk: undetected long-term access and silent data exfiltration.
 This isn't about removing ransomware from the register. It's about whether you've added the risk that four independent research teams say has become more prevalent, harder to detect, and potentially more damaging.
 Most IR plans optimize for containment and recovery. Tabletop exercises simulate encryption events. Insurance covers business interruption. All still necessary. But the threat that appears twice as often as encryption doesn't trigger any of those controls. There's no alert. No ransom note. No business interruption. The adversary is inside.
 One action: add "undetected persistent access" as a top-tier risk alongside ransomware. If your register doesn't reflect this, it doesn't match the 2026 threat landscape.
-FIR Risk INTEL-8 — full analysis linked below.
+FIR Risk INTEL-7 — full analysis linked below.
 #cybersecurity #riskmanagement #CISO #threatintelligence #enterpriserisk #infosec #ransomware #identitysecurity #fraudprevention
 ```
 
@@ -86,7 +86,7 @@ Most IR plans, tabletops, and insurance are built for disruption. The dominant t
 
 One action: add "undetected persistent access" as a top-tier risk alongside ransomware.
 
-INTEL-8 — linked below.
+INTEL-7 — linked below.
 
 #cybersecurity #threatintelligence
 
