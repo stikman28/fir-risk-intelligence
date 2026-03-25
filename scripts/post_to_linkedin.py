@@ -230,9 +230,13 @@ def extract_image_path(filepath: str) -> str:
 
     match = re.search(r"!\[.*?\]\((images/.+?\.png)\)", content)
     if not match:
-        raise ValueError(f"No image reference found in {filepath}")
+        return None
 
-    return os.path.join(content_dir, match.group(1))
+    image_path = os.path.join(content_dir, match.group(1))
+    if not os.path.exists(image_path):
+        print(f"Image referenced but not found: {image_path}")
+        return None
+    return image_path
 
 
 def detect_content_ref(filepath: str) -> str:
@@ -240,13 +244,14 @@ def detect_content_ref(filepath: str) -> str:
     with open(filepath) as f:
         content = f.read()
 
-    m = re.search(r"\bE(\d{2,3})\b", content)
-    if m:
-        return f"E{m.group(1)}"
-
+    # Check INTEL first — INTEL files reference E## in Learn More section
     m = re.search(r"\bINTEL-(\d+)\b", content)
     if m:
         return f"INTEL-{m.group(1)}"
+
+    m = re.search(r"\bE(\d{2,3})\b", content)
+    if m:
+        return f"E{m.group(1)}"
 
     return os.path.basename(filepath).replace(".md", "")
 

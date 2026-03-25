@@ -158,9 +158,13 @@ def extract_image_path(filepath: str) -> str:
 
     match = re.search(r"!\[.*?\]\((images/.+?\.png)\)", content)
     if not match:
-        raise ValueError(f"No image reference found in {filepath}")
+        return None
 
-    return os.path.join(newsletter_dir, match.group(1))
+    image_path = os.path.join(newsletter_dir, match.group(1))
+    if not os.path.exists(image_path):
+        print(f"Image referenced but not found: {image_path}")
+        return None
+    return image_path
 
 
 def upload_image(image_path: str, auth: OAuth1) -> str:
