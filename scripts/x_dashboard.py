@@ -87,13 +87,20 @@ if not os.path.exists(DB_PATH):
 conn = get_conn()
 
 # --- Header ---
-st.title("FIR Risk Intelligence")
-st.markdown(
-    '<p class="header-sub">Content publishing + social engagement &nbsp;|&nbsp; '
-    '<a href="https://firrisk.ai" target="_blank">firrisk.ai</a> &nbsp;|&nbsp; '
-    '<a href="https://x.com/stikman28" target="_blank">@stikman28</a></p>',
-    unsafe_allow_html=True
-)
+BRAND_IMG = os.path.join(REPO_ROOT, "brand", "fir-risk-watercolor.jpg")
+
+hdr_col1, hdr_col2 = st.columns([3, 1])
+with hdr_col1:
+    st.title("FIR Risk Intelligence")
+    st.markdown(
+        '<p class="header-sub">Content publishing + social engagement &nbsp;|&nbsp; '
+        '<a href="https://firrisk.ai" target="_blank">firrisk.ai</a> &nbsp;|&nbsp; '
+        '<a href="https://x.com/stikman28" target="_blank">@stikman28</a></p>',
+        unsafe_allow_html=True
+    )
+with hdr_col2:
+    if os.path.exists(BRAND_IMG):
+        st.image(BRAND_IMG, width=250)
 
 # --- Tabs ---
 tab_overview, tab_content, tab_social = st.tabs(["Overview", "Content", "Social"])
