@@ -1,7 +1,7 @@
 # FIR Risk INTEL-7 — A New Risk Has Entered the Top 5
 
 **Type:** `TREND`
-**Date:** March 19, 2026
+**Date:** March 26, 2026
 **Platform Source:** Picus Red Report 2026 | Unit 42 | Cloudflare | CrowdStrike
 
 ![FIR Risk INTEL-7 - Risk Profile Inversion](images/intel-7-risk-profile-inversion.png)
