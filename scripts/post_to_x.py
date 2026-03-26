@@ -88,29 +88,29 @@ def extract_x_hook(filepath: str) -> str:
 
 
 def extract_slug(filepath: str) -> str:
-    """Extract the URL slug from the newsletter filename.
-    Uses filename (not title) because Hugo slugs match filenames exactly.
-    E.g., 2026-03-24-m-trends-2026.md → checks for matching Hugo file e85-*."""
+    """Extract the URL slug from the newsletter/INTEL filename.
+    Checks the website repo for the matching Hugo page."""
     with open(filepath, "r") as f:
-        content = f.read()
+        content = f.read(3000)
 
-    # Find the edition number from content
-    match = re.search(r"# FIR Risk (?:Tuesday )?(E\d+)", content)
-    edition = match.group(1).lower() if match else None
+    # Check INTEL first (INTEL files reference E## in body)
+    intel_match = re.search(r"# FIR Risk INTEL-(\d+)", content)
+    if intel_match:
+        intel_num = intel_match.group(1)
+        intel_dir = "/Users/stikman/Projects/ai-assistant/fir-risk-website/content/intel"
+        if os.path.isdir(intel_dir):
+            for fname in os.listdir(intel_dir):
+                if fname.startswith(f"intel-{intel_num}-") and fname.endswith(".md"):
+                    return fname.replace(".md", "")
 
-    if edition:
-        # Look for the matching Hugo file in the website repo
+    # Then check newsletter E##
+    edition_match = re.search(r"# FIR Risk (?:Tuesday )?(E\d+)", content)
+    if edition_match:
+        edition = edition_match.group(1).lower()
         website_dir = "/Users/stikman/Projects/ai-assistant/fir-risk-website/content/tuesday"
         if os.path.isdir(website_dir):
             for fname in os.listdir(website_dir):
                 if fname.startswith(edition + "-") and fname.endswith(".md"):
-                    return fname.replace(".md", "")
-
-        # Look for INTEL
-        intel_dir = "/Users/stikman/Projects/ai-assistant/fir-risk-website/content/intel"
-        if os.path.isdir(intel_dir):
-            for fname in os.listdir(intel_dir):
-                if fname.startswith(edition.replace("e", "intel-")) and fname.endswith(".md"):
                     return fname.replace(".md", "")
 
     # Fallback: use source filename
@@ -123,8 +123,11 @@ def build_reply_url(filepath: str) -> str:
     """Build the firrisk.ai URL for the reply post."""
     slug = extract_slug(filepath)
 
-    # Determine if Tuesday or INTEL
-    if "/intel/" in filepath or "intel-" in os.path.basename(filepath).lower():
+    # Determine if Tuesday or INTEL — check slug, filepath, and filename
+    is_intel = (slug.startswith("intel-")
+                or "/intel/" in filepath
+                or filepath.startswith("intel/"))
+    if is_intel:
         return f"https://firrisk.ai/intel/{slug}/"
     else:
         return f"https://firrisk.ai/tuesday/{slug}/"
@@ -212,6 +215,8 @@ def main():
     parser.add_argument("--no-image", action="store_true", help="Post without image")
     parser.add_argument("--hook", action="store_true",
                         help="Post a short hook + reply with firrisk.ai link (for X Article promotion)")
+    parser.add_argument("--no-reply", action="store_true",
+                        help="Skip the auto-reply with firrisk.ai link")
     parser.add_argument("--schedule", type=int, metavar="MINUTES",
                         help="Schedule post to go out in N minutes")
     args = parser.parse_args()
@@ -271,12 +276,15 @@ def main():
             print(f"Image: {image_path}")
 
         if args.dry_run:
+            reply_url = build_reply_url(args.file)
             print(f"\n{'='*50}")
             print("DRY RUN — Post preview")
             print(f"{'='*50}\n")
             if image_path:
                 print(f"[IMAGE: {image_path}]\n")
             print(x_post_text)
+            if not args.no_reply:
+                print(f"\n[REPLY] Full analysis: {reply_url}")
             print(f"\n{'='*50}")
             print(f"{len(x_post_text)} characters")
             if args.schedule:
@@ -299,6 +307,16 @@ def main():
         data = post_to_x(x_post_text, auth, media_id)
         tweet_id = data["id"]
         print(f"Posted! https://x.com/stikman28/status/{tweet_id}")
+
+        # Auto-reply with firrisk.ai link
+        if not args.no_reply:
+            reply_url = build_reply_url(args.file)
+            reply_text = f"Full analysis: {reply_url}"
+            try:
+                reply_data = post_reply(reply_text, tweet_id, auth)
+                print(f"Reply posted! https://x.com/stikman28/status/{reply_data['id']}")
+            except Exception as e:
+                print(f"Reply failed (post succeeded): {e}")
 
 
 if __name__ == "__main__":

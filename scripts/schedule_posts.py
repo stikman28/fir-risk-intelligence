@@ -2,33 +2,37 @@
 """
 FIR Risk Social Scheduler — Queue posts across LinkedIn and X.
 
-Schedule multiple posts with delays between them. Posts execute sequentially,
-each waiting its specified delay from the previous post.
+Uses wall-clock time (not sleep) so posts fire correctly even if the
+Mac sleeps. Checks the DB before posting to prevent duplicates if a
+post was already sent manually.
 
 Usage:
-    # Schedule from a YAML/JSON queue file:
+    # Schedule for a specific time (today or tomorrow):
+    python3 schedule_posts.py --linkedin file.md --x file.md --at 07:00
+
+    # Schedule with delay from now:
+    python3 schedule_posts.py --linkedin file.md --x file.md --x-delay 5
+
+    # Post immediately:
+    python3 schedule_posts.py --linkedin file.md --x file.md
+
+    # From a JSON queue file with absolute times:
     python3 schedule_posts.py queue.json
 
-    # Quick schedule: LinkedIn now + X in 60 min from same file:
-    python3 schedule_posts.py --linkedin newsletters/2026-03-13-slug.md --x newsletters/2026-03-13-slug.md --x-delay 60
-
-    # Ad-hoc text post to LinkedIn in 30 min:
-    python3 schedule_posts.py --linkedin-text "Your hook post here" --linkedin-image path/to/image.png --delay 30
-
-    # Dry run — show what would post and when:
-    python3 schedule_posts.py queue.json --dry-run
+    # Dry run:
+    python3 schedule_posts.py --linkedin file.md --at 07:00 --dry-run
 
 Queue file format (JSON):
 [
-    {"platform": "linkedin", "file": "newsletters/2026-03-13-slug.md", "delay_min": 0},
-    {"platform": "x", "file": "newsletters/2026-03-13-slug.md", "delay_min": 60},
-    {"platform": "linkedin", "text": "Hook post text...", "image": "path/to/img.png", "delay_min": 120}
+    {"platform": "linkedin", "file": "intel/2026-03-26-slug.md", "at": "2026-03-27 07:00"},
+    {"platform": "x", "file": "intel/2026-03-26-slug.md", "at": "2026-03-27 07:05"}
 ]
 """
 
 import argparse
 import json
 import os
+import sqlite3
 import subprocess
 import sys
 import time
@@ -36,6 +40,66 @@ from datetime import datetime, timedelta
 
 SCRIPTS_DIR = os.path.dirname(os.path.abspath(__file__))
 PYTHON = sys.executable
+DB_PATH = os.path.join(SCRIPTS_DIR, "..", "data", "x_platform.db")
+
+
+def is_already_posted(platform, content_ref):
+    """Check if this content was already posted to this platform."""
+    if not os.path.exists(DB_PATH):
+        return False
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.row_factory = sqlite3.Row
+        if platform == "x":
+            row = conn.execute(
+                "SELECT x_posted FROM content_status WHERE content_ref = ?",
+                (content_ref,)
+            ).fetchone()
+            conn.close()
+            return row and row["x_posted"] == 1
+        elif platform == "linkedin":
+            row = conn.execute(
+                "SELECT linkedin_posted FROM content_status WHERE content_ref = ?",
+                (content_ref,)
+            ).fetchone()
+            conn.close()
+            return row and row["linkedin_posted"] == 1
+    except Exception:
+        pass
+    return False
+
+
+def detect_content_ref(filepath):
+    """Detect INTEL-# or E## from file content."""
+    try:
+        with open(filepath) as f:
+            content = f.read(2000)
+        import re
+        m = re.search(r"\bINTEL-(\d+)\b", content)
+        if m:
+            return f"INTEL-{m.group(1)}"
+        m = re.search(r"\bE(\d{2,3})\b", content)
+        if m:
+            return f"E{m.group(1)}"
+    except Exception:
+        pass
+    return os.path.basename(filepath).replace(".md", "")
+
+
+def update_scheduled_status(platform, content_ref, status, result=None):
+    """Update scheduled_posts table with outcome."""
+    if not os.path.exists(DB_PATH):
+        return
+    try:
+        conn = sqlite3.connect(DB_PATH)
+        conn.execute("""
+            UPDATE scheduled_posts SET status = ?, result = ?
+            WHERE platform = ? AND content_ref = ? AND status = 'pending'
+        """, (status, result, platform, content_ref))
+        conn.commit()
+        conn.close()
+    except Exception:
+        pass
 
 
 def run_post(platform, file=None, text=None, image=None, no_comment=False, dry_run=False):
@@ -46,7 +110,6 @@ def run_post(platform, file=None, text=None, image=None, no_comment=False, dry_r
             if no_comment:
                 cmd.append("--no-comment")
         elif text:
-            # Ad-hoc text post — use the LinkedIn API directly
             cmd = [PYTHON, "-c", _adhoc_linkedin_script(text, image)]
         else:
             print("  ERROR: LinkedIn post needs --file or --text")
@@ -104,44 +167,62 @@ else:
 """
 
 
+def wait_until(target_time, check_interval=30):
+    """
+    Wait until target_time using wall-clock checks.
+    Survives Mac sleep — checks actual time every interval.
+    Returns True if time reached, False if interrupted.
+    """
+    while datetime.now() < target_time:
+        remaining = (target_time - datetime.now()).total_seconds()
+        # Sleep for min of check_interval or remaining time
+        sleep_time = min(check_interval, max(remaining, 1))
+        time.sleep(sleep_time)
+    return True
+
+
 def run_queue(queue, dry_run=False):
-    """Execute a queue of scheduled posts."""
+    """Execute a queue of scheduled posts with wall-clock timing."""
     print(f"\n{'=' * 60}")
     print(f"FIR Risk Social Scheduler — {len(queue)} posts queued")
     print(f"{'=' * 60}\n")
 
-    now = datetime.now()
-    cumulative_delay = 0
-
+    # Show schedule
     for i, item in enumerate(queue, 1):
-        delay = item.get("delay_min", 0)
         platform = item["platform"]
-        post_time = now + timedelta(minutes=cumulative_delay + delay)
-
-        print(f"[{i}/{len(queue)}] {platform.upper()} — ", end="")
-        if item.get("file"):
-            print(f"{os.path.basename(item['file'])}", end="")
-        elif item.get("text"):
-            print(f"\"{item['text'][:50]}...\"", end="")
-        print(f" — {'NOW' if delay == 0 and cumulative_delay == 0 else f'{post_time:%I:%M %p}'}")
-
-        cumulative_delay += delay
+        target = item.get("_target_time", datetime.now())
+        label = os.path.basename(item['file']) if item.get('file') else (item.get('text', '')[:40] + '...')
+        is_now = target <= datetime.now()
+        print(f"[{i}/{len(queue)}] {platform.upper():>2} — {label} — {'NOW' if is_now else f'{target:%I:%M %p}'}")
 
     if dry_run:
         print(f"\n(Dry run — no posts will be sent)\n")
 
     print(f"\nStarting at {datetime.now():%I:%M:%S %p}...\n")
 
-    cumulative_delay = 0
     for i, item in enumerate(queue, 1):
-        delay = item.get("delay_min", 0)
         platform = item["platform"]
+        target = item.get("_target_time", datetime.now())
+        content_ref = item.get("_content_ref", "")
 
-        if delay > 0:
-            target = datetime.now() + timedelta(minutes=delay)
-            print(f"\n  Waiting {delay} min (until {target:%I:%M %p})...")
+        # Check if already posted (manual post or previous run)
+        if content_ref and is_already_posted(platform, content_ref):
+            print(f"\n[{datetime.now():%H:%M:%S}] Skipping {i}/{len(queue)}: {platform.upper()} {content_ref} — already posted")
+            update_scheduled_status(platform, content_ref, "skipped", "Already posted")
+            continue
+
+        # Wait for target time (wall-clock, survives sleep)
+        if target > datetime.now():
+            remaining = (target - datetime.now()).total_seconds() / 60
+            print(f"\n  Waiting until {target:%I:%M %p} ({remaining:.0f} min)...")
             if not dry_run:
-                time.sleep(delay * 60)
+                wait_until(target)
+
+                # Re-check after waking — might have been posted manually
+                if content_ref and is_already_posted(platform, content_ref):
+                    print(f"  Skipping — {content_ref} was posted manually while waiting")
+                    update_scheduled_status(platform, content_ref, "skipped", "Posted manually")
+                    continue
 
         print(f"\n[{datetime.now():%H:%M:%S}] Posting {i}/{len(queue)}: {platform.upper()}")
         success = run_post(
@@ -155,10 +236,33 @@ def run_queue(queue, dry_run=False):
 
         status = "OK" if success else "FAILED"
         print(f"  [{status}]")
+        if content_ref:
+            update_scheduled_status(platform, content_ref,
+                                    "completed" if success else "failed",
+                                    f"Posted at {datetime.now():%Y-%m-%d %H:%M}")
 
     print(f"\n{'=' * 60}")
     print(f"Queue complete! {datetime.now():%I:%M:%S %p}")
     print(f"{'=' * 60}")
+
+
+def parse_at_time(at_str):
+    """Parse --at time string into a datetime. If time has passed today, schedule for tomorrow."""
+    try:
+        target = datetime.strptime(at_str, "%H:%M").replace(
+            year=datetime.now().year,
+            month=datetime.now().month,
+            day=datetime.now().day,
+        )
+        if target <= datetime.now():
+            target += timedelta(days=1)
+        return target
+    except ValueError:
+        # Try full datetime format
+        try:
+            return datetime.strptime(at_str, "%Y-%m-%d %H:%M")
+        except ValueError:
+            raise argparse.ArgumentTypeError(f"Invalid time format: {at_str}. Use HH:MM or YYYY-MM-DD HH:MM")
 
 
 def main():
@@ -172,11 +276,11 @@ def main():
     parser.add_argument("--linkedin", metavar="FILE", help="LinkedIn post from markdown file")
     parser.add_argument("--linkedin-text", metavar="TEXT", help="Ad-hoc LinkedIn text post")
     parser.add_argument("--linkedin-image", metavar="IMG", help="Image for ad-hoc LinkedIn post")
-    parser.add_argument("--linkedin-delay", type=int, default=0, metavar="MIN",
-                        help="Delay LinkedIn post by N minutes (default: 0)")
     parser.add_argument("--x", metavar="FILE", help="X post from markdown file")
-    parser.add_argument("--x-delay", type=int, default=0, metavar="MIN",
-                        help="Delay X post by N minutes (default: 0)")
+    parser.add_argument("--x-delay", type=int, default=5, metavar="MIN",
+                        help="Delay X post after LinkedIn (default: 5 min)")
+    parser.add_argument("--at", metavar="TIME",
+                        help="Schedule for specific time: HH:MM (today/tomorrow) or YYYY-MM-DD HH:MM")
     parser.add_argument("--no-comment", action="store_true",
                         help="Skip LinkedIn link comment")
 
@@ -187,31 +291,50 @@ def main():
 
     if args.queue_file:
         with open(args.queue_file) as f:
-            queue = json.load(f)
+            raw_queue = json.load(f)
+        for item in raw_queue:
+            if item.get("at"):
+                item["_target_time"] = datetime.strptime(item["at"], "%Y-%m-%d %H:%M")
+            else:
+                item["_target_time"] = datetime.now()
+            if item.get("file"):
+                item["_content_ref"] = detect_content_ref(item["file"])
+            queue.append(item)
     else:
+        base_time = parse_at_time(args.at) if args.at else datetime.now()
+
         if args.linkedin:
+            content_ref = detect_content_ref(args.linkedin)
             queue.append({
                 "platform": "linkedin",
                 "file": args.linkedin,
-                "delay_min": args.linkedin_delay,
                 "no_comment": args.no_comment,
+                "_target_time": base_time,
+                "_content_ref": content_ref,
             })
         if args.linkedin_text:
             queue.append({
                 "platform": "linkedin",
                 "text": args.linkedin_text,
                 "image": args.linkedin_image,
-                "delay_min": args.linkedin_delay if not args.linkedin else 0,
+                "_target_time": base_time,
+                "_content_ref": "",
             })
         if args.x:
+            content_ref = detect_content_ref(args.x)
+            x_time = base_time + timedelta(minutes=args.x_delay) if args.at else datetime.now()
             queue.append({
                 "platform": "x",
                 "file": args.x,
-                "delay_min": args.x_delay,
+                "_target_time": x_time,
+                "_content_ref": content_ref,
             })
 
     if not queue:
         parser.error("Provide a queue file or use --linkedin/--x flags")
+
+    # Sort by target time
+    queue.sort(key=lambda x: x.get("_target_time", datetime.now()))
 
     run_queue(queue, args.dry_run)
 
