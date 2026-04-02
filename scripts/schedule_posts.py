@@ -128,9 +128,38 @@ def run_post(platform, file=None, text=None, image=None, no_comment=False, dry_r
     if dry_run:
         cmd.append("--dry-run")
 
-    print(f"  Running: {' '.join(cmd[-3:])}")
-    result = subprocess.run(cmd, cwd=os.path.join(SCRIPTS_DIR, ".."))
-    return result.returncode == 0
+    max_retries = 5
+    retry_delay = 30  # seconds between retries
+    for attempt in range(1, max_retries + 1):
+        print(f"  Running: {' '.join(cmd[-3:])}" + (f" (attempt {attempt}/{max_retries})" if attempt > 1 else ""))
+        result = subprocess.run(cmd, cwd=os.path.join(SCRIPTS_DIR, ".."), capture_output=True, text=True)
+        if result.returncode == 0:
+            if result.stdout:
+                print(result.stdout.rstrip())
+            return True
+        # Check if it's a network error worth retrying
+        stderr = result.stderr or ""
+        stdout = result.stdout or ""
+        output = stderr + stdout
+        is_network_error = any(kw in output for kw in [
+            "ConnectionError", "NameResolutionError", "nodename nor servname",
+            "Network is unreachable", "Temporary failure in name resolution",
+            "Max retries exceeded", "ConnectionRefusedError", "TimeoutError",
+        ])
+        if is_network_error and attempt < max_retries:
+            print(f"  Network error — retrying in {retry_delay}s...")
+            time.sleep(retry_delay)
+            continue
+        else:
+            # Non-network error or final attempt — print output and fail
+            if result.stdout:
+                print(result.stdout.rstrip())
+            if result.stderr:
+                print(result.stderr.rstrip())
+            if is_network_error:
+                print(f"  FAILED after {max_retries} retries — network still unavailable")
+            return False
+    return False
 
 
 def _adhoc_linkedin_script(text, image_path=None):
