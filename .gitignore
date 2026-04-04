@@ -28,3 +28,4 @@ venv/
 
 # Claude (internal workflow)
 CLAUDE.md
+logs/

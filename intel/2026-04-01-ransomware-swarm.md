@@ -1,4 +1,4 @@
-# FIR Risk INTEL — The Ransomware Swarm
+# FIR Risk INTEL-10 — The Ransomware Swarm
 
 **Type:** `TREND`
 **Date:** April 1, 2026

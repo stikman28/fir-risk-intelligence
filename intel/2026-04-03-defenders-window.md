@@ -1,4 +1,4 @@
-# FIR Risk INTEL — The Defender's Window
+# FIR Risk INTEL-12 — The Defender's Window
 
 **Type:** `TREND`
 **Date:** April 3, 2026
