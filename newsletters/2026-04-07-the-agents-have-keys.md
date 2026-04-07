@@ -1,7 +1,7 @@
 # FIR Risk Tuesday E87
 
 **Publish Date:** April 7, 2026
-**Source:** [Anthropic 2026 Agentic Coding Trends Report](https://www.anthropic.com/research/agentic-coding-trends-2026) & [Anthropic 2026 State of AI Agents Report](https://www.anthropic.com/research/state-of-ai-agents-2026) (2026)
+**Source:** [Anthropic 2026 Agentic Coding Trends Report](https://resources.anthropic.com/2026-agentic-coding-trends-report) & Anthropic 2026 State of AI Agents Report (2026)
 **Analysis:** FIR Risk Platform
 
 ---
@@ -212,8 +212,8 @@ If the answer is uncomfortable, here's where to focus:
 
 ## Learn More
 
-- [Anthropic 2026 Agentic Coding Trends Report](https://www.anthropic.com/research/agentic-coding-trends-2026) — Primary source
-- [Anthropic 2026 State of AI Agents Report](https://www.anthropic.com/research/state-of-ai-agents-2026) — Primary source
+- [Anthropic 2026 Agentic Coding Trends Report](https://resources.anthropic.com/2026-agentic-coding-trends-report) — Primary source
+- Anthropic 2026 State of AI Agents Report — Primary source (available from Anthropic)
 - [FIR Risk Tuesday E86 — Castles on Quicksand](/tuesday/e86-castles-on-quicksand/) — IBM X-Force + Red Canary convergence
 - [FIR Risk Tuesday E85 — The Responder's Report](/tuesday/e85-responders-report/) — Mandiant M-Trends 2026
 - [FIR Risk Tuesday E84 — The Digital Parasite](/tuesday/e84-digital-parasite/) — Picus Red Report 2026
@@ -344,7 +344,7 @@ Full E87 — The Agents Have Keys — linked below.
 - CONFIRMED: Trend 8 dual-use quote: "While agents will benefit defensive uses, they will also benefit offensive uses too"
 - CONFIRMED: Collaboration paradox: 60% usage, 0-20% full delegation
 - CONFIRMED: 500+ technical leaders surveyed with Material research firm
-- NOTE: Report URLs are placeholder — actual Anthropic publication URLs should be verified at time of publish
+- NOTE: Agentic Coding report links to resources.anthropic.com landing page (sign-up wall). State of AI Agents report has no public landing page — referenced descriptively only.
 
 **FIR Risk Platform Agent Analysis (supplemental):**
 - Agent query: "What documented incidents, emerging threat patterns, or framework guidance exist for governing autonomous AI agents as privileged machine identities — and where are the biggest blind spots?"
