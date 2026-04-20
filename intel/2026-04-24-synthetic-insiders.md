@@ -57,6 +57,15 @@ Pick one. Make it a documented control, owned jointly by HR and the CISO office,
 
 ---
 
+## Learn More
+
+- [Trend Micro — 2026 Security Predictions: The AI-fication of Cyberthreats](https://www.trendmicro.com/vinfo/us/security/research-and-analysis/predictions/2026) — Primary source
+- [FIR Risk Tuesday E88 — The Trust Audit](/tuesday/e88-the-trust-audit/) — Full dual-report analysis
+- [FIR Risk INTEL-14 — Shadow Agents](/intel/intel-14-shadow-agents/) — Machine identities inside the perimeter
+- [FIR Risk INTEL-11 — Identity Crisis](/intel/intel-11-identity-crisis/) — 850% identity attack surge context
+
+---
+
 *Powered by [FIR Risk Platform](https://firrisk.ai/platform/) — AI-driven threat intelligence for enterprise risk leaders.*
 
 ---

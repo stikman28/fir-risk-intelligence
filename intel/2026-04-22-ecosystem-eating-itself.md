@@ -48,6 +48,15 @@ Schedule a tabletop this quarter that simulates a modern extortion demand — on
 
 ---
 
+## Learn More
+
+- [Intel 471 — 2026 Cyber Threat Trends & Outlook Report](https://intel471.com/resources/reports/2026-cyber-threat-trends-outlook-report) — Primary source
+- [FIR Risk Tuesday E88 — The Trust Audit](/tuesday/e88-the-trust-audit/) — Full dual-report analysis
+- [FIR Risk INTEL-13 — Every Wall Has a Door](/intel/intel-13-every-wall-has-a-door/) — Structural shifts in the attack model
+- [FIR Risk INTEL-10 — The Ransomware Swarm](/intel/intel-10-ransomware-swarm/) — 109 groups, commodity toolkits
+
+---
+
 *Powered by [FIR Risk Platform](https://firrisk.ai/platform/) — AI-driven threat intelligence for enterprise risk leaders.*
 
 ---
