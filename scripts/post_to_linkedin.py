@@ -49,13 +49,18 @@ LI_VERSION = "202503"
 
 
 def get_keychain_secret(service: str) -> str:
-    """Retrieve a secret from macOS Keychain."""
+    """Retrieve a secret. Prefers env var (for CI); falls back to macOS Keychain."""
+    env_value = os.environ.get(service)
+    if env_value:
+        return env_value.strip()
     result = subprocess.run(
         ["security", "find-generic-password", "-a", KEYCHAIN_ACCOUNT, "-s", service, "-w"],
         capture_output=True, text=True
     )
     if result.returncode != 0:
-        raise RuntimeError(f"Key '{service}' not in Keychain. Run --setup first.")
+        raise RuntimeError(
+            f"'{service}' not found. Set env var or add to Keychain (run --setup)."
+        )
     return result.stdout.strip()
 
 

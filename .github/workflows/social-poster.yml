@@ -1,0 +1,71 @@
+name: Social Poster
+
+# Every 15 minutes checks scripts/*-queue.json for due items and posts them.
+# GitHub cron is best-effort — expect 5–30 min drift. Queue times are ET.
+#
+# Secrets required (see scripts/GITHUB_ACTIONS_SETUP.md):
+#   X_PUBLISH_CONSUMER_KEY, X_PUBLISH_CONSUMER_SECRET,
+#   X_PUBLISH_ACCESS_TOKEN, X_PUBLISH_ACCESS_TOKEN_SECRET,
+#   LINKEDIN_ACCESS_TOKEN, LINKEDIN_PERSON_ID
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (preview only, no posts)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: social-poster
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install --quiet requests requests-oauthlib
+
+      - name: Run queue
+        env:
+          X_PUBLISH_CONSUMER_KEY: ${{ secrets.X_PUBLISH_CONSUMER_KEY }}
+          X_PUBLISH_CONSUMER_SECRET: ${{ secrets.X_PUBLISH_CONSUMER_SECRET }}
+          X_PUBLISH_ACCESS_TOKEN: ${{ secrets.X_PUBLISH_ACCESS_TOKEN }}
+          X_PUBLISH_ACCESS_TOKEN_SECRET: ${{ secrets.X_PUBLISH_ACCESS_TOKEN_SECRET }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python3 scripts/run_queue.py --dry-run
+          else
+            python3 scripts/run_queue.py
+          fi
+
+      - name: Commit queue state changes
+        if: inputs.dry_run != true
+        run: |
+          if [ -n "$(git status --porcelain scripts/*-queue.json)" ]; then
+            git config user.name "fir-risk-scheduler"
+            git config user.email "noreply@firrisk.ai"
+            git add scripts/*-queue.json
+            git commit -m "ops: social-poster state update [skip ci]"
+            git push
+          else
+            echo "No queue state changes to commit."
+          fi

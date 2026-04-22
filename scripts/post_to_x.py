@@ -28,24 +28,30 @@ import requests
 from requests_oauthlib import OAuth1
 
 
-def get_keychain_secret(service: str, account: str = "stikman28") -> str:
-    """Retrieve a secret from macOS Keychain."""
+def get_secret(service: str, account: str = "stikman28") -> str:
+    """Retrieve a secret. Prefers env var (for CI); falls back to macOS Keychain."""
+    env_value = os.environ.get(service)
+    if env_value:
+        return env_value.strip()
     result = subprocess.run(
         ["security", "find-generic-password", "-a", account, "-s", service, "-w"],
         capture_output=True, text=True
     )
     if result.returncode != 0:
-        raise RuntimeError(f"Failed to retrieve '{service}' from Keychain: {result.stderr.strip()}")
+        raise RuntimeError(
+            f"'{service}' not found. Set env var or add to Keychain. "
+            f"Keychain error: {result.stderr.strip()}"
+        )
     return result.stdout.strip()
 
 
 def get_auth() -> OAuth1:
-    """Create OAuth1 auth using Keychain credentials (fir-risk-publisher app)."""
+    """Create OAuth1 auth from env vars or Keychain (fir-risk-publisher app)."""
     return OAuth1(
-        get_keychain_secret("X_PUBLISH_CONSUMER_KEY"),
-        get_keychain_secret("X_PUBLISH_CONSUMER_SECRET"),
-        get_keychain_secret("X_PUBLISH_ACCESS_TOKEN"),
-        get_keychain_secret("X_PUBLISH_ACCESS_TOKEN_SECRET"),
+        get_secret("X_PUBLISH_CONSUMER_KEY"),
+        get_secret("X_PUBLISH_CONSUMER_SECRET"),
+        get_secret("X_PUBLISH_ACCESS_TOKEN"),
+        get_secret("X_PUBLISH_ACCESS_TOKEN_SECRET"),
     )
 
 
