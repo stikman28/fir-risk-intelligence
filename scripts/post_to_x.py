@@ -21,11 +21,16 @@ import argparse
 import os
 import re
 import subprocess
+import sys
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 import requests
 from requests_oauthlib import OAuth1
+
+
+FINGERPRINT_LEN = 80
+DUPLICATE_WINDOW_HOURS = 48
 
 
 def get_secret(service: str, account: str = "stikman28") -> str:
@@ -195,6 +200,47 @@ def upload_image(image_path: str, auth: OAuth1) -> str:
         raise RuntimeError(f"Image upload failed {response.status_code}: {response.text}")
 
 
+def _fingerprint(text: str) -> str:
+    """First N chars of the text, whitespace-normalized. Used to spot duplicates."""
+    normalized = re.sub(r"\s+", " ", text).strip()
+    return normalized[:FINGERPRINT_LEN]
+
+
+def check_recent_duplicate(text: str, auth: OAuth1) -> str | None:
+    """Return post_id if a tweet matching `text` was posted in the last window.
+
+    Uses fingerprint match on first 80 chars (whitespace-normalized). Best-effort —
+    API errors are swallowed so we don't block posting if X's read endpoint is down.
+    """
+    fp = _fingerprint(text)
+    if not fp:
+        return None
+
+    try:
+        me = requests.get("https://api.x.com/2/users/me", auth=auth, timeout=10)
+        me.raise_for_status()
+        user_id = me.json()["data"]["id"]
+
+        start = (datetime.now(timezone.utc) - timedelta(hours=DUPLICATE_WINDOW_HOURS)).strftime(
+            "%Y-%m-%dT%H:%M:%SZ"
+        )
+        resp = requests.get(
+            f"https://api.x.com/2/users/{user_id}/tweets",
+            auth=auth,
+            params={"max_results": 20, "start_time": start},
+            timeout=10,
+        )
+        resp.raise_for_status()
+
+        for tweet in resp.json().get("data", []):
+            if _fingerprint(tweet.get("text", "")) == fp:
+                return tweet["id"]
+    except Exception as e:
+        print(f"  (idempotency check skipped: {e})", file=sys.stderr)
+
+    return None
+
+
 def post_to_x(text: str, auth: OAuth1, media_id: str = None) -> dict:
     """Post text (with optional image) to X via API v2. Returns response data."""
     payload = {"text": text}
@@ -225,6 +271,8 @@ def main():
                         help="Skip the auto-reply with firrisk.ai link")
     parser.add_argument("--schedule", type=int, metavar="MINUTES",
                         help="Schedule post to go out in N minutes")
+    parser.add_argument("--force", action="store_true",
+                        help="Skip duplicate-check against recent posts (use to re-post identical content)")
     args = parser.parse_args()
 
     print(f"Reading: {args.file}")
@@ -261,6 +309,14 @@ def main():
             print(f"[{datetime.now():%H:%M:%S}] Executing scheduled post...")
 
         auth = get_auth()
+
+        if not args.force:
+            dup_id = check_recent_duplicate(hook_text, auth)
+            if dup_id:
+                print(f"Already posted (last {DUPLICATE_WINDOW_HOURS}h): "
+                      f"https://x.com/stikman28/status/{dup_id}")
+                print("Skipping repost. Use --force to override.")
+                return
 
         print("Posting hook...")
         hook_data = post_to_x(hook_text, auth)
@@ -306,6 +362,15 @@ def main():
             print(f"[{datetime.now():%H:%M:%S}] Executing scheduled post...")
 
         auth = get_auth()
+
+        if not args.force:
+            dup_id = check_recent_duplicate(x_post_text, auth)
+            if dup_id:
+                print(f"Already posted (last {DUPLICATE_WINDOW_HOURS}h): "
+                      f"https://x.com/stikman28/status/{dup_id}")
+                print("Skipping repost. Use --force to override.")
+                return
+
         media_id = None
         if image_path:
             media_id = upload_image(image_path, auth)

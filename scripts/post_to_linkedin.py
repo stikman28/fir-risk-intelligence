@@ -25,6 +25,7 @@ import json
 import os
 import re
 import subprocess
+import sys
 import threading
 import time
 import urllib.parse
@@ -32,6 +33,10 @@ import webbrowser
 from datetime import datetime, timedelta
 
 import requests
+
+
+FINGERPRINT_LEN = 80
+DUPLICATE_WINDOW_HOURS = 48
 
 
 # --- Keychain helpers ---
@@ -280,6 +285,57 @@ def build_firrisk_url(filepath: str, content_ref: str) -> str:
 
 # --- LinkedIn API ---
 
+def _fingerprint(text: str) -> str:
+    """First N chars of the text, whitespace-normalized. Used to spot duplicates."""
+    normalized = re.sub(r"\s+", " ", text).strip()
+    return normalized[:FINGERPRINT_LEN]
+
+
+def check_recent_duplicate(text: str, access_token: str, person_id: str) -> str | None:
+    """Return post URN if a LinkedIn post matching `text` was published in the last window.
+
+    Best-effort. If the token lacks read scope (common for write-only OAuth apps),
+    returns None and posting proceeds. The narrow cron + PR-based state flow cap
+    the risk of duplicates without this check; it's defense-in-depth.
+    """
+    fp = _fingerprint(text)
+    if not fp:
+        return None
+
+    try:
+        headers = li_headers(access_token)
+        author = f"urn:li:person:{person_id}"
+        resp = requests.get(
+            f"{LI_API}/posts",
+            headers=headers,
+            params={
+                "q": "author",
+                "author": author,
+                "count": 20,
+                "sortBy": "LAST_MODIFIED",
+            },
+            timeout=10,
+        )
+        if resp.status_code == 403:
+            print("  (idempotency check skipped: token lacks r_member_social scope)",
+                  file=sys.stderr)
+            return None
+        resp.raise_for_status()
+
+        cutoff = (datetime.utcnow() - timedelta(hours=DUPLICATE_WINDOW_HOURS)).timestamp() * 1000
+        for post in resp.json().get("elements", []):
+            created = post.get("createdAt") or post.get("publishedAt") or 0
+            if created < cutoff:
+                continue
+            commentary = post.get("commentary", "")
+            if _fingerprint(commentary) == fp:
+                return post.get("id", "")
+    except Exception as e:
+        print(f"  (idempotency check skipped: {e})", file=sys.stderr)
+
+    return None
+
+
 def upload_image(image_path: str, access_token: str, person_id: str) -> str:
     """Upload image to LinkedIn. Returns image URN."""
     print(f"Uploading image: {image_path}")
@@ -402,10 +458,17 @@ def update_db(content_ref: str):
         print(f"DB updated: {content_ref} linkedin_posted=1")
 
 
-def do_linkedin_post(li_text, image_path, content_ref, firrisk_url, no_comment=False):
+def do_linkedin_post(li_text, image_path, content_ref, firrisk_url, no_comment=False, force=False):
     """Execute the LinkedIn post (image upload + post + comment)."""
     access_token = get_keychain_secret(KEYCHAIN_KEYS["access_token"])
     person_id = get_keychain_secret(KEYCHAIN_KEYS["person_id"])
+
+    if not force:
+        dup_urn = check_recent_duplicate(li_text, access_token, person_id)
+        if dup_urn:
+            print(f"Already posted (last {DUPLICATE_WINDOW_HOURS}h): {dup_urn}")
+            print("Skipping repost. Use --force to override.")
+            return dup_urn
 
     image_urn = None
     if image_path:
@@ -437,6 +500,8 @@ def main():
     parser.add_argument("--no-comment", action="store_true", help="Skip the link comment")
     parser.add_argument("--schedule", type=int, metavar="MINUTES",
                         help="Schedule post to go out in N minutes")
+    parser.add_argument("--force", action="store_true",
+                        help="Skip duplicate-check against recent posts (use to re-post identical content)")
     args = parser.parse_args()
 
     if args.setup:
@@ -482,7 +547,7 @@ def main():
         time.sleep(args.schedule * 60)
         print(f"[{datetime.now():%H:%M:%S}] Executing scheduled post...")
 
-    do_linkedin_post(li_text, image_path, content_ref, firrisk_url, args.no_comment)
+    do_linkedin_post(li_text, image_path, content_ref, firrisk_url, args.no_comment, args.force)
 
 
 if __name__ == "__main__":
