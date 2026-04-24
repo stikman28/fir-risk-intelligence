@@ -27,6 +27,7 @@ concurrency:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   post:
@@ -60,15 +61,32 @@ jobs:
             python3 scripts/run_queue.py
           fi
 
-      - name: Commit queue state changes
+      - name: Commit queue state via PR
         if: inputs.dry_run != true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ -n "$(git status --porcelain scripts/*-queue.json)" ]; then
-            git config user.name "fir-risk-scheduler"
-            git config user.email "noreply@firrisk.ai"
-            git add scripts/*-queue.json
-            git commit -m "ops: social-poster state update [skip ci]"
-            git push
-          else
+          if [ -z "$(git status --porcelain scripts/*-queue.json)" ]; then
             echo "No queue state changes to commit."
+            exit 0
           fi
+
+          BRANCH="scheduler/state-$(date -u +%Y%m%d-%H%M%S)"
+          git config user.name "fir-risk-scheduler"
+          git config user.email "noreply@firrisk.ai"
+          git checkout -b "$BRANCH"
+          git add scripts/*-queue.json
+          git commit -m "ops: social-poster state update [skip ci]"
+          git push -u origin "$BRANCH"
+
+          gh pr create \
+            --base main \
+            --head "$BRANCH" \
+            --title "ops: social-poster state update" \
+            --body "Automated state update from social-poster workflow. Records \`posted_at\` + \`post_id\` for items just posted.
+
+Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+
+          # Immediate squash-merge. If approvals are later required, this fails cleanly
+          # and the PR sits open for human review — duplicates blocked by idempotency check.
+          gh pr merge "$BRANCH" --squash --delete-branch
