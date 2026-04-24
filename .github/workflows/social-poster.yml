@@ -1,6 +1,7 @@
 name: Social Poster
 
-# Every 15 minutes checks scripts/*-queue.json for due items and posts them.
+# Checks scripts/*-queue.json for due items and posts them.
+# Narrow window: runs 2x/day around 07:00 ET (primary + retry).
 # GitHub cron is best-effort — expect 5–30 min drift. Queue times are ET.
 #
 # Secrets required (see scripts/GITHUB_ACTIONS_SETUP.md):
@@ -10,7 +11,9 @@ name: Social Poster
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    # 11:00 UTC = 07:00 ET (EDT) — primary
+    # 12:00 UTC = 07:00 ET (EST) — handles winter + acts as EDT retry slot
+    - cron: "0 11,12 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
