@@ -26,21 +26,33 @@
     {
         "platform": "linkedin",
         "file": "intel/2026-04-23-clickfix-user-as-exploit.md",
-        "at": "2026-04-23 07:00"
+        "at": "2026-04-23 07:00",
+        "posted_at": "2026-04-23T11:26:55+00:00",
+        "post_id": "7453041700186386432",
+        "note": "First of ~40 duplicate posts due to scheduler push-rejection loop (main branch protection). Subsequent duplicates not recorded."
     },
     {
         "platform": "x",
         "file": "intel/2026-04-23-clickfix-user-as-exploit.md",
-        "at": "2026-04-23 07:05"
+        "at": "2026-04-23 07:05",
+        "posted_at": "2026-04-23T11:26:55+00:00",
+        "post_id": "2047276022219878402",
+        "note": "First of ~40 duplicate posts due to scheduler push-rejection loop."
     },
     {
         "platform": "linkedin",
         "file": "intel/2026-04-24-synthetic-insiders.md",
-        "at": "2026-04-24 07:00"
+        "at": "2026-04-24 07:00",
+        "posted_at": "2026-04-24T12:15:22+00:00",
+        "post_id": "7453416280059035648",
+        "note": "First of 2 posts due to scheduler push-rejection loop."
     },
     {
         "platform": "x",
         "file": "intel/2026-04-24-synthetic-insiders.md",
-        "at": "2026-04-24 07:05"
+        "at": "2026-04-24 07:05",
+        "posted_at": "2026-04-24T12:15:22+00:00",
+        "post_id": "2047650603636052475",
+        "note": "First of 2 posts due to scheduler push-rejection loop."
     }
 ]
