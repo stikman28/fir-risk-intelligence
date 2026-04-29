@@ -84,9 +84,7 @@ jobs:
             --base main \
             --head "$BRANCH" \
             --title "ops: social-poster state update" \
-            --body "Automated state update from social-poster workflow. Records \`posted_at\` + \`post_id\` for items just posted.
-
-Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+            --body "Automated state update from social-poster workflow. Records \`posted_at\` + \`post_id\` for items just posted. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
 
           # Immediate squash-merge. If approvals are later required, this fails cleanly
           # and the PR sits open for human review — duplicates blocked by idempotency check.
