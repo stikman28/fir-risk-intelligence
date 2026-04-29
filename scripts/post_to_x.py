@@ -100,11 +100,16 @@ def extract_x_hook(filepath: str) -> str:
 
 def extract_slug(filepath: str) -> str:
     """Extract the URL slug from the newsletter/INTEL filename.
-    Checks the website repo for the matching Hugo page."""
+    Prefers a lookup against the local website repo, but constructs the
+    canonical Hugo slug from the markdown content + filename when the
+    website repo isn't checked out (e.g. on the GitHub Actions runner)."""
     with open(filepath, "r") as f:
         content = f.read(3000)
 
-    # Check INTEL first (INTEL files reference E## in body)
+    basename = os.path.splitext(os.path.basename(filepath))[0]
+    name_slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", basename)
+
+    # INTEL: prefer website-repo lookup; fall back to constructed slug.
     intel_match = re.search(r"# FIR Risk INTEL-(\d+)", content)
     if intel_match:
         intel_num = intel_match.group(1)
@@ -113,8 +118,9 @@ def extract_slug(filepath: str) -> str:
             for fname in os.listdir(intel_dir):
                 if fname.startswith(f"intel-{intel_num}-") and fname.endswith(".md"):
                     return fname.replace(".md", "")
+        return f"intel-{intel_num}-{name_slug}"
 
-    # Then check newsletter E##
+    # Newsletter E##: prefer website-repo lookup; fall back to constructed slug.
     edition_match = re.search(r"# FIR Risk (?:Tuesday )?(E\d+)", content)
     if edition_match:
         edition = edition_match.group(1).lower()
@@ -123,11 +129,10 @@ def extract_slug(filepath: str) -> str:
             for fname in os.listdir(website_dir):
                 if fname.startswith(edition + "-") and fname.endswith(".md"):
                     return fname.replace(".md", "")
+        return f"{edition}-{name_slug}"
 
-    # Fallback: use source filename
-    basename = os.path.splitext(os.path.basename(filepath))[0]
-    slug = re.sub(r"^\d{4}-\d{2}-\d{2}-", "", basename)
-    return slug
+    # No INTEL or edition number found — fall back to bare filename slug.
+    return name_slug
 
 
 def build_reply_url(filepath: str) -> str:
