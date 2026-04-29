@@ -3,7 +3,9 @@
         "platform": "x",
         "file": "newsletters/2026-04-28-the-april-inflection.md",
         "at": "2026-04-28 08:00",
-        "note": "Newsletter — posted manually by user (newsletters are not automated)"
+        "posted_at": "2026-04-28T18:00:00+00:00",
+        "post_id": "manual",
+        "note": "Newsletter — posted manually by user as X Article (long-form), Tuesday Apr 28 afternoon"
     },
     {
         "platform": "linkedin",
