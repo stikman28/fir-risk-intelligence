@@ -5,17 +5,21 @@
         "at": "2026-04-28 08:00",
         "posted_at": "2026-04-28T18:00:00+00:00",
         "post_id": "manual",
-        "note": "Newsletter — posted manually by user as X Article (long-form), Tuesday Apr 28 afternoon"
+        "note": "Newsletter \u2014 posted manually by user as X Article (long-form), Tuesday Apr 28 afternoon"
     },
     {
         "platform": "linkedin",
         "file": "intel/2026-04-29-vendor-pressure-audit.md",
-        "at": "2026-04-29 07:00"
+        "at": "2026-04-29 07:00",
+        "posted_at": "2026-04-29T16:35:28+00:00",
+        "post_id": "7455293679553892352"
     },
     {
         "platform": "x",
         "file": "intel/2026-04-29-vendor-pressure-audit.md",
-        "at": "2026-04-29 07:05"
+        "at": "2026-04-29 07:05",
+        "posted_at": "2026-04-29T16:35:29+00:00",
+        "post_id": "2049528003349127359"
     },
     {
         "platform": "linkedin",
