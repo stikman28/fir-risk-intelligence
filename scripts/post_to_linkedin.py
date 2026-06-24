@@ -46,6 +46,7 @@ KEYCHAIN_KEYS = {
     "client_id": "LINKEDIN_CLIENT_ID",
     "client_secret": "LINKEDIN_CLIENT_SECRET",
     "access_token": "LINKEDIN_ACCESS_TOKEN",
+    "refresh_token": "LINKEDIN_REFRESH_TOKEN",
     "person_id": "LINKEDIN_PERSON_ID",
 }
 
@@ -100,24 +101,28 @@ def setup_oauth():
     print("LinkedIn OAuth Setup")
     print("=" * 50)
     print()
-    print("1. Go to https://www.linkedin.com/developers/apps")
-    print("2. Create an app (or use existing)")
-    print("3. Under 'Products', request 'Share on LinkedIn'")
-    print("4. Under 'Auth', add redirect URL: http://localhost:8585/callback")
-    print("5. Copy your Client ID and Client Secret")
-    print()
 
-    client_id = input("Client ID: ").strip()
-    client_secret = input("Client Secret: ").strip()
-
-    if not client_id or not client_secret:
-        print("Error: Both Client ID and Client Secret required.")
-        return
-
-    # Store credentials
-    set_keychain_secret(KEYCHAIN_KEYS["client_id"], client_id)
-    set_keychain_secret(KEYCHAIN_KEYS["client_secret"], client_secret)
-    print("Credentials saved to Keychain.")
+    # Reuse the stored app credentials if present — a re-auth shouldn't require
+    # re-entering Client ID/Secret. Only prompt (with instructions) when missing.
+    try:
+        client_id = get_keychain_secret(KEYCHAIN_KEYS["client_id"])
+        client_secret = get_keychain_secret(KEYCHAIN_KEYS["client_secret"])
+        print("Using existing Client ID/Secret from Keychain.")
+    except RuntimeError:
+        print("1. Go to https://www.linkedin.com/developers/apps")
+        print("2. Create an app (or use existing)")
+        print("3. Under 'Products', request 'Share on LinkedIn'")
+        print("4. Under 'Auth', add redirect URL: http://localhost:8585/callback")
+        print("5. Copy your Client ID and Client Secret")
+        print()
+        client_id = input("Client ID: ").strip()
+        client_secret = input("Client Secret: ").strip()
+        if not client_id or not client_secret:
+            print("Error: Both Client ID and Client Secret required.")
+            return
+        set_keychain_secret(KEYCHAIN_KEYS["client_id"], client_id)
+        set_keychain_secret(KEYCHAIN_KEYS["client_secret"], client_secret)
+        print("Credentials saved to Keychain.")
 
     # OAuth consent flow
     redirect_uri = "http://localhost:8585/callback"
@@ -156,8 +161,9 @@ def setup_oauth():
     server_thread.start()
 
     print(f"\nOpening browser for LinkedIn authorization...")
+    print(f"If it doesn't open automatically, paste this into your browser:\n{auth_url}\n")
     webbrowser.open(auth_url)
-    print("Waiting for authorization...")
+    print("Waiting for authorization (up to 120s)...")
 
     server_thread.join(timeout=120)
     server.server_close()
@@ -187,6 +193,24 @@ def setup_oauth():
     set_keychain_secret(KEYCHAIN_KEYS["access_token"], access_token)
     print(f"Access token saved. Expires in {expires_in // 86400} days.")
 
+    # Capture the refresh token IF LinkedIn issued one (enables non-interactive --refresh).
+    # Standard "Share on LinkedIn" apps often get NO refresh token — only apps enrolled in
+    # LinkedIn's programmatic-refresh program do. This tells us which kind we have.
+    refresh_token = token_data.get("refresh_token")
+    refresh_expires = token_data.get("refresh_token_expires_in", 0)
+    if refresh_token:
+        set_keychain_secret(KEYCHAIN_KEYS["refresh_token"], refresh_token)
+        print(f"Refresh token saved (valid ~{refresh_expires // 86400} days). "
+              "Automated refresh ENABLED — use `--refresh` (no browser needed).")
+    else:
+        print("NOTE: LinkedIn did NOT issue a refresh token for this app — the 60-day token "
+              "must be re-authorized via `--setup` each cycle. To enable `--refresh`, the app "
+              "needs LinkedIn's programmatic-refresh capability.")
+
+    # Push the fresh access token to the GitHub Actions secret so the scheduler stays valid
+    # too. For apps without a refresh token, this re-auth IS the refresh — one command does both.
+    _update_github_secret("LINKEDIN_ACCESS_TOKEN", access_token)
+
     # Get person ID via userinfo
     print("Fetching LinkedIn profile...")
     profile_resp = requests.get(
@@ -204,6 +228,71 @@ def setup_oauth():
               f"Set LINKEDIN_PERSON_ID manually in Keychain.")
 
     print("\nSetup complete! You can now post to LinkedIn.")
+
+
+def refresh_access_token(update_github: bool = True) -> str:
+    """Non-interactively mint a new access token from the stored refresh token.
+
+    Saves the new token(s) to Keychain and (by default) updates the GitHub Actions
+    secret so the scheduler stays valid too. Requires a refresh token from --setup.
+    """
+    try:
+        refresh_token = get_keychain_secret(KEYCHAIN_KEYS["refresh_token"])
+    except RuntimeError:
+        raise SystemExit(
+            "No refresh token stored. This app may not issue refresh tokens "
+            "(re-run --setup to check), or you haven't completed setup yet."
+        )
+    client_id = get_keychain_secret(KEYCHAIN_KEYS["client_id"])
+    client_secret = get_keychain_secret(KEYCHAIN_KEYS["client_secret"])
+
+    print("Refreshing LinkedIn access token (no browser needed)...")
+    resp = requests.post("https://www.linkedin.com/oauth/v2/accessToken", data={
+        "grant_type": "refresh_token",
+        "refresh_token": refresh_token,
+        "client_id": client_id,
+        "client_secret": client_secret,
+    }, timeout=20)
+
+    if resp.status_code != 200:
+        raise SystemExit(
+            f"Refresh failed ({resp.status_code}): {resp.text[:300]}\n"
+            "The refresh token may be expired or revoked — re-run --setup."
+        )
+
+    data = resp.json()
+    access_token = data["access_token"]
+    expires_in = data.get("expires_in", 0)
+    set_keychain_secret(KEYCHAIN_KEYS["access_token"], access_token)
+    print(f"New access token saved to Keychain (expires in {expires_in // 86400} days).")
+
+    # LinkedIn rotates refresh tokens — persist the new one if it changed.
+    new_refresh = data.get("refresh_token")
+    rotated = bool(new_refresh and new_refresh != refresh_token)
+    if rotated:
+        set_keychain_secret(KEYCHAIN_KEYS["refresh_token"], new_refresh)
+        print("Refresh token rotated — new one saved to Keychain.")
+
+    if update_github:
+        _update_github_secret("LINKEDIN_ACCESS_TOKEN", access_token)
+        if rotated:
+            _update_github_secret("LINKEDIN_REFRESH_TOKEN", new_refresh)
+
+    return access_token
+
+
+def _update_github_secret(name: str, value: str,
+                          repo: str = "stikman28/fir-risk-intelligence"):
+    """Update a GitHub Actions secret via gh (value piped on stdin — never echoed or in argv)."""
+    result = subprocess.run(
+        ["gh", "secret", "set", name, "--repo", repo],
+        input=value, capture_output=True, text=True,
+    )
+    if result.returncode == 0:
+        print(f"GitHub secret {name} updated ✓")
+    else:
+        print(f"WARNING: couldn't update GitHub secret {name}: "
+              f"{result.stderr.strip() or 'gh failed'}")
 
 
 # --- Content extraction ---
@@ -477,10 +566,8 @@ def do_linkedin_post(li_text, image_path, content_ref, firrisk_url, no_comment=F
     print("Posting to LinkedIn...")
     post_urn = create_post(li_text, access_token, person_id, image_urn)
 
-    if not no_comment:
-        time.sleep(2)
-        comment_text = f"Full {content_ref} analysis: {firrisk_url}"
-        add_comment(post_urn, comment_text, access_token, person_id)
+    # The firrisk.ai link is in the post body (LinkedIn's comment API is partner-only — 403
+    # for this app). add_comment() is retained for if/when MDP partner access is granted.
 
     update_db(content_ref)
     print(f"Done! Check your LinkedIn feed.")
@@ -502,10 +589,19 @@ def main():
                         help="Schedule post to go out in N minutes")
     parser.add_argument("--force", action="store_true",
                         help="Skip duplicate-check against recent posts (use to re-post identical content)")
+    parser.add_argument("--refresh", action="store_true",
+                        help="Non-interactively refresh the access token from the stored refresh token "
+                             "(updates Keychain + the GitHub Actions secret)")
+    parser.add_argument("--no-gh", action="store_true",
+                        help="With --refresh: update Keychain only; skip the GitHub secret update")
     args = parser.parse_args()
 
     if args.setup:
         setup_oauth()
+        return
+
+    if args.refresh:
+        refresh_access_token(update_github=not args.no_gh)
         return
 
     if not args.file:
@@ -518,11 +614,20 @@ def main():
     content_ref = detect_content_ref(args.file)
     firrisk_url = build_firrisk_url(args.file, content_ref)
 
+    # LinkedIn's comment API is partner-only (403 for this app), so the firrisk.ai link goes
+    # in the post body instead of a first comment — inserted just before the trailing hashtags.
+    link_line = f"Full analysis → {firrisk_url}"
+    m = re.search(r"\n+(#[^\n]*)\s*$", li_text)
+    if m:
+        li_text = f"{li_text[:m.start()].rstrip()}\n\n{link_line}\n\n{m.group(1).strip()}"
+    else:
+        li_text = f"{li_text.rstrip()}\n\n{link_line}"
+
     print(f"Content: {content_ref}")
     print(f"Post length: {len(li_text)} characters")
     if image_path:
         print(f"Image: {image_path}")
-    print(f"Link comment: {firrisk_url}")
+    print(f"Link (in body): {firrisk_url}")
 
     if args.dry_run:
         print(f"\n{'=' * 50}")
@@ -532,9 +637,7 @@ def main():
             print(f"[IMAGE: {image_path}]\n")
         print(li_text)
         print(f"\n{'=' * 50}")
-        print(f"COMMENT: Full {content_ref} analysis: {firrisk_url}")
-        print(f"{'=' * 50}")
-        print(f"\n{len(li_text)} characters | Content ref: {content_ref}")
+        print(f"{len(li_text)} characters | Content ref: {content_ref}")
         if args.schedule:
             target = datetime.now() + timedelta(minutes=args.schedule)
             print(f"\nWould be scheduled for: {target:%I:%M %p}")
