@@ -18,8 +18,6 @@ FIR Risk Advisory | Enterprise Risk Intelligence
 
 ## One report is a claim. Three is a pattern.
 
-[SUGGESTED OPENER — Bruce to personalize/replace]
-
 Any single vendor threat report is easy to discount. The company publishing it sells the cure for the disease it diagnoses, and it has every reason to make the disease sound terminal. We read them anyway — carefully, and against each other — because when reports that share nothing but a publication quarter start telling the same story from opposite ends of the industry, the story stops being marketing and starts being signal.
 
 That is what happened this quarter. Three reports landed — Rapid7 from the threat-intelligence world, VulnCheck from the vulnerability-intelligence world, Zscaler from the AI-security world. Different companies, different datasets, different attack surfaces. And underneath the three different vocabularies is one identical finding: **the window between when a threat appears and when it hurts you has collapsed.** Not narrowed. Collapsed.
