@@ -107,6 +107,52 @@ Stay forward. Stay positive. Stay verified.
 
 Find all editions on our Blog: https://firriskadvisory.com/blog/
 
+# LINKEDIN POST
+
+```
+Three 2026 threat reports. Three different corners of the industry. One identical conclusion — and it should reframe how your board thinks about risk this year.
+
+Rapid7 (threat intelligence), VulnCheck (vulnerability intelligence), and Zscaler (AI security) each published major 2026 research. Different companies, different datasets, different attack surfaces. Underneath the different vocabularies, the same finding: the window between when a threat appears and when it hurts you has collapsed.
+
+→ VulnCheck: nearly 3 in 10 actively-exploited vulnerabilities in 2025 were weaponized on or before the day they were disclosed. There was no window to be fast inside of.
+
+→ Rapid7: initial access has been industrialized into a product — bought pre-packaged from brokers, so the attacker's preparation happens upstream, off your clock.
+
+→ Zscaler: red-team testing found critical vulnerabilities in 100% of the AI systems it tested. Even the newest surface fails at machine speed.
+
+Here's the fair objection, and you should raise it before a skeptic does: all three of these companies sell the cure for the disease they diagnose.
+
+So we tested the thesis against the one dataset with no product to move — Verizon's DBIR. Its neutral breach data points the same way: third-party involvement up 60% to nearly half of all breaches, roughly eight months to remediate vendor weaknesses. The vendors have every reason to sound the alarm. The breach data has none. They agree anyway.
+
+The takeaway for risk leaders: you will not out-detect a threat that arrives before the patch, bought ready-made, moving at machine speed. The 2026 move isn't reacting faster. It's being exposed less.
+
+Full breakdown in FIR Risk Tuesday E91 — link in the comments.
+
+#CyberSecurity #ThreatIntelligence #CISO #RiskManagement #VulnerabilityManagement #ThirdPartyRisk #AISecurity #ZeroTrust
+```
+
+## X POST
+
+Three 2026 threat reports. Three different corners of the industry — threat intel, vulnerability intel, AI security. Three different datasets.
+
+One identical conclusion: the window between when a threat appears and when it hurts you has collapsed.
+
+VulnCheck: ~3 in 10 exploited vulnerabilities in 2025 were weaponized on or before disclosure day. No window to be fast inside of.
+
+Rapid7: access is now a product — bought pre-packaged from brokers. The attacker's prep happens upstream, off your clock.
+
+Zscaler: critical flaws in 100% of AI systems red-tested. Even the newest surface fails at machine speed.
+
+The fair objection: all three sell the cure for the disease they diagnose.
+
+So we checked it against the one dataset with nothing to sell — Verizon's DBIR. Same direction: third-party breaches up 60%, to nearly half of all breaches. The vendors have reason to alarm. The breach data doesn't. They agree anyway.
+
+You won't out-detect a threat that arrives before the patch, moving at machine speed. The 2026 move isn't reacting faster — it's being exposed less.
+
+Full breakdown → FIR Risk Tuesday E91
+
+#CyberSecurity #RiskManagement
+
 ---
 
 ## SOURCE DATA
