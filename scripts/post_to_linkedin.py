@@ -585,6 +585,8 @@ def main():
     parser.add_argument("--dry-run", action="store_true", help="Preview post without publishing")
     parser.add_argument("--no-image", action="store_true", help="Post without image")
     parser.add_argument("--no-comment", action="store_true", help="Skip the link comment")
+    parser.add_argument("--no-link", action="store_true",
+                        help="Post native content only (no firrisk.ai link in body); add the link as a manual first comment")
     parser.add_argument("--schedule", type=int, metavar="MINUTES",
                         help="Schedule post to go out in N minutes")
     parser.add_argument("--force", action="store_true",
@@ -614,14 +616,16 @@ def main():
     content_ref = detect_content_ref(args.file)
     firrisk_url = build_firrisk_url(args.file, content_ref)
 
-    # LinkedIn's comment API is partner-only (403 for this app), so the firrisk.ai link goes
-    # in the post body instead of a first comment — inserted just before the trailing hashtags.
-    link_line = f"Full analysis → {firrisk_url}"
-    m = re.search(r"\n+(#[^\n]*)\s*$", li_text)
-    if m:
-        li_text = f"{li_text[:m.start()].rstrip()}\n\n{link_line}\n\n{m.group(1).strip()}"
-    else:
-        li_text = f"{li_text.rstrip()}\n\n{link_line}"
+    # LinkedIn's comment API is partner-only (403 for this app), so by default the firrisk.ai
+    # link goes in the post body — inserted just before the trailing hashtags. Pass --no-link
+    # to post the native content only and add the link as a manual first comment (best reach).
+    if not args.no_link:
+        link_line = f"Full analysis → {firrisk_url}"
+        m = re.search(r"\n+(#[^\n]*)\s*$", li_text)
+        if m:
+            li_text = f"{li_text[:m.start()].rstrip()}\n\n{link_line}\n\n{m.group(1).strip()}"
+        else:
+            li_text = f"{li_text.rstrip()}\n\n{link_line}"
 
     print(f"Content: {content_ref}")
     print(f"Post length: {len(li_text)} characters")
