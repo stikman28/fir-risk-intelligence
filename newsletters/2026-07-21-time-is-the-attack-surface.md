@@ -1,7 +1,7 @@
 # FIR Risk Tuesday E92
 
 **Publish Date:** July 21, 2026
-**Sources:** [Microsoft & Accenture — Securing Nations in the Intelligent Economy (2026)](https://wwps.microsoft.com/cybersecurity) · primary for the intrusion case: [Anthropic GTG-1002 disclosure (Sept 2025)](https://www.anthropic.com/) · corroborating: UK ONS production data (as cited in-report) · threading: FIR E87 (The Agents Have Keys), INTEL-1 (The April Inflection)
+**Sources:** [Microsoft & Accenture — Securing Nations in the Intelligent Economy (2026)](https://wwps.microsoft.com/blog/securing-nations-ai-quantum-disruption) · primary for the intrusion case: [Anthropic GTG-1002 disclosure (Nov 2025)](https://www-cdn.anthropic.com/d7dd50dd1185f59be051b307150d877f2b82bd2c.pdf) · corroborating: UK ONS production data (as cited in-report) · threading: FIR E87 (The Agents Have Keys), INTEL-1 (The April Inflection)
 **Analysis:** FIR Risk Platform
 
 ---
@@ -60,7 +60,7 @@ One honesty note before it goes in your board memo: the JLR case and the scenari
 
 ## 2. The adversary's clock now runs at machine speed
 
-The second clock is the attacker's. The report's centerpiece case is one our readers already know from INTEL-1 and E87: Anthropic's September 2025 disclosure that a suspected state-linked actor — GTG-1002 — used Claude Code, an agentic AI coding tool, to run an espionage campaign against roughly **30 high-value organizations** including financial institutions, chemical manufacturers, technology firms, and government agencies. Anthropic's estimate: **80–90% of the attack lifecycle was executed by AI**, with human operators intervening at only **4–6 decision points**.
+The second clock is the attacker's. The report's centerpiece case is one our readers already know from INTEL-1 and E87: Anthropic's disclosure — activity detected in September 2025, findings published that November — that a suspected state-linked actor, GTG-1002, used Claude Code, an agentic AI coding tool, to run an espionage campaign against roughly **30 high-value organizations** including financial institutions, chemical manufacturers, technology firms, and government agencies. Anthropic's estimate: **80–90% of the attack lifecycle was executed by AI**, with human operators intervening at only **4–6 decision points**.
 
 What's new is not the incident — it's who is citing it. When the world's largest security vendor elevates a competitor-AI-lab's disclosure into a national-security policy document, the agentic threat has formally crossed from frontier-lab warning to mainstream doctrine. The thread we started pulling in April is now the establishment position.
 
@@ -68,7 +68,7 @@ The report surrounds the case with tempo data: public institutions absorbed **2,
 
 The operational translation: detection and response SLAs were calibrated to human-speed adversaries. An intrusion lifecycle that is 80–90% automated does not honor a 24–48-hour lateral-movement assumption.
 
-> **INTEL [GLOBAL] [THREAT]:** The GTG-1002 case (Anthropic disclosure, Sept 2025 — 80–90% AI-executed intrusion lifecycle, human input at 4–6 decision points, ~30 targets) has been elevated into Microsoft/Accenture national-security doctrine, marking the agentic-AI threat's transition from frontier-lab warning to mainstream policy evidence. Supporting tempo: 2,632 attacks/week on public institutions, +26% YoY (Check Point). Defender SLAs built on human-paced adversaries need re-baselining; SOC automation is now an adversary-tempo-matching investment, not an efficiency play.
+> **INTEL [GLOBAL] [THREAT]:** The GTG-1002 case (Anthropic disclosure, Nov 2025 — 80–90% AI-executed intrusion lifecycle, human input at 4–6 decision points, ~30 targets) has been elevated into Microsoft/Accenture national-security doctrine, marking the agentic-AI threat's transition from frontier-lab warning to mainstream policy evidence. Supporting tempo: 2,632 attacks/week on public institutions, +26% YoY (Check Point). Defender SLAs built on human-paced adversaries need re-baselining; SOC automation is now an adversary-tempo-matching investment, not an efficiency play.
 
 ---
 
@@ -100,14 +100,28 @@ There's also a pattern worth a sentence of its own: within this single report, t
 
 ## So What Should Organizations Actually Do?
 
-Three clocks, three owners, one budget conversation.
+*Each of these stands alone — if you read nothing else, assess your organization against these four.*
 
-1. **Re-price resilience using the convex curve.** Take the 1.4/4.6/13.7 scenario shape into your next BC/DR budget cycle: the marginal dollar that moves recovery from three weeks to one buys roughly triple the risk reduction of the dollar that marginally improves prevention. Set RTO targets in days, test failover against them, and time your tabletops with a stopwatch.
-2. **Re-baseline response SLAs for machine-speed adversaries.** GTG-1002 makes "we have 24–48 hours before lateral movement" a legacy assumption. SOC automation and AI-assisted containment are now tempo-matching investments — and your regulators and insurers will start asking about AI-specific intrusion readiness; be ahead of the question in your next board risk report.
-3. **Start the cryptographic inventory this year.** Map what's encrypted with RSA/ECC, where, and how long it must stay confidential. Data with a 10-year-plus shelf life exfiltrated today is already on the fuse. NIST's PQC standards are final; a crypto-agility roadmap started in 2026 is cheap, and only 22% of your peers are paying attention — that's the arbitrage.
-4. **Fund by fuse length, not by incident count.** The risks with the best incident evidence are not the biggest risks — they're the shortest-fused ones. Put one line in the risk-appetite statement that explicitly prices long-fuse exposure (quantum, data shelf-life, systemic dependencies) so it can't be crowded out by whatever breached last quarter.
+1. **Measure your recovery time in days — then price it.** Economic modeling of real incidents shows cyber damage compounds with downtime: each extra week of disruption roughly *triples* the loss rather than adding to it *[the report's 1.4% → 4.6% → 13.7% GDP scenarios, Section 1]*. The question for your team: if an attack halted core operations today, how many days to restore — and when did we last prove that number with a live failover test rather than a paper plan? Budget accordingly: a dollar that shortens recovery buys more risk reduction than a dollar that marginally improves prevention.
+2. **Assume the intruder moves in minutes, not days.** Attackers now automate the bulk of an intrusion — in one disclosed 2025 espionage campaign, AI executed 80–90% of the attack lifecycle with humans stepping in only a handful of times *[the GTG-1002 case, Section 2]*. If your incident-response plan assumes a 24–48-hour window before an intruder spreads, it was calibrated for human-speed adversaries who are disappearing. The question: which containment steps — isolating a host, suspending an account, revoking a credential — can execute automatically, without waiting for a human? Expect insurers and regulators to start asking the same.
+3. **Inventory the data that must stay secret for a decade.** Adversaries are stealing encrypted data *today* to decrypt it when quantum computing matures *["harvest now, decrypt later," Section 3]*. Anything that must remain confidential for 10+ years — health records, financial accounts, PII, trade secrets — is effectively at risk the day it's exfiltrated, whenever that decryption day arrives. The action: catalogue where that long-lived data lives and what encryption protects it — today's standard public-key cryptography *[RSA/ECC]* is the class at risk, the replacement standards are finalized *[NIST post-quantum]*, and government migration deadlines run 2030–2035. Starting the inventory in 2026 costs little, and only 22% of executives are paying attention — being early here is cheap differentiation.
+4. **Ask what your risk register can't see.** Budget processes naturally fund the risks that produced last quarter's incidents — and systematically starve the risks that won't produce an incident until it's too late to act *[the long-fuse problem, Section 3]*. The test for your next risk-appetite review: name one material risk with zero incident history but a fixed external deadline — quantum-era decryption is the canonical example — and check whether it appears anywhere in your capital plan. If it doesn't, your funding model is driven by memory, not exposure.
 
 The report was written to tell nations that resilience is destiny. Strip the statecraft and the private-sector version is simpler: the attacker's clock sped up, your recovery clock got more expensive, and your data's clock never stopped. Owning all three is the job now.
+
+---
+
+## Learn More
+
+- [Securing Nations in the Intelligent Economy (Microsoft & Accenture)](https://wwps.microsoft.com/blog/securing-nations-ai-quantum-disruption) — Primary source
+- [Disrupting the first reported AI-orchestrated cyber espionage campaign (Anthropic)](https://www-cdn.anthropic.com/d7dd50dd1185f59be051b307150d877f2b82bd2c.pdf) — Primary disclosure for the GTG-1002 case
+- [MITRE ATT&CK Campaign C0062](https://attack.mitre.org/campaigns/C0062/) — Technique mapping for the GTG-1002 campaign
+- [NIST Post-Quantum Cryptography Standards](https://csrc.nist.gov/projects/post-quantum-cryptography) — The finalized replacement standards (ML-KEM, ML-DSA)
+- [CISA Post-Quantum Cryptography Initiative](https://www.cisa.gov/quantum) — US migration guidance for the harvest-now-decrypt-later era
+- [FIR Risk Tuesday E91 — The Window Closed](/tuesday/e91-the-window-closed/) — The collapsed detection-response window this edition's tempo findings extend
+- [FIR Risk Tuesday E89 — The April Inflection](/tuesday/e89-the-april-inflection/) — The AI offense/defense inflection point
+- [FIR Risk Tuesday E87 — The Agents Have Keys](/tuesday/e87-the-agents-have-keys/) — When agentic AI got production access
+- [FIR Risk Intelligence](https://github.com/stikman28/fir-risk-intelligence) — Source prompts, methodology, all published INTEL
 
 ---
 
@@ -115,7 +129,7 @@ Stay forward. Stay positive. Stay verified.
 
 — FIR Risk Advisory
 
-Find all editions on our Blog: https://firriskadvisory.com/blog/
+Find all editions on our Blog: https://firriskadvisory.com/blog/ · and on firrisk.ai: https://firrisk.ai/tuesday/
 
 # LINKEDIN POST
 
@@ -141,26 +155,29 @@ Full breakdown in FIR Risk Tuesday E92 — link in the comments.
 
 ## X POST
 
-A cyberattack showed up in a G7 nation's GDP numbers.
+A cyberattack showed up in a G7 nation's GDP statistics this year.
 
-When Jaguar Land Rover was halted by a cyber incident, UK car production hit a 73-year low and ~0.1% came off monthly GDP.
+When a cyber incident halted Jaguar Land Rover's manufacturing, UK motor vehicle production fell 28.6% — the country's lowest car output in 73 years — and roughly 0.1% came off monthly GDP. Not a simulation. The Office for National Statistics measured it.
 
-A new Microsoft/Accenture report models what duration does to damage:
-• Recover in 1 week → 1.4% of monthly GDP
-• 3 weeks → 4.6%
-• 30 days → 13.7%
+A new Microsoft/Accenture report built for governments asks what duration does to damage, and models a cyberattack on critical infrastructure at three levels of resilience:
 
-Every extra week roughly triples the bill. Damage isn't linear — it compounds.
+Recover in a week → 1.4% of monthly GDP lost.
+Three weeks → 4.6%.
+Thirty days → 13.7%.
 
-Two more clocks in the same report:
+Each extra week roughly triples the bill. Cyber damage doesn't add up — it compounds. Which cuts both ways: money that shortens recovery buys exponential risk reduction, not linear.
 
-The adversary's: a state-linked actor ran 80–90% of an espionage campaign on agentic AI, humans at only 4–6 decision points (Anthropic's disclosure).
+That's the first clock. The report contains two more.
 
-Your data's: "harvest now, decrypt later" is live. Encrypted data stolen today sits on a fuse until quantum decryption matures. Only 22% of executives are paying attention.
+The adversary's clock: its centerpiece case is a disclosed 2025 espionage campaign in which a state-linked actor used agentic AI to execute 80–90% of the attack lifecycle — human operators stepped in at only 4–6 decision points across ~30 targets. If your response plan assumes a day or two before an intruder spreads, it was calibrated for attackers who are disappearing.
 
-Cyber loss is no longer priced by whether you're breached. It's priced by how long you stay down, how fast they move, and how long your data stays valuable.
+Your data's clock: "harvest now, decrypt later" is already operational. Adversaries are stealing encrypted data today, warehousing it for the day quantum computing can open it. Health records, financial data, trade secrets — anything sensitive for a decade-plus is on the fuse the day it's exfiltrated. Governments have set hard migration deadlines (US 2035, EU/UK critical infrastructure 2030). Yet only 22% of executives rank quantum as game-changing, versus 66% for AI.
 
-Time is the attack surface.
+The fair objection: both authors sell the cure for two of these three diseases. So we weighted the evidence before believing it. The strongest leg is government statistics with no product attached. The AI case comes from a primary-source disclosure by the AI company itself — whose incentive ran against publishing it. The quantum timeline is the weakest link, so it carries a caveat in our full analysis, and the conclusions are built to survive without it.
+
+The takeaway for risk leaders: cyber loss is no longer priced by whether you get breached. It's priced by how long you stay down, how fast they move, and how long your stolen data stays valuable.
+
+Time is the attack surface. All three clocks need an owner.
 
 Full breakdown → FIR Risk Tuesday E92
 
@@ -175,7 +192,7 @@ E92 is a single-source translation piece: a report written for policymakers, re-
 
 **Primary Sources:**
 - Microsoft & Accenture — Securing Nations in the Intelligent Economy: Turning AI and Quantum Disruption into Strategic Advantage (2026, 43pp)
-- Anthropic — GTG-1002 disclosure, September 2025 (cited directly for the intrusion case rather than the report's retelling)
+- Anthropic — GTG-1002 disclosure (activity detected September 2025; findings published November 13, 2025) — cited directly for the intrusion case rather than the report's retelling; MITRE tracks it as Campaign C0062
 - UK Office for National Statistics production/GDP data (as cited in-report, refs 1, 20 — The Guardian)
 
 **Methodology (this edition):**
