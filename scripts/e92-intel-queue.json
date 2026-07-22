@@ -32,5 +32,16 @@
         "platform": "x",
         "file": "intel/2026-07-24-the-fuse-is-already-lit.md",
         "at": "2026-07-24 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-07-03-the-storefront-door.md",
+        "at": "2026-07-26 06:45",
+        "note": "INTEL-29 weekend release \u2014 draft skipped in early July, recovered 2026-07-22"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-07-03-the-storefront-door.md",
+        "at": "2026-07-26 06:50"
     }
 ]
