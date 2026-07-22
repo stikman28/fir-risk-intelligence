@@ -24,11 +24,13 @@
     {
         "platform": "linkedin",
         "file": "intel/2026-04-30-contract-restructuring-window.md",
-        "at": "2026-04-30 07:00"
+        "at": "2026-07-26 06:45",
+        "note": "INTEL-21 weekend release — original 2026-04-30 07:00 ET slot missed (>= 07:00 ET timing trap, same class as INTEL-22); rescheduled 2026-07-22 per user"
     },
     {
         "platform": "x",
         "file": "intel/2026-04-30-contract-restructuring-window.md",
-        "at": "2026-04-30 07:05"
+        "at": "2026-07-26 06:50",
+        "note": "INTEL-21 weekend release — rescheduled with the linkedin entry above"
     }
 ]
