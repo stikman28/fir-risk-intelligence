@@ -355,8 +355,19 @@ def detect_content_ref(filepath: str) -> str:
     return os.path.basename(filepath).replace(".md", "")
 
 
+def explicit_url(filepath: str) -> str | None:
+    """An explicit `**URL:** https://firrisk.ai/...` line in the file wins over slug-based URL building
+    (needed for content outside /intel/ and /tuesday/, e.g. case studies)."""
+    with open(filepath) as f:
+        m = re.search(r"^\*\*URL:\*\*\s*(https://firrisk\.ai/\S+)", f.read(), re.M)
+    return m.group(1) if m else None
+
+
 def build_firrisk_url(filepath: str, content_ref: str) -> str:
     """Build the firrisk.ai URL for this content."""
+    url = explicit_url(filepath)
+    if url:
+        return url
     slug = os.path.basename(filepath).replace(".md", "")
     # Remove date prefix (YYYY-MM-DD-)
     parts = slug.split("-", 3)
@@ -620,7 +631,7 @@ def main():
     # link goes in the post body — inserted just before the trailing hashtags. Pass --no-link
     # to post the native content only and add the link as a manual first comment (best reach).
     if not args.no_link:
-        link_line = f"Full analysis → {firrisk_url}"
+        link_line = f"{'Full story' if '/case-studies/' in firrisk_url else 'Full analysis'} → {firrisk_url}"
         m = re.search(r"\n+(#[^\n]*)\s*$", li_text)
         if m:
             li_text = f"{li_text[:m.start()].rstrip()}\n\n{link_line}\n\n{m.group(1).strip()}"
