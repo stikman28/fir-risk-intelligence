@@ -137,6 +137,10 @@ def extract_slug(filepath: str) -> str:
 
 def build_reply_url(filepath: str) -> str:
     """Build the firrisk.ai URL for the reply post."""
+    with open(filepath) as f:
+        m = re.search(r"^\*\*URL:\*\*\s*(https://firrisk\.ai/\S+)", f.read(), re.M)
+    if m:  # explicit URL (e.g. case studies) wins over slug-based building
+        return m.group(1)
     slug = extract_slug(filepath)
 
     # Determine if Tuesday or INTEL — check slug, filepath, and filename
