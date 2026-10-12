@@ -8,11 +8,11 @@
 
 ## The INTEL
 
-**Anthropic has announced Enterprise Frontier Safeguards (EFS), a new control model for its most capable models that splits AI misuse defense between the lab and the customer. Anthropic runs automated detection across sessions and accounts, looking for offensive cyber activity, biological misuse, and stolen or leaked credentials. The customer keeps the monitoring data in its own cloud account (Amazon S3, Azure Blob Storage or Google Cloud Storage), under its own encryption keys, and receives every flag directly. No Anthropic employee reviews the flags. There is no Anthropic fee. It was designed with more than 100 enterprises, including the CISOs of the largest US banks through the Analysis and Resilience Center for Systemic Risk.**
+**Anthropic has announced Enterprise Frontier Safeguards (EFS), a new control model for its most capable models that splits AI misuse defense between the lab and the customer. Anthropic runs automated detection across sessions and accounts, looking for offensive cyber activity, biological misuse, and stolen or leaked credentials. The customer keeps the monitoring data in its own cloud account (Amazon S3, Azure Blob Storage or Google Cloud Storage), under its own encryption keys, and receives every flag directly. No Anthropic human review is required; flags go straight to your team. There is no Anthropic fee. It was designed with more than 100 enterprises, including the CISOs of the largest US banks through the Analysis and Resilience Center for Systemic Risk.**
 
 The reason it exists: Anthropic says the most sophisticated misuse is spread across many sessions and accounts, so analyzing each interaction alone and then discarding it isn't enough. Starting with Fable 5, it began retaining data for 30 days to correlate activity over time. Regulated customers pushed back. EFS is the compromise: the correlation Anthropic needs, with the custody regulated firms require.
 
-Status as of October 11, 2026: EFS is rolling out in phases to *eligible* customers, with broad availability targeted for this fall. Anthropic confirms eligibility and hasn't published the criteria. Eligible Fable 5 and 5.1 customers can request zero data retention in the meantime. It will be supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform and Microsoft Foundry.
+Status as of October 11, 2026: EFS is rolling out in phases to *eligible* customers, with broad availability targeted for this fall. Anthropic confirms eligibility and hasn't published the criteria. Anthropic says eligible Fable 5 and 5.1 customers will receive zero data retention in the meantime. It will be supported on Claude Code, Claude Enterprise, the Claude Platform, Amazon Bedrock, Claude Platform on AWS, Google's Agent Platform and Microsoft Foundry.
 
 **What's a "flag"?** An alert that one of your AI accounts or keys may be in the wrong hands or being used for harm: a stolen key in use, or activity that looks like attack tooling. EFS is one source of these alerts. Your own monitoring of AI usage, spend and logs is the other, and you don't need EFS for that.
 
@@ -20,17 +20,17 @@ Status as of October 11, 2026: EFS is rolling out in phases to *eligible* custom
 
 ## Why It Matters
 
-This is the first time a frontier lab has handed misuse monitoring to the customer as an operating responsibility. That's a genuine tailwind: regulated firms can now run frontier models with the data, keys and reviewers they already trust. But it also moves accountability. Under EFS, a flag that arrives at 2 a.m. has no Anthropic analyst behind it. It's your team, your playbook and your clock. A flag nobody acts on is no control at all.
+This is one of the first times a frontier lab has handed misuse monitoring to the customer as an operating responsibility. That's a genuine tailwind: regulated firms can now run frontier models with the data, keys and reviewers they already trust. But it also moves accountability. Under EFS, a flag that arrives at 2 a.m. doesn't require any Anthropic human review. It's your team, your playbook and your clock. A flag nobody acts on is no control at all.
 
 The timing lines up with the threat picture. Anthropic's September 2026 threat report documents access to AI (compromised API keys, session tokens and devices) becoming the sole objective of multiple criminal groups, attackers using customers' stolen API keys, and a fake reseller harvesting account credentials. EFS is the vendor-side answer to the credential problem. But Anthropic only sees activity on its own platform: if your organization uses several AI providers, only you can see all of your own AI usage.
 
-Three caveats belong in any board briefing. Anthropic has not yet published detection-performance data, flag thresholds or eligibility rules, so treat EFS as a promising control whose effectiveness is still unproven. Anthropic also has a commercial interest: EFS is its product, launched days before its threat report. And smaller organizations may never be eligible, which leaves them running frontier AI without this layer at all.
+Three caveats belong in any board briefing. Anthropic has not yet published detection-performance data, flag thresholds or eligibility rules, so treat EFS as a promising control whose effectiveness is still unproven. Anthropic also has a commercial interest: EFS is its product, announced days before its threat report. And smaller organizations may never be eligible, which leaves them running frontier AI without this layer at all.
 
 ---
 
 ## What To Do — One Key Action
 
-**Name the owner of every AI misuse flag before EFS reaches you. Pick a primary and a backup, write a triage playbook for the three signal types Anthropic monitors (credential compromise, offensive cyber, biological misuse), route flags into your SIEM and incident response process, and decide in advance who is cleared to look at flagged content that may include privileged or regulated data. Then submit Anthropic's eligibility form so you're in the queue.**
+**Name the owner of every AI misuse flag before EFS reaches you. Pick a primary and a backup, write a triage playbook for the signal types Anthropic has named (credential compromise, offensive cyber, biological misuse), route flags into your SIEM and incident response process, and decide in advance who is cleared to look at flagged content that may include privileged or regulated data. Then submit Anthropic's eligibility form so you're in the queue.**
 
 The storage bucket and encryption keys take a day. The people and process take a quarter. Start with the part that takes longer. Our free [EFS Readiness Guide](/efs-readiness/) has the full checklist, including compensating controls for organizations that aren't eligible.
 
@@ -64,7 +64,7 @@ Anthropic is moving AI misuse monitoring into the customer's own cloud.
 
 Enterprise Frontier Safeguards (EFS) keeps monitoring data in your cloud account, under your encryption keys. Alerts about stolen credentials or attack activity go straight to your team, and there's no Anthropic fee. More than 100 enterprises helped design it, including the CISOs of the largest US banks.
 
-The part risk leaders need to hear: no Anthropic employee reviews those alerts. A flag at 2 a.m. is your team, your playbook and your clock. A flag nobody acts on is no control at all.
+The part risk leaders need to hear: Anthropic doesn't require any of its own employees to review those alerts. A flag at 2 a.m. is your team, your playbook and your clock. A flag nobody acts on is no control at all.
 
 EFS is rolling out in phases to eligible customers this fall. One action now: name who owns AI misuse alerts, before the first one arrives.
 
@@ -81,7 +81,7 @@ Anthropic is moving AI misuse monitoring into the customer's own cloud.
 
 Enterprise Frontier Safeguards (EFS) keeps monitoring data in your cloud account, under your encryption keys. Alerts about stolen credentials or attack activity go straight to your team, and there's no Anthropic fee. More than 100 enterprises helped design it, including the CISOs of the largest US banks.
 
-The part risk leaders need to hear: no Anthropic employee reviews those alerts. A flag at 2 a.m. is your team, your playbook and your clock. A flag nobody acts on is no control at all.
+The part risk leaders need to hear: Anthropic doesn't require any of its own employees to review those alerts. A flag at 2 a.m. is your team, your playbook and your clock. A flag nobody acts on is no control at all.
 
 EFS is rolling out in phases to eligible customers this fall. One action now: name who owns AI misuse alerts, before the first one arrives.
 

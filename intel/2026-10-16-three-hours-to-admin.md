@@ -10,9 +10,9 @@
 
 **AI has compressed the SaaS supply-chain attack from weeks to hours. Anthropic's September 2026 threat report describes operators it suspects are affiliates of the ShinyHunters extortion collective using AI agents to run intrusions end to end. In one case, a single stolen developer token escalated to full administrative control of a victim's cloud environment in roughly three hours. One breach of an enterprise software company took only hours from first access to bulk data theft.**
 
-The downstream reach is the real story. After breaching one SaaS provider, an affiliate extracted data belonging to roughly 200 of that provider's customer organizations, then dumped over 2,100 Azure AD token sets spanning more than 40 corporate tenants in about 34 hours. Anthropic notes that AI agents performed nearly all of the work. In a separate SaaS compromise, a different actor exploited a cross-site scripting flaw and exfiltrated data from thousands of downstream customer organizations.
+The downstream reach is the real story. After breaching one SaaS provider, an affiliate extracted data belonging to roughly 200 of that provider's customer organizations, then dumped over 2,100 Azure AD token sets spanning more than 40 corporate tenants in about 34 hours. Anthropic notes that AI agents performed nearly all of the work. In a separate SaaS compromise, the same actor exploited a cross-site scripting flaw and exfiltrated data from thousands of downstream customer organizations.
 
-The pattern the report describes is consistent: get in through stolen credentials, go straight to the databases for customer data, and if the victim is a SaaS provider, use that data to reach its customers and demand payment from everyone.
+The pattern the report describes is consistent: get in through stolen credentials, go straight to the databases for customer data, and if the victim is a SaaS provider, use that data to reach its customers, then demand that the provider pay or see its customers' data leaked.
 
 ---
 

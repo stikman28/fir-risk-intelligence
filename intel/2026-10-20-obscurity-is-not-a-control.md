@@ -10,9 +10,9 @@
 
 **The quiet corner of your network is no longer safe. Anthropic's September 2026 threat report says it plainly: "The old adage of 'security through obscurity' is no longer viable in this new AI-assisted world: everything connected to the internet is a potential target for exploitation." With AI, the report says, diverse target environments become "trivial to understand," and unique and obscure configurations "are made clear and exploitable."**
 
-The economics explain why. AI lowers the skill and labor an attacker needs per campaign "while leaving potential payoffs largely unchanged," which the report says "makes previously marginal targets viable and encourages higher-volume, lower-touch operations." Opportunistic groups now race to exploit newly published vulnerabilities before patches land, and mass-scan internet-facing devices for anything they can open.
+The economics explain why. AI lowers the skill and labor an attacker needs per campaign "while leaving potential payoffs largely unchanged," which the report says "makes previously marginal targets viable and encourages higher-volume, lower-touch operations." Opportunistic groups now race to exploit newly published vulnerabilities before victims apply patches, and mass-scan internet-facing devices for anything they can open.
 
-Exploit supply is no longer the bottleneck it was. The report describes a group, including two undergraduate students, that ran an automated exploit foundry: AI conducted vulnerability research around the clock and kept working while the operators were away. The group targeted roughly fifty organizations across education, retail, energy, healthcare, finance and government.
+Exploit supply is no longer the bottleneck it was. The report describes a Chinese-speaking espionage group (GTG-10007), including two undergraduate students, that ran an automated exploit foundry: AI conducted vulnerability research around the clock and kept working while the operators were away. The group targeted roughly fifty organizations across education, retail, energy, healthcare, finance and government.
 
 ---
 
@@ -57,7 +57,7 @@ Use an external scan to find what your own records miss. Attackers are already r
 
 That's Anthropic, in its September threat report. AI makes unusual configurations easy to understand and exploit, and it lowers attacker costs enough to make previously marginal targets worth attacking.
 
-The report even describes two undergraduate students in a group running an automated exploit foundry, with AI researching vulnerabilities around the clock while they were away.
+The report even describes two undergraduate students in a Chinese-speaking espionage group running an automated exploit foundry, with AI researching vulnerabilities around the clock while they were away.
 
 The systems most at risk are the ones nobody remembers: the old VPN appliance, the forgotten test server, the admin panel a contractor set up years ago.
 
@@ -74,7 +74,7 @@ Full INTEL — link in the comments.
 
 That's Anthropic, in its September threat report. AI makes unusual configurations easy to understand and exploit, and it lowers attacker costs enough to make previously marginal targets worth attacking.
 
-The report even describes two undergraduate students in a group running an automated exploit foundry, with AI researching vulnerabilities around the clock while they were away.
+The report even describes two undergraduate students in a Chinese-speaking espionage group running an automated exploit foundry, with AI researching vulnerabilities around the clock while they were away.
 
 The systems most at risk are the ones nobody remembers: the old VPN appliance, the forgotten test server, the admin panel a contractor set up years ago.
 
