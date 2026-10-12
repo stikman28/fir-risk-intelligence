@@ -1,6 +1,7 @@
 # FIR Risk Tuesday E93
 
 **Publish Date:** October 13, 2026
+**URL:** https://firrisk.ai/tuesday/e93-the-economics-changed/
 **Sources:** [Anthropic — Detecting and countering misuse of AI: September 2026](https://www.anthropic.com/threat-intelligence-report-september-2026) · control response: [Anthropic — Developing Enterprise Frontier Safeguards with our customers](https://www.anthropic.com/news/enterprise-frontier-safeguards) · defender recommendations: [Anthropic Frontier Red Team — LLM ATT&CK Navigator](https://www.anthropic.com/research/attack-navigator) · threading: E92, INTEL-34 (GTG-1002), E90, E87
 **Analysis:** FIR Risk Platform
 
@@ -157,7 +158,7 @@ For risk leaders, that changes three things:
 
 This week's FIR Risk Tuesday breaks down what the report shows, what it can't prove, and what to do now, next and later.
 
-Full breakdown in FIR Risk Tuesday E93 — link in the comments.
+Full breakdown in FIR Risk Tuesday E93.
 
 #CyberSecurity #CISO #RiskManagement #AIGovernance #AISecurity #BoardGovernance
 ```
