@@ -60,30 +60,28 @@ The storage bucket and encryption keys take a day. The people and process take a
 ## LINKEDIN POST
 
 ```
-Anthropic is moving AI misuse monitoring into the customer's own cloud.
+It's 2 a.m. An alert says one of your company's AI keys may be in the wrong hands. Who picks it up?
 
-Enterprise Frontier Safeguards (EFS) keeps monitoring data in your cloud account, under your encryption keys. Alerts about stolen credentials or attack activity go straight to your team, and there's no Anthropic fee. More than 100 enterprises helped design it, including the CISOs of the largest US banks.
+Under Anthropic's new Enterprise Frontier Safeguards (EFS), that answer is yours. Anthropic runs the detection. The monitoring data stays in your own cloud account, under your encryption keys, and every flag goes straight to your team. No Anthropic human review is required, and there's no Anthropic fee.
 
-The part risk leaders need to hear: Anthropic doesn't require any of its own employees to review those alerts. A flag at 2 a.m. is your team, your playbook and your clock. A flag nobody acts on is no control at all.
+It's a real step forward, designed with more than 100 enterprises, including the CISOs of the largest US banks. But it moves accountability rather than removing it. A flag nobody acts on is no control at all.
 
-EFS is rolling out in phases to eligible customers this fall. One action now: name who owns AI misuse alerts, before the first one arrives.
+EFS is rolling out in phases to eligible customers this fall. One action now: name an owner for AI misuse alerts, and a backup, before the first one arrives.
 
 Our free EFS Readiness Guide has the full checklist, including steps for organizations that won't be eligible.
-
-Full INTEL and the free guide — link in the comments.
 
 #AIGovernance #CISO #RiskManagement #AISecurity #Compliance
 ```
 
 ## X POST
 
-Anthropic is moving AI misuse monitoring into the customer's own cloud.
+It's 2 a.m. An alert says one of your company's AI keys may be in the wrong hands. Who picks it up?
 
-Enterprise Frontier Safeguards (EFS) keeps monitoring data in your cloud account, under your encryption keys. Alerts about stolen credentials or attack activity go straight to your team, and there's no Anthropic fee. More than 100 enterprises helped design it, including the CISOs of the largest US banks.
+Under Anthropic's new Enterprise Frontier Safeguards (EFS), that answer is yours. Anthropic runs the detection. The monitoring data stays in your own cloud account, under your encryption keys, and every flag goes straight to your team. No Anthropic human review is required, and there's no Anthropic fee.
 
-The part risk leaders need to hear: Anthropic doesn't require any of its own employees to review those alerts. A flag at 2 a.m. is your team, your playbook and your clock. A flag nobody acts on is no control at all.
+It's a real step forward, designed with more than 100 enterprises, including the CISOs of the largest US banks. But it moves accountability rather than removing it. A flag nobody acts on is no control at all.
 
-EFS is rolling out in phases to eligible customers this fall. One action now: name who owns AI misuse alerts, before the first one arrives.
+EFS is rolling out in phases to eligible customers this fall. One action now: name an owner for AI misuse alerts, and a backup, before the first one arrives.
 
 Our free EFS Readiness Guide has the full checklist, including steps for organizations that won't be eligible.
 

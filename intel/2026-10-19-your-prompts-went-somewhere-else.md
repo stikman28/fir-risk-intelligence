@@ -53,26 +53,24 @@ Anthropic's report makes the same point from the other side: buy AI access only 
 ## LINKEDIN POST
 
 ```
-The AI tool your employee chose may not be the AI that answers them.
+The users thought they were talking to one AI model. Their requests were quietly answered by another, and kept.
 
-Anthropic's September threat report alleges that China-based AI labs silently forwarded their customers' requests to Claude and kept the exchanges for training. Many came through third-party model routers popular in the US and Europe. Those prompts held names, email addresses, company data, and in one example, a developer's live credentials. In one example, Anthropic says the user "had no way of knowing."
+Anthropic's September threat report alleges that China-based AI labs forwarded their own customers' requests to Claude and kept the exchanges to train their models. In one case, Moonshot AI relayed almost 300,000 requests in ten days. Many exchanges came through third-party model routers commonly used in the US and Europe, and they held names, email addresses, company data and, in one example, a developer's live credentials. That user, Anthropic says, "had no way of knowing."
 
-A fair caveat: Anthropic competes with the labs it names. But the compliance lesson stands either way. If a tool passes your data to an undisclosed party, you may have an unapproved sub-processor and a cross-border transfer you never signed off on.
+A fair caveat: Anthropic competes with the labs it names, and these are its allegations. But the compliance lesson holds either way. If a tool passes your data to an undisclosed party, you may have an unapproved sub-processor and a cross-border transfer you never signed off on.
 
 One action: approve only AI tools whose data path you can see in writing.
-
-Full INTEL — link in the comments.
 
 #DataPrivacy #AIGovernance #Compliance #ThirdPartyRisk #RiskManagement
 ```
 
 ## X POST
 
-The AI tool your employee chose may not be the AI that answers them.
+The users thought they were talking to one AI model. Their requests were quietly answered by another, and kept.
 
-Anthropic's September threat report alleges that China-based AI labs silently forwarded their customers' requests to Claude and kept the exchanges for training. Many came through third-party model routers popular in the US and Europe. Those prompts held names, email addresses, company data, and in one example, a developer's live credentials. In one example, Anthropic says the user "had no way of knowing."
+Anthropic's September threat report alleges that China-based AI labs forwarded their own customers' requests to Claude and kept the exchanges to train their models. In one case, Moonshot AI relayed almost 300,000 requests in ten days. Many exchanges came through third-party model routers commonly used in the US and Europe, and they held names, email addresses, company data and, in one example, a developer's live credentials. That user, Anthropic says, "had no way of knowing."
 
-A fair caveat: Anthropic competes with the labs it names. But the compliance lesson stands either way. If a tool passes your data to an undisclosed party, you may have an unapproved sub-processor and a cross-border transfer you never signed off on.
+A fair caveat: Anthropic competes with the labs it names, and these are its allegations. But the compliance lesson holds either way. If a tool passes your data to an undisclosed party, you may have an unapproved sub-processor and a cross-border transfer you never signed off on.
 
 One action: approve only AI tools whose data path you can see in writing.
 

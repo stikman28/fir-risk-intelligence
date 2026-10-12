@@ -53,32 +53,30 @@ Use an external scan to find what your own records miss. Attackers are already r
 ## LINKEDIN POST
 
 ```
-"The old adage of 'security through obscurity' is no longer viable."
+"We're too small to be a target." "Our setup is too unusual to bother with."
 
-That's Anthropic, in its September threat report. AI makes unusual configurations easy to understand and exploit, and it lowers attacker costs enough to make previously marginal targets worth attacking.
+Anthropic's September threat report retires both. "The old adage of 'security through obscurity' is no longer viable," it says. AI makes unusual configurations easy to understand, and it cuts attacker costs enough to make previously marginal targets worth the effort.
 
-The report even describes two undergraduate students in a Chinese-speaking espionage group running an automated exploit foundry, with AI researching vulnerabilities around the clock while they were away.
+The report describes a Chinese-speaking espionage group, two of them undergraduate students, running an automated exploit foundry. AI researched vulnerabilities around the clock and kept working while they were away.
 
 The systems most at risk are the ones nobody remembers: the old VPN appliance, the forgotten test server, the admin panel a contractor set up years ago.
 
-One action: build a complete inventory of everything you expose to the internet, and give every item an owner.
-
-Full INTEL — link in the comments.
+One action: inventory everything you expose to the internet, and give every item an owner.
 
 #CyberSecurity #SMB #AttackSurfaceManagement #CISO #RiskManagement
 ```
 
 ## X POST
 
-"The old adage of 'security through obscurity' is no longer viable."
+"We're too small to be a target." "Our setup is too unusual to bother with."
 
-That's Anthropic, in its September threat report. AI makes unusual configurations easy to understand and exploit, and it lowers attacker costs enough to make previously marginal targets worth attacking.
+Anthropic's September threat report retires both. "The old adage of 'security through obscurity' is no longer viable," it says. AI makes unusual configurations easy to understand, and it cuts attacker costs enough to make previously marginal targets worth the effort.
 
-The report even describes two undergraduate students in a Chinese-speaking espionage group running an automated exploit foundry, with AI researching vulnerabilities around the clock while they were away.
+The report describes a Chinese-speaking espionage group, two of them undergraduate students, running an automated exploit foundry. AI researched vulnerabilities around the clock and kept working while they were away.
 
 The systems most at risk are the ones nobody remembers: the old VPN appliance, the forgotten test server, the admin panel a contractor set up years ago.
 
-One action: build a complete inventory of everything you expose to the internet, and give every item an owner.
+One action: inventory everything you expose to the internet, and give every item an owner.
 
 Full INTEL → FIR Risk INTEL-40
 
