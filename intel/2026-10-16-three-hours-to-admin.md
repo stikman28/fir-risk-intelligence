@@ -53,26 +53,24 @@ Short-lived tokens, automated revocation and secret scanning are the controls th
 ## LINKEDIN POST
 
 ```
-One stolen developer token. Full administrative control of a cloud environment in roughly three hours.
+Roughly 200 companies had their data taken in a single breach. None of them was the company that got breached.
 
-That's one case from Anthropic's September threat report. In another, attackers breached a single SaaS provider and pulled data belonging to roughly 200 of its downstream customers. Anthropic says AI agents did nearly all the work.
+The attackers broke into one SaaS provider, then used that foothold to pull data belonging to about 200 of its customers. Anthropic's September threat report says AI agents did nearly all the work. In another case, one stolen developer token became full admin control of a cloud environment in roughly three hours.
 
-Annual questionnaires and SOC 2 reports tell you whether a vendor has controls. They don't tell you how fast the vendor responds when a token is stolen, and three hours is now realistic.
+You can do everything right and still be one of the 200. Annual questionnaires and SOC 2 reports tell you whether a vendor has controls. They don't tell you how fast that vendor moves when a token is stolen.
 
 One action: ask your five most critical SaaS vendors, in writing, how quickly they can detect and revoke a stolen token, and how they'll tell you. Then ask your own team the same.
-
-Full INTEL — link in the comments.
 
 #ThirdPartyRisk #CyberSecurity #SupplyChainSecurity #CISO #RiskManagement
 ```
 
 ## X POST
 
-One stolen developer token. Full administrative control of a cloud environment in roughly three hours.
+Roughly 200 companies had their data taken in a single breach. None of them was the company that got breached.
 
-That's one case from Anthropic's September threat report. In another, attackers breached a single SaaS provider and pulled data belonging to roughly 200 of its downstream customers. Anthropic says AI agents did nearly all the work.
+The attackers broke into one SaaS provider, then used that foothold to pull data belonging to about 200 of its customers. Anthropic's September threat report says AI agents did nearly all the work. In another case, one stolen developer token became full admin control of a cloud environment in roughly three hours.
 
-Annual questionnaires and SOC 2 reports tell you whether a vendor has controls. They don't tell you how fast the vendor responds when a token is stolen, and three hours is now realistic.
+You can do everything right and still be one of the 200. Annual questionnaires and SOC 2 reports tell you whether a vendor has controls. They don't tell you how fast that vendor moves when a token is stolen.
 
 One action: ask your five most critical SaaS vendors, in writing, how quickly they can detect and revoke a stolen token, and how they'll tell you. Then ask your own team the same.
 

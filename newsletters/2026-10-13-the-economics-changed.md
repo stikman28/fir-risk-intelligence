@@ -145,38 +145,36 @@ Find all editions on our Blog: https://firriskadvisory.com/blog/ · and on firri
 # LINKEDIN POST
 
 ```
-Anthropic just published 154 pages on how attackers misused its AI over eight months. The most important line isn't about a new technique. It's this: "The attacks themselves are familiar."
+Anthropic spent eight months watching attackers use its AI. Its most important finding: almost nothing they did was new.
 
-Stolen passwords. Unpatched VPN gateways. Exposed services. Phishing. Nothing defenders haven't seen before.
+"The attacks themselves are familiar," the report says. Stolen credentials. Unpatched edge devices. Exposed services. Phishing.
 
-What changed is the cost. The reconnaissance, exploitation, tool development and data processing that once took a well-funded team now run as AI agents, at machine speed and in parallel. In one case, a stolen developer token became full cloud admin control in roughly three hours.
+What changed is the cost. The reconnaissance, exploitation, tool-building and data processing that once took a well-funded team now run as AI agents, at machine speed and in parallel. In one case, a single stolen developer token became full cloud admin control in roughly three hours.
 
-For risk leaders, that changes three things:
-→ Likelihood goes up for every known, fixable weakness you carry
+Anthropic published the 154-page report in September. We've spent the weeks since checking it against the source and reading it through a risk lens. For risk leaders, it changes three things:
+→ Likelihood rises for every known, fixable weakness you carry
 → "Too small to target" no longer holds
 → The measure that matters is how fast you close known gaps
 
-This week's FIR Risk Tuesday breaks down what the report shows, what it can't prove, and what to do now, next and later.
-
-Full breakdown in FIR Risk Tuesday E93.
+This week's FIR Risk Tuesday covers what the report shows, what it can't prove, and what to do now, next and later.
 
 #CyberSecurity #CISO #RiskManagement #AIGovernance #AISecurity #BoardGovernance
 ```
 
 ## X POST
 
-Anthropic just published 154 pages on how attackers misused its AI over eight months. The most important line isn't about a new technique. It's this: "The attacks themselves are familiar."
+Anthropic spent eight months watching attackers use its AI. Its most important finding: almost nothing they did was new.
 
-Stolen passwords. Unpatched VPN gateways. Exposed services. Phishing. Nothing defenders haven't seen before.
+"The attacks themselves are familiar," the report says. Stolen credentials. Unpatched edge devices. Exposed services. Phishing.
 
-What changed is the cost. The reconnaissance, exploitation, tool development and data processing that once took a well-funded team now run as AI agents, at machine speed and in parallel. In one case, a stolen developer token became full cloud admin control in roughly three hours.
+What changed is the cost. The reconnaissance, exploitation, tool-building and data processing that once took a well-funded team now run as AI agents, at machine speed and in parallel. In one case, a single stolen developer token became full cloud admin control in roughly three hours.
 
-For risk leaders, that changes three things:
-→ Likelihood goes up for every known, fixable weakness you carry
+Anthropic published the 154-page report in September. We've spent the weeks since checking it against the source and reading it through a risk lens. For risk leaders, it changes three things:
+→ Likelihood rises for every known, fixable weakness you carry
 → "Too small to target" no longer holds
 → The measure that matters is how fast you close known gaps
 
-This week's FIR Risk Tuesday breaks down what the report shows, what it can't prove, and what to do now, next and later.
+This week's FIR Risk Tuesday covers what the report shows, what it can't prove, and what to do now, next and later.
 
 Full breakdown → FIR Risk Tuesday E93
 

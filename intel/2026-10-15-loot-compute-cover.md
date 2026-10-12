@@ -55,32 +55,34 @@ Anthropic's own guidance is to treat AI keys and agent integrations as seriously
 ## LINKEDIN POST
 
 ```
-Your AI keys are worth stealing for their own sake.
+The attackers broke in, found the company's AI keys, and moved their own attack workloads onto them. The victim's account paid for the next attacks.
 
-Anthropic's September threat report finds that stolen AI API keys and session tokens have become the sole objective of multiple criminal groups. A stolen key gives an attacker three things at once:
+That's one of several cases in Anthropic's September threat report. In another, a single stolen AI key powered roughly three weeks of attacks on other organizations.
+
+For multiple criminal groups, AI access is now the whole objective. A stolen key buys three things at once:
 → Loot: keys resell in established markets
 → Compute: their attacks run on your bill
 → Cover: the activity shows up under your name
 
-Where do the keys come from? Mostly from organizations that exposed them by accident in code, mobile apps, containers and chatbots. One operator scanned 1.8 million Android apps for hardcoded secrets.
+Where do they find the keys? Mostly where organizations left them by accident: public code, mobile apps, containers and chatbots. One operator scanned 1.8 million Android apps for hardcoded secrets.
 
 One action: scan everywhere attackers look, rotate what you find, and vault the replacements like any production credential.
-
-Full INTEL — link in the comments.
 
 #CyberSecurity #ThirdPartyRisk #AIGovernance #CISO #RiskManagement
 ```
 
 ## X POST
 
-Your AI keys are worth stealing for their own sake.
+The attackers broke in, found the company's AI keys, and moved their own attack workloads onto them. The victim's account paid for the next attacks.
 
-Anthropic's September threat report finds that stolen AI API keys and session tokens have become the sole objective of multiple criminal groups. A stolen key gives an attacker three things at once:
+That's one of several cases in Anthropic's September threat report. In another, a single stolen AI key powered roughly three weeks of attacks on other organizations.
+
+For multiple criminal groups, AI access is now the whole objective. A stolen key buys three things at once:
 → Loot: keys resell in established markets
 → Compute: their attacks run on your bill
 → Cover: the activity shows up under your name
 
-Where do the keys come from? Mostly from organizations that exposed them by accident in code, mobile apps, containers and chatbots. One operator scanned 1.8 million Android apps for hardcoded secrets.
+Where do they find the keys? Mostly where organizations left them by accident: public code, mobile apps, containers and chatbots. One operator scanned 1.8 million Android apps for hardcoded secrets.
 
 One action: scan everywhere attackers look, rotate what you find, and vault the replacements like any production credential.
 
