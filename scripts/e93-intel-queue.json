@@ -1,14 +1,66 @@
 [
-    {"platform": "linkedin", "file": "newsletters/2026-10-13-the-economics-changed.md", "at": "2026-10-13 06:45"},
-    {"platform": "x", "file": "newsletters/2026-10-13-the-economics-changed.md", "at": "2026-10-13 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-10-14-the-alarm-is-yours.md", "at": "2026-10-14 06:45"},
-    {"platform": "x", "file": "intel/2026-10-14-the-alarm-is-yours.md", "at": "2026-10-14 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-10-15-loot-compute-cover.md", "at": "2026-10-15 06:45"},
-    {"platform": "x", "file": "intel/2026-10-15-loot-compute-cover.md", "at": "2026-10-15 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-10-16-three-hours-to-admin.md", "at": "2026-10-16 06:45"},
-    {"platform": "x", "file": "intel/2026-10-16-three-hours-to-admin.md", "at": "2026-10-16 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md", "at": "2026-10-19 06:45"},
-    {"platform": "x", "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md", "at": "2026-10-19 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-10-20-obscurity-is-not-a-control.md", "at": "2026-10-20 06:45"},
-    {"platform": "x", "file": "intel/2026-10-20-obscurity-is-not-a-control.md", "at": "2026-10-20 06:50"}
+    {
+        "platform": "linkedin",
+        "file": "newsletters/2026-10-13-the-economics-changed.md",
+        "at": "2026-10-13 06:45",
+        "posted_at": "2026-10-13T17:48:57+00:00",
+        "post_id": "7515830956147019776"
+    },
+    {
+        "platform": "x",
+        "file": "newsletters/2026-10-13-the-economics-changed.md",
+        "at": "2026-10-13 06:50",
+        "posted_at": "2026-10-13T17:48:59+00:00",
+        "post_id": "2110065271696404813"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-14-the-alarm-is-yours.md",
+        "at": "2026-10-14 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-14-the-alarm-is-yours.md",
+        "at": "2026-10-14 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-15-loot-compute-cover.md",
+        "at": "2026-10-15 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-15-loot-compute-cover.md",
+        "at": "2026-10-15 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-16-three-hours-to-admin.md",
+        "at": "2026-10-16 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-16-three-hours-to-admin.md",
+        "at": "2026-10-16 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md",
+        "at": "2026-10-19 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md",
+        "at": "2026-10-19 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-20-obscurity-is-not-a-control.md",
+        "at": "2026-10-20 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-20-obscurity-is-not-a-control.md",
+        "at": "2026-10-20 06:50"
+    }
 ]
