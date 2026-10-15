@@ -37,7 +37,7 @@ The window an attacker can use is widening at both ends. At the front end, flaws
 
 ## The One Sentence Your Board Needs
 
-> Attackers now move at machine speed: are we resourcing and automating our defenses to keep pace, and does every AI agent we run have a named employee who answers for it?
+> AI has cut the time, skill and cost of attacking us. Are we resourcing and automating our defenses to keep pace, and does every AI agent we run have a named employee who answers for it?
 
 Boards don't set patch deadlines; they set direction and priority. Microsoft's own report says reporting should move "from number of patches deployed to exposure reduced, detection coverage increased, and time-to-mitigate compressed." The board's job is to ask whether management is funding that shift, not to manage the patch queue.
 
@@ -113,15 +113,13 @@ We put the Microsoft findings next to the three other major reports we've covere
 
 ## 6. What changed in a year
 
-Microsoft now compares each edition with the last one, so these changes are like-for-like, the same data measured the same way:
+Microsoft now compares each edition with the last, so these are like-for-like. Beyond the Teams and dwell-time shifts above:
 
-- **ClickFix faded, then came back hard.** Last year these fake "verify you are human" copy-and-paste attacks were 47% of the initial access Microsoft observed, the #1 technique in our [E73](/tuesday/e73-mddr-2025-summary/) coverage. This year their share fell to 12.8%, but volume "rebounded explosively in early 2026, growing roughly 23x between December and May."
-- **Teams voice phishing went mainstream.** Up 502% from a year earlier.
-- **Ransomware kept growing.** Microsoft Defender saw a 15.8% increase in ransomware attacks reaching the ransom stage against enterprises. Akira was the most active family in its detections (22%, up 150%).
-- **Detection slowed.** Dwell time rose significantly, and consistently across multiple sectors.
-- **One piece of good news: the basics work.** Password attacks are down 26% year over year, which Microsoft calls "strong evidence" that MFA and passkeys are forcing attackers elsewhere, to new-hire onboarding and account recovery.
+- **ClickFix came back.** These fake "verify you are human" attacks were 47% of observed initial access last year (our [E73](/tuesday/e73-mddr-2025-summary/) lead). Their share fell to 12.8%, but volume grew roughly 23x between December and May.
+- **Ransomware grew.** Attacks reaching the ransom stage against enterprises rose 15.8%.
+- **The basics work.** Password attacks fell 26%, which Microsoft calls "strong evidence" that MFA and passkeys are forcing attackers elsewhere.
 
-The story across the last two editions is consistent. Last year Microsoft's message was to treat cyber risk as business risk. This year it asks leaders to govern it directly, and adds two things to what they should see: how long intruders go unnoticed, and what permissions AI agents hold.
+Last year we summarized Microsoft's message as treating cyber risk as business risk. This year it asks leaders to govern it directly, with dwell time and agent permissions added to what they see.
 
 ---
 
