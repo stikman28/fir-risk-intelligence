@@ -1,25 +1,25 @@
 # FIR Risk Tuesday E94
 
 **Publish Date:** October 20, 2026
-**URL:** https://firrisk.ai/tuesday/e94-the-clock-and-the-owner/
+**URL:** https://firrisk.ai/tuesday/e94-shift-in-the-physics-of-cyber-risk/
 **Sources:** [Microsoft — Microsoft Digital Defense Report 2026: Decoding emergence](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2026) · threading: E73 (MDDR 2025), Best of E24 (MDDR 2024), E93, INTEL-36, E92
 **Analysis:** FIR Risk Platform
 
 ---
 
-# FIR Risk E94 — The Clock and the Owner
+# FIR Risk E94 — MDDR 2026: A Shift in the Physics of Cyber Risk
 
-![FIR Risk E94 - The Clock and the Owner](images/e94-the-clock-and-the-owner.jpg)
+![FIR Risk E94 - MDDR 2026: A Shift in the Physics of Cyber Risk](images/e94-shift-in-the-physics-of-cyber-risk.jpg)
 
 FIR Risk Advisory | Enterprise Risk Intelligence
 
-*Microsoft's 2026 Digital Defense Report describes an exposure window opening at both ends. Attackers turn new flaws into working exploits faster than most organizations can patch, and once inside they are staying hidden longer before anyone notices. In the middle sits a new kind of actor, the AI agent, which often has access but no owner. The answer for boards isn't another tool or a stricter deadline. It's direction on two things: the clock, meaning whether defenses are resourced and automated to keep pace with machine-speed attackers, and the owner, meaning a named person who answers for every AI agent and every exposed system.*
+*Microsoft says AI is "changing the physics of cybersecurity": it is reducing the time, expertise and cost required to find and exploit weaknesses. Its 2026 Digital Defense Report shows the result, an exposure window opening at both ends. Attackers turn new flaws into working exploits faster than most organizations can patch, and once inside they are staying hidden longer before anyone notices. In the middle sits a new kind of actor, the AI agent, which often has access but no owner. The answer for boards isn't another tool or a stricter deadline. It's direction on two things: the clock, meaning whether defenses are resourced and automated to keep pace with machine-speed attackers, and the owner, meaning a named person who answers for every AI agent and every exposed system.*
 
 ---
 
 ## A year on, Microsoft asks the board question itself
 
-Last November, in [E73](/tuesday/e73-mddr-2025-summary/), we summarized the 2025 edition of Microsoft's Digital Defense Report with one line: treat cyber risk as business risk. The 2026 edition, "Decoding emergence," covers July 2025 through June 2026 and goes further. Its first priority for organizations is to "govern cyber risk at leadership level," and it frames the defining question for boards as "not whether disruption will occur, but whether the organization can continue operating, contain harm, recover quickly, and maintain trust when it does."
+Last November, in [E73](/tuesday/e73-mddr-2025-summary/), we summarized the 2025 edition of Microsoft's Digital Defense Report with one line: treat cyber risk as business risk. The 2026 edition, "Decoding emergence," covers July 2025 through June 2026 and goes further. Its first takeaway is that "AI is changing the physics of cybersecurity," which Microsoft defines as AI "reducing the time, expertise, and cost required to discover and exploit weaknesses." Those three things used to slow attackers down. Its first priority for organizations is to "govern cyber risk at leadership level," and it frames the defining question for boards as "not whether disruption will occur, but whether the organization can continue operating, contain harm, recover quickly, and maintain trust when it does."
 
 That is the question we've been asking since [E92](/tuesday/e92-time-is-the-attack-surface/), and it's a welcome one to see from the company with the largest sensor network in security. This edition pulls out what matters for CEOs, CFOs and risk leaders, compares it with the last two editions of the report, and runs our usual check on what the data can and can't tell you.
 
@@ -225,6 +225,7 @@ Full breakdown → FIR Risk Tuesday E94
 ## SOURCE DATA
 
 **Editorial Frame:**
+Title (Bruce, 10/15): "MDDR 2026: A Shift in the Physics of Cyber Risk." Microsoft's "physics" = time, expertise and cost to discover/exploit weaknesses (p10 verbatim; p5 and p8 restate it as compressing timelines, falling cost of sophisticated capability, agentic automation/autonomy). "Cyber risk" chosen over "cyber physics" to avoid confusion with "cyber-physical" (OT/ICS).
 E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("Decoding emergence"; reporting period July 2025–June 2026, 103-page PDF), written for CEOs, CFOs and risk leaders. Thesis: the exposure window is widening at both ends (weaponization speed, dwell time) while agents arrive without owners; boards should give direction on the clock (resourced, prioritized, automated defense) and the owner (named human for every agent). It continues E73 (MDDR 2025) and Best of E24 (MDDR 2024) with a year-over-year section, and links to E93/INTEL-36 on accountability. Frontier/autonomy material (JADEPUFFER, the OpenAI agents/Hugging Face sandbox escape, Mythos/GPT-5.5 32-step test) deliberately held for E95, a multi-source agent edition. No Recorded Future content (Bruce, 10/15).
 
 **Board framing rule (Bruce, 10/15):** boards set direction and priority; they don't mandate patch speed. Explain the risk (machine-speed attackers) and encourage resourcing and automation of patch management; ask the ownership question (100% of AI agents with a named employee owner). Microsoft's 72-hour guidance is presented as technical guidance for security teams, not a board mandate.
@@ -262,5 +263,5 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 
 **Pending before publish:**
 - Board sentence: Bruce still refining.
-- Hero image: images/e94-the-clock-and-the-owner.jpg not yet created.
+- Hero image: images/e94-shift-in-the-physics-of-cyber-risk.jpg not yet created.
 - Confirm the public MDDR 2026 landing-page URL.
