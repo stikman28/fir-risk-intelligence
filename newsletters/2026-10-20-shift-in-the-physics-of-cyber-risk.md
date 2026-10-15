@@ -86,8 +86,6 @@ In Microsoft's telemetry from AI workloads on Azure over a 90-day window, four t
 
 The report names three risks as organizations adopt agents: ungoverned proliferation, where agent identities multiply faster than anyone tracks them; overprivileged access that is rarely revoked; and no human accountability. Its rule is the clearest sentence in the report: "No environment should ever have an agent without a human to answer for it."
 
-AI browsers are the other new front. Microsoft sees them in daily use at more than 40% of organizations in its dataset. In a May 2026 analysis, AI browsers were the initial infection vector in incidents involving 57 distinct malware families, and a malicious extension campaign reached about 900,000 installs across more than 20,000 enterprise tenants, harvesting AI chat histories, prompts and session data.
-
 This is the same conclusion Anthropic reached from the other side of the table in [E93](/tuesday/e93-the-economics-changed/) and [INTEL-36](/intel/intel-36-the-alarm-is-yours/): the AI vendor can raise the alarm, but accountability stays with you.
 
 **What it means for you:** the board question is simple and answerable: do we have a named employee owner for 100% of our AI agents? If management can't say yes, or can't say how many agents there are, that's the finding.
@@ -106,10 +104,7 @@ We put the Microsoft findings next to the three other major reports we've covere
 - **The phone is the new inbox.** Mandiant found voice phishing was the #2 way in (11%), while Microsoft's Teams voice phishing rose 502%.
 - **AI is an accelerant, not a new weapon.** Verizon found fewer than 1% of 793 AI-using threat actors reached high or critical capability. Anthropic found that the attacks are familiar and the economics changed. Microsoft's new contribution is the governance gap: agents with access and no owner.
 
-**Where they seem to disagree, and why:**
-
-- **Phishing.** Microsoft's incident response data has phishing rising from 7% to 23%. Mandiant has email phishing falling to 6%. Different case populations and different definitions (Microsoft counts "social engineering" separately), so neither number means "phishing is solved" or "phishing is back."
-- **Third parties.** Verizon says third parties are involved in 48% of breaches, up 60%. Microsoft counts supply chain and trusted-relationship compromise as an *entry point* and gets 4% each, up from 2%. One measures involvement, the other the front door; both are rising.
+---
 
 ## 6. What changed in a year
 
@@ -125,12 +120,10 @@ Last year we summarized Microsoft's message as treating cyber risk as business r
 
 ## The test we ran before we believed any of it
 
-- **Whose data it is.** Microsoft's figures come from its own customers and telemetry, and the incident response numbers from organizations that called Microsoft for help. That's an enormous view, not a representative sample.
-- **Different datasets give different answers.** Public-facing exploitation is 24% of incident response findings but 4.8% of intrusions in Microsoft's wider threat telemetry. Exploit timing is "well below 24 hours" from discovery to weaponization, "single-digit days" from disclosure to exploitation, and "about five days" median time-to-exploit in outside research the report cites. They measure different things, so we quote each with its own definition rather than blending them.
-- **Some shifts may be relabeling.** In the initial-access table, "phishing" rose sharply while "social engineering" and "none identified" fell. Part of the change may be better attribution and classification rather than attacker behavior.
-- **The dwell-time finding has no headline number.** Microsoft shows it as box plots by sector and states the increase is statistically significant, but doesn't publish a median. We say "increased," and use Mandiant's 14-day median only as Mandiant's figure.
-- **Projections are projections.** 72,000 CVEs is an estimate for the full year.
-- **Microsoft has an interest.** It sells the integrated, cross-signal defense it recommends. It also deserves credit for candor: it names its own SharePoint Server as the most frequently exploited product in its data.
+- **Whose data it is.** Microsoft's own customers and telemetry, and organizations that called it for incident response. An enormous view, not a representative sample.
+- **Datasets and definitions differ.** Public-facing exploitation is 24% of incident response findings but 4.8% of intrusions in wider telemetry. Exploit timing is "well below 24 hours" to weaponization, "single-digit days" from disclosure, and "about five days" in outside research the report cites. Phishing rose to 23% in Microsoft's data while Mandiant has email phishing at 6%, partly because "social engineering" and "none identified" are counted separately. We quote each figure with its own definition.
+- **Dwell time has no headline number.** Microsoft shows box plots and a statistically significant increase, not a median. The 14-day figure is Mandiant's.
+- **Projections and interests.** 72,000 CVEs is a full-year estimate, and Microsoft sells the integrated defense it recommends. It also deserves credit for candor: it names its own SharePoint Server as the most frequently exploited product in its data.
 
 What holds regardless: how well patching is resourced, how long intruders go unnoticed and who owns each agent can all be measured inside your own organization, whoever's data you trust.
 
@@ -150,7 +143,7 @@ Most organizations already do some version of each of these. What changes is the
 
 4. **Fund and automate patch management.** Give the CISO the resources to know what's exposed, rank it by risk (internet-facing, identity and management systems first) and automate routine fixes. That starts with a complete inventory of internet-facing systems, remote-management tools and older devices, and isolating what can't be patched. Microsoft's own technical guidance is to fix newly identified vulnerabilities on internet-facing or identity systems within 72 hours, and to review the previous 90 days for signs of earlier exploitation. That's a target for the security team to work toward, not a board mandate.
 5. **Change what gets reported.** Move from patches deployed to exposure reduced, detection coverage and time to contain, and add dwell time and agent permissions to the leadership view.
-6. **Govern AI browsers and extensions.** Decide which are approved, block the rest, and watch for extensions that read AI chats.
+6. **Govern AI browsers and extensions.** Decide which are approved and block the rest. Microsoft found malicious AI-assistant extensions in more than 20,000 enterprise tenants, harvesting AI chat histories ([INTEL-41](/intel/intel-41-the-browser-reads-your-ai-chats/)).
 
 **Future: prepare now, act when you can**
 
