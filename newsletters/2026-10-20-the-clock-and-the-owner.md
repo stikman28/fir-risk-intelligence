@@ -47,13 +47,13 @@ Boards don't set patch deadlines; they set direction and priority. Microsoft's o
 
 Microsoft's starkest number: "The median time from vulnerability discovery in the wild to weaponization has now collapsed to well below 24 hours." Vulnerabilities are on track for a record, an estimated 72,000 CVEs for 2026 (a projection, not a count).
 
-Patching hasn't changed pace. The report puts median enterprise remediation for critical external vulnerabilities at 30 to 60 days, against the 7 to 14 days US federal agencies are required to meet for known-exploited flaws. Attackers also often get in before anyone knows there is a flaw: the Interlock ransomware group exploited a maximum-severity Cisco Secure FMC flaw for about 30 days before it was disclosed, and Microsoft says pre-disclosure windows of 30 days or more "are now routine."
+Patching hasn't changed pace. Microsoft says median enterprise remediation for critical external vulnerabilities "can take 30–60 days," against the 7 to 14 days US federal agencies are required to meet for known-exploited flaws. For internet-exposed services, mass scanning "often starts within hours." Attackers also often get in before anyone knows there is a flaw: the Interlock ransomware group exploited a maximum-severity Cisco Secure FMC flaw for about 30 days before it was disclosed, and Microsoft says pre-disclosure windows of 30 days or more "are now routine."
 
 The small-business angle is direct. In September 2025, Microsoft tracked a four-week surge in Akira ransomware across more than 50 organizations, mostly small and medium-sized businesses, all tied to one SonicWall VPN flaw.
 
 Microsoft's conclusion is the right one, and it isn't "patch faster at all costs." It's that "the issue is no longer simply whether a patch exists, but whether organizations can identify exposed assets, prioritize the highest-risk flaws, and remediate them before attackers operationalize them." For internet-facing, identity and management systems, it says, "traditional monthly patch cycles may no longer be fast enough."
 
-**What it means for you:** patching is hard, resource-hungry work, and a deadline from the boardroom doesn't make it faster. What does is knowing what you have exposed, ranking it by risk, and automating the routine fixes so people can focus on the hard ones. That's a funding and priority decision, which makes it a board-level one. Speed alone can't close the gap anyway: Verizon's 2026 DBIR found 29% of known-exploited vulnerabilities were attacked before they were even publicly disclosed ([E90](/tuesday/e90-refinement-not-revolution/)). That's why Microsoft pairs fast fixes with a look back for signs of earlier exploitation.
+**What it means for you:** patching is hard, resource-hungry work, and a deadline from the boardroom doesn't make it faster. What does is knowing what you have exposed, ranking it by risk, and automating the routine fixes so people can focus on the hard ones. That's a funding and priority decision, which makes it a board-level one. Speed alone can't close the gap anyway: Verizon's 2026 DBIR found 29% of known-exploited vulnerabilities were attacked before they were even publicly disclosed ([E90](/tuesday/e90-refinement-not-revolution/)). That's why Microsoft pairs fast fixes with two moves that cover what patching can't: removing or isolating exposure you don't need, and looking back 90 days for signs of earlier exploitation.
 
 ---
 
@@ -101,8 +101,8 @@ We put the Microsoft findings next to the three other major reports we've covere
 **Where they agree:**
 
 - **Exploited flaws are the main way in.** Verizon ranks vulnerability exploitation first for the first time (31% of breaches with a known entry point). Mandiant has had exploits at #1 for six straight years (32%). Microsoft's incident response data shows public-facing exploitation rising from 15% to 24%.
-- **Fixing isn't keeping up.** Verizon found organizations fully remediated only 26% of critical known-exploited vulnerabilities, down from 38%, with a median of 43 days to resolve one. Microsoft puts enterprise remediation at 30 to 60 days.
-- **The same flaw serves spies and extortionists.** Microsoft and Mandiant both document the 2025 SharePoint flaws being used for state espionage and for Warlock ransomware. One unpatched server can become either a data-theft disclosure or a business shutdown, and you won't know in advance which.
+- **Fixing isn't keeping up.** Verizon found organizations fully remediated only 26% of critical known-exploited vulnerabilities, down from 38%, with a median of 43 days to resolve one. Microsoft says enterprise remediation can take 30 to 60 days.
+- **The same flaw serves spies and extortionists.** Microsoft and Mandiant both document the July 2025 on-premises SharePoint attacks being used for state espionage and, within days, for Warlock ransomware. One unpatched server can become either a data-theft disclosure or a business shutdown, and you won't know in advance which.
 - **The phone is the new inbox.** Mandiant found voice phishing was the #2 way in (11%), while Microsoft's Teams voice phishing rose 502%.
 - **AI is an accelerant, not a new weapon.** Verizon found fewer than 1% of 793 AI-using threat actors reached high or critical capability. Anthropic found that the attacks are familiar and the economics changed. Microsoft's new contribution is the governance gap: agents with access and no owner.
 
@@ -150,7 +150,7 @@ Most organizations already do some version of each of these. What changes is the
 
 **Next: plan these over the next few quarters, in order of priority**
 
-4. **Fund and automate patch management.** Give the CISO the resources to know what's exposed, rank it by risk (internet-facing, identity and management systems first) and automate routine fixes. Microsoft's own technical guidance is to fix newly identified vulnerabilities on internet-facing or identity systems within 72 hours, and to review the previous 90 days for signs of earlier exploitation. That's a target for the security team to work toward, not a board mandate.
+4. **Fund and automate patch management.** Give the CISO the resources to know what's exposed, rank it by risk (internet-facing, identity and management systems first) and automate routine fixes. That starts with a complete inventory of internet-facing systems, remote-management tools and older devices, and isolating what can't be patched. Microsoft's own technical guidance is to fix newly identified vulnerabilities on internet-facing or identity systems within 72 hours, and to review the previous 90 days for signs of earlier exploitation. That's a target for the security team to work toward, not a board mandate.
 5. **Change what gets reported.** Move from patches deployed to exposure reduced, detection coverage and time to contain, and add dwell time and agent permissions to the leadership view.
 6. **Govern AI browsers and extensions.** Decide which are approved, block the rest, and watch for extensions that read AI chats.
 
@@ -185,7 +185,7 @@ Find all editions on our Blog: https://firriskadvisory.com/blog/ · and on firri
 ```
 Microsoft's 2026 Digital Defense Report describes an exposure window opening at both ends.
 
-At the front: the median time from a flaw's discovery in the wild to a working exploit is now "well below 24 hours." Enterprise fixes for critical external flaws still take 30 to 60 days.
+At the front: the median time from a flaw's discovery in the wild to a working exploit is now "well below 24 hours." Enterprise fixes for critical external flaws can still take 30 to 60 days.
 
 At the back: intruders are going unnoticed longer. Microsoft's incident response data shows a statistically significant rise in dwell time.
 
@@ -208,7 +208,7 @@ This week's FIR Risk Tuesday: what the report shows, how it changed from the las
 
 Microsoft's 2026 Digital Defense Report: the exposure window is opening at both ends.
 
-Weaponization: "well below 24 hours." Enterprise fixes: 30 to 60 days. Dwell time: up. And AI agents arriving with access but no owner.
+Weaponization: "well below 24 hours." Enterprise fixes: up to 30 to 60 days. Dwell time: up. And AI agents arriving with access but no owner.
 
 Microsoft's rule: "No environment should ever have an agent without a human to answer for it."
 
@@ -251,6 +251,8 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 - p76: Defender: Akira most active (22%, up 150% compared to 2025); Qilin 14% (up 111%); leak sites: Qilin 16.4%, +386%.
 - p77: "15.8% increase year-on-year in ransom detonations against enterprises."
 - E24 (2024) comparisons dropped: unverifiable without the 2024 PDF and not needed.
+
+**FIR agent ingest answer (10/15), checked vs p48:** all MDDR figures it gave match p47–48. Attribution: "about five days" is cited research ("Research published in 2025"); the 30–60 day enterprise figure carries no citation on p48 or in References (p102–103) and is worded "can take 30–60 days" → draft wording corrected from "puts median… at". Added: mass scanning "often starts within hours"; inventory + isolate-if-unpatchable recommendations. NOT used: VulnCheck 28.96%/23.6% (secondary summaries, unverified); claim the ToolShell patch was incomplete (not in MDDR). SharePoint: Microsoft cites CVE-2025-49704/49706, Mandiant (E85) CVE-2025-53770/53771, so §5 says "the July 2025 on-premises SharePoint attacks," not "the same flaws."
 
 **Cross-report section (§5), added 10/15 from a FIR Risk Platform agent comparison, verified against our own fact-checked editions:**
 - DBIR 2026 (E90; dataset Nov 1, 2024 – Oct 31, 2025): exploitation #1 at 31% of breaches with known vector; KEV critical remediation 26% (from 38%), median 43 days; "29% of KEV vulnerabilities were attacked before public disclosure" (E90 fact-check, Year in Review p.109). Use "before public disclosure," NOT "before a patch existed" (agent wording, and E90's own social copy, are looser than the source). Third-party 48%, +60%. 793 AI-using actors, <1% high/critical.
