@@ -254,5 +254,5 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 
 **Pending before publish:**
 - Board sentence: Bruce still refining.
-- Hero image: images/e94-shift-in-the-physics-of-cyber-risk.jpg not yet created.
+- Hero image: added 10/15 (Bruce, 1408x768 watercolor).
 - MDDR URL: linked to Microsoft's official PDF (cdn-dynmedia-1.microsoft.com, HTTP 200 on 10/15); the old security-insider URL 404s.
