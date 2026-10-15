@@ -111,22 +111,17 @@ We put the Microsoft findings next to the three other major reports we've covere
 - **Phishing.** Microsoft's incident response data has phishing rising from 7% to 23%. Mandiant has email phishing falling to 6%. Different case populations and different definitions (Microsoft counts "social engineering" separately), so neither number means "phishing is solved" or "phishing is back."
 - **Third parties.** Verizon says third parties are involved in 48% of breaches, up 60%. Microsoft counts supply chain and trusted-relationship compromise as an *entry point* and gets 4% each, up from 2%. One measures involvement, the other the front door; both are rising.
 
-## 6. Three years of the same report: what changed
+## 6. What changed in a year
 
-*[YOY SECTION — DRAFT. The 2026 comparisons below are verified against the 2026 report, which publishes its own year-over-year data. The 2024 and 2025 points come from our E24 and E73 editions and are pending verification via the FIR Risk Platform questions; nothing below the line ships until verified.]*
+Microsoft now compares each edition with the last one, so these changes are like-for-like, the same data measured the same way:
 
-Microsoft now publishes its own two-year comparisons, which makes some changes like-for-like:
+- **ClickFix faded, then came back hard.** Last year these fake "verify you are human" copy-and-paste attacks were 47% of the initial access Microsoft observed, the #1 technique in our [E73](/tuesday/e73-mddr-2025-summary/) coverage. This year their share fell to 12.8%, but volume "rebounded explosively in early 2026, growing roughly 23x between December and May."
+- **Teams voice phishing went mainstream.** Up 502% from a year earlier.
+- **Ransomware kept growing.** Microsoft Defender saw a 15.8% increase in ransomware attacks reaching the ransom stage against enterprises. Akira was the most active family in its detections (22%, up 150%).
+- **Detection slowed.** Dwell time rose significantly, and consistently across multiple sectors.
+- **One piece of good news: the basics work.** Password attacks are down 26% year over year, which Microsoft calls "strong evidence" that MFA and passkeys are forcing attackers elsewhere, to new-hire onboarding and account recovery.
 
-- **Initial access shifted toward people and exposed services.** Phishing rose from 7% to 23% of incident response findings and public-facing exploitation from 15% to 24%, while "none identified" fell from 25% to 14% and "social engineering" fell from 15% to 7%.
-- **Detection slowed.** Dwell time rose significantly year over year in its incident response engagements.
-- **Teams vishing went mainstream.** Up 502% year over year.
-
-Across three editions, the report's center of gravity has moved:
-
-- *[VERIFY — Q2]* **2024 (E24):** the exploitation window was described as narrowing to 24–72 hours. **2026:** weaponization "well below 24 hours." *Only keep if MDDR 2024 measured the same thing.*
-- *[VERIFY — Q6]* **AI's role:** 2024, nation-states using AI for influence operations → 2025, an AI arms race on both sides → 2026, AI agents as identities that need owners.
-- *[VERIFY — Q6]* **What Microsoft asks of leadership:** 2025, a ten-point action plan and KPIs including median patch time and mean time to revoke tokens → 2026, governance "at leadership level," with agent permissions, dwell time and recovery readiness added to what leaders should see.
-- *[VERIFY — Q4/Q5]* Ransomware and fraud continuity points, once the platform answers are in.
+The story across the last two editions is consistent. Last year Microsoft's message was to treat cyber risk as business risk. This year it asks leaders to govern it directly, and adds two things to what they should see: how long intruders go unnoticed, and what permissions AI agents hold.
 
 ---
 
@@ -249,6 +244,14 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 - p48: Akira surge Sept 2025, 50+ orgs mostly SMBs, CVE-2024-40766 SonicWall SSL VPN; Interlock exploited Cisco Secure FMC CVE-2026-20131 (CVSS 10.0) ~30 days pre-disclosure; "pre-disclosure windows of 30 days or more are now routine"; "median time-to-exploit of about five days" (research published 2025); KEV 7–14 days vs enterprise 30–60 days; "The issue is no longer simply whether a patch exists…" verbatim; "traditional monthly patch cycles may no longer be fast enough"; recommendations: 72 hours for internet-facing/identity systems, review previous 90 days.
 - p50: BCI term introduced; >46 million BCI attacks in 12 months; 17% (Oct 2025) → 3% (June 2026); "BCI is, overwhelmingly, a conversation starter. The fraud comes later…"; payroll diversion 51% Monday/Tuesday.
 
+**YoY section (§6), 10/15: built ONLY from MDDR 2026's own year-over-year comparisons** (prior-year PDFs not used; the FIR agent's prior-year question timed out at 240s):
+- p44: "Last year, ClickFix-style attacks… represented 47% of observed initial access activity" (matches E73's 47%, Defender Experts); this year "only 12.8% of observed intrusions"; "rebounded explosively in early 2026, growing roughly 23x between December and May." Source: Microsoft Defender Experts.
+- p46: Teams vishing +502% "from this time last year."
+- p64: "password attacks are down 26% year-over-year. This provides strong evidence that… MFA and passkeys are forcing…" attackers to other areas (new-hire onboarding, account recovery).
+- p76: Defender: Akira most active (22%, up 150% compared to 2025); Qilin 14% (up 111%); leak sites: Qilin 16.4%, +386%.
+- p77: "15.8% increase year-on-year in ransom detonations against enterprises."
+- E24 (2024) comparisons dropped: unverifiable without the 2024 PDF and not needed.
+
 **Cross-report section (§5), added 10/15 from a FIR Risk Platform agent comparison, verified against our own fact-checked editions:**
 - DBIR 2026 (E90; dataset Nov 1, 2024 – Oct 31, 2025): exploitation #1 at 31% of breaches with known vector; KEV critical remediation 26% (from 38%), median 43 days; "29% of KEV vulnerabilities were attacked before public disclosure" (E90 fact-check, Year in Review p.109). Use "before public disclosure," NOT "before a patch existed" (agent wording, and E90's own social copy, are looser than the source). Third-party 48%, +60%. 793 AI-using actors, <1% high/critical.
 - M-Trends 2026 (E85; 2025 investigations): exploits #1 for sixth year at 32%; email phishing 6% (22% in 2022), voice phishing 11% (#2); global median dwell 14 days from 11, first increase since 2010; SharePoint 2025 flaws used by PRC espionage and LOCKBIT.WARLOCK.
@@ -256,7 +259,6 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 - AGENT ERRORS CORRECTED: (1) said Anthropic's Sept 2026 report couldn't be found and used August 2025 report figures (17 orgs, $500K), which are outdated and dropped; (2) called DBIR figures unverified (E90 verified them against the report); (3) said Mandiant gave no exploit percentage (32%) and no period (2025 investigations); (4) said Verizon/Mandiant "underplay" one-flaw/two-adversary risk. Mandiant documented the same SharePoint dual use, so it's presented as corroboration, not a Microsoft-only insight. Agent's SEC-materiality and insurance-notice inferences not used (not in any source).
 
 **Pending before publish:**
-- YoY section: 2024/2025 points from E24/E73 to be verified via FIR Risk Platform questions Q1–Q6 (AIQToolkit/docs/review-2026-10-10/e94-fir-agent-questions.md) and, where possible, the original MDDR 2024/2025 PDFs. Drop anything not like-for-like.
 - Board sentence: Bruce still refining.
 - Hero image: images/e94-the-clock-and-the-owner.jpg not yet created.
 - Confirm the public MDDR 2026 landing-page URL.
