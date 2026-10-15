@@ -143,7 +143,7 @@ Most organizations already do some version of each of these. What changes is the
 
 4. **Fund and automate patch management.** Give the CISO the resources to know what's exposed, rank it by risk (internet-facing, identity and management systems first) and automate routine fixes. That starts with a complete inventory of internet-facing systems, remote-management tools and older devices, and isolating what can't be patched. Microsoft's own technical guidance is to fix newly identified vulnerabilities on internet-facing or identity systems within 72 hours, and to review the previous 90 days for signs of earlier exploitation. That's a target for the security team to work toward, not a board mandate.
 5. **Change what gets reported.** Move from patches deployed to exposure reduced, detection coverage and time to contain, and add dwell time and agent permissions to the leadership view.
-6. **Govern AI browsers and extensions.** Decide which are approved and block the rest. Microsoft found malicious AI-assistant extensions in more than 20,000 enterprise tenants, harvesting AI chat histories ([INTEL-41](/intel/intel-41-the-browser-reads-your-ai-chats/)).
+6. **Govern AI browsers and extensions.** Decide which are approved and block the rest. Microsoft found malicious AI-assistant extensions in more than 20,000 enterprise tenants, harvesting AI chat histories.
 
 **Future: prepare now, act when you can**
 
