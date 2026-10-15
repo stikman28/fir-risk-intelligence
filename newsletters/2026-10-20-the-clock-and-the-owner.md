@@ -53,13 +53,15 @@ The small-business angle is direct. In September 2025, Microsoft tracked a four-
 
 Microsoft's conclusion is the right one, and it isn't "patch faster at all costs." It's that "the issue is no longer simply whether a patch exists, but whether organizations can identify exposed assets, prioritize the highest-risk flaws, and remediate them before attackers operationalize them." For internet-facing, identity and management systems, it says, "traditional monthly patch cycles may no longer be fast enough."
 
-**What it means for you:** patching is hard, resource-hungry work, and a deadline from the boardroom doesn't make it faster. What does is knowing what you have exposed, ranking it by risk, and automating the routine fixes so people can focus on the hard ones. That's a funding and priority decision, which makes it a board-level one.
+**What it means for you:** patching is hard, resource-hungry work, and a deadline from the boardroom doesn't make it faster. What does is knowing what you have exposed, ranking it by risk, and automating the routine fixes so people can focus on the hard ones. That's a funding and priority decision, which makes it a board-level one. Speed alone can't close the gap anyway: Verizon's 2026 DBIR found 29% of known-exploited vulnerabilities were attacked before they were even publicly disclosed ([E90](/tuesday/e90-refinement-not-revolution/)). That's why Microsoft pairs fast fixes with a look back for signs of earlier exploitation.
 
 ---
 
 ## 2. The back end: intruders are staying longer
 
 The second clock runs after the break-in. Comparing two years of its incident response engagements, Microsoft found "a statistically significant increase in dwell time" (the time from an intruder's first activity to its detection), while the overall length of attacker activity stayed broadly stable. In plain terms, attackers weren't staying longer because they wanted to. Organizations were taking longer to notice. The biggest increase was in industrials and manufacturing.
+
+Microsoft doesn't put a number on it, but Mandiant does, from a different set of investigations. M-Trends 2026 reported that global median dwell time rose to 14 days from 11 in 2025, the first increase since Mandiant began tracking in 2010 ([E85](/tuesday/e85-responders-report/)). Two incident response teams, two datasets, same direction.
 
 **What it means for you:** prevention gets the budget, but detection is where this year's data is slipping. How long an intruder could go unnoticed is a resilience measure, and it belongs in the same conversation as recovery readiness.
 
@@ -92,7 +94,24 @@ This is the same conclusion Anthropic reached from the other side of the table i
 
 ---
 
-## 5. Three years of the same report: what changed
+## 5. Microsoft isn't the only one seeing this
+
+We put the Microsoft findings next to the three other major reports we've covered this year: Verizon's 2026 DBIR ([E90](/tuesday/e90-refinement-not-revolution/)), Mandiant's M-Trends 2026 ([E85](/tuesday/e85-responders-report/)) and Anthropic's September 2026 threat report ([E93](/tuesday/e93-the-economics-changed/)).
+
+**Where they agree:**
+
+- **Exploited flaws are the main way in.** Verizon ranks vulnerability exploitation first for the first time (31% of breaches with a known entry point). Mandiant has had exploits at #1 for six straight years (32%). Microsoft's incident response data shows public-facing exploitation rising from 15% to 24%.
+- **Fixing isn't keeping up.** Verizon found organizations fully remediated only 26% of critical known-exploited vulnerabilities, down from 38%, with a median of 43 days to resolve one. Microsoft puts enterprise remediation at 30 to 60 days.
+- **The same flaw serves spies and extortionists.** Microsoft and Mandiant both document the 2025 SharePoint flaws being used for state espionage and for Warlock ransomware. One unpatched server can become either a data-theft disclosure or a business shutdown, and you won't know in advance which.
+- **The phone is the new inbox.** Mandiant found voice phishing was the #2 way in (11%), while Microsoft's Teams voice phishing rose 502%.
+- **AI is an accelerant, not a new weapon.** Verizon found fewer than 1% of 793 AI-using threat actors reached high or critical capability. Anthropic found that the attacks are familiar and the economics changed. Microsoft's new contribution is the governance gap: agents with access and no owner.
+
+**Where they seem to disagree, and why:**
+
+- **Phishing.** Microsoft's incident response data has phishing rising from 7% to 23%. Mandiant has email phishing falling to 6%. Different case populations and different definitions (Microsoft counts "social engineering" separately), so neither number means "phishing is solved" or "phishing is back."
+- **Third parties.** Verizon says third parties are involved in 48% of breaches, up 60%. Microsoft counts supply chain and trusted-relationship compromise as an *entry point* and gets 4% each, up from 2%. One measures involvement, the other the front door; both are rising.
+
+## 6. Three years of the same report: what changed
 
 *[YOY SECTION — DRAFT. The 2026 comparisons below are verified against the 2026 report, which publishes its own year-over-year data. The 2024 and 2025 points come from our E24 and E73 editions and are pending verification via the FIR Risk Platform questions; nothing below the line ships until verified.]*
 
@@ -116,7 +135,7 @@ Across three editions, the report's center of gravity has moved:
 - **Whose data it is.** Microsoft's figures come from its own customers and telemetry, and the incident response numbers from organizations that called Microsoft for help. That's an enormous view, not a representative sample.
 - **Different datasets give different answers.** Public-facing exploitation is 24% of incident response findings but 4.8% of intrusions in Microsoft's wider threat telemetry. Exploit timing is "well below 24 hours" from discovery to weaponization, "single-digit days" from disclosure to exploitation, and "about five days" median time-to-exploit in outside research the report cites. They measure different things, so we quote each with its own definition rather than blending them.
 - **Some shifts may be relabeling.** In the initial-access table, "phishing" rose sharply while "social engineering" and "none identified" fell. Part of the change may be better attribution and classification rather than attacker behavior.
-- **The dwell-time finding has no headline number.** Microsoft shows it as box plots by sector and states the increase is statistically significant, but doesn't publish a median. We say "increased," not a figure.
+- **The dwell-time finding has no headline number.** Microsoft shows it as box plots by sector and states the increase is statistically significant, but doesn't publish a median. We say "increased," and use Mandiant's 14-day median only as Mandiant's figure.
 - **Projections are projections.** 72,000 CVEs is an estimate for the full year.
 - **Microsoft has an interest.** It sells the integrated, cross-signal defense it recommends. It also deserves credit for candor: it names its own SharePoint Server as the most frequently exploited product in its data.
 
@@ -229,6 +248,12 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 - p47: recon "in two minutes or less" after RMM access; "single-digit days" disclosure-to-exploitation.
 - p48: Akira surge Sept 2025, 50+ orgs mostly SMBs, CVE-2024-40766 SonicWall SSL VPN; Interlock exploited Cisco Secure FMC CVE-2026-20131 (CVSS 10.0) ~30 days pre-disclosure; "pre-disclosure windows of 30 days or more are now routine"; "median time-to-exploit of about five days" (research published 2025); KEV 7–14 days vs enterprise 30–60 days; "The issue is no longer simply whether a patch exists…" verbatim; "traditional monthly patch cycles may no longer be fast enough"; recommendations: 72 hours for internet-facing/identity systems, review previous 90 days.
 - p50: BCI term introduced; >46 million BCI attacks in 12 months; 17% (Oct 2025) → 3% (June 2026); "BCI is, overwhelmingly, a conversation starter. The fraud comes later…"; payroll diversion 51% Monday/Tuesday.
+
+**Cross-report section (§5), added 10/15 from a FIR Risk Platform agent comparison, verified against our own fact-checked editions:**
+- DBIR 2026 (E90; dataset Nov 1, 2024 – Oct 31, 2025): exploitation #1 at 31% of breaches with known vector; KEV critical remediation 26% (from 38%), median 43 days; "29% of KEV vulnerabilities were attacked before public disclosure" (E90 fact-check, Year in Review p.109). Use "before public disclosure," NOT "before a patch existed" (agent wording, and E90's own social copy, are looser than the source). Third-party 48%, +60%. 793 AI-using actors, <1% high/critical.
+- M-Trends 2026 (E85; 2025 investigations): exploits #1 for sixth year at 32%; email phishing 6% (22% in 2022), voice phishing 11% (#2); global median dwell 14 days from 11, first increase since 2010; SharePoint 2025 flaws used by PRC espionage and LOCKBIT.WARLOCK.
+- Anthropic: use the September 2026 report via E93.
+- AGENT ERRORS CORRECTED: (1) said Anthropic's Sept 2026 report couldn't be found and used August 2025 report figures (17 orgs, $500K), which are outdated and dropped; (2) called DBIR figures unverified (E90 verified them against the report); (3) said Mandiant gave no exploit percentage (32%) and no period (2025 investigations); (4) said Verizon/Mandiant "underplay" one-flaw/two-adversary risk. Mandiant documented the same SharePoint dual use, so it's presented as corroboration, not a Microsoft-only insight. Agent's SEC-materiality and insurance-notice inferences not used (not in any source).
 
 **Pending before publish:**
 - YoY section: 2024/2025 points from E24/E73 to be verified via FIR Risk Platform questions Q1–Q6 (AIQToolkit/docs/review-2026-10-10/e94-fir-agent-questions.md) and, where possible, the original MDDR 2024/2025 PDFs. Drop anything not like-for-like.
