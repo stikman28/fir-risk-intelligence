@@ -2,7 +2,7 @@
 
 **Publish Date:** October 20, 2026
 **URL:** https://firrisk.ai/tuesday/e94-shift-in-the-physics-of-cyber-risk/
-**Sources:** [Microsoft — Microsoft Digital Defense Report 2026: Decoding emergence](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2026) · threading: E73 (MDDR 2025), Best of E24 (MDDR 2024), E93, INTEL-36, E92
+**Sources:** [Microsoft — Microsoft Digital Defense Report 2026: Decoding emergence](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2026-Microsoft-Digital-Defense-Report.pdf) · threading: E73 (MDDR 2025), Best of E24 (MDDR 2024), E93, INTEL-36, E92
 **Analysis:** FIR Risk Platform
 
 ---
@@ -156,7 +156,7 @@ Microsoft frames the goal as engineering "for endurance." We'd put it in a board
 
 ## Learn More
 
-- [Microsoft Digital Defense Report 2026: Decoding emergence (Microsoft)](https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2026) — Primary source
+- [Microsoft Digital Defense Report 2026: Decoding emergence (Microsoft)](https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2026-Microsoft-Digital-Defense-Report.pdf) — Primary source
 - [FIR Risk Tuesday E73 — MDDR 2025 Summary](/tuesday/e73-mddr-2025-summary/) — Last year's edition
 - [FIR Risk Best of E24 — Microsoft Digital Defense Report 2024](/tuesday/best-of-e24-microsoft-digital-defense-report-2024/) — The 2024 edition
 - [FIR Risk Tuesday E93 — The Attacks Aren't New. The Economics Are.](/tuesday/e93-the-economics-changed/) — Anthropic's view of AI-enabled attacks
@@ -255,4 +255,4 @@ E94 is a single-source synthesis of the Microsoft Digital Defense Report 2026 ("
 **Pending before publish:**
 - Board sentence: Bruce still refining.
 - Hero image: images/e94-shift-in-the-physics-of-cyber-risk.jpg not yet created.
-- Confirm the public MDDR 2026 landing-page URL.
+- MDDR URL: linked to Microsoft's official PDF (cdn-dynmedia-1.microsoft.com, HTTP 200 on 10/15); the old security-insider URL 404s.
