@@ -44,12 +44,15 @@
     {
         "platform": "linkedin",
         "file": "intel/2026-10-16-three-hours-to-admin.md",
-        "at": "2026-10-16 06:45"
+        "at": "2026-10-16 06:45",
+        "error": "2026-10-16T15:01:18+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
     },
     {
         "platform": "x",
         "file": "intel/2026-10-16-three-hours-to-admin.md",
-        "at": "2026-10-16 06:50"
+        "at": "2026-10-16 06:50",
+        "posted_at": "2026-10-16T15:01:19+00:00",
+        "post_id": "2111110243644227884"
     },
     {
         "platform": "linkedin",
