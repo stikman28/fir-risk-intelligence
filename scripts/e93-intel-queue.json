@@ -45,7 +45,7 @@
         "platform": "linkedin",
         "file": "intel/2026-10-16-three-hours-to-admin.md",
         "at": "2026-10-16 06:45",
-        "error": "2026-10-16T15:24:55+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
+        "error": "2026-10-17T13:57:52+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
     },
     {
         "platform": "x",
