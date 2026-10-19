@@ -57,12 +57,15 @@
     {
         "platform": "linkedin",
         "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md",
-        "at": "2026-10-19 06:45"
+        "at": "2026-10-19 06:45",
+        "error": "2026-10-19T17:12:00+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
     },
     {
         "platform": "x",
         "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md",
-        "at": "2026-10-19 06:50"
+        "at": "2026-10-19 06:50",
+        "posted_at": "2026-10-19T17:12:01+00:00",
+        "post_id": "2112230297207189756"
     },
     {
         "platform": "linkedin",
