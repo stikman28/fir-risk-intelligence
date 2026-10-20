@@ -58,7 +58,7 @@
         "platform": "linkedin",
         "file": "intel/2026-10-19-your-prompts-went-somewhere-else.md",
         "at": "2026-10-19 06:45",
-        "error": "2026-10-19T17:35:10+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
+        "error": "2026-10-20T15:23:58+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
     },
     {
         "platform": "x",
@@ -70,11 +70,14 @@
     {
         "platform": "linkedin",
         "file": "intel/2026-10-20-obscurity-is-not-a-control.md",
-        "at": "2026-10-20 06:45"
+        "at": "2026-10-20 06:45",
+        "error": "2026-10-20T15:23:59+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
     },
     {
         "platform": "x",
         "file": "intel/2026-10-20-obscurity-is-not-a-control.md",
-        "at": "2026-10-20 06:50"
+        "at": "2026-10-20 06:50",
+        "posted_at": "2026-10-20T15:24:00+00:00",
+        "post_id": "2112565501142385140"
     }
 ]
