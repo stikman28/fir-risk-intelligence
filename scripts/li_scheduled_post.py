@@ -35,7 +35,7 @@ def post():
     
     headers = {
         'Authorization': f'Bearer {access_token}',
-        'Linkedin-Version': '202503',
+        'Linkedin-Version': '202609',
         'X-Restli-Protocol-Version': '2.0.0',
         'Content-Type': 'application/json',
     }

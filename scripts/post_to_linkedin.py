@@ -51,7 +51,7 @@ KEYCHAIN_KEYS = {
 }
 
 LI_API = "https://api.linkedin.com/rest"
-LI_VERSION = "202503"
+LI_VERSION = "202609"
 
 
 def get_keychain_secret(service: str) -> str:
@@ -327,7 +327,7 @@ def extract_image_path(filepath: str) -> str:
     with open(filepath) as f:
         content = f.read()
 
-    match = re.search(r"!\[.*?\]\((images/.+?\.png)\)", content)
+    match = re.search(r"!\[.*?\]\((images/.+?\.(?:png|jpe?g))\)", content)
     if not match:
         return None
 

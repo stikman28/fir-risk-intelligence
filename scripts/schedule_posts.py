@@ -185,7 +185,7 @@ def get_key(s):
 access_token = get_key('LINKEDIN_ACCESS_TOKEN')
 person_id = get_key('LINKEDIN_PERSON_ID')
 LI_API = 'https://api.linkedin.com/rest'
-headers = {{'Authorization': f'Bearer {{access_token}}', 'Linkedin-Version': '202503', 'X-Restli-Protocol-Version': '2.0.0', 'Content-Type': 'application/json'}}
+headers = {{'Authorization': f'Bearer {{access_token}}', 'Linkedin-Version': '202609', 'X-Restli-Protocol-Version': '2.0.0', 'Content-Type': 'application/json'}}
 payload = {{'author': f'urn:li:person:{{person_id}}', 'commentary': '{escaped_text}', 'visibility': 'PUBLIC', 'distribution': {{'feedDistribution': 'MAIN_FEED', 'targetEntities': [], 'thirdPartyDistributionChannels': []}}, 'lifecycleState': 'PUBLISHED', 'isReshareDisabledByAuthor': False}}
 {img_line}
 resp = requests.post(f'{{LI_API}}/posts', headers=headers, json=payload)
