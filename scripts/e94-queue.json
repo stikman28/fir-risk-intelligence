@@ -1,4 +1,16 @@
 [
-    {"platform": "linkedin", "file": "newsletters/2026-10-20-shift-in-the-physics-of-cyber-risk.md", "at": "2026-10-21 06:45"},
-    {"platform": "x", "file": "newsletters/2026-10-20-shift-in-the-physics-of-cyber-risk.md", "at": "2026-10-21 06:50"}
+    {
+        "platform": "linkedin",
+        "file": "newsletters/2026-10-20-shift-in-the-physics-of-cyber-risk.md",
+        "at": "2026-10-21 06:45",
+        "posted_at": "2026-10-21T15:39:37+00:00",
+        "post_id": "7518697511897702400"
+    },
+    {
+        "platform": "x",
+        "file": "newsletters/2026-10-20-shift-in-the-physics-of-cyber-risk.md",
+        "at": "2026-10-21 06:50",
+        "posted_at": "2026-10-21T15:39:40+00:00",
+        "post_id": "2112931829485314116"
+    }
 ]
