@@ -327,7 +327,7 @@ def extract_image_path(filepath: str) -> str:
     with open(filepath) as f:
         content = f.read()
 
-    match = re.search(r"!\[.*?\]\((images/.+?\.png)\)", content)
+    match = re.search(r"!\[.*?\]\((images/.+?\.(?:png|jpe?g))\)", content)
     if not match:
         return None
 
