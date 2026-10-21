@@ -197,15 +197,21 @@ This week's FIR Risk Tuesday: what the report shows, how it changed from the las
 
 ## X POST
 
-Microsoft's 2026 Digital Defense Report: the exposure window is opening at both ends.
+Microsoft says AI is changing the "physics of cybersecurity": it is reducing the time, expertise and cost it takes to find and exploit a weakness.
 
-Weaponization: "well below 24 hours." Enterprise fixes: up to 30 to 60 days. Dwell time: up. And AI agents arriving with access but no owner.
+Its 2026 Digital Defense Report shows what that does to your exposure window. It's opening at both ends.
 
-Microsoft's rule: "No environment should ever have an agent without a human to answer for it."
+At the front: the median time from a flaw's discovery in the wild to a working exploit is now "well below 24 hours." Enterprise fixes for critical external flaws can take 30 to 60 days.
 
-Two board questions:
-→ Are we resourcing and automating defenses to keep pace?
-→ Does every AI agent have a named owner?
+At the back: intruders are going unnoticed longer. Microsoft's incident response data shows a statistically significant rise in dwell time. Mandiant's separate data puts the median at 14 days, up from 11.
+
+In the middle: AI agents with access and no owner. Microsoft's rule: "No environment should ever have an agent without a human to answer for it."
+
+For finance teams, the scams got quieter. Teams voice phishing is up 502%. Only 3% of impersonation scams' first messages now ask for money or documents. In Microsoft's words, "The fraud comes later."
+
+Two questions for the board:
+→ Are we resourcing and automating our defenses to keep pace with machine-speed attackers?
+→ Does every AI agent we run have a named employee who answers for it?
 
 Full breakdown → FIR Risk Tuesday E94
 
