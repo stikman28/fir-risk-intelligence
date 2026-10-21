@@ -51,7 +51,7 @@ KEYCHAIN_KEYS = {
 }
 
 LI_API = "https://api.linkedin.com/rest"
-LI_VERSION = "202503"
+LI_VERSION = "202609"
 
 
 def get_keychain_secret(service: str) -> str:
