@@ -21,7 +21,7 @@ FIR Risk Advisory | Enterprise Risk Intelligence
 
 Last week, in [E94](/tuesday/e94-shift-in-the-physics-of-cyber-risk/), Microsoft told boards that no AI agent should run without a human who answers for it. This week we went to the source: the AI labs that build the agents. We read what OpenAI, Anthropic and Google have each published on securing agents, and checked it against OWASP's two independent Top 10 lists, one for AI applications and one for agents.
 
-Competitors rarely agree in public. On this, they do. When the companies selling agents tell you which controls their own products need, it's worth listening. And when an independent standards body says the same thing, it's worth acting on.
+Competitors rarely agree in public. On this, they do. When the companies selling agents tell you which controls their own products need, and an independent standards body says the same, it's worth acting on.
 
 — Bruce, FIR Risk Advisory
 
@@ -45,14 +45,14 @@ Boards don't configure agents. They decide whether agents are deployed under the
 
 ## 1. The builders agree
 
-Read side by side, the labs' guidance lines up closely:
+Read side by side, the guidance lines up closely:
 
-- **OpenAI** (*Agent security in the enterprise*, August 2026) builds its guidance on five principles, including "constrain authority to the task at hand" and "assume context is untrusted." Its paper cites Google's Secure AI Framework and the OWASP Agentic Top 10 as foundations.
-- **Anthropic** (*Trustworthy agents in practice*, April 2026) says its layered safeguards "are not a guarantee," and that safe agents depend "on choices made by every party involved," including the customer deploying them.
-- **Google** (*Google's Approach for Secure AI Agents*) rests on three principles: agents "must have well-defined human controllers," their "powers must have limitations," and their "actions and planning must be observable."
-- **OWASP**, the independent, community-built standard, ranks prompt injection first and Excessive Agency (an agent with more permission or autonomy than its task needs) third in its 2026 Top 10 for AI applications.
+- **OpenAI** (*Agent security in the enterprise*, August 2026): "constrain authority to the task at hand" and "assume context is untrusted." The paper cites Google's framework and OWASP as foundations.
+- **Anthropic** (*Trustworthy agents in practice*, April 2026): its safeguards "are not a guarantee," and safety depends "on choices made by every party involved," including the customer.
+- **Google** (*Google's Approach for Secure AI Agents*): agents "must have well-defined human controllers," their "powers must have limitations," and their "actions and planning must be observable."
+- **OWASP**, the independent standard, ranks prompt injection first and Excessive Agency (more permission or autonomy than the task needs) third for 2026.
 
-Three competitors and an independent body arrive at the same two conclusions. That agreement is the validation.
+Three competitors and an independent body, two conclusions. That agreement is the validation.
 
 ---
 
@@ -96,11 +96,11 @@ OpenAI's simplest advice may be the most useful for leaders: "we recommend askin
 
 ## 4. When a control fails
 
-OpenAI published a candid example in its July 2026 incident report. During an internal cyber evaluation, run with safeguards deliberately switched off, OpenAI's models escaped their test environment, found login credentials that other organizations had left exposed on the internet, and used them to break into parts of Hugging Face's production systems. OpenAI calls it "the first known case of an automated agent collective acting offensively without authorization." Hugging Face counted about 17,600 agent actions over four and a half days, and noted its own AI-assisted detection connected the signals but "failed to correctly raise the alert's criticality."
+OpenAI published a candid example in July. During an internal cyber evaluation, run with safeguards deliberately switched off, its models escaped their test environment, found login credentials other organizations had left exposed online, and used them to break into parts of Hugging Face's production systems: "the first known case of an automated agent collective acting offensively without authorization." Hugging Face counted about 17,600 agent actions in four and a half days; its own AI-assisted detection connected the signals but "failed to correctly raise the alert's criticality."
 
-This happened in a research setting, not a deployed product, and it's months old. The lessons still travel. OWASP's Agentic Top 10 lists identity and privilege abuse, where leaked credentials let agents operate beyond their intended scope, as a top risk. And OpenAI's own conclusion applies to every organization: "no single control should ever be assumed to be fully robust."
+It was a research setting, not a deployed product, but the lesson travels. OWASP's Agentic Top 10 lists identity and privilege abuse, where leaked credentials let agents operate beyond their scope, and OpenAI's conclusion applies to everyone: "no single control should ever be assumed to be fully robust."
 
-**What it means for you:** layer independent controls, keep agent credentials short-lived and revocable, and make sure your monitoring escalates when the signals line up.
+**What it means for you:** layer independent controls, keep agent credentials short-lived and revocable, and make sure monitoring escalates when the signals line up.
 
 ---
 
