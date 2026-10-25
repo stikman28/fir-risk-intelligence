@@ -26,7 +26,9 @@ The defense has to move from the inbox to the moment money moves.
 
 ## What To Do — One Key Action
 
-**Require a call back to a known number, never one supplied in the message, before any change to vendor bank details or employee direct deposit. Tell payroll and HR teams that Monday and Tuesday are when these requests peak.**
+**Put every change to vendor bank details or employee direct deposit under a formal internal control that the organization designs, documents, audits and verifies is working. At a minimum, the control should require verification by calling back a known number (never one supplied in the request), approval by a second person before the change takes effect, and regular review of every change made.**
+
+A callback on its own is a good habit. A control is different: it has an owner, it applies to every change with no exceptions for urgency or seniority, it leaves evidence, and it's tested. The test is simple: can you show your auditors that every bank-detail and payroll change last quarter went through it? Then make sure payroll and HR know that Monday and Tuesday are when these requests peak.
 
 ---
 
@@ -61,7 +63,7 @@ The first email is bland by design, so filters have nothing to catch. The ask ar
 
 And the scams keep office hours: 51% of payroll diversion attempts land on a Monday or Tuesday, when payroll and HR are clearing last week's requests.
 
-One action: require a call back to a known number before any change to vendor bank details or employee direct deposit. Tell payroll and HR that early in the week is peak season.
+One action: put every change to vendor bank details or employee direct deposit under a formal internal control, one you design, audit and verify actually works. At a minimum: a call back to a known number, a second approver, and regular review of every change. A callback is a habit. A control is something you can prove to your auditors.
 
 #CyberSecurity #FraudPrevention #BEC #CFO #Payroll #RiskManagement #SocialEngineering
 ```
@@ -76,7 +78,7 @@ That's how most business impersonation scams start now. Microsoft detected more 
 
 51% of payroll diversion attempts land on a Monday or Tuesday.
 
-One action: call back a known number before any change to bank details or direct deposit.
+One action: put every bank-detail and direct-deposit change under a formal internal control: a call back to a known number, a second approver, and regular audits that prove it works.
 
 Full INTEL → FIR Risk INTEL-42
 
@@ -87,7 +89,7 @@ Full INTEL → FIR Risk INTEL-42
 ## SOURCE DATA
 
 **Editorial Frame:**
-INTEL-42 expands E94 §3 (BCI) with page detail E94 didn't carry: the sample openers, the "deliberately bland" design, the April spike and the weekly payroll cadence. One action: out-of-band callback on payment-detail changes, with early-week awareness.
+INTEL-42 expands E94 §3 (BCI) with page detail E94 didn't carry: the sample openers, the "deliberately bland" design, the April spike and the weekly payroll cadence. One action (strengthened by Bruce 10/25): a formal internal control over payment-detail changes, designed, documented, audited and verified effective, with callback, second-person approval and regular review as minimum elements; early-week awareness.
 
 **Primary Source:**
 - Microsoft Digital Defense Report 2026, "Decoding emergence" (reporting period July 2025 – June 2026). Verified against the PDF on Oct 25, 2026 (PDF page numbers below).
@@ -104,4 +106,4 @@ INTEL-42 expands E94 §3 (BCI) with page detail E94 didn't carry: the sample ope
 
 **FIR Risk Editorial Position:**
 - "121%" describes the April month-over-month surge, not a year-over-year rise; worded as "monthly attacks surged 121% in April 2026."
-- Board-readable; no actor names. Action is an operating control, not a board mandate.
+- Board-readable; no actor names. The action is framed as an internal control the organization owns and audits (Bruce 10/25): a callback is a procedure; a control has an owner, applies every time, leaves evidence and is tested.
