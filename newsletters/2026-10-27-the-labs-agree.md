@@ -1,19 +1,19 @@
 # FIR Risk Tuesday E95
 
 **Publish Date:** October 27, 2026 [CONFIRM: 10/27 or 11/3]
-**URL:** https://firrisk.ai/tuesday/e95-access-isnt-authority/
+**URL:** https://firrisk.ai/tuesday/e95-the-labs-agree/
 **Sources:** [OpenAI — Agent security in the enterprise (Aug 2026)](https://cdn.openai.com/pdf/6546a5a6-170a-41e8-bf2f-979ff3484db1/agent-security-enterprise.pdf) · [OpenAI — Designing AI agents to resist prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/) · [OpenAI — Continuously hardening ChatGPT Atlas against prompt injection](https://openai.com/index/hardening-atlas-against-prompt-injection/) · [OpenAI — Hugging Face Incident Technical Report](https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf) · [Anthropic — Trustworthy agents in practice](https://www.anthropic.com/research/trustworthy-agents) · [Anthropic — Our framework for developing safe and trustworthy agents](https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents) · [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) · [Google — Google's Approach for Secure AI Agents](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) · [Google Cloud — How Google secures AI agents](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-secures-ai-agents) · [OWASP — Top 10 for LLM Applications 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) · [OWASP — Top 10 for Agentic Applications 2026](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/) · threading: E94, E93, INTEL-36, INTEL-39, INTEL-41, INTEL-42
 **Analysis:** FIR Risk Platform
 
 ---
 
-# FIR Risk E95 — Access Isn't Authority
+# FIR Risk E95 — The Labs Agree: Govern What Goes In, Limit What Comes Out
 
-[HERO IMAGE: Bruce, watercolor 1408x768 → images/e95-access-isnt-authority.jpg]
+[HERO IMAGE: Bruce, watercolor 1408x768 → images/e95-the-labs-agree.jpg]
 
 FIR Risk Advisory | Enterprise Risk Intelligence
 
-*AI agents now read your email, browse the web, process invoices and change records with an employee's own access. The companies that build them, OpenAI, Anthropic and Google, have each published how agents should be secured, and OWASP's independent Top 10 lists cover the same ground. They agree on two things. First, you can't fully filter what goes into an agent: hidden instructions in a web page, an email or a document can steer it, and every lab says that problem won't be completely solved. Second, because of that, you have to limit what an agent is allowed to do. As OpenAI puts it, "a runtime credential is not task authority." Access isn't authority, and that makes agent governance a job for compliance, security and the executive team at the same time.*
+*AI agents now read your email, browse the web, process invoices and change records with an employee's own access. The companies that build them, OpenAI, Anthropic and Google, have each published how agents should be secured, and OWASP's independent Top 10 lists cover the same ground. They agree on two things. First, you can't fully filter what goes into an agent: hidden instructions in a web page, an email or a document can steer it, and every lab says that problem won't be completely solved. Second, because of that, you have to limit what an agent is allowed to do. As OpenAI puts it, "a runtime credential is not task authority." Govern what goes in, limit what comes out: that makes agent governance a job for compliance, security and the executive team at the same time.*
 
 ---
 
@@ -31,7 +31,7 @@ Competitors rarely agree in public. On this, they do. When the companies selling
 
 You can't stop every bad instruction from reaching an AI agent. You can decide what the agent is allowed to do when one gets through. Every AI lab we read says the same thing: govern what goes in, limit what comes out, and keep a person accountable for the result.
 
-**Access isn't authority. An agent's login lets it reach a system; it doesn't mean the organization approved everything the agent can do there.**
+**Govern what goes in. Limit what comes out. Keep a person accountable for the result.**
 
 ---
 
@@ -74,7 +74,7 @@ There's a second input channel, and it's ours: what employees paste in. OWASP ra
 
 ---
 
-## 3. Govern what it can do
+## 3. Limit what comes out
 
 If bad instructions will sometimes get through, the protection has to sit around the agent, not just inside it. OpenAI says so directly: defense "cannot rely only on filtering inputs. It also requires designing the system so that the impact of manipulation is constrained, even if some attacks succeed."
 
@@ -175,7 +175,7 @@ OpenAI's example will be familiar to any finance team. An invoice agent renews a
 
 OWASP's independent Top 10 lists agree: prompt injection is #1, and an agent with more power than its task needs is #3.
 
-Access isn't authority. Three questions for every AI agent you run:
+The labs agree: govern what goes in, limit what comes out. Three questions for every AI agent you run:
 → Who owns it?
 → What can it do without a person approving?
 → Could we stop it if it were tricked?
@@ -199,7 +199,7 @@ OpenAI's example: an invoice agent renews a subscription on its own. Approved ve
 
 OWASP's independent Top 10 agrees: prompt injection is #1, excessive agency #3.
 
-Access isn't authority. For every AI agent you run:
+The labs agree: govern what goes in, limit what comes out. For every AI agent you run:
 → Who owns it?
 → What can it do without a person approving?
 → Could we stop it if it were tricked?
@@ -213,7 +213,7 @@ Full breakdown → FIR Risk Tuesday E95
 ## SOURCE DATA
 
 **Editorial Frame:**
-E95 = "Access Isn't Authority," the AI-labs edition. SOURCING RULE (Bruce, 10/25): ONLY AI labs (OpenAI, Anthropic, Google) + OWASP Top 10s; that combination is the validation angle. Microsoft/MDDR deliberately excluded (covered in E94; linked only). AISI, Sysdig/JADEPUFFER, AICD, SailPoint excluded. Bruce's theme: "AI inputs need governance," both what users feed models and what browser agents read; second half = what agents may do. Audience: compliance, security and executive teams equally. Internal-control framing ties to INTEL-42 (Bruce's strengthened action). Hugging Face incident used as supporting evidence only ("old news," Bruce).
+E95 = "The Labs Agree: Govern What Goes In, Limit What Comes Out" (title chosen by Bruce 10/25; "Access Isn't Authority" dropped because access control CAN confer authority, so it could mislead), the AI-labs edition. SOURCING RULE (Bruce, 10/25): ONLY AI labs (OpenAI, Anthropic, Google) + OWASP Top 10s; that combination is the validation angle. Microsoft/MDDR deliberately excluded (covered in E94; linked only). AISI, Sysdig/JADEPUFFER, AICD, SailPoint excluded. Bruce's theme: "AI inputs need governance," both what users feed models and what browser agents read; second half = what agents may do. Audience: compliance, security and executive teams equally. Internal-control framing ties to INTEL-42 (Bruce's strengthened action). Hugging Face incident used as supporting evidence only ("old news," Bruce).
 
 **Fact-Check Notes (verified 10/25/2026 against primary sources):**
 - OpenAI, *Agent security in the enterprise: A practical guide to deploying autonomous agents safely*, August 2026, 30-pp PDF (official: openai.com/business/learn/agent-security-enterprise/; CDN PDF). PDF pages:
@@ -243,7 +243,7 @@ E95 = "Access Isn't Authority," the AI-labs edition. SOURCING RULE (Bruce, 10/25
 - "A new employee in accounts payable doesn't get to sign contracts on day one" = FIR illustration, not a lab quote.
 
 **Pending before publish:**
-- Publish date (10/27 vs 11/3) and title.
+- Publish date (10/27 vs 11/3).
 - Board sentence: refine together.
 - Hero image (Bruce).
 - Confirm dates for the two OpenAI posts and Anthropic's framework post.
