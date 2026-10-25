@@ -1,4 +1,22 @@
 [
-    {"platform": "linkedin", "file": "intel/2026-10-27-the-browser-reads-your-ai-chats.md", "at": "2026-10-27 06:45"},
-    {"platform": "x", "file": "intel/2026-10-27-the-browser-reads-your-ai-chats.md", "at": "2026-10-27 06:50"}
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-27-the-browser-reads-your-ai-chats.md",
+        "at": "2026-10-27 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-27-the-browser-reads-your-ai-chats.md",
+        "at": "2026-10-27 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-10-28-the-first-email-asks-for-nothing.md",
+        "at": "2026-10-28 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-10-28-the-first-email-asks-for-nothing.md",
+        "at": "2026-10-28 06:50"
+    }
 ]
