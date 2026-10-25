@@ -1,6 +1,6 @@
 # FIR Risk Tuesday E95
 
-**Publish Date:** October 27, 2026 [CONFIRM: 10/27 or 11/3]
+**Publish Date:** October 27, 2026
 **URL:** https://firrisk.ai/tuesday/e95-the-labs-agree/
 **Sources:** [OpenAI — Agent security in the enterprise (Aug 2026)](https://cdn.openai.com/pdf/6546a5a6-170a-41e8-bf2f-979ff3484db1/agent-security-enterprise.pdf) · [OpenAI — Designing AI agents to resist prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/) · [OpenAI — Continuously hardening ChatGPT Atlas against prompt injection](https://openai.com/index/hardening-atlas-against-prompt-injection/) · [OpenAI — Hugging Face Incident Technical Report](https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf) · [Anthropic — Trustworthy agents in practice](https://www.anthropic.com/research/trustworthy-agents) · [Anthropic — Our framework for developing safe and trustworthy agents](https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents) · [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) · [Google — Google's Approach for Secure AI Agents](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) · [Google Cloud — How Google secures AI agents](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-secures-ai-agents) · [OWASP — Top 10 for LLM Applications 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) · [OWASP — Top 10 for Agentic Applications 2026](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/) · threading: E94, E93, INTEL-36, INTEL-39, INTEL-41, INTEL-42
 **Analysis:** FIR Risk Platform
@@ -252,7 +252,6 @@ E95 = "The Labs Agree: Govern What Goes In, Limit What Comes Out" (title chosen 
 - "A new employee in accounts payable doesn't get to sign contracts on day one" = FIR illustration, not a lab quote.
 
 **Pending before publish:**
-- Publish date (10/27 vs 11/3).
 - Board sentence: refine together.
 - Hero image (Bruce).
 - Confirm dates for the two OpenAI posts and Anthropic's framework post.
