@@ -37,9 +37,9 @@ You can't stop every bad instruction from reaching an AI agent. You can decide w
 
 ## The One Sentence Your Board Needs
 
-> For every AI agent we run: who owns it, what can it do without a person approving, and could we stop it if it were tricked? [Bruce + Claude to refine together]
+> Do we know every AI agent we run, and for each one: who owns it, what can it do on its own, and could we stop it if it were tricked?
 
-Boards don't configure agents. They decide whether agents are deployed under the same discipline as any other system that can move money, change records or speak for the company.
+Boards don't configure agents. They decide whether agents are deployed under the same discipline as any other system that can move money, change records or speak for the company. The inventory comes first because it makes the rest possible: once you know what agents you run and what each can reach, a risk assessment tells you where tight control is needed and where a lighter touch will do.
 
 ---
 
@@ -123,7 +123,7 @@ Most of this is familiar discipline: identity, least privilege, segregation of d
 
 **Now: build the foundation**
 
-1. **Know your agents and name their owners.** Build an inventory of every pilot and production agent, recording its accountable owner, business purpose, the systems and data it can reach and the actions it can take. This is the first item on OpenAI's CISO checklist.
+1. **Know your agents and name their owners.** Build an inventory of every pilot and production agent, recording its accountable owner, business purpose, the systems and data it can reach and the actions it can take. This is the first item on OpenAI's CISO checklist. Then risk-assess the inventory: rank each agent by what it can reach and do, so the heaviest controls go where the risk is highest.
 2. **Control access to AI systems and what goes in.** Decide who may deploy or connect agents and to which systems. Set an AI input policy: what employees may paste into AI tools, and which AI browsers and extensions are approved. Block the rest. Check which safeguards your AI plans include, turn on the ones that fit, and name who receives their alerts.
 3. **Put consequential actions behind a human.** No agent sends funds, changes vendor or payroll records, signs commitments or contacts customers without approval through a formal internal control, the same standard we set for people in [INTEL-42](/intel/intel-42-the-first-email-asks-for-nothing/).
 
@@ -249,10 +249,10 @@ E95 = "The Labs Agree: Govern What Goes In, Limit What Comes Out" (title chosen 
 **FIR Risk Editorial Position:**
 - OWASP is CC BY-SA: we quote and summarize with credit; no adaptation of OWASP text beyond quotation.
 - Board message rule: direction and accountability questions, no technical mandates.
+- Board sentence chosen by Bruce 10/25 (option 2: inventory first, then owner / autonomy / stoppability). Bruce: once there's an AI inventory, a risk assessment on it directs how much control is needed and where; carried into the board paragraph and action 1.
 - "A new employee in accounts payable doesn't get to sign contracts on day one" = FIR illustration, not a lab quote.
 
 **Pending before publish:**
-- Board sentence: refine together.
 - Hero image (Bruce).
 - Confirm dates for the two OpenAI posts and Anthropic's framework post.
 - Re-check EFS availability status (GA or still phased) on publish day.
