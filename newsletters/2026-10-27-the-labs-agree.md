@@ -1,6 +1,6 @@
 # FIR Risk Tuesday E95
 
-**Publish Date:** October 27, 2026 [CONFIRM: 10/27 or 11/3]
+**Publish Date:** October 27, 2026
 **URL:** https://firrisk.ai/tuesday/e95-the-labs-agree/
 **Sources:** [OpenAI — Agent security in the enterprise (Aug 2026)](https://cdn.openai.com/pdf/6546a5a6-170a-41e8-bf2f-979ff3484db1/agent-security-enterprise.pdf) · [OpenAI — Designing AI agents to resist prompt injection](https://openai.com/index/designing-agents-to-resist-prompt-injection/) · [OpenAI — Continuously hardening ChatGPT Atlas against prompt injection](https://openai.com/index/hardening-atlas-against-prompt-injection/) · [OpenAI — Hugging Face Incident Technical Report](https://cdn.openai.com/pdf/67869394-cb91-4c12-888c-5cbd85c7814c/OpenAI-Hugging-Face%20Incident-Technical-Report.pdf) · [Anthropic — Trustworthy agents in practice](https://www.anthropic.com/research/trustworthy-agents) · [Anthropic — Our framework for developing safe and trustworthy agents](https://www.anthropic.com/news/our-framework-for-developing-safe-and-trustworthy-agents) · [Anthropic — Mitigating prompt injections in browser use](https://www.anthropic.com/research/prompt-injection-defenses) · [Google — Google's Approach for Secure AI Agents](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) · [Google Cloud — How Google secures AI agents](https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-how-google-secures-ai-agents) · [OWASP — Top 10 for LLM Applications 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) · [OWASP — Top 10 for Agentic Applications 2026](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/) · threading: E94, E93, INTEL-36, INTEL-39, INTEL-41, INTEL-42
 **Analysis:** FIR Risk Platform
@@ -9,7 +9,7 @@
 
 # FIR Risk E95 — The Labs Agree: Govern What Goes In, Limit What Comes Out
 
-[HERO IMAGE: Bruce, watercolor 1408x768 → images/e95-the-labs-agree.jpg]
+![FIR Risk E95 - The Labs Agree: Govern What Goes In, Limit What Comes Out](images/e95-the-labs-agree.jpg)
 
 FIR Risk Advisory | Enterprise Risk Intelligence
 
@@ -37,9 +37,9 @@ You can't stop every bad instruction from reaching an AI agent. You can decide w
 
 ## The One Sentence Your Board Needs
 
-> For every AI agent we run: who owns it, what can it do without a person approving, and could we stop it if it were tricked? [Bruce + Claude to refine together]
+> Do we know every AI agent we run, and for each one: who owns it, what can it do on its own, and could we stop it if it were tricked?
 
-Boards don't configure agents. They decide whether agents are deployed under the same discipline as any other system that can move money, change records or speak for the company.
+Boards don't configure agents. They decide whether agents are deployed under the same discipline as any other system that can move money, change records or speak for the company. The inventory comes first because it makes the rest possible: once you know what agents you run and what each can reach, a risk assessment tells you where tight control is needed and where a lighter touch will do.
 
 ---
 
@@ -88,6 +88,8 @@ AI governance is still a new discipline, but its starting point isn't new: contr
 - **Watch data leaving, where you can.** OpenAI says attacks against ChatGPT "most often consist of attempting to convince the assistant it should take some secret information from a conversation and transmit it to a malicious third-party." Its defense detects when that would happen and either shows the user what would be sent and asks them to confirm, or blocks it. OWASP ranks Sensitive Information Disclosure second for the same reason.
 - **Above all, break the dangerous combinations.** The biggest risks come from capabilities that are acceptable alone and dangerous together. OpenAI's security engineers look for an attacker's "source," a way to influence the agent, paired with a "sink," "a capability that becomes dangerous in the wrong context." OWASP turns that into a floor it calls the Rule of Two, credited to Meta AI: an agent that reads untrusted input, holds sensitive data and can change things or communicate externally needs human approval for each action, or should lose one of the three. OpenAI saw the same pattern in its own incident: agents can "combine vulnerabilities, credentials, and permissions into attack paths that may not be apparent when individual weaknesses are assessed separately." Excessive Agency rose to third in OWASP's 2026 list, where the project says expert judgment and the incident record "agree most clearly."
 
+Some of these layers can now be switched on at the lab, not just built by you. In [E93](/tuesday/e93-the-economics-changed/) we covered Anthropic's Enterprise Frontier Safeguards: Anthropic runs automated detection across sessions and accounts for stolen or leaked credentials and offensive cyber activity, while the monitoring data stays in the customer's own cloud, under the customer's keys, and every flag goes to the customer's own team. It's rolling out in phases to eligible customers, on supported plans and platforms, and Anthropic hasn't published the eligibility criteria. The broader point holds for every provider: what safeguards you can configure depends on the plan and platform you buy. So the governance questions start at procurement: which controls does our AI plan include, have we turned them on, and who receives the alerts? A lab-side control still lands on your desk. As we put it in [INTEL-36](/intel/intel-36-the-alarm-is-yours/), a flag nobody acts on is no control at all.
+
 OpenAI's simplest advice may be the most useful for leaders: "we recommend asking what controls a human agent should have in a similar situation and implementing those." A new employee in accounts payable doesn't get to sign contracts on day one. Neither should an agent.
 
 **What it means for you:** this is internal control, applied to a new kind of worker. Build the foundation first: controlled access, a human owner for every agent and governed inputs. Then layer on scoped authority, human approval, hard limits and data monitoring, and review every agent for combinations of access that add up to a bigger risk than any one of them alone.
@@ -107,7 +109,7 @@ It was a research setting, not a deployed product, but the lesson travels. OWASP
 ## The test we ran before we believed any of it
 
 - **Who's talking.** The labs sell agents, and their attack success rates come from their own testing. We use them for what they concede, not what they promise. When a vendor tells you its product can't be made fully safe, that's a credible statement.
-- **Dates.** Google's agent-security principles and its Cloud CISO post date from 2025, and Anthropic's browser figures from November 2025. They remain the companies' current published positions, and OpenAI's August 2026 paper builds on Google's framework.
+- **Dates.** Google's agent-security principles and its Cloud CISO post date from 2025, as do Anthropic's agent framework (August) and browser figures (November) and OpenAI's Atlas post (December). They remain the companies' current published positions, and OpenAI's August 2026 paper builds on Google's framework.
 - **Independence.** OWASP is a nonprofit, community project. It also has vendor sponsors, and some of its leaders work for agent-security companies. Its lists are reviewed by hundreds of contributors, including standards bodies and national agencies.
 - **The incident.** The OpenAI case involved test conditions with safeguards off. It shows capability and failure modes, not how deployed products behave.
 
@@ -121,8 +123,8 @@ Most of this is familiar discipline: identity, least privilege, segregation of d
 
 **Now: build the foundation**
 
-1. **Know your agents and name their owners.** Build an inventory of every pilot and production agent, recording its accountable owner, business purpose, the systems and data it can reach and the actions it can take. This is the first item on OpenAI's CISO checklist.
-2. **Control access to AI systems and what goes in.** Decide who may deploy or connect agents and to which systems. Set an AI input policy: what employees may paste into AI tools, and which AI browsers and extensions are approved. Block the rest.
+1. **Know your agents and name their owners.** Build an inventory of every pilot and production agent, recording its accountable owner, business purpose, the systems and data it can reach and the actions it can take. This is the first item on OpenAI's CISO checklist. Then risk-assess the inventory: rank each agent by what it can reach and do, so the heaviest controls go where the risk is highest.
+2. **Control access to AI systems and what goes in.** Decide who may deploy or connect agents and to which systems. Set an AI input policy: what employees may paste into AI tools, and which AI browsers and extensions are approved. Block the rest. Check which safeguards your AI plans include, turn on the ones that fit, and name who receives their alerts.
 3. **Put consequential actions behind a human.** No agent sends funds, changes vendor or payroll records, signs commitments or contacts customers without approval through a formal internal control, the same standard we set for people in [INTEL-42](/intel/intel-42-the-first-email-asks-for-nothing/).
 
 **Next: build on it over the next few quarters, in order of priority**
@@ -149,6 +151,8 @@ The labs building these agents have told us, in writing, that the agent can be t
 - [Google's Approach for Secure AI Agents (Google)](https://research.google/pubs/an-introduction-to-googles-approach-for-secure-ai-agents/) — The three principles
 - [OWASP Top 10 for LLM Applications 2026](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) — Independent risk ranking, including the Rule of Two
 - [OWASP Top 10 for Agentic Applications 2026](https://genai.owasp.org/2025/12/09/owasp-top-10-for-agentic-applications-the-benchmark-for-agentic-security-in-the-age-of-autonomous-ai/) — Agent-specific risks
+- [FIR Risk Tuesday E93 — The Attacks Aren't New. The Economics Are.](/tuesday/e93-the-economics-changed/) — Anthropic's threat report and Enterprise Frontier Safeguards
+- [FIR Risk INTEL-36 — The Alarm Is Yours](/intel/intel-36-the-alarm-is-yours/) — Who owns an AI misuse flag
 - [FIR Risk Tuesday E94 — MDDR 2026: A Shift in the Physics of Cyber Risk](/tuesday/e94-shift-in-the-physics-of-cyber-risk/) — Microsoft's agent sponsor rule
 - [FIR Risk INTEL-42 — The First Email Asks for Nothing](/intel/intel-42-the-first-email-asks-for-nothing/) — Internal controls over payment changes
 
@@ -223,30 +227,30 @@ E95 = "The Labs Agree: Govern What Goes In, Limit What Comes Out" (title chosen 
   - p16: "A runtime credential is not task authority, and a tool connection is not permission to use every capability it exposes."
   - p29: CISO first-actions checklist ("Know your agents… accountable owner, business purpose, systems and data each can reach and actions each can take"; "Require an independent check before actions such as sending funds, changing records or contacting customers"; test with "malicious instructions in retrieved content"; "Reassess meaningful changes"; "Plan for intervention").
   - p30: "A credential or tool connection is not permission to take every available action."
-- OpenAI, *Designing AI agents to resist prompt injection* (openai.com; page undated in fetch, ~early 2026 [CONFIRM date]; read in full via reader proxy, openai.com 403s to scripts): "increasingly resemble social engineering more than simple prompt overrides"; "cannot rely only on filtering inputs. It also requires designing the system so that the impact of manipulation is constrained, even if some attacks succeed"; customer-service-agent analogy; "we recommend asking what controls a human agent should have in a similar situation and implementing those."
-- OpenAI, *Continuously hardening ChatGPT Atlas against prompt injection* [CONFIRM date]: "Prompt injection, much like scams and social engineering on the web, is unlikely to ever be fully 'solved'"; surface list "emails and attachments, calendar invites, shared documents, forums, social media posts, and arbitrary webpages."
+- OpenAI, *Designing AI agents to resist prompt injection* (openai.com, March 11, 2026, per page dateline, confirmed 10/25; read in full via reader proxy, openai.com 403s to scripts): "increasingly resemble social engineering more than simple prompt overrides"; "cannot rely only on filtering inputs. It also requires designing the system so that the impact of manipulation is constrained, even if some attacks succeed"; customer-service-agent analogy; "we recommend asking what controls a human agent should have in a similar situation and implementing those."
+- OpenAI, *Continuously hardening ChatGPT Atlas against prompt injection* (December 22, 2025, per page dateline, confirmed 10/25): "Prompt injection, much like scams and social engineering on the web, is unlikely to ever be fully 'solved'"; surface list "emails and attachments, calendar invites, shared documents, forums, social media posts, and arbitrary webpages."
 - OpenAI, *OpenAI – Hugging Face Incident Technical Report* (38 pp): models escaped evaluation sandbox from July 8 via Artifactory vulnerability; used publicly exposed third-party credentials; compromised parts of Hugging Face production July 11–13; detected July 19, disclosed July 21; "certain safeguards disabled"; no OpenAI customer impact; §VII.A "the first known case of an automated agent collective acting offensively without authorization"; §VII.C "no single control should ever be assumed to be fully robust."
 - OpenAI, *Designing AI agents to resist prompt injection* (additional, verified in full text 10/25): "Deterministic systems the agent interacts with limit the amount of refunds that can be given to a customer"; source-sink: "an attacker needs both a source, or a way to influence the system, and a sink, or a capability that becomes dangerous in the wrong context"; "Attacks we see developed against ChatGPT most often consist of attempting to convince the assistant it should take some secret information from a conversation and transmit it to a malicious third-party"; Safe Url: "we either show the user the information that would be transmitted and ask them to confirm, or we block it."
 - OpenAI HF report §VII.A (additional): "Agentic systems can persist across tasks, share discoveries, build on one another's progress, and combine vulnerabilities, credentials, and permissions into attack paths that may not be apparent when individual weaknesses are assessed separately."
 - §3 structure (Bruce 10/25): foundation = access control over AI systems + human owner for every agent + govern inputs; build = scope authority, human in the loop (workflows, outputs), hard limits where practical, monitor data leaving where possible, and MOST IMPORTANT, combined risks (Rule of Two / source-sink).
 - Hugging Face, *Anatomy of a Frontier Lab Agent Intrusion* (huggingface.co blog): ~17,600 actions over ~4.5 days; detection stack "failed to correctly raise the alert's criticality and trigger the on-call team."
 - Anthropic, *Trustworthy agents in practice*, April 9, 2026 (Frontier Red Team): "Even together, these safeguards are not a guarantee, which is why we encourage our customers to think carefully"; "requires defenses at every level, and on choices made by every party involved"; "This shifts the user's level of oversight from the individual step to the overall strategy."
-- Anthropic, *Our framework for developing safe and trustworthy agents* [CONFIRM date, 2025]: humans "should retain control over how their goals are pursued, particularly before high-stakes decisions are made"; Claude Code "has read-only permissions by default" and "must ask for human approval before taking any actions that modify code or systems."
+- Anthropic, *Our framework for developing safe and trustworthy agents* (August 4, 2025, page metadata, confirmed 10/25): humans "should retain control over how their goals are pursued, particularly before high-stakes decisions are made"; Claude Code "has read-only permissions by default" and "must ask for human approval before taking any actions that modify code or systems."
 - Anthropic, *Mitigating prompt injections in browser use*, November 24, 2025: internal adaptive Best-of-N attacker; Opus 4.5 with improved safeguards 1.4% attack success; "A 1% attack success rate—while a significant improvement—still represents meaningful risk"; "No browser agent is immune to prompt injection."
 - Google, *Google's Approach for Secure AI Agents* (Díaz, Kern, Olive; research.google, 2025): three principles; hybrid defense-in-depth.
 - Google Cloud, *Cloud CISO Perspectives: How Google secures AI agents*, June 12, 2025 (Anton Chuvakin): principles verbatim: "Agents must have well-defined human controllers"; "Agent powers must have limitations"; "Agent actions and planning must be observable"; "model-based input filtering coupled with adversarial training and other techniques can help reduce the risk of prompt injection, but not completely eliminate it"; "such a traditional 1980s-style security control delivers high value for securing 2020s AI agents."
 - OWASP Top 10 for LLM Applications 2026 (released Sept 1–2, 2026; CC BY-SA 4.0): order LLM01 Prompt Injection, LLM02 Sensitive Information Disclosure, LLM03 Excessive Agency, LLM04 Supply Chain, LLM05 Data and Model Poisoning, LLM06 Unbounded Consumption, LLM07 Misinformation, LLM08 Hidden Context Exposure, LLM09 Vector and Embedding Weaknesses, LLM10 Improper Output Handling. Intro: prompt injection "falls out of the top 10 entirely" on the raw incident record, "That gap is a defense effect." Mitigation 8: Rule of Two (Meta AI, 2025): [A] untrusted input, [B] sensitive data, [C] state change or external communication; "any [A,B,C] agent needs per-action human approval." Mitigation 7: surface "the exact rendered action rather than a summary"; "approval fatigue degrades reviewer judgment at volume." Release page: Excessive Agency "now number three," where "expert judgment and the record agree most clearly" (quote from Michael Bargury, Zenity, OWASP release).
 - OWASP Top 10 for Agentic Applications 2026 (released Dec 9, 2025): ASI01 Agent Goal Hijack … ASI03 Identity & Privilege Abuse (leaked credentials let agents operate beyond intended scope) … ASI09 Human-Agent Trust Exploitation (polished explanations lead operators to approve harmful actions) … ASI10 Rogue Agents.
 
+- Anthropic, *Developing Enterprise Frontier Safeguards with our customers* (Sept 1, 2026), as verified for E93/INTEL-36 on Oct 11, 2026: automated detection across sessions and accounts for offensive cyber, biological misuse and stolen/leaked credentials; monitoring data in customer cloud storage under customer keys; flags go to the customer, no Anthropic human review required; phased rollout to eligible customers, criteria unpublished; supported on Claude Code, Claude Enterprise, Claude Platform, Bedrock, Claude Platform on AWS, Google's Agent Platform, Microsoft Foundry. STATUS RE-CHECKED 10/25: still no general-availability announcement found. Re-check before publish. Woven in at Bruce's request (10/25) to connect E93's lab-side control to E95's layers. "Safeguards depend on the plan and platform you buy" = FIR generalization, not an Anthropic quote.
+
 **NOT USED:** Google DeepMind "AI Agent Traps" (primary paper not located; the 86% figure only in secondary coverage). Microsoft MDDR (excluded by rule; linked as E94). AISI TLO / Mythos 5 incident, JADEPUFFER (non-lab sources).
 
 **FIR Risk Editorial Position:**
 - OWASP is CC BY-SA: we quote and summarize with credit; no adaptation of OWASP text beyond quotation.
 - Board message rule: direction and accountability questions, no technical mandates.
+- Board sentence chosen by Bruce 10/25 (option 2: inventory first, then owner / autonomy / stoppability). Bruce: once there's an AI inventory, a risk assessment on it directs how much control is needed and where; carried into the board paragraph and action 1.
 - "A new employee in accounts payable doesn't get to sign contracts on day one" = FIR illustration, not a lab quote.
 
 **Pending before publish:**
-- Publish date (10/27 vs 11/3).
-- Board sentence: refine together.
-- Hero image (Bruce).
-- Confirm dates for the two OpenAI posts and Anthropic's framework post.
+- Re-check EFS availability status (GA or still phased) on publish day.
