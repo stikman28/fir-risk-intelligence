@@ -73,7 +73,8 @@
         "platform": "linkedin",
         "file": "intel/2026-10-20-obscurity-is-not-a-control.md",
         "at": "2026-10-26 06:45",
-        "error": "2026-10-20T15:41:47+00:00: RuntimeError: Post failed 426: {\"status\":426,\"code\":\"NONEXISTENT_VERSION\",\"message\":\"Requested version 20250301 is not active\"}"
+        "posted_at": "2026-10-26T17:01:36+00:00",
+        "post_id": "7520530078540292096"
     },
     {
         "platform": "x",
