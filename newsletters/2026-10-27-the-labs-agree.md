@@ -9,7 +9,7 @@
 
 # FIR Risk E95 — The Labs Agree: Govern What Goes In, Limit What Comes Out
 
-[HERO IMAGE: Bruce, watercolor 1408x768 → images/e95-the-labs-agree.jpg]
+![FIR Risk E95 - The Labs Agree: Govern What Goes In, Limit What Comes Out](images/e95-the-labs-agree.jpg)
 
 FIR Risk Advisory | Enterprise Risk Intelligence
 
@@ -253,6 +253,5 @@ E95 = "The Labs Agree: Govern What Goes In, Limit What Comes Out" (title chosen 
 - "A new employee in accounts payable doesn't get to sign contracts on day one" = FIR illustration, not a lab quote.
 
 **Pending before publish:**
-- Hero image (Bruce).
 - Confirm dates for the two OpenAI posts and Anthropic's framework post.
 - Re-check EFS availability status (GA or still phased) on publish day.
