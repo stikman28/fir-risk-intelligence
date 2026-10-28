@@ -25,6 +25,8 @@ Capability A is where governance starts, because it is the one an organization c
 - **A clear policy** on the kinds of content users may give their agents: which sources, which documents, which data, and what stays out.
 - **Monitoring** of what agents are actually reading and acting on, so the policy can be checked rather than assumed.
 
+That choice changes the risk itself. A company that allows its agents to read only what a user gives them directly, or content from approved sources, has narrowed capability A on purpose. A company with no rules on what its agents can read has left A wide open, and every agent with sensitive data and the ability to act inherits that exposure. Two agents with identical permissions can carry very different risk, depending on what they are allowed to read.
+
 The third piece is people. The Rule of Two works because a human sits between the agent and a consequential action, and that takes two kinds of human involvement:
 
 - **The people who own and run the agent**, who approve its actions and notice when it behaves unexpectedly.
@@ -72,7 +74,7 @@ OWASP's 2026 Top 10 for LLM Applications calls its answer the Rule of Two: an ag
 
 OpenAI's security team describes the attack it sees most: convincing the assistant to "take some secret information from a conversation and transmit it to a malicious third-party." All three in one sentence.
 
-The same three questions are a useful lens for governing AI agents in general. The first one, what goes in, is where governance starts: a clear policy on what users may give their agents, monitoring of what agents actually read, or both. And it takes people: those who own and run each agent, and those responsible for oversight of AI across the organization.
+The same three questions are a useful lens for governing AI agents in general. The first one, what goes in, is where governance starts: a clear policy on what users may give their agents, monitoring of what agents actually read, or both. An agent that reads only what a user hands it, or approved sources, is a different risk from one that can read anything. And it takes people: those who own and run each agent, and those responsible for oversight of AI across the organization.
 
 Worth adding to your AI agent risk assessment: Does it read outside content? Can it reach sensitive data? Can it act or send data out?
 
@@ -116,6 +118,7 @@ INTEL-47 expands E95 §3's most important layer ("Above all, break the dangerous
 **FIR Risk Editorial Position:**
 - OWASP places the Rule of Two under LLM01 Prompt Injection. Using the three capabilities as a general governance lens is FIR's view and is labeled as such in the text ("also a useful lens").
 - OWASP's text names [A,B] or [A,C] for residual-risk assessment; [B,C] (no untrusted input) is not named. The INTEL attributes only what OWASP says; "agents with two are worth a closer look" is FIR guidance.
+- The input-scope example (agents limited to user-provided content or approved sources vs no governance over inputs) is Bruce's 10/28 framing, an FIR illustration.
 - The input-control recommendation (policy, monitoring, or both) and the two kinds of human involvement (owners/operators and oversight) are FIR's guidance, consistent with E95's "govern what goes in." No governance route or reporting line is prescribed.
 - "NIST and joint guidance ... endorse the rule" is OWASP's statement, attributed to OWASP. "Silent on autonomy depth" is reflected as "a floor, not the whole answer."
 - The email-assistant example is an FIR illustration.
