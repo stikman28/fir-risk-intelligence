@@ -26,7 +26,7 @@ We made the same point about payments in [INTEL-42](/intel/intel-42-the-first-em
 
 ## What To Do — One Key Action
 
-**Make agent approvals a real control. Show reviewers the exact action (the amount, the recipient, the record being changed), not the agent's summary of it. Reserve approval for actions that are consequential or hard to reverse, so the volume stays low enough for real scrutiny. Then test it: periodically check a sample of approved actions to confirm reviewers would have caught a bad one.**
+**Treat agent approvals as a real control. That means showing reviewers the exact action (the amount, the recipient, the record being changed), not the agent's summary of it, and reserving approval for actions that are consequential or hard to reverse, so the volume stays low enough for real scrutiny. It's also worth testing: periodically checking a sample of approved actions shows whether reviewers would have caught a bad one.**
 
 If reviewers are approving so many requests that they can't look at each one, that isn't human oversight. It's a sign the agent has too much authority for the approval step to carry.
 
@@ -66,7 +66,7 @@ Its 2026 LLM Top 10 explains why:
 
 By the fortieth approval request of the day, the reviewer is approving the summary, not the action. And in every audit, it still looks like a control.
 
-One action: show reviewers the exact action (amount, recipient, record), reserve approval for consequential or hard-to-reverse actions so volume stays low, and test a sample of approvals to confirm reviewers would catch a bad one.
+What makes an approval real: reviewers see the exact action (amount, recipient, record), approvals are reserved for consequential or hard-to-reverse actions so volume stays low, and a sample of approvals is tested to confirm reviewers would catch a bad one.
 
 #AIGovernance #AgenticAI #HumanInTheLoop #InternalControls #CyberSecurity #CISO #RiskManagement
 ```
@@ -77,7 +77,7 @@ One action: show reviewers the exact action (amount, recipient, record), reserve
 
 OWASP: "Confident, polished explanations misled human operators into approving harmful actions." And "approval fatigue degrades reviewer judgment at volume."
 
-One action: show reviewers the exact action, not the agent's summary, keep approvals rare enough to scrutinize, and test them.
+What makes it real: reviewers see the exact action, not the agent's summary; approvals stay rare enough to scrutinize; and they get tested.
 
 Full INTEL → FIR Risk INTEL-48
 

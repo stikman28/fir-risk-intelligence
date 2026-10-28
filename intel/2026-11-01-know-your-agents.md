@@ -26,9 +26,9 @@ The inventory is also what makes control affordable. Not every agent needs the s
 
 ## What To Do — One Key Action
 
-**Build an inventory of every AI agent in pilot or production, recording its owner, purpose, the systems and data it can reach and the actions it can take. Then risk-assess each one by what it can affect, what it can do without a person deciding, and how hard its actions are to undo, and set controls to match.**
+**A good starting point is an inventory of every AI agent in pilot or production, recording its owner, purpose, the systems and data it can reach and the actions it can take. A risk assessment of each one, by what it can affect, what it can do without a person deciding, and how hard its actions are to undo, then shows where controls matter most.**
 
-Any agent nobody will own gets an owner or gets switched off. The board question that follows is the one from [E95](/tuesday/e95-the-labs-agree/): do we know every AI agent we run, and for each one, who owns it, what can it do on its own, and could we stop it if it were tricked?
+An agent that nobody is willing to own deserves a hard look: give it an owner, or consider switching it off. The board question that follows is the one from [E95](/tuesday/e95-the-labs-agree/): do we know every AI agent we run, and for each one, who owns it, what can it do on its own, and could we stop it if it were tricked?
 
 ---
 
@@ -63,7 +63,7 @@ The next item turns the list into a decision: assess each agent's "blast radius,
 
 Not every agent needs the same scrutiny. One that summarizes public documents isn't one that pays invoices. The inventory and the risk assessment tell you where control belongs.
 
-One action: build the inventory, risk-assess every agent on it, and set controls to match. Any agent nobody will own gets an owner or gets switched off.
+A good place to start: build the inventory, risk-assess every agent on it, and let the results show where controls matter most. An agent nobody is willing to own deserves a hard look.
 
 #AIGovernance #AgenticAI #CyberSecurity #RiskManagement #CISO #BoardGovernance #Compliance
 ```
@@ -76,7 +76,7 @@ OpenAI's enterprise security guide puts it first on its CISO checklist: "Know yo
 
 Then assess each one's "blast radius": what it can affect, what it can do alone, how hard it is to undo.
 
-One action: build the inventory, risk-assess it, set controls to match.
+Start with the inventory, then let a risk assessment show where controls matter most.
 
 Full INTEL → FIR Risk INTEL-46
 

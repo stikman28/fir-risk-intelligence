@@ -8,27 +8,35 @@
 
 ## The INTEL
 
-**Three things an AI agent can do are each acceptable on their own: read content from outside the organization, work with sensitive data, and take actions or send information out. Put all three in one agent and you have the setup attackers need. OWASP's 2026 Top 10 for LLM Applications turns that into a floor it calls the Rule of Two, credited to Meta AI: "any [A,B,C] agent needs per-action human approval," where A is untrusted input, B is sensitive data and C is "state change or external communication."**
+**Hidden instructions in an email, a web page or a shared document can steer an AI agent. That is prompt injection, and none of the AI labs expects it to be fully solved. OWASP's 2026 Top 10 for LLM Applications offers a floor for limiting the damage, which it calls the Rule of Two, credited to Meta AI. It looks at three capabilities an agent can have: (A) untrusted input, (B) sensitive data, and (C) "state change or external communication." OWASP's guidance: "any [A,B,C] agent needs per-action human approval," and an agent that reads untrusted input and has one of the other two needs "an explicit residual-risk assessment."**
 
-Two of the three isn't automatically safe either. When an agent reads untrusted content and has either of the other two, OWASP says the configuration needs "an explicit residual-risk assessment." It also notes that NIST and joint guidance from CISA, the FBI, the NSA and Australia's ACSC endorse the rule.
+The logic is simple. Each capability is ordinary on its own. An email assistant that reads inbound mail is fine. Access to the inbox is fine. Being able to send replies is fine. Together, they mean a stranger's email can instruct the agent to forward your confidential messages to the stranger. OpenAI's security engineers describe the same pattern: "an attacker needs both a source, or a way to influence the system, and a sink, or a capability that becomes dangerous in the wrong context." The attack they see most often is an attempt to convince the assistant "it should take some secret information from a conversation and transmit it to a malicious third-party." That is A, B and C in one sentence.
 
-OpenAI's security engineers describe the same logic in their own terms: "an attacker needs both a source, or a way to influence the system, and a sink, or a capability that becomes dangerous in the wrong context." They also say which combination they see attacked most: attempts to convince ChatGPT "it should take some secret information from a conversation and transmit it to a malicious third-party." That is A, B and C in one sentence.
+OWASP notes that NIST and joint guidance from CISA, the FBI, the NSA and Australia's ACSC endorse the rule. It also says the rule is a floor, not the whole answer.
 
 ---
 
 ## Why It Matters
 
-Most access reviews look at one permission at a time, and each one usually passes. An email assistant that reads inbound mail is fine. Access to the inbox is fine. Being able to send replies is fine. Together, they mean a stranger's email can instruct the agent to forward your confidential messages to the stranger.
+OWASP lists the Rule of Two as a prompt-injection defense, and that is where it started. The same three capabilities are also a useful lens for governing AI agents in general. Together they describe how far an agent can be misled, how much it can see, and how much it can do without a person involved.
 
-Every AI lab we read for [E95](/tuesday/e95-the-labs-agree/) agrees that hidden instructions will sometimes get through. The Rule of Two doesn't try to stop them. It makes sure that when one gets through, the agent can't do harm without a person seeing it first.
+Capability A is where governance starts, because it is the one an organization can shape before anything goes wrong. That is why [E95](/tuesday/e95-the-labs-agree/) put governing what goes into an agent first. A control over agent inputs can take two forms, and many organizations will want both:
+
+- **A clear policy** on the kinds of content users may give their agents: which sources, which documents, which data, and what stays out.
+- **Monitoring** of what agents are actually reading and acting on, so the policy can be checked rather than assumed.
+
+The third piece is people. The Rule of Two works because a human sits between the agent and a consequential action, and that takes two kinds of human involvement:
+
+- **The people who own and run the agent**, who approve its actions and notice when it behaves unexpectedly.
+- **The people responsible for oversight** of AI use across the organization, who need to know which agents hold all three capabilities and whether the controls around them are working.
 
 ---
 
 ## What To Do — One Key Action
 
-**Check every agent in your inventory against the three capabilities: does it read untrusted content, can it reach sensitive data, and can it change things or send information out? Any agent with all three gets human approval for each action, or loses one of the three. Any agent with two gets a documented risk assessment and an owner who signs off on it.**
+**Consider adding the three capabilities to your AI agent risk assessment. For each agent, ask: does it read content from outside the organization, can it reach sensitive data, and can it change records or send information out?**
 
-Removing a capability is often easier than it sounds. An agent that summarizes inbound email may not need to send anything. An agent that sends customer updates may not need to read the open web.
+Agents with all three are where OWASP recommends human approval for each action. Agents with two are worth a closer look at whether they need every capability they have. For all of them, the answers point to where a control over inputs, and a named person watching, will do the most good.
 
 ---
 
@@ -54,34 +62,34 @@ Removing a capability is often easier than it sounds. An agent that summarizes i
 ## LINKEDIN POST
 
 ```
-Three permissions. Each one passes review. Together, they're the attack.
+Three capabilities. Each one passes review on its own. Together, they're what a prompt injection attack needs.
 
 1. The agent reads content from outside (email, web pages, documents).
 2. It can reach sensitive data.
 3. It can take actions or send information out.
 
-OWASP's 2026 Top 10 for LLM Applications sets the floor with the Rule of Two: an agent with all three needs human approval for each action. An agent that reads outside content and has one of the other two needs an explicit risk assessment.
+OWASP's 2026 Top 10 for LLM Applications calls its answer the Rule of Two: an agent with all three needs human approval for each action.
 
-OpenAI's security team describes the attack it sees most: convincing the assistant to "take some secret information from a conversation and transmit it to a malicious third-party."
+OpenAI's security team describes the attack it sees most: convincing the assistant to "take some secret information from a conversation and transmit it to a malicious third-party." All three in one sentence.
 
-That's all three in one sentence.
+The same three questions are a useful lens for governing AI agents in general. The first one, what goes in, is where governance starts: a clear policy on what users may give their agents, monitoring of what agents actually read, or both. And it takes people: those who own and run each agent, and those responsible for oversight of AI across the organization.
 
-One action: check every agent against the three. All three = a human approves each action, or remove one. Two = a documented risk assessment with an owner who signs off.
+Worth adding to your AI agent risk assessment: Does it read outside content? Can it reach sensitive data? Can it act or send data out?
 
 #AIGovernance #AgenticAI #CyberSecurity #OWASP #PromptInjection #CISO #RiskManagement
 ```
 
 ## X POST
 
-Three agent permissions. Each passes review. Together, they're the attack:
+Three agent capabilities. Each passes review alone. Together, they're what prompt injection needs:
 
 1. Reads outside content
 2. Reaches sensitive data
 3. Can act or send data out
 
-OWASP's Rule of Two: an agent with all three needs human approval for every action.
+OWASP's Rule of Two: with all three, a human approves each action.
 
-One action: check every agent against the three.
+Worth adding to your AI agent risk assessment, along with a control over what goes in.
 
 Full INTEL → FIR Risk INTEL-47
 
@@ -92,7 +100,7 @@ Full INTEL → FIR Risk INTEL-47
 ## SOURCE DATA
 
 **Editorial Frame:**
-INTEL-47 expands E95 §3's most important layer ("Above all, break the dangerous combinations"; Bruce: watch for combined risks that lead to bigger risks) and action 4. Follows INTEL-46: inventory first, then the combination check. Sourcing rule: AI labs + OWASP only.
+INTEL-47 expands E95 §3's most important layer ("Above all, break the dangerous combinations"; Bruce: watch for combined risks that lead to bigger risks) and action 4, and ties it back to E95's first theme, governing what goes in. Bruce, 10/28: the three capabilities matter both for prompt-injection protection and as a governance lens for agentic workers; this is WHY we recommend a control over agent inputs (monitoring, an explicit input policy, or both), and the human in the loop means both the people who own and run the agent and the people responsible for oversight. Written as guidance to educate readers, not a mandate. Follows INTEL-46 (inventory first). Sourcing rule: AI labs + OWASP only.
 
 **Primary Sources:**
 - OWASP Top 10 for LLM Applications 2026 v1.0 (CC BY-SA 4.0), LLM01 Prompt Injection, prevention and mitigation strategy 8 (PDF p14). Verified against the PDF on Oct 25, 2026.
@@ -101,13 +109,14 @@ INTEL-47 expands E95 §3's most important layer ("Above all, break the dangerous
 **Fact-Check Notes:**
 - OWASP p14 CONFIRMED verbatim: "Budget agent capabilities with the Rule of Two as a floor (Meta AI, 2025). Treat simultaneous access to (A) untrusted input, (B) sensitive data, and (C) state change or external communication as high-risk: any [A,B,C] agent needs per-action human approval, and [A,B] or [A,C] configurations need an explicit residual-risk assessment (see Scenario #8). NIST AI 100-2 E2025 and the CISA, FBI, NSA, and ACSC OT guidance (CISA et al., 2025) endorse the rule, which is silent on autonomy depth (Noma Security, 2025)."
 - OWASP reference: Meta AI (2025, October 31), "Agents rule of two: A practical approach to AI agent security."
+- "None of the AI labs expects it to be fully solved": E95 §1 sourcing (OpenAI: prompt injection "is unlikely to ever be fully 'solved'"; Anthropic and Google equivalents in E95).
 - OpenAI CONFIRMED verbatim: "an attacker needs both a source, or a way to influence the system, and a sink, or a capability that becomes dangerous in the wrong context."
 - OpenAI CONFIRMED verbatim: "Attacks we see developed against ChatGPT most often consist of attempting to convince the assistant it should take some secret information from a conversation and transmit it to a malicious third-party." (OpenAI adds that most such attacks fail because safety training causes the agent to refuse.)
 
 **FIR Risk Editorial Position:**
-- OWASP's strict text says [A,B] or [A,C] need assessment; [B,C] (no untrusted input) is not named. The INTEL text and posts attribute only [A,B]/[A,C] to OWASP (corrected 10/28); the action's "any agent with two" is a conservative FIR recommendation, not OWASP's rule.
-- "Or lose one of the three" is FIR's action (consistent with Meta's original Rule of Two), not OWASP text; posts attribute only per-action approval to OWASP.
-- "NIST and joint guidance ... endorse the rule" is OWASP's statement, attributed to OWASP.
-- OWASP notes the rule "is silent on autonomy depth": it's a floor, not the whole answer. The action is framed as a check, not a complete control set.
+- OWASP places the Rule of Two under LLM01 Prompt Injection. Using the three capabilities as a general governance lens is FIR's view and is labeled as such in the text ("also a useful lens").
+- OWASP's text names [A,B] or [A,C] for residual-risk assessment; [B,C] (no untrusted input) is not named. The INTEL attributes only what OWASP says; "agents with two are worth a closer look" is FIR guidance.
+- The input-control recommendation (policy, monitoring, or both) and the two kinds of human involvement (owners/operators and oversight) are FIR's guidance, consistent with E95's "govern what goes in." No governance route or reporting line is prescribed.
+- "NIST and joint guidance ... endorse the rule" is OWASP's statement, attributed to OWASP. "Silent on autonomy depth" is reflected as "a floor, not the whole answer."
 - The email-assistant example is an FIR illustration.
 - MITRE: no ATT&CK technique for prompt injection; T1567 is labeled closest analog.
