@@ -10,7 +10,7 @@
 
 **Three things an AI agent can do are each acceptable on their own: read content from outside the organization, work with sensitive data, and take actions or send information out. Put all three in one agent and you have the setup attackers need. OWASP's 2026 Top 10 for LLM Applications turns that into a floor it calls the Rule of Two, credited to Meta AI: "any [A,B,C] agent needs per-action human approval," where A is untrusted input, B is sensitive data and C is "state change or external communication."**
 
-Agents with two of the three don't get a pass either. OWASP says those configurations "need an explicit residual-risk assessment." It also notes that NIST and joint guidance from CISA, the FBI, the NSA and Australia's ACSC endorse the rule.
+Two of the three isn't automatically safe either. When an agent reads untrusted content and has either of the other two, OWASP says the configuration needs "an explicit residual-risk assessment." It also notes that NIST and joint guidance from CISA, the FBI, the NSA and Australia's ACSC endorse the rule.
 
 OpenAI's security engineers describe the same logic in their own terms: "an attacker needs both a source, or a way to influence the system, and a sink, or a capability that becomes dangerous in the wrong context." They also say which combination they see attacked most: attempts to convince ChatGPT "it should take some secret information from a conversation and transmit it to a malicious third-party." That is A, B and C in one sentence.
 
@@ -60,7 +60,7 @@ Three permissions. Each one passes review. Together, they're the attack.
 2. It can reach sensitive data.
 3. It can take actions or send information out.
 
-OWASP's 2026 Top 10 for LLM Applications calls the fix the Rule of Two: an agent with all three needs human approval for each action, or should lose one of the three. Agents with two need an explicit risk assessment.
+OWASP's 2026 Top 10 for LLM Applications sets the floor with the Rule of Two: an agent with all three needs human approval for each action. An agent that reads outside content and has one of the other two needs an explicit risk assessment.
 
 OpenAI's security team describes the attack it sees most: convincing the assistant to "take some secret information from a conversation and transmit it to a malicious third-party."
 
@@ -79,7 +79,7 @@ Three agent permissions. Each passes review. Together, they're the attack:
 2. Reaches sensitive data
 3. Can act or send data out
 
-OWASP's Rule of Two: an agent with all three needs human approval for every action, or loses one.
+OWASP's Rule of Two: an agent with all three needs human approval for every action.
 
 One action: check every agent against the three.
 
@@ -105,7 +105,8 @@ INTEL-47 expands E95 §3's most important layer ("Above all, break the dangerous
 - OpenAI CONFIRMED verbatim: "Attacks we see developed against ChatGPT most often consist of attempting to convince the assistant it should take some secret information from a conversation and transmit it to a malicious third-party." (OpenAI adds that most such attacks fail because safety training causes the agent to refuse.)
 
 **FIR Risk Editorial Position:**
-- OWASP's strict text says [A,B] or [A,C] need assessment; [B,C] (no untrusted input) is not named. The action says "any agent with two" as a conservative FIR simplification.
+- OWASP's strict text says [A,B] or [A,C] need assessment; [B,C] (no untrusted input) is not named. The INTEL text and posts attribute only [A,B]/[A,C] to OWASP (corrected 10/28); the action's "any agent with two" is a conservative FIR recommendation, not OWASP's rule.
+- "Or lose one of the three" is FIR's action (consistent with Meta's original Rule of Two), not OWASP text; posts attribute only per-action approval to OWASP.
 - "NIST and joint guidance ... endorse the rule" is OWASP's statement, attributed to OWASP.
 - OWASP notes the rule "is silent on autonomy depth": it's a floor, not the whole answer. The action is framed as a check, not a complete control set.
 - The email-assistant example is an FIR illustration.
