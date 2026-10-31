@@ -1,7 +1,7 @@
 # FIR Risk INTEL-52 — What SEC Cyber Filings Don't Tell You
 
 **Type:** `FILING INTEL`
-**Date:** November 7, 2026
+**Date:** November 9, 2026
 **Platform Source:** FIR Risk E96 — The Costliest 5%: What Confirmed Losses Teach Us About Planning (Cyentia Institute, IRIS Xtreme 2026)
 
 ---
