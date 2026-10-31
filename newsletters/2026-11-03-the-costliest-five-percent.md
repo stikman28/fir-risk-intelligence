@@ -29,7 +29,7 @@ That makes it the right input for one specific job: the risk assessment. When a 
 
 ## Bottom Line
 
-The costliest cyber events are not bigger versions of everyday incidents. They are mostly disruption and fraud rather than data theft, they usually run through stolen logins and trusted third-party access, and companies' own SEC disclosures say little about what they cost. Use this evidence to size your planning range and to check that your risk register covers the scenarios where the big losses actually land.
+The costliest cyber events are not bigger versions of everyday incidents. They are mostly disruption, plus direct theft of funds, rather than data theft, they usually run through stolen logins and trusted third-party access, and companies' own SEC disclosures say little about what they cost. Use this evidence to size your planning range and to check that your risk register covers the scenarios where the big losses actually land.
 
 **Plan for the events that cost the most, not just the ones that happen most.**
 
@@ -76,7 +76,7 @@ Cyentia also simulated the old risk-matrix question: one catastrophe or a thousa
 
 ## 3. The big losses come from disruption
 
-Across all incidents, about 91% are mainly data exposure. Among extreme events, that falls to 33%. Disruption rises from 8% to 43%, and fraud from under 1% to 24%. Strip out cryptocurrency theft, and business interruption and lost sales are the largest share of losses. Response and notification costs are the most frequently reported, but not the largest.
+Across all incidents, about 91% are mainly data exposure. Among extreme events, that falls to 33%. Disruption rises from 8% to 43%, and fraud from under 1% to 24%. Most of that fraud is cryptocurrency theft: across the 43 crypto events, theft of funds was nearly all of the loss, while among the other extreme events it was 7% of losses. Strip out cryptocurrency theft, and business interruption and lost sales are the largest share of losses. Response and notification costs are the most frequently reported, but not the largest.
 
 The impact also travels. Nearly half of extreme events (46%) spread into the victim's supply chain, accounting for 55% of losses, and Cyentia's earlier research found downstream companies can lose as much as the original victim. The pattern held after the data closed: the 2026 Verizon DBIR describes the Jaguar Land Rover ransomware attack, which halted production for five weeks, caused an estimated £1.9 billion in damages and rippled across about 5,000 downstream organizations.
 
@@ -173,7 +173,7 @@ Most cyber research counts attacks. Cyentia's IRIS Xtreme 2026 counts what the w
 It's hindsight: the newest events are from early 2025, because the full cost of an attack takes time to surface. That's what makes it useful for one job, checking your risk assessment against real outcomes.
 
 What the evidence says:
-→ The big losses are disruption and fraud, not data theft. Data exposure is 91% of all incidents but 33% of extreme ones.
+→ The big losses are mostly disruption, not data theft. Data exposure is 91% of all incidents but 33% of extreme ones.
 → Stolen logins were involved in events making up 91% of extreme losses. Vendor and partner access: 20% of events, 65% of losses.
 → 46% of extreme events spread into the supply chain.
 → Of 205 incidents filed with the SEC, companies called 6% material, and only 22 gave a cost estimate.
@@ -192,7 +192,7 @@ Most cyber research counts attacks. Cyentia's IRIS Xtreme 2026 counts what the w
 
 It's hindsight (newest events early 2025), and that's the point: check your risk assessment against real outcomes.
 
-→ Big losses are disruption and fraud, not data theft
+→ Big losses are mostly disruption, not data theft
 → Stolen logins tied to 91% of extreme losses
 → Vendor access: 20% of events, 65% of losses
 → Only 6% of SEC-filed incidents called material
@@ -224,6 +224,7 @@ E96 = IRIS Xtreme 2026 (Cyentia), next edition before SIGNALS 2026 ships. Bruce'
 - p11: crypto 43 of 136 (16 of 103 in 2020).
 - p15 Fig 9 (overall → extreme, by count): exposure 91% → 32.8%; disruption 7.8% → 43%; fraud 0.9% → 24.1% (text: "under 40%", "over 43%", "27-fold").
 - p16–17 Fig 11: records vs losses for extreme events; regression line "almost perfectly flat… same loss prediction for a breach of a thousand records as for a breach of a billion."
+- p16 text after Fig 10: "a good chunk of those fraud events involve cryptocurrency theft" (no crypto split of Fig 9 given). p18 Table 2 financial theft & fraud: crypto 97.6% freq / 91.2% losses; non-crypto 18.1% / 6.9%. p28: scam/fraud pattern (BEC) "constricts at the extremes." Report does not analyze attacker motive (fraud = outcome category). Fraud wording tightened 10/31 at Bruce's request.
 - p18 Table 2 (non-crypto freq / loss share): business interruptions & lost sales 29.2% / 20.4%; response & notification 45.8% / 17.8%; fines 33.3% / 10.0%; ransom 15.3% / 2.6%; brand 4.2% / 0.9%. Text: response "most commonly reported"; business interruptions "drive the largest share of actual losses."
 - p19: brand or reputational damage "appears in just three incidents in the entire dataset." Fig 13: supply chain impact 46.4% (text: "over half (55%) of all associated losses"; Ripples research: downstream costs "can equal or even exceed"); government hearing 38.4%; bankruptcy 8.7%; extinction 6.5%; credit rating 2.9%; exec churn 2.2%. Text (p20): "60% of companies go out of business after a breach" myth.
 - p21: stock returns reverse "within roughly two weeks for the average incident"; credit downgrades rare (Hamilton, Co-op, MGM credit negative).
