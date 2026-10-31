@@ -29,7 +29,7 @@ That makes it the right input for one specific job: the risk assessment. When a 
 
 ## Bottom Line
 
-The costliest cyber events are not bigger versions of everyday incidents. They are mostly disruption and fraud rather than data theft, they usually run through stolen logins and trusted third-party access, and companies' own SEC disclosures say little about what they cost. Use this evidence to size your planning range and to check that your risk register covers the scenarios where the big losses actually land.
+The costliest cyber events are not bigger versions of everyday incidents. They are mostly disruption, plus direct theft of funds, rather than data theft, they usually run through stolen logins and trusted third-party access, and companies' own SEC disclosures say little about what they cost. Use this evidence to size your planning range and to check that your risk register covers the scenarios where the big losses actually land.
 
 **Plan for the events that cost the most, not just the ones that happen most.**
 
@@ -39,7 +39,7 @@ The costliest cyber events are not bigger versions of everyday incidents. They a
 
 > Is our worst-case cyber loss estimate based on evidence from real events at companies our size, and are our insurance and reserves built around it?
 
-Boards don't build loss models. They can ask whether the number the company plans around comes from evidence, and whether insurance and cash reserves match it. Cyentia's own test is simple: if every scenario on your risk register is a few million dollars for a multi-billion-dollar company, the estimate is probably too low; if every scenario is a billion-dollar catastrophe, it is probably too high. Either way, insurance, reserves and security spending end up sized to the wrong number.
+Boards don't build loss models. They can ask whether the number the company plans around comes from evidence, and whether insurance and cash reserves match it. Cyentia's own test is simple: if your worst-case scenario is a few million dollars and you are a multi-billion-dollar company, you are probably off by an order of magnitude; if every scenario on your risk register is a billion-dollar loss, you are probably overstating it. Either way, insurance, reserves and security spending end up sized to the wrong number.
 
 ---
 
@@ -48,7 +48,7 @@ Boards don't build loss models. They can ask whether the number the company plan
 Three things to keep in mind before using any of these figures:
 
 - **It covers the extreme tail only.** Cyentia defines an extreme event as one in the top 5% of losses, at least $32 million. These 136 events are not a picture of all cyber incidents, and most organizations will never suffer one.
-- **It trails the present.** The study covers five years, with the newest events in early 2025. Cyentia notes that a reporting lag is built into cyber loss data: costs surface over many months, through filings, lawsuits and insurance claims.
+- **It trails the present.** The study covers five years, with the newest events in early 2025. Cyentia notes the reporting lag that is inherent to cyber loss events, which is why the most recent quarters in its data are thin.
 - **It is a lower bound.** Only publicly reported losses are counted, and mostly the direct ones. Cyentia says the true cost is likely higher.
 
 Used that way, it answers questions a forecast can't: what the worst outcomes really cost, what kind of loss they were, and how attackers got in.
@@ -76,7 +76,7 @@ Cyentia also simulated the old risk-matrix question: one catastrophe or a thousa
 
 ## 3. The big losses come from disruption
 
-Across all incidents, about 91% are mainly data exposure. Among extreme events, that falls to 33%. Disruption rises from 8% to 43%, and fraud from under 1% to 24%. Strip out cryptocurrency theft, and business interruption and lost sales are the largest share of losses. Response and notification costs are the most frequently reported, but not the largest.
+Across all incidents, about 91% are mainly data exposure. Among extreme events, that falls to 33%. Disruption rises from 8% to 43%, and fraud from under 1% to 24%. Most of that fraud is cryptocurrency theft: across the 43 crypto events, theft of funds was nearly all of the loss, while among the other extreme events it was 7% of losses. Strip out cryptocurrency theft, and business interruption and lost sales are the largest share of losses. Response and notification costs are the most frequently reported, but not the largest.
 
 The impact also travels. Nearly half of extreme events (46%) spread into the victim's supply chain, accounting for 55% of losses, and Cyentia's earlier research found downstream companies can lose as much as the original victim. The pattern held after the data closed: the 2026 Verizon DBIR describes the Jaguar Land Rover ransomware attack, which halted production for five weeks, caused an estimated £1.9 billion in damages and rippled across about 5,000 downstream organizations.
 
@@ -108,7 +108,7 @@ Several common inputs to risk assessments turn out to be weak:
 - **SEC disclosures.** Of 205 incidents reported on 8-K filings, companies judged only 6% material or likely material, and only 22 included any estimate of financial impact. There is little overlap between the incidents filed as material and the costliest events. Cyentia calls the 8-K record "as much a record of regulatory uncertainty as it is a record of genuine material risk." Where filings are useful is operational impact: 44% describe disruption to operations, outages, order fulfillment or production.
 - **Reputation.** Brand damage appears as a loss in just three extreme events, and as a possibly material impact in two of the 205 SEC filings. Stock prices typically recover within about two weeks of an average incident, and credit downgrades are rare.
 - **Cost per record.** The number of records stolen tells you almost nothing about the loss. Cyentia's regression line is nearly flat, predicting the same cost for a thousand records as for a billion.
-- **Worst-case myths.** The often-quoted claim that most companies close after a breach doesn't hold up: even among these extreme events, 9% led to bankruptcy and about 7% to the company ceasing to exist.
+- **Worst-case myths.** Cyentia calls the claim that "60% of companies go out of business after a breach" a myth that persists in the security community. Even among these extreme events, about 9% led to bankruptcy and near 7% to the company ceasing to exist: rare overall, though more likely at the extreme end.
 
 **What it means for you:** use public disclosures for what they show well, operational impact, and use loss data like this to set the size of the risk.
 
@@ -173,7 +173,7 @@ Most cyber research counts attacks. Cyentia's IRIS Xtreme 2026 counts what the w
 It's hindsight: the newest events are from early 2025, because the full cost of an attack takes time to surface. That's what makes it useful for one job, checking your risk assessment against real outcomes.
 
 What the evidence says:
-→ The big losses are disruption and fraud, not data theft. Data exposure is 91% of all incidents but 33% of extreme ones.
+→ The big losses are mostly disruption, not data theft. Data exposure is 91% of all incidents but 33% of extreme ones.
 → Stolen logins were involved in events making up 91% of extreme losses. Vendor and partner access: 20% of events, 65% of losses.
 → 46% of extreme events spread into the supply chain.
 → Of 205 incidents filed with the SEC, companies called 6% material, and only 22 gave a cost estimate.
@@ -192,7 +192,7 @@ Most cyber research counts attacks. Cyentia's IRIS Xtreme 2026 counts what the w
 
 It's hindsight (newest events early 2025), and that's the point: check your risk assessment against real outcomes.
 
-→ Big losses are disruption and fraud, not data theft
+→ Big losses are mostly disruption, not data theft
 → Stolen logins tied to 91% of extreme losses
 → Vendor access: 20% of events, 65% of losses
 → Only 6% of SEC-filed incidents called material
@@ -218,14 +218,15 @@ E96 = IRIS Xtreme 2026 (Cyentia), next edition before SIGNALS 2026 ships. Bruce'
 - p4: extreme threshold = 95th pct of inflation-adjusted losses over last 15 years = at least $32M.
 - p5 Table 1 (Source: IRIS 2025, all incidents) 50%/95%: >$10B $2.2M/$266.2M; $1B–10B $1.8M/$61.8M; $100M–1B $466.7K/$12.3M; <$100M $357.0K/$9.1M. "$9M loss for a $50M organization… nearly 20%"; "$266M loss for a $50B organization… 0.5%". Note: losses are direct/quantifiable, "conservative lower bound."
 - p6: 2020 Xtreme median $47M → $100M; Fig 2: 95th $14.7M (2008) → $281.3M (19.1x); median $192.2K → $2.4M (12.6x).
-- p7: 136 events over five-year period; Fig 3 quarterly counts end at 2025, "dip at the end… due to the reporting lag that's inherent to cyber loss events." Newest events ~early 2025 = FIR reading of Fig 3 (no stated cutoff); latest named case Co-op UK, April 2025 (p21).
+- p7: 136 events over five-year period; Fig 3 quarterly counts end at 2025, "Ignore the dip at the end; that's due to the reporting lag that's inherent to cyber loss events." (Section 1 previously added "filings, lawsuits and insurance claims" — not in the source; removed 10/31.) Newest events ~early 2025 = FIR reading of Fig 3 (no stated cutoff); latest named case Co-op UK, April 2025 (p21).
 - p8–9: Fig 4: "on average, it takes 7 years of 'minor cuts' to equal the damage caused by one 'critical hit'"; Fig 5: >$100B firms, "<3 years of smaller losses to exceed."
 - p10: "If your security budget is 90% prevention and 10% resilience, does that match what this data is telling you?" Financial ~40% of extreme events.
 - p11: crypto 43 of 136 (16 of 103 in 2020).
 - p15 Fig 9 (overall → extreme, by count): exposure 91% → 32.8%; disruption 7.8% → 43%; fraud 0.9% → 24.1% (text: "under 40%", "over 43%", "27-fold").
 - p16–17 Fig 11: records vs losses for extreme events; regression line "almost perfectly flat… same loss prediction for a breach of a thousand records as for a breach of a billion."
+- p16 text after Fig 10: "a good chunk of those fraud events involve cryptocurrency theft" (no crypto split of Fig 9 given). p18 Table 2 financial theft & fraud: crypto 97.6% freq / 91.2% losses; non-crypto 18.1% / 6.9%. p28: scam/fraud pattern (BEC) "constricts at the extremes." Report does not analyze attacker motive (fraud = outcome category). Fraud wording tightened 10/31 at Bruce's request.
 - p18 Table 2 (non-crypto freq / loss share): business interruptions & lost sales 29.2% / 20.4%; response & notification 45.8% / 17.8%; fines 33.3% / 10.0%; ransom 15.3% / 2.6%; brand 4.2% / 0.9%. Text: response "most commonly reported"; business interruptions "drive the largest share of actual losses."
-- p19: brand or reputational damage "appears in just three incidents in the entire dataset." Fig 13: supply chain impact 46.4% (text: "over half (55%) of all associated losses"; Ripples research: downstream costs "can equal or even exceed"); government hearing 38.4%; bankruptcy 8.7%; extinction 6.5%; credit rating 2.9%; exec churn 2.2%. Text (p20): "60% of companies go out of business after a breach" myth.
+- p19: brand or reputational damage "appears in just three incidents in the entire dataset." Fig 13: supply chain impact 46.4% (text: "over half (55%) of all associated losses"; Ripples research: downstream costs "can equal or even exceed"); government hearing 38.4%; bankruptcy 8.7%; extinction 6.5%; credit rating 2.9%; exec churn 2.2%. Text (p20): "Those numbers may seem small if you've heard the '60% of companies go out of business after a breach' myth that persists in the security community… going belly up after an incident is very rare in the grand scheme of things, but that risk is significantly elevated when we cross into extreme event territory." (Section 5 bullet now quotes the claim exactly; was paraphrased as "most companies close" — fixed 10/31.)
 - p21: stock returns reverse "within roughly two weeks for the average incident"; credit downgrades rare (Hamilton, Co-op, MGM credit negative).
 - p22–24: 205 incidents from Board Cybersecurity (34 Item 1.05, 33 Item 7.01, 145 Item 8.01); 22 of 205 with financial impact estimate; median reported loss $13.5M; "only 7 are currently assessed as material… with 5 more assessed as likely to be material… (6% of the total)"; footnote 8: 10-Q/10-K not integrated; "as much a record of regulatory uncertainty as it is a record of genuine material risk"; reputation "possibly material" in exactly 2 of 205; 91 of 205 (44%) confirmed operational impact; Fig 15 categories (business operations, system outages, order fulfillment, production output…).
 - p25 Fig 16: external 94.9% of events / 86.0% of losses; internal 2.9% / 2.5%; third party 2.2% / 11.4%.
