@@ -248,5 +248,5 @@ E96 = IRIS Xtreme 2026 (Cyentia), next edition before SIGNALS 2026 ships. Bruce'
 - "Two forms of third-party risk need different responses" = FIR synthesis (prompted by the FIR agent's Q2 answer), not a Cyentia claim.
 
 **Pending before publish:**
-- Bruce: personal intro in his voice; title approval.
-- Candidate INTELs: (1) planning range by revenue band; (2) disruption, not data theft; (3) logins vs exploits; (4) SEC 8-Ks as weak calibration.
+- Title and intro ("Hindsight is the point") approved by Bruce 10/31; hero image added 10/31.
+- Candidate INTELs: (1) planning range by revenue band (drafted as INTEL-49, branch content/e96-intel); (2) disruption, not data theft; (3) logins vs exploits; (4) SEC 8-Ks as weak calibration.
