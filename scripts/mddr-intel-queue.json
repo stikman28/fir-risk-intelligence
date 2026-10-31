@@ -58,11 +58,15 @@
     {
         "platform": "linkedin",
         "file": "intel/2026-10-31-stop-counting-patches.md",
-        "at": "2026-10-31 06:45"
+        "at": "2026-10-31 06:45",
+        "posted_at": "2026-10-31T15:53:22+00:00",
+        "post_id": "7522324848703070211"
     },
     {
         "platform": "x",
         "file": "intel/2026-10-31-stop-counting-patches.md",
-        "at": "2026-10-31 06:50"
+        "at": "2026-10-31 06:50",
+        "posted_at": "2026-10-31T15:53:23+00:00",
+        "post_id": "2116559164109430943"
     }
 ]
