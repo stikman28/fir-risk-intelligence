@@ -151,7 +151,7 @@ The costliest 5% of cyber events have already happened to someone else. The best
 ## Learn More
 
 - [IRIS Xtreme 2026 (Cyentia Institute)](https://www.cyentia.com/iris) — Primary source: 136 extreme cyber events and 205 SEC 8-K incidents
-- [FIR Risk Tuesday E59 — Cyentia Institute's 2025 Information Risk Insights Study](/tuesday/e59-iris-2025-risk-insights/) — The all-incident companion study
+- [FIR Risk Tuesday E59 — 150,000 Incidents Prove Time Is the Variable That Matters](/tuesday/e59-iris-2025-risk-insights/) — The all-incident companion study
 - [FIR Risk Tuesday E90 — Refinement, Not Revolution](/tuesday/e90-refinement-not-revolution/) — The 2026 Verizon DBIR, including third-party breaches
 - [FIR Risk Tuesday E85 — The Responder's Report](/tuesday/e85-responders-report/) — Mandiant M-Trends 2026
 
