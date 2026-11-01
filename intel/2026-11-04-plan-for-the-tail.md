@@ -51,7 +51,7 @@ If the estimate today is a single number from a vendor report or the last headli
 
 - [IRIS Xtreme 2026 (Cyentia Institute)](https://www.cyentia.com/iris) — Primary source; Table 1 loss statistics by revenue band (p5), cost per record (Figure 11, pp16–17)
 - [FIR Risk Tuesday E96 — The Costliest 5%: What Confirmed Losses Teach Us About Planning](/tuesday/e96-the-costliest-five-percent/) — Full analysis
-- [FIR Risk Tuesday E59 — Cyentia Institute's 2025 Information Risk Insights Study](/tuesday/e59-iris-2025-risk-insights/) — The all-incident study behind the revenue bands
+- [FIR Risk Tuesday E59 — 150,000 Incidents Prove Time Is the Variable That Matters](/tuesday/e59-iris-2025-risk-insights/) — The all-incident study behind the revenue bands
 
 ---
 
