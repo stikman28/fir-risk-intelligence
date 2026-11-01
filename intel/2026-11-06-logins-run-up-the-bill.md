@@ -49,7 +49,7 @@ This is hindsight evidence: Cyentia's events run to early 2025. The DBIR's 2025 
 - [IRIS Xtreme 2026 (Cyentia Institute)](https://www.cyentia.com/iris) — Primary source; initial access techniques (Table 3, p29)
 - [FIR Risk Tuesday E96 — The Costliest 5%: What Confirmed Losses Teach Us About Planning](/tuesday/e96-the-costliest-five-percent/) — Full analysis
 - [FIR Risk Tuesday E90 — Refinement, Not Revolution](/tuesday/e90-refinement-not-revolution/) — The 2026 Verizon DBIR
-- [FIR Risk Tuesday E85 — M-Trends 2026](/tuesday/e85-responders-report/) — Mandiant's frontline investigations
+- [FIR Risk Tuesday E85 — The Responder's Report](/tuesday/e85-responders-report/) — Mandiant M-Trends 2026
 
 ---
 
