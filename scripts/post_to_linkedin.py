@@ -385,6 +385,17 @@ def build_firrisk_url(filepath: str, content_ref: str) -> str:
 
 # --- LinkedIn API ---
 
+# The Posts API reads `commentary` as "little text" markup. An unescaped reserved character
+# silently truncates the post there — the API still returns 201. '#' is left alone so
+# hashtags keep working.
+LITTLE_TEXT_RESERVED = re.compile(r"([\\|{}@\[\]()<>*_~])")
+
+
+def escape_little_text(text: str) -> str:
+    """Backslash-escape LinkedIn little-text reserved characters so they post literally."""
+    return LITTLE_TEXT_RESERVED.sub(r"\\\1", text)
+
+
 def _fingerprint(text: str) -> str:
     """First N chars of the text, whitespace-normalized. Used to spot duplicates."""
     normalized = re.sub(r"\s+", " ", text).strip()
@@ -428,7 +439,7 @@ def check_recent_duplicate(text: str, access_token: str, person_id: str) -> str 
             if created < cutoff:
                 continue
             commentary = post.get("commentary", "")
-            if _fingerprint(commentary) == fp:
+            if _fingerprint(commentary) in (fp, _fingerprint(escape_little_text(text))):
                 return post.get("id", "")
     except Exception as e:
         print(f"  (idempotency check skipped: {e})", file=sys.stderr)
@@ -485,7 +496,7 @@ def create_post(text: str, access_token: str, person_id: str, image_urn: str = N
 
     payload = {
         "author": f"urn:li:person:{person_id}",
-        "commentary": text,
+        "commentary": escape_little_text(text),
         "visibility": "PUBLIC",
         "distribution": {
             "feedDistribution": "MAIN_FEED",
@@ -531,7 +542,7 @@ def add_comment(post_urn: str, text: str, access_token: str, person_id: str):
         json={
             "actor": f"urn:li:person:{person_id}",
             "message": {
-                "text": text
+                "text": escape_little_text(text)
             }
         }
     )
