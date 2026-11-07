@@ -49,12 +49,12 @@ Boards don't need to follow capital markets. They can ask whether the company kn
 
 How we read these filings, and what they can and can't tell you:
 
-- **We compared like with like.** Each company's most recent risk factors against the same filing a year earlier: the third-quarter 10-Q for Amazon, Meta and Microsoft (Microsoft's fiscal first quarter); the annual 10-K for Apple and Oracle; and for Alphabet, the 10-K plus the "material changes" its third-quarter 10-Q added this year, where the same quarter last year added none.
+- **We compared like with like.** Each company's most recent risk factors against the same filing a year earlier: the third-quarter 10-Q for Amazon, Meta and Microsoft (Microsoft's fiscal first quarter); the annual 10-K for Apple and Oracle; and for Alphabet, the 10-K plus the "material changes" its third-quarter 10-Q added this year, where the same quarter last year added none. Microsoft, Oracle and Apple have fiscal years that don't match the calendar, so each is compared with its own prior year, not with each other.
 - **What changed matters more than what's listed.** Risk factors are written by lawyers to protect the company, so no single sentence is news. A company listing a risk is not predicting it. When a company adds a new risk factor, rewrites an old one, or starts naming a figure, it is telling investors something has moved.
 - **We looked for patterns, not headlines.** A risk that several companies add at the same time is a signal. One company's wording is not.
 - **This is not investment analysis.** We are not commenting on valuations or stock prices. We are reading these companies as suppliers to everyone else.
 
-By our count, the risk-factor sections grew by about 16% at Microsoft, 26% at Apple and 30% at Oracle compared with a year earlier. Amazon's barely changed; more on that in the test we ran.
+By our count, the risk-factor sections grew by about 16% at Microsoft, 26% at Apple and 30% at Oracle compared with a year earlier. Amazon's barely changed; more on that in signal two.
 
 ---
 
@@ -98,6 +98,8 @@ The same race carries very different risk depending on how each company makes it
 - **A model maker: Anthropic.** It buys capacity from the builders and sells AI to businesses, 44% of it through the builders' own cloud marketplaces. More in the special section below.
 
 **Our read:** the risk of the race is not spread evenly. Companies that can resell capacity can pass part of the cost to customers. Companies building for their own use carry it themselves, and companies that rent depend on the builders' prices and priorities.
+
+**Amazon is the exception that proves the method.** Its capital spending more than doubled while its risk factors barely changed. It already warned a year ago that misjudging demand can mean "excess or insufficient fulfillment or data center capacity... and impairment charges," and its $883.6 billion of commitments are disclosed in full in its notes. Amazon writes broad, stable risk factors and puts the numbers in its financial statements.
 
 **What it means for you:** most organizations are in the renter's position. Know which model each of your critical providers runs, because it shapes how they will price, what they will prioritize when capacity is short, and how exposed they are if demand disappoints.
 
@@ -181,16 +183,6 @@ Anthropic is not yet public. It filed for an initial public offering on October 
 
 ---
 
-## The test we ran before we believed any of it
-
-- **Same filing, a year apart.** Every comparison is like-for-like. Where a company only reports changes in its 10-Q (Oracle), we used its annual 10-K.
-- **Figures from the primary documents.** Capital spending comes from each company's cash flow statement, commitments from its own commitments disclosures, and financing amounts from its 8-K filings. Microsoft's capital spending excludes finance leases, which are large. Commitments are defined differently by each company, so we don't add them up or rank them.
-- **Amazon is the outlier, and the reason is in the filing.** Its capital spending more than doubled while its risk factors barely changed, mostly adding "artificial intelligence" to existing sentences. But Amazon's risk factors already warned, a year earlier, that misjudging demand can "result in excess or insufficient fulfillment or data center capacity... and impairment charges," and its commitments, $883.6 billion, are disclosed in full in its notes. Amazon writes broad, stable risk factors and puts the numbers in the financial statements. The filing doesn't tell us whether it views its risks differently from its peers, so we don't guess.
-- **Different calendars.** Microsoft, Oracle and Apple have fiscal years that don't match the calendar, so we compare each with its own prior year, not with each other.
-- **Who's missing.** OpenAI is private and has not filed for an IPO, so there is no disclosure to read. Nvidia, the largest supplier of AI chips, reports later in November. SpaceX, now public and reporting its AI business as a separate segment, and Tesla deserve their own look. We will cover them in coming editions.
-
----
-
 ## So What Should Organizations Actually Do?
 
 None of this calls for pulling back from AI or cloud. The companies building it are leaning in, and so should yours, with these risks managed rather than ignored. That starts with treating these providers as the concentrated suppliers they have become. Six lines worth adding to your risk register:
@@ -211,6 +203,8 @@ None of this calls for pulling back from AI or cloud. The companies building it 
 6. **Capacity and power.** Ask critical providers where your workloads run and how they plan for power or capacity constraints, and plan for slower availability or higher prices, not just an outage.
 
 The companies building AI have told regulators, in writing, that they are racing to secure the capacity the next decade will need. The best use of that disclosure is to decide where your organization stands in that race, and to make sure your own plans account for what it costs.
+
+Not yet covered: Nvidia reports later in November, SpaceX and Tesla get their own edition, and OpenAI is private and files nothing.
 
 **Coming next: FIR SIGNALS 2026**, our annual report on the risk signals that held up across a full year of evidence. Two of them, the shrinking window to patch and the risk inside your own AI, show up again in these filings.
 
@@ -311,6 +305,8 @@ Bruce asked why Amazon's risk factors barely changed ("disclosing risk well, or 
 - Apple 10-K FY26 (p.13; not in FY25): "Some consequences, such as deleting data or completing transactions, may be difficult or impossible to reverse"; "the Company's ability to oversee and control third-party artificial intelligence agents and other technologies may be limited."
 - Circularity paragraph reuses already-verified Anthropic figures ($895.4B committed, rounded to "about $895 billion"; 44% via CSP marketplaces). Meta's contingent cloud-capacity purchase was NOT used (Bruce's Meta rule).
 - Agent-sourced items NOT used: Meta agent/vulnerability language (rule); research-corpus stats (MDDR 2026, Unit 42, Rapid7 KEV) — kept for SIGNALS; "no filer discloses agent controls" (not verified across Item 1C).
+
+**11/7 edit (Bruce):** removed the "The test we ran before we believed any of it" section (process notes, duplicated section 1). Kept: calendar note → section 1; Amazon outlier → end of signal two (quote verified in Amazon Q3'26 p.43 and Q3'25 p.39; $883,581M commitments Note 4 p.15); "who's missing" → one line before Coming next.
 
 **FIR synthesis (not company claims), labeled "Our read" in text:** the capacity race (Bruce's thesis, supported by the cost/scarcity statements above); money moving in circles linking the risks; the business-model risk map; human approval as the control the builders' agent language points to; the defender side of the vulnerability race.
 
