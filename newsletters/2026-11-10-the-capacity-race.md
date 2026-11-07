@@ -77,6 +77,10 @@ The most striking pattern is how much these companies have committed to pay for,
 
 **The race is now funded with borrowed money and new shares.** Capital spending roughly doubled: Alphabet $132.0 billion in the first nine months of 2026, up from $63.6 billion; Amazon $77.3 billion in the third quarter alone, up from $35.1 billion; Microsoft $39.4 billion in its September quarter, up from $19.4 billion before finance leases; Oracle $28.5 billion in its August quarter, up from $8.5 billion. Between October 29 and November 5, the companies raised more than $72 billion, plus €6 billion, in bonds, shares and preferred stock, according to their 8-K filings. Microsoft sold $25 billion of bonds with maturities out to 2066. Oracle sold $10 billion of new shares and $10 billion of bonds, on top of $129.5 billion of debt at the end of May. Over the last twelve months, Amazon's free cash flow was negative $42.4 billion, and it brought in $124.1 billion from financing, including a $17.5 billion term loan.
 
+**Some of the money moves in circles.** The builders are also financing the companies that buy their capacity. Amazon invested $50.0 billion in OpenAI's preferred stock and $10.0 billion in Anthropic's in the first nine months of 2026. Microsoft calls itself "a major investor in OpenAI," and its quarterly results now swing with that stake: $4.1 billion of net losses a year ago and $272 million of gains this quarter, which it excludes from its adjusted results. Alphabet now discloses $75.7 billion of backstops for data centers, including $10.0 billion with Crux AI, which it identifies as a related party, plus $22.8 billion of guarantees so its counterparties can order power equipment. And Anthropic, which has committed about $895 billion to compute, earns 44% of its revenue through the builders' own cloud marketplaces.
+
+**Our read:** in a race, financing your own demand is rational, but it links the risks. A setback at a major model maker, or at a partner a builder has guaranteed, would travel through investors, suppliers and customers at the same time.
+
 **The other side of the bet** is in the filings too. Microsoft added that overestimating demand "may lead to impairment of assets on our balance sheet." Oracle says that if customers don't renew, it could be "locked into multi-year commitments for excess data center space... without receiving corresponding revenue."
 
 **What it means for you:** the cost of the race is recovered from customers. Expect your providers to push for longer terms, minimum spend and committed-use contracts, and decide how much lock-in you are willing to accept before you sign.
@@ -103,14 +107,15 @@ The same race carries very different risk depending on how each company makes it
 
 The builders now describe physical limits on how fast anyone can grow:
 
-- **Power.** Microsoft added new language on electricity: grid constraints, delays in getting connected, and the cost of power. Alphabet says its growth is "increasingly constrained by the availability of power, water, and land."
+- **Power.** Microsoft added new language on electricity: grid constraints, delays in getting connected, and the cost of power. Alphabet says its growth is "increasingly constrained by the availability of power, water, and land." Oracle added that rising energy costs "can adversely affect our margins, particularly where customer pricing is fixed or committed," and that its long-term power contracts "may extend beyond customer contract terms."
 - **Permits and local opposition.** Microsoft now cites "community opposition, state and local moratoriums, and hyper-local dissent." Oracle cites government "limits or moratoria on data center construction."
 - **People.** Microsoft added shortages of skilled construction and operations workers.
+- **Partners' financing.** Oracle added that it depends on third parties to build some of its data-center capacity, and "their inability to obtain financing, complete construction on schedule or manage construction cost overruns could delay the availability of data center space or increase our costs." Anthropic says the same about its compute suppliers (see the special section below).
 - **Parts.** Apple says supply constraints and rising costs for memory and storage are expected "to intensify." Microsoft lists shortages of chips, networking, power systems and cooling equipment.
 
 These limits are part of why the race exists: if capacity can't be built fast enough later, securing it now looks safer.
 
-**What it means for you:** AI capacity is not unlimited, and its cost is tied to energy and hardware markets. If a critical process depends on an AI service, plan for slower availability or higher prices at some point, not just for an outage.
+**What it means for you:** AI capacity is not unlimited, and its cost is tied to energy and hardware markets. If a critical process depends on an AI service, plan for slower availability or higher prices at some point, not just for an outage. Expect energy-cost pass-through or price-indexing clauses at renewal, and ask whether your provider's capacity depends on someone else's financing.
 
 ---
 
@@ -121,6 +126,13 @@ These companies supply the cloud, software and AI that most organizations run on
 - **Microsoft:** AI models and agents with access to internal systems "may present risks similar to those associated with highly privileged users or threat actors," and "the risks associated with AI and cybersecurity increasingly overlap and amplify one another."
 - **Apple:** agents may behave in unexpected ways, "including by taking actions that were not directed, instructed or authorized, exceeding permissions, defying directions or resisting instructions."
 - **Alphabet:** "During model testing, we have sometimes observed unexpected behavior, including autonomous agents taking actions outside of their intended scope."
+
+Two new lines go to the heart of how agents should be controlled:
+
+- **Apple:** "Some consequences, such as deleting data or completing transactions, may be difficult or impossible to reverse," and its "ability to oversee and control third-party artificial intelligence agents and other technologies may be limited."
+- **Alphabet:** agents may "execute multi-step actions without adequate human review."
+
+**Our read:** the builders are naming the exact failure that human approval is meant to catch.
 
 Microsoft also adds a related risk: errors and vulnerabilities in code written by AI. This builds on what the AI labs told us in [E95](/tuesday/e95-the-labs-agree/): govern what goes into an agent and limit what it can do.
 
@@ -191,7 +203,7 @@ None of this calls for pulling back from AI or cloud. The companies building it 
 
 **Next: build it into contracts and planning over the next few quarters**
 
-4. **Vendor financial health.** Add credit ratings, debt levels and capacity commitments of critical technology providers to your third-party reviews.
+4. **Vendor financial health.** Add credit ratings, debt levels and capacity commitments of critical technology providers to your third-party reviews, and the AI partners they have invested in or guaranteed.
 5. **Price and lock-in.** Before signing multi-year AI or cloud commitments, model the cost if prices rise or usage falls, keep an exit path for critical workloads, and decide whether locking in capacity now is worth it for your own business.
 
 **Future: watch the physical limits**
@@ -232,6 +244,7 @@ We compared Alphabet, Amazon, Apple, Meta, Microsoft and Oracle's risk factors w
 
 → A race to lock up capacity. Alphabet reports $924B of purchase commitments, Amazon $884B of total commitments, Anthropic about $895B for compute. Their own filings explain why: capacity bought later or short-term costs more.
 → Now funded with borrowed money. More than $72B plus €6B raised in bonds, shares and preferred stock between Oct 29 and Nov 5.
+→ Money moving in circles: builders investing in, and guaranteeing, the companies that buy their capacity.
 → Risk depends on the business model. Builders that rent capacity to others can pass costs to customers. Those building for their own use carry it themselves.
 → AI agents described as insiders: "risks similar to those associated with highly privileged users" (Microsoft).
 → A race to find flaws first: AI "is accelerating vulnerability discovery" (Microsoft), for attackers and defenders.
@@ -290,7 +303,16 @@ Bruce asked why Amazon's risk factors barely changed ("disclosing risk well, or 
 - Financing total Oct 29–Nov 5: MSFT 25.0 + META 12.5 + 15.0 + ORCL 10.0 + 10.0 = $72.5B, plus GOOGL €6B. (Meta is included in the total but not named in the trend paragraph.)
 - Anthropic S-1/A (filed 11/2): revenue 9M'25 $2,545M / 9M'26 $33,242M; compute & infrastructure $18,808M; operating loss $(1,260)M; net loss $(104,039)M; FV change $(94,324)M (p.24). CSP marketplace sales ≈48% (9M'25) and 44% (9M'26) of revenue (risk factors p.59; notes p.F-17). Committed spend ~$895.4B; $447.5B before 12/31/2030; $69.8B in 12 months; take-or-pay (p.34). Short-term compute "currently costs significantly more than comparable compute procured under our multi-year commitments" (p.136). "Primary constraint" (p.43); "Competitors that succeed ... better positioned to remain at the frontier of AI" (p.39); generation equipment "at prices above prevailing market rates" (p.36, not quoted). Mythos gated release April 2026, "select organizations for cybersecurity applications", "advanced capabilities in cyber vulnerability discovery" (p.53). New in S-1/A vs S-1: "may imminently meet" RSP (p.30); supplier financing (p.32); models assessing models misaligned (p.50); "keep humans in control" (p.189). Unchanged: CSP conflicts (p.76); top five ≈25% of revenue (p.58).
 
-**FIR synthesis (not company claims), labeled "Our read" in text:** the capacity race (Bruce's thesis, supported by the cost/scarcity statements above); the business-model risk map; the defender side of the vulnerability race.
+**Added 11/7 from the FIR Risk Agent's platform answers (Bruce: "apply all 4 + LinkedIn line"); every figure re-verified against the primary documents in filings/text, all NEW vs the prior-year filing:**
+- Amazon 10-Q Q3'26: "$50.0 billion in OpenAI's Series C Preferred Stock, including $21.3 billion invested in Q3 2026, and $10.0 billion in Anthropic nonvoting preferred stock" (nine months; p.29). Not in Q3'25.
+- Microsoft 10-Q Q1 FY27: "Microsoft is a major investor in OpenAI and will continue to receive revenue-sharing payments" (p.29); other income included "$272 million of net gains and $4.1 billion of net losses for the three months ended September 30, 2026 and 2025, respectively, from investments in OpenAI" (p.35); non-GAAP measures "exclude net gains and losses from investments in OpenAI" (p.32).
+- Alphabet 10-Q Q3'26, Contingent Commitments: "$75.7 billion of financial support in the form of backstop obligations relating to data centers ... $27.7 billion represents our obligation to put in place future backstops ... of which $10.0 billion is with Crux AI, a related party" and "$22.8 billion of financial guarantees, primarily to support counterparty procurement of long-lead time equipment for our future power purchase and energy agreements" (pp.57–58). Q3'25 only mentioned credit derivatives to backstop data-center leases, unquantified. Crux AI's relationship to Alphabet is not described further; we say only "related party". Agents "execute multi-step actions without adequate human review" (Item 1A material changes, pp.61–62).
+- Oracle 10-K FY26 (p.19; neither sentence in FY25 10-K): energy costs "can adversely affect our margins, particularly where customer pricing is fixed or committed"; power arrangements "may extend beyond customer contract terms"; third parties' "inability to obtain financing, complete construction on schedule or manage construction cost overruns could delay the availability of data center space or increase our costs."
+- Apple 10-K FY26 (p.13; not in FY25): "Some consequences, such as deleting data or completing transactions, may be difficult or impossible to reverse"; "the Company's ability to oversee and control third-party artificial intelligence agents and other technologies may be limited."
+- Circularity paragraph reuses already-verified Anthropic figures ($895.4B committed, rounded to "about $895 billion"; 44% via CSP marketplaces). Meta's contingent cloud-capacity purchase was NOT used (Bruce's Meta rule).
+- Agent-sourced items NOT used: Meta agent/vulnerability language (rule); research-corpus stats (MDDR 2026, Unit 42, Rapid7 KEV) — kept for SIGNALS; "no filer discloses agent controls" (not verified across Item 1C).
+
+**FIR synthesis (not company claims), labeled "Our read" in text:** the capacity race (Bruce's thesis, supported by the cost/scarcity statements above); money moving in circles linking the risks; the business-model risk map; human approval as the control the builders' agent language points to; the defender side of the vulnerability race.
 
 **NOT USED:** commitments ranking or total (definitions differ); Anthropic implied Q3 revenue; Meta settlement/Manus/DAP; Alphabet antitrust; Meta's vulnerability quote and agent list (Bruce: Meta not in trend lists; Meta's "unprecedented speed and scale" language is available if wanted).
 
