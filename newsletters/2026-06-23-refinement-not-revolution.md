@@ -44,7 +44,7 @@ Strip away the marketing and the 2026 DBIR is a report about a dangerous illusio
 
 Verizon proves it in section after section. Of 793 real threat actors caught using AI, **fewer than 1% reached high or critical capability** — AI mass-produces *known* techniques, not novel ones. **83% of privilege-escalation incidents involved no vulnerability at all** — escalation is an identity-and-permissions problem, not a patching one. And the single most common way attackers get in is to simply *log in* with valid credentials.
 
-But this is not a "just patch your stuff" story, because the fundamentals are getting harder and faster, not easier. Vulnerability exploitation **doubled in a single year** to become the number-one way in. Known-exploited-vulnerability remediation got **worse**. And **29% of known-exploited vulnerabilities were weaponized before a patch even existed.**
+But this is not a "just patch your stuff" story, because the fundamentals are getting harder and faster, not easier. Vulnerability exploitation **doubled in a single year** to become the number-one way in. Known-exploited-vulnerability remediation got **worse**. And **29% of known-exploited vulnerabilities were attacked before public disclosure.**
 
 The translation for a risk leader: you don't need to chase every AI headline. You need to do the fundamentals better, and faster, than you did last year. Refinement — under fire.
 
@@ -110,7 +110,7 @@ This is no longer abstract. Verizon's own year-in-review reads like a ledger of 
 
 And third-party risk cascades sideways. A single zero-day in **Oracle's E-Business Suite**, weaponized by the Cl0p crew, produced breaches across both Education and Healthcare — two sectors with nothing in common except a shared piece of enterprise software. Shared software is now a cross-sector single point of failure.
 
-The sector that should be reading this twice is **manufacturing**, which carries both the highest third-party exposure in the report (**61%** of its breaches) and an elevated espionage motive (15%) — supply-chain attack surface meeting intellectual-property theft.
+The sector that should be reading this twice is **manufacturing**, which carries both one of the highest third-party exposures in the report (**61%** of its breaches) and an elevated espionage motive (15%) — supply-chain attack surface meeting intellectual-property theft.
 
 > **INTEL [GLOBAL] [THIRD-PARTY RISK]:** Third-party-involved breaches grew 60% year over year to 48% of all breaches in the 2026 DBIR. A single Oracle E-Business Suite zero-day (Cl0p) cascaded across Education and Healthcare; the Jaguar Land Rover incident (~£1.9B, five-week shutdown, ~5,000 downstream entities) is the new benchmark for supply-chain blast radius. The defensive posture: a maintained inventory of third parties with access, contractual security and MFA requirements, continuous (not annual) vendor reconciliation, and — where the economics allow — *reducing* third-party dependency outright. Owning the stack is a control.
 
@@ -223,7 +223,7 @@ A few findings worth your time:
 
 → AI is breadth, not depth. Of 793 real threat actors caught using AI, fewer than 1% reached high or critical capability. AI mass-produces known attacks; it isn't conjuring new ones. AI-generated phishing text doubled — and phishing success barely moved.
 
-→ Vulnerability exploitation is now the #1 way in, and defenders are losing while patching harder than ever. Only 26% of critical known-exploited vulnerabilities were fully remediated (down from 38%), and 29% were attacked before a patch even existed. "Patch on disclosure" is now too late.
+→ Vulnerability exploitation is now the #1 way in, and defenders are losing while patching harder than ever. Only 26% of critical known-exploited vulnerabilities were fully remediated (down from 38%), and 29% were attacked before public disclosure. "Patch on disclosure" is now too late.
 
 → 83% of privilege-escalation incidents used no vulnerability at all. Attackers log in with valid credentials and walk to domain admin through misconfigured permissions. In 16% of organizations, any foothold meant an ~80% chance of reaching a critical admin account.
 
@@ -262,7 +262,7 @@ The headlines this year are AI, vulnerabilities and social engineering. The brea
 
 AI is breadth, not depth. Of 793 threat actors caught using AI, fewer than 1% reached high or critical capability. AI mass-produces known attacks; it isn't conjuring new ones. AI-generated phishing text doubled — phishing success barely moved.
 
-Vulnerability exploitation is now the #1 way in, and defenders are losing while patching harder than ever. Only 26% of critical known-exploited vulnerabilities were fully remediated, down from 38%. And 29% were attacked before a patch existed. "Patch on disclosure" is too late.
+Vulnerability exploitation is now the #1 way in, and defenders are losing while patching harder than ever. Only 26% of critical known-exploited vulnerabilities were fully remediated, down from 38%. And 29% were attacked before public disclosure. "Patch on disclosure" is too late.
 
 83% of privilege-escalation incidents used no vulnerability at all. Attackers log in with valid credentials and walk to domain admin through misconfigured permissions. In 16% of organizations, any foothold meant an ~80% chance of reaching a critical admin account. If you only defend against what your red team showed you, you're defending against the wrong attacker.
 

@@ -18,7 +18,7 @@ Not by a single threat. Not by a single technique. By a structural shift in how 
 
 **Your intelligence model can't scale.** 109 active ransomware groups — a 49% year-over-year increase (INTEL-10). They're not sophisticated. They don't need to be. Generic leaked toolkits, commodity techniques, opportunistic targeting. You can't track TTPs for 109 groups. Attribution-based defense is dead.
 
-**Your threat model is inverted.** Credential theft is now at 23% prevalence — double the rate of encryption (INTEL-7). The most damaging attacks produce no alert, no business interruption, no ransom note. Identity attacks surged 850% in a single year (INTEL-11) — confirmed across six independent reports as the dominant attack vector. The thing your risk register ranks highest may no longer be the thing that hurts you most.
+**Your threat model is inverted.** Credential theft is now at 23% prevalence — double the rate of encryption (INTEL-7). The most damaging attacks produce no alert, no business interruption, no ransom note. Red Canary's identity threat detections rose 850% in a single year (INTEL-11), and six independent reports name identity as the dominant attack vector. The thing your risk register ranks highest may no longer be the thing that hurts you most.
 
 **Your detection is being outsmarted.** Malware now performs trigonometric analysis of mouse cursor movements to determine if it's in a sandbox or on a human's machine (INTEL-6). A "clean" sandbox verdict may mean the file is more sophisticated than your analysis environment. And voice phishing — which bypasses every technical control in the email security stack — accounts for 23% of cloud compromises (INTEL-8). There is no URL to scan, no attachment to detonate, no domain to block.
 
