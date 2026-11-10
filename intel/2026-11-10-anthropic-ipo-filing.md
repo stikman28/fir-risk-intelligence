@@ -1,7 +1,7 @@
 # FIR Risk INTEL-53 — Read Anthropic's IPO Filing as a Supplier Disclosure
 
 **Type:** `FILING INTEL`
-**Date:** November 12, 2026
+**Date:** November 10, 2026
 **Platform Source:** FIR Risk E97 — The Capacity Race: Five Signals From Big Tech's Risk Disclosures (SEC filings; Anthropic, PBC Form S-1 and Amendments No. 1 and No. 2)
 
 ---

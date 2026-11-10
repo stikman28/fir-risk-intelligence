@@ -1,7 +1,7 @@
 # FIR Risk INTEL-57 — The Financing Behind Your Vendors
 
 **Type:** `FILING INTEL`
-**Date:** November 18, 2026
+**Date:** November 15, 2026
 **Platform Source:** FIR Risk E97 — The Capacity Race: Five Signals From Big Tech's Risk Disclosures (SEC filings from Oracle, Alphabet and Anthropic, PBC)
 
 ---

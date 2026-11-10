@@ -1,7 +1,7 @@
 # FIR Risk INTEL-54 — Your Technology Suppliers Now Call AI Agents Insiders
 
 **Type:** `FILING INTEL`
-**Date:** November 13, 2026
+**Date:** November 12, 2026
 **Platform Source:** FIR Risk E97 — The Capacity Race: Five Signals From Big Tech's Risk Disclosures (SEC filings from Alphabet, Apple and Microsoft)
 
 ---

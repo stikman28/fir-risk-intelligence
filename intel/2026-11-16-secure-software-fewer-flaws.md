@@ -1,7 +1,7 @@
 # FIR Risk INTEL-58 — Secure Software Means Fewer Flaws to Manage
 
 **Type:** `TREND`
-**Date:** November 19, 2026
+**Date:** November 16, 2026
 **Platform Source:** FIR Risk E97 — The Capacity Race: Five Signals From Big Tech's Risk Disclosures (SEC filings from Microsoft, Alphabet and Apple; Anthropic, PBC Form S-1/A)
 
 ---

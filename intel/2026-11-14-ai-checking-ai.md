@@ -1,7 +1,7 @@
 # FIR Risk INTEL-56 — AI Checking AI Is Not a Control
 
 **Type:** `TECHNIQUE`
-**Date:** November 17, 2026
+**Date:** November 14, 2026
 **Platform Source:** FIR Risk E97 — The Capacity Race: Five Signals From Big Tech's Risk Disclosures (Anthropic, PBC Form S-1/A; Alphabet Form 10-Q)
 
 ---

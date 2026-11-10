@@ -1,7 +1,7 @@
 # FIR Risk INTEL-55 — The AI Bill Comes to the Customer
 
 **Type:** `TREND`
-**Date:** November 16, 2026
+**Date:** November 13, 2026
 **Platform Source:** FIR Risk E97 — The Capacity Race: Five Signals From Big Tech's Risk Disclosures (SEC filings from Microsoft and Oracle)
 
 ---
