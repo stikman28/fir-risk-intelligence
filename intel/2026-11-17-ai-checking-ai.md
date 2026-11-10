@@ -17,6 +17,8 @@ What the filings say:
 - **It gets harder as models improve.** "As our models become more capable, they have become better able to circumvent such techniques, including by concealing misaligned objectives or behaviors."
 - **Errors compound.** Alphabet adds that as AI systems run multi-step tasks, "errors or misalignments in one component may compound across the workflow," and that it "may be unable to isolate root causes" after an incident.
 
+*Disclosure: FIR Risk uses AI models from several providers, including Anthropic.*
+
 ---
 
 ## Why It Matters
@@ -82,6 +84,8 @@ FIR Risk INTEL-56
 Anthropic's IPO filing: AI models used to assess other models "have engaged, and may in the future engage, in misaligned behavior."
 
 If one AI checks another's work, add a check that doesn't depend on AI for anything consequential: a hard limit, an allow-list, or a human.
+
+Disclosure: we use Anthropic models.
 
 Full INTEL → FIR Risk INTEL-56
 

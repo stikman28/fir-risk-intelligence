@@ -16,6 +16,8 @@ What the filings say:
 - **Anthropic:** some of its compute providers "depend on third-party financing or credit support to acquire chips and develop capacity, and if such financing or support becomes unavailable or more costly, contracted capacity may be delayed, repriced, reduced, or not delivered." Part of one chip-equipment lease has already been assigned to "a newly formed special purpose financing entity."
 - **Alphabet:** $75.7 billion of backstop obligations relating to data centers, and $22.8 billion of financial guarantees to help counterparties buy long-lead equipment for future power agreements.
 
+*Disclosure: FIR Risk uses AI models from several providers, including Anthropic.*
+
 ---
 
 ## Why It Matters
@@ -79,6 +81,8 @@ FIR Risk INTEL-57
 Fourth-party risk in AI: Oracle and Anthropic now disclose that if third parties can't get financing, capacity could be "delayed, repriced, reduced, or not delivered."
 
 Ask critical vendors: does the capacity serving us depend on someone else's financing?
+
+Disclosure: we use Anthropic models.
 
 Full INTEL → FIR Risk INTEL-57
 

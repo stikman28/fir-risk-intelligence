@@ -16,6 +16,8 @@ What the filings say:
 - **The builders see the race.** Microsoft: AI "is accelerating vulnerability discovery." Alphabet: AI "is accelerating timelines on which such vulnerabilities may be discovered and exploited by threat actors." Apple: AI is "identifying and exploiting vulnerabilities at a greater scale and at a highly accelerated pace." All three statements are new this year.
 - **And name the answer.** Microsoft says its response includes "continuously engineering more secure products and services... including through the deployment of AI-based and automated defenses."
 
+*Disclosure: FIR Risk uses AI models from several providers, including Anthropic.*
+
 ---
 
 ## Why It Matters
@@ -83,6 +85,8 @@ FIR Risk INTEL-58
 AI flaw-finding is an access race. The most capable models are gated to vetted organizations first.
 
 Every flaw fixed before release is one customers never patch. Expect the companies that wrote your software to lead, and ask them for evidence.
+
+Disclosure: we use Anthropic models.
 
 Full INTEL → FIR Risk INTEL-58
 
