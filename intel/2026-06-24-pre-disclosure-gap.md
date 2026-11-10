@@ -8,7 +8,7 @@
 
 ## The INTEL
 
-**For the first time in the Verizon DBIR's history, exploiting an unpatched vulnerability is the single most common way attackers break in — and 29% of the critical ones were weaponized before a patch existed. "Patch when it's disclosed" is now "patch after the breach."**
+**For the first time in the Verizon DBIR's history, exploiting an unpatched vulnerability is the single most common way attackers break in — and 29% of the critical ones were attacked before public disclosure. "Patch when it's disclosed" is now "patch after the breach."**
 
 The 2026 DBIR puts exploitation of vulnerabilities at the top of the initial-access list — 31% of breaches, up from 20% a year ago, a 55% jump that finally pushed it past stolen credentials and phishing. As a raw attack action, it doubled, to 32% of breaches.
 
@@ -60,7 +60,7 @@ The one question for your next review: not "can we patch faster?" but **"is our 
 ```
 For the first time in the Verizon DBIR's history, exploiting an unpatched vulnerability is the #1 way attackers break in.
 
-And 29% of the critical ones were weaponized before a patch existed.
+And 29% of the critical ones were attacked before public disclosure.
 
 "Patch when it's disclosed" is now "patch after the breach."
 
@@ -68,7 +68,7 @@ The 2026 DBIR puts vulnerability exploitation at the top of the initial-access l
 
 But the number that should reset your strategy is in the year-in-review: 29% of known-exploited vulnerabilities were attacked before public disclosure. Nearly a third were live zero-days before a CVE, an advisory, or a patch existed.
 
-So the lesson is NOT "patch faster." When a third of critical bugs are exploited before a patch exists, speed can't win the race. Heroic, reactive patching is a treadmill: defenders shipped 30% more fixes in 2025 and still lost ground — only 26% of KEV vulnerabilities fully remediated.
+So the lesson is NOT "patch faster." When nearly a third of critical bugs are attacked before they are even disclosed, speed can't win the race. Heroic, reactive patching is a treadmill: defenders shipped 30% more fixes in 2025 and still lost ground — only 26% of KEV vulnerabilities fully remediated.
 
 What holds the line is the opposite of heroics — a consistent, risk-based patching discipline that runs the same way every cycle. Patch the exploitable, exposed things first. Every time. Without the program slipping the moment things get busy.
 
@@ -89,7 +89,7 @@ FIR Risk INTEL-22 — The Pre-Disclosure Gap.
 
 ## X POST
 
-For the first time in the Verizon DBIR's history, exploiting an unpatched vulnerability is the #1 way attackers break in. And 29% of the critical ones were weaponized before a patch existed.
+For the first time in the Verizon DBIR's history, exploiting an unpatched vulnerability is the #1 way attackers break in. And 29% of the critical ones were attacked before public disclosure.
 
 "Patch when it's disclosed" is now "patch after the breach."
 
@@ -97,7 +97,7 @@ The 2026 DBIR puts vulnerability exploitation at the top of the initial-access l
 
 But the number in the year-in-review is the one that matters: 29% of known-exploited vulnerabilities were attacked before public disclosure. Live zero-days before a CVE or a patch existed.
 
-So the lesson is NOT "patch faster." When a third of critical bugs are exploited before a patch exists, speed can't win the race. Reactive patching is a treadmill — defenders shipped 30% more fixes in 2025 and still lost ground, only 26% of KEV vulns fully remediated.
+So the lesson is NOT "patch faster." When nearly a third of critical bugs are attacked before they are even disclosed, speed can't win the race. Reactive patching is a treadmill — defenders shipped 30% more fixes in 2025 and still lost ground, only 26% of KEV vulns fully remediated.
 
 What holds the line is the opposite of heroics: a consistent, risk-based patching discipline that runs the same way every cycle. Patch the exploitable, exposed things first. Every time. Without the program slipping when things get busy.
 

@@ -54,7 +54,7 @@ The shape matters more than the numbers. From scenario one to two the damage mul
 
 One honesty note before it goes in your board memo: the JLR case and the scenario model are **two separate analyses** in the report — the real incident was not run through the 1.4/4.6/13.7 framework, and implying otherwise would overreach. Real event proves it happens; model quantifies how it scales.
 
-> **INTEL [GLOBAL] [FINDING]:** Microsoft/Accenture input-output modeling of a critical-infrastructure cyberattack shows national monthly GDP impact scaling non-linearly with recovery time — 1.4% (≤1 week), 4.6% (~3 weeks), 13.7% (~30 days) — each extension roughly tripling damage. Empirical companion: the 2025 Jaguar Land Rover incident measurably reduced UK monthly GDP ~0.1% (~$2.5B), with motor vehicle production down 28.6% (ONS). Board implication: recovery-time compression yields convex, not linear, risk reduction — RTO investment now has a quantified multiplier attached.
+> **INTEL [GLOBAL] [FINDING]:** Microsoft/Accenture input-output modeling of a critical-infrastructure cyberattack shows national monthly GDP impact scaling non-linearly with recovery time — 1.4% (restored within a week), 4.6% (first week lost, restored from week two), 13.7% (almost two weeks to restore) — each extension roughly tripling damage. Empirical companion: the 2025 Jaguar Land Rover incident measurably reduced UK monthly GDP ~0.1% (~$2.5B), with motor vehicle production down 28.6% (ONS). Board implication: recovery-time compression yields convex, not linear, risk reduction — RTO investment now has a quantified multiplier attached.
 
 ---
 
@@ -138,7 +138,7 @@ A cyberattack showed up in a G7 nation's GDP statistics — and the report analy
 
 Microsoft and Accenture wrote "Securing Nations in the Intelligent Economy" for governments. But its core economic finding translates directly to the private sector: cyber loss is no longer priced by whether you're breached. It's priced by three clocks.
 
-→ Clock 1 — Your recovery time. When a cyberattack halted Jaguar Land Rover, UK motor vehicle production fell 28.6% — a 73-year low — and ~0.1% came off monthly GDP. The report's economic modeling shows damage scaling non-linearly: 1.4% of monthly GDP if you recover in a week, 4.6% in three weeks, 13.7% in thirty days. Every extra week roughly triples the bill.
+→ Clock 1 — Your recovery time. When a cyberattack halted Jaguar Land Rover, UK motor vehicle production fell 28.6% — a 73-year low — and ~0.1% came off monthly GDP. The report's economic modeling shows damage scaling non-linearly: 1.4% of monthly GDP if you recover within a week, 4.6% if recovery only starts in week two, 13.7% if it takes almost two weeks. One extra week costs roughly ten times as much.
 
 → Clock 2 — The adversary's tempo. The report's centerpiece case: a state-linked actor ran 80–90% of an espionage campaign's lifecycle on agentic AI, with humans at only 4–6 decision points (Anthropic's own disclosure). Response SLAs built for human-speed attackers are now legacy assumptions.
 

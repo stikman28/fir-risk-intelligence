@@ -8,7 +8,7 @@
 
 ## The INTEL
 
-**Only 15% of organizations report confidence in their non-human identity governance. 57% are already deploying AI agents with production credentials.**
+**57% of organizations already deploy AI agents for multi-stage workflows. Each of those agents needs credentials, and most identity programs were built for people.**
 
 Anthropic's 2026 State of AI Agents survey of 500+ technical leaders reveals that AI agents have crossed from experimental tools to production infrastructure — 80% of organizations report measurable financial returns, 86% use coding agents across the full development lifecycle, and 42% trust agents to lead development with limited human review.
 
@@ -56,9 +56,7 @@ The 850% surge in identity attacks documented in our E86 analysis is about to me
 ## LINKEDIN POST
 
 ```
-Only 15% of organizations report confidence in their non-human identity governance.
-
-57% are already deploying AI agents with production credentials.
+57% of organizations already deploy AI agents for multi-stage workflows. Each of those agents needs credentials, and most identity programs were built for people.
 
 Anthropic's 2026 State of AI Agents survey reveals that AI agents have crossed from tools to infrastructure — 80% report measurable returns, 86% use coding agents across the full development lifecycle, and 42% trust agents to lead development with limited human review.
 
@@ -83,7 +81,7 @@ FIR Risk INTEL-14 — Shadow Agents. Full analysis in E87.
 
 ## X POST
 
-Only 15% of organizations report confidence in their non-human identity governance. 57% are already deploying AI agents with production credentials.
+57% of organizations already deploy AI agents for multi-stage workflows. Each of those agents needs credentials, and most identity programs were built for people.
 
 Anthropic's 2026 State of AI Agents survey of 500+ technical leaders reveals AI agents have crossed from experimental tools to production infrastructure. 80% report measurable returns. 86% use coding agents across the full development lifecycle. 42% trust agents to lead development with limited human review.
 
@@ -93,7 +91,7 @@ The problem compounds outside engineering. Agents are extending into legal, mark
 
 Traditional security tools were designed to monitor human behavior. AI agents generate high-volume API traffic with autonomous behavior patterns that don't fit human baselines. Most monitoring cannot reliably distinguish normal agent behavior from a compromised agent operating under adversary control.
 
-The 850% surge in identity attacks documented across six 2026 annual threat reports is about to meet an entirely new category of machine identity. Organizations that don't know how many agents have credentials to their systems can't protect credentials they don't know exist.
+The 850% surge in identity attacks documented by Red Canary (E86) is about to meet an entirely new category of machine identity. Organizations that don't know how many agents have credentials to their systems can't protect credentials they don't know exist.
 
 The action: treat AI agent identity as a priority risk. Establish agent identity registries. Classify by autonomy level and credential scope. Move from static API keys to dynamic, context-aware authentication. Assign clear ownership for every agent identity.
 
@@ -109,4 +107,4 @@ INTEL-14 — Shadow Agents. Full analysis in E87 — The Agents Have Keys.
 
 **Platform Source:** Anthropic 2026 State of AI Agents Report & Anthropic 2026 Agentic Coding Trends Report
 **Parent Edition:** FIR Risk Tuesday E87 — The Agents Have Keys
-**Key Stats:** 15% non-human identity governance confidence, 57% multi-stage agent workflows, 42% agents lead with limited review, 47% hybrid deployment model, 80% measurable ROI, 86% coding agent adoption
+**Key Stats:** 57% multi-stage agent workflows, 42% agents lead with limited review, 47% hybrid deployment model, 80% measurable ROI, 86% coding agent adoption
