@@ -31,7 +31,7 @@ Vendor reports are full of spikes. A spike is a reason to look, not a reason to 
 
 ## What To Do — One Key Action
 
-**Ask for one number every quarter: how many systems and services the company exposes to the internet, and whether that count is going down. A shrinking footprint is the measure that matches six years of evidence.**
+**Ask for one number every quarter: how many systems and services the company exposes to the internet, including its AI applications, and whether that count is going down. A shrinking footprint is the measure that matches six years of evidence.**
 
 ---
 
@@ -39,6 +39,10 @@ Vendor reports are full of spikes. A spike is a reason to look, not a reason to 
 
 - **T1190 — Exploit Public-Facing Application:** seen in 27.7% of Mandiant's 2025 investigations
 - **T1133 — External Remote Services:** seen in 23.8%, the other half of what you expose
+
+**MITRE ATLAS** (attacks on AI systems, v5.6)
+
+- **AML.T0049 — Exploit Public-Facing Application:** ATLAS applies the same technique to internet-facing AI applications, so they belong in the exposure count
 
 ---
 
@@ -68,7 +72,7 @@ This year, the other datasets caught up:
 
 Four datasets, collected four different ways, pointing the same direction. That's why it made SIGNALS 2026. A spike is a reason to look. Six years of agreement is a reason to act.
 
-The action: ask for one number every quarter. How many systems and services do we expose to the internet, and is that count going down?
+The action: ask for one number every quarter. How many systems and services do we expose to the internet, including our AI applications, and is that count going down?
 
 FIR Risk INTEL-59 · SIGNALS 2026, Signal 01
 
@@ -100,5 +104,7 @@ SIGNALS 2026 INTEL series (Bruce 11/16): 3 INTELs per signal, unique insight int
 - Verizon DBIR 2026 p10: exploitation "the most common initial access vector for breaches… risen to 31%… while credential abuse—the previous leader—is down to 13%." 20% prior year (p15; SIGNALS figure list).
 - IBM X-Force 2026 p4, p7: "44% increase in incidents caused by the exploitation of public-facing applications… accounted for 40% of cases, whereas use of valid credentials made up only 32%."
 - Microsoft MDDR 2026 p33: IR initial access, exploit public-facing application 15% → 24%.
+
+**MITRE ATLAS (v5.6.0, atlas-data dist/ATLAS.yaml, checked Nov 16, 2026):** AML.T0049 Exploit Public-Facing Application, tactic Initial Access, ATT&CK reference T1190. FIR mapping; SIGNALS appendix maps ATLAS to Signal 05b only.
 
 **FIR Risk Editorial Position:** "standing risk, not this year's emergency" and the quarterly exposure count are FIR's read; matches the SIGNALS Signal 01 board question. MITRE mapping from the SIGNALS appendix.

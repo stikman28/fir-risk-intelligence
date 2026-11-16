@@ -29,7 +29,7 @@ Remote access is exposure you chose. Every VPN, remote desktop gateway and remot
 
 ## What To Do — One Key Action
 
-**Ask for a list of every way someone can reach the company's systems remotely, with a business owner for each. Close the ones nobody owns, and require phishing-resistant multi-factor authentication on the rest.**
+**Ask for a list of every way someone can reach the company's systems remotely, including the API keys for its AI services, with a business owner for each. Close the ones nobody owns, and require phishing-resistant multi-factor authentication on the rest.**
 
 ---
 
@@ -39,6 +39,11 @@ Remote access is exposure you chose. Every VPN, remote desktop gateway and remot
 - **T1190 — Exploit Public-Facing Application:** 27.7%, including flaws in the edge devices that run remote access
 - **T1078 — Valid Accounts:** stolen or guessed VPN credentials turn a remote-access service into a way in
 - MITRE mitigations listed in SIGNALS: M1035 Limit Access to Resource Over Network · M1042 Disable or Remove Feature or Program · M1030 Network Segmentation · M1032 Multi-factor Authentication
+
+**MITRE ATLAS** (attacks on AI systems, v5.6)
+
+- **AML.T0012 — Valid Accounts:** in ATLAS, the credentials include "API keys that provide access to various AI resources and services": an AI service key is a remote-access credential too
+- **AML.T0040 — AI Model Inference API Access:** access to an AI model through its API, the AI version of a remote-access service. ATLAS mitigations: AML.M0019 Control Access to AI Models and Data in Production · AML.M0024 AI Telemetry Logging
 
 ---
 
@@ -67,7 +72,7 @@ Both made Mandiant's top 10 techniques of the year. One ransomware group got in 
 
 Remote access is exposure you chose. Every VPN and remote support tool was opened for a reason, and most were never closed when the reason ended. A patch does nothing about a door that works exactly as designed for anyone with a stolen password.
 
-The action: list every way someone can reach your systems remotely, with a business owner for each. Close the ones nobody owns. Put phishing-resistant MFA on the rest.
+The action: list every way someone can reach your systems remotely, including the API keys for your AI services, with a business owner for each. Close the ones nobody owns. Put phishing-resistant MFA on the rest.
 
 FIR Risk INTEL-60 · SIGNALS 2026, Signal 01
 
@@ -98,5 +103,7 @@ SIGNALS INTEL series, Signal 01, INTEL 2 of 3. Unique insight from the SIGNALS M
 - M-Trends 2026 p37 (UNC6276): "gain initial network access through the use of either stolen or brute-forced virtual private network (VPN) credentials."
 - M-Trends 2026 p37–38 (REDBIKE, aka Akira): "the most commonly observed ransomware variant" in 2025 Mandiant investigations; cluster UNC6361 "compromises target environments through the exploitation of known vulnerabilities in network edge devices."
 - Mitigations: SIGNALS PDF appendix p16, Signal 01 (M1035, M1042, M1030, M1016) and Signal 02 (M1032).
+
+**MITRE ATLAS (v5.6.0, atlas-data dist/ATLAS.yaml, checked Nov 16, 2026):** AML.T0012 Valid Accounts (Initial Access, Privilege Escalation; ATT&CK T1078), description quoted: credentials "may take the form of usernames and passwords of individual user accounts or API keys that provide access to various AI resources and services." AML.T0040 AI Model Inference API Access (tactic AI Model Access); mitigations AML.M0019, AML.M0024. FIR mapping.
 
 **FIR Risk Editorial Position:** "exposure you chose", the owner list and phishing-resistant MFA action are FIR's read. MITRE T1078 added by FIR (stolen VPN credentials).
