@@ -1,8 +1,36 @@
 [
-    {"platform": "linkedin", "file": "intel/2026-11-18-six-years-at-the-top.md", "at": "2026-11-18 06:45"},
-    {"platform": "x", "file": "intel/2026-11-18-six-years-at-the-top.md", "at": "2026-11-18 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-11-20-the-door-you-opened.md", "at": "2026-11-20 06:45"},
-    {"platform": "x", "file": "intel/2026-11-20-the-door-you-opened.md", "at": "2026-11-20 06:50"},
-    {"platform": "linkedin", "file": "intel/2026-11-22-fixing-got-slower.md", "at": "2026-11-22 06:45"},
-    {"platform": "x", "file": "intel/2026-11-22-fixing-got-slower.md", "at": "2026-11-22 06:50"}
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-11-18-six-years-at-the-top.md",
+        "at": "2026-11-18 06:45",
+        "posted_at": "2026-11-18T19:07:41+00:00",
+        "post_id": "7528896732391419904"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-11-18-six-years-at-the-top.md",
+        "at": "2026-11-18 06:50",
+        "posted_at": "2026-11-18T19:07:42+00:00",
+        "post_id": "2123131047902601497"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-11-20-the-door-you-opened.md",
+        "at": "2026-11-20 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-11-20-the-door-you-opened.md",
+        "at": "2026-11-20 06:50"
+    },
+    {
+        "platform": "linkedin",
+        "file": "intel/2026-11-22-fixing-got-slower.md",
+        "at": "2026-11-22 06:45"
+    },
+    {
+        "platform": "x",
+        "file": "intel/2026-11-22-fixing-got-slower.md",
+        "at": "2026-11-22 06:50"
+    }
 ]
