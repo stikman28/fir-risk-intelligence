@@ -37,7 +37,7 @@ Risk is there to be managed. We work to understand it so organizations can adopt
 
 ## Bottom Line
 
-Tesla and SpaceX file separately, but their filings describe one family that manages risk by design: it pools risk under one roof, shares it between companies, finances it from inside, and keeps it rather than insuring it. It works for the family. For everyone who depends on these companies, it means their risks move together: one CEO whose time both list as a risk, one lender with a board seat, shared products, and now two board committees studying a combination. On top of that, SpaceX's fast-growing AI business now gets half its revenue from two customers, on contracts either side can end with 90 days' notice.
+Tesla and SpaceX file separately, but their filings describe one family that manages risk by design: it pools risk under one roof, shares it between companies, finances it from inside, and keeps it rather than insuring it. It also builds the stack itself, from rockets and chips to robots. It works for the family. For everyone who depends on these companies, it means their risks move together: one CEO whose time both list as a risk, one lender with a board seat, shared products, and now two board committees studying a combination. On top of that, SpaceX's fast-growing AI business now gets half its revenue from two customers, on contracts either side can end with 90 days' notice.
 
 **If you depend on more than one Musk company, score them as one concentration, not several independent suppliers.**
 
@@ -98,13 +98,52 @@ Read the filings together and four moves show up again and again.
 
 **Our read:** this is a deliberate design, and it is effective. Each company gets something from its siblings that most companies buy from outsiders: a customer, an investor, a lender, a supplier or a distribution channel. The family keeps the premiums it would otherwise pay insurers, and it can move capital and opportunities to wherever they earn most. The results are visible in the filings: an AI business that went from $0.8 billion to $7.6 billion of quarterly revenue in a year, built with IPO cash, a director's financing and a sister company's batteries.
 
-The catch is who the design works for. Risk kept inside a family is managed for the family, but it is concentrated for everyone who depends on it. When the companies share a leader, a lender, products and a reputation, they tend to have good years together and bad years together. The money flowing between them is small, about 1% of SpaceX's capital spending in the case of Megapacks. The binding ties are governance and dependency. And when risk moves between related companies, the safeguard is the independent directors, which is why both boards' special committees and SpaceX's limits on shareholder suits matter (section 7).
+The catch is who the design works for. Risk kept inside a family is managed for the family, but it is concentrated for everyone who depends on it. When the companies share a leader, a lender, products and a reputation, they tend to have good years together and bad years together. The money flowing between them is small, about 1% of SpaceX's capital spending in the case of Megapacks. The binding ties are governance and dependency. And when risk moves between related companies, the safeguard is the independent directors, which is why both boards' special committees and SpaceX's limits on shareholder suits matter (section 8).
 
 **What it means for you:** a contract with one of these companies is not isolated from the others. If your organization uses Starlink, Tesla vehicles or energy storage, X or Grok, map them together. Ask what a regulatory action, a boycott or a leadership change aimed at one would do to the rest.
 
 ---
 
-## 3. Where the risks converge, and where they don't
+## 3. One stack, from rockets to robots
+
+Musk's companies are known for vertical integration: making for themselves what other companies buy. The filings show it is now a family habit, not just a company one, and they show where it creates risk.
+
+**Inside each company.** About 80% of Starship, SpaceX's next rocket, is made in-house, and SpaceX says its "vertical integration allows us to achieve iterative cycles in weeks, compared to years for some legacy companies." For AI, its strategy is "extreme vertical integration, 'from shovels to tokens,'" covering everything "from on-site power generation and water reclamation to GPU deployment." Tesla describes the same habit: it works "at the system level where we identify the limiting factor," building its own batteries, power electronics, software and AI chips, and credits vertical integration for letting it "quickly troubleshoot bottlenecks in production."
+
+**Across the family.** Follow the chain through the filings:
+- **Tesla's batteries power SpaceX's data centers**, which are training Grok-5.
+- **Grok rides in Tesla's Cybercab** (section 2).
+- **Terafab**, the chip fab Tesla and SpaceX plan with Intel, would make two kinds of chips: "one type optimized for terrestrial edge and inference to be used primarily in Tesla's Optimus robots and vehicles, and another type optimized for the space environment to be used in our orbital compute infrastructure."
+- **Macrohard**, an AI platform SpaceX is developing "together with Tesla" to emulate office work, aims to "combine our frontier AI model with Tesla's physical AI prowess," running partly on "cost efficient Tesla processors, a critical advantage of our vertical integration." Tesla separately describes "Digital Optimus," aimed at "automating digital workloads." Neither filing says whether these are the same project.
+- **Starship would carry the next layer**: next-generation Starlink satellites and computers in orbit.
+
+SpaceX puts the idea in one line: "the future of AI will be determined by the control of the physical stack."
+
+**The rockets: the family's own supplier.** The rocket business is now a small part of SpaceX's revenue and mostly serves the rest of the family:
+- **12% of revenue.** The Space segment brought in $1.77 billion in the third quarter, out of $14.6 billion. It lost $7 million from operations, against a $259 million profit a year earlier, as Starship development costs rose 44% to $1.2 billion.
+- **Most flights are internal.** Falcon rockets flew 33 times in the quarter, down from 43. Twenty-one carried SpaceX's own payloads, mostly Starlink; 12 carried customers, down from 15. Over nine months, 81 of 110 Falcon launches were internal, and SpaceX classes every Starship launch so far as internal.
+- **Internal launches earn no revenue.** Their cost goes onto the balance sheet as part of the satellites. SpaceX says it allocates "a significant amount of launch capacity to our Connectivity segment, and expect[s] to allocate a significant amount to our SI segment in the future."
+- **Starship is the first risk on the list.** The first item in SpaceX's risk factor summary: any failure or delay in Starship "would delay or limit our ability to execute our growth strategy, including the deployment of next-generation satellites, global satellite-to-mobile connectivity, and orbital AI compute."
+
+**Optimus: the next product on the line.** Tesla's humanoid robot went from design to factory floor during 2026:
+- **The line.** In January, Tesla called Optimus Gen 3 "our first design meant for mass production." In April, it said the first production line, "designed for 1 million robots a year, will replace the Model S and Model X lines in Fremont." By July those car lines were gone. In October: "Optimus production began in Fremont on our high-volume lines," and a second line is under construction in Texas.
+- **The money.** Tesla's research spending rose $2.45 billion, or 53%, in the first nine months, partly for "SI and other programs, such as Optimus." Its manufacturing expansion now includes "our semiconductor, Optimus and solar operations."
+- **The pay.** "1 million bots delivered" is one of the 12 operational milestones in Musk's 2025 CEO Performance Award. "Optimus production and deployment" is also among the goals behind employee equity awards.
+- **The risk factor.** Tesla calls robots "a nascent industry that has yet to develop commercially" and says "there is no guarantee this business will be successful. We have yet to commercialize Bots and cannot predict how demand for Bots will develop." No filing reports Optimus sales yet.
+
+**Our read:** vertical integration is the most effective part of the design. It removes outside bottlenecks and lets the family move fast, and the results show in launch counts and AI revenue. But it moves risk rather than removing it, in three ways:
+1. **Internal single points of failure.** A delay in one layer reaches products in another. Starship gates satellites, phone connectivity and orbital compute. Terafab's chips are planned for both Optimus and orbital compute.
+2. **Outside suppliers still matter.** SpaceX says: "Although we are focused on the vertical integration of our businesses, we depend on third parties to manufacture and supply certain key components." It buys GPUs on purchase orders, and even with Terafab it expects "to continue sourcing a significant portion of our compute hardware from third-party suppliers."
+3. **The family is often its own customer.** When rocket and compute capacity serve Starlink and AI first, outside customers compete with sister businesses for it.
+
+**What it means for you:**
+- If you buy launch or compute from SpaceX, ask how your capacity is protected when its own businesses need more, and put priority terms in the contract.
+- If you are planning around humanoid robots, treat Optimus as development-stage: in production, but not yet sold, by Tesla's own account.
+- Map the stack, not just the vendor. A delay in one layer can show up in a product you buy from another company in the family.
+
+---
+
+## 4. Where the risks converge, and where they don't
 
 We read all 40 of Tesla's risk factors and all 55 of SpaceX's, and grouped them by underlying cause. The difference in length says something on its own:
 
@@ -145,7 +184,7 @@ We read all 40 of Tesla's risk factors and all 55 of SpaceX's, and grouped them 
 
 ---
 
-## 4. Half of SpaceX's revenue comes from two customers
+## 5. Half of SpaceX's revenue comes from two customers
 
 SpaceX's AI segment (it calls it "SI," for super intelligence) grew from $0.8 billion of revenue in the third quarter of 2025 to $7.6 billion a year later, mostly from renting computing capacity. That changed the company's customer base.
 
@@ -169,7 +208,7 @@ At full capacity that is more than $9 billion a quarter. SpaceX's total revenue 
 
 ---
 
-## 5. Paying for the race
+## 6. Paying for the race
 
 **SpaceX** spent $48.1 billion on capital projects in the first nine months of 2026, up from $13.8 billion a year earlier. $40.0 billion of it went to the AI segment. Most of the third quarter was paid from the cash raised in the June IPO: total debt stayed at about $38.0 billion, while cash and marketable securities fell by about $10 billion. In October, SpaceX committed to a lease financing of about $40 billion for GPU equipment with an entity managed by Apollo, starting in the first half of 2027.
 
@@ -183,7 +222,7 @@ The wording on financing also changed. In August, SpaceX said that if its data c
 
 ---
 
-## 6. AI liability is in court
+## 7. AI liability is in court
 
 SpaceX's AI legal exposure has grown since the prospectus:
 - **Grok image cases.** Multiple lawsuits since January 2026 allege Grok's image features enabled nonconsensual explicit images, and a motion asks to consolidate them in one federal court. Virginia's attorney general sent a notice of violation in October.
@@ -197,7 +236,7 @@ SpaceX's AI legal exposure has grown since the prospectus:
 
 ---
 
-## 7. What the risk factors don't say yet
+## 8. What the risk factors don't say yet
 
 - **A possible combination.** In October, both boards formed special committees to evaluate it. SpaceX: "our board of directors has formed a special committee to evaluate a potential combination between SpaceX and Tesla, Inc." Any deal would also need the approval of "our controlling shareholder." Neither company has added a risk factor about it. It appears only in the quarterly reports.
 - **Tesla's side of the family.** Tesla's risk factors never mention the chip project, the AI collaboration or its SpaceX shares. Tesla hasn't added a risk factor since January, before those were disclosed. SpaceX names Tesla in four.
@@ -264,6 +303,7 @@ What we found: a family of companies that manages risk by design. It keeps risk 
 → Share it: Tesla owns $2.9B of SpaceX stock and sells it Megapacks; SpaceX's Grok runs inside Tesla's Cybercab, with access to riders' inbox and calendar.
 → Finance it inside: a SpaceX director's firm holds $12.9B of SpaceX debt, about a third of the total. He joined Neuralink's and The Boring Company's boards in May.
 → Keep it: both companies use the identical heading, "Our insurance coverage strategy may not be adequate."
+→ Build it in-house: about 80% of Starship is made in-house, 81 of 110 Falcon launches this year carried SpaceX's own payloads, and the planned chip fab would make chips for Tesla's Optimus robots and for computers in orbit.
 
 It works for the family. For everyone who depends on them, it means the risks move together. And two customers now make up 51% of SpaceX's revenue, on contracts either side can end with 90 days' notice.
 
@@ -330,11 +370,20 @@ Christmas theme carried lightly by the title ("All Under One Tree" = one family)
 - Section 2 (11/26 rework): xAI and X under X.AI Holdings March 2025; acquired by SpaceX February 2, 2026 (Tesla DEF 14A L5338; 424B4 p.55 "We acquired xAI in February 2026"). Tesla's $2.0B agreed January 2026 (Tesla Q3 10-Q p.28). "Energy storage demand is increasingly aligned with SI infrastructure demand" (Tesla Q3-26 update letter, L12). Musk "not restricted from owning assets or engaging in businesses that compete directly or indirectly with us" (424B4 p.58); corporate-opportunity renunciation (424B4 p.59). No key-person insurance (424B4 p.59). Gracias SpaceX director "since October 2010" (424B4 L10408 p.228). Megapacks $480M vs capex $48,069M = 1.0% [computed]. SI revenue $813M → $7,560M (Q3 10-Q p.13).
 - Sidebar (research/private_cos_formd.md; raw XML filings/formd/): TBC Form D accession 0001737630-26-000003 filed 2026-09-10, first sale 2026-08-21, $3,198,599,250 sold of $3,420,699,200, 141 investors, equity + debt + options/warrants, directors Akis, Gracias, Hering; 2022 round $675,285,773 (38 investors) [computed 4.7x, "about five times"]. Musk "controlling voting interest in TBC"; SpaceX "holds certain equity interests in TBC"; $561M gain "following TBC's completion of new round of financing in September 2026" (SpaceX Q3 10-Q L931 p.32; L558 p.17). Round = gain is OUR date match (10-Q doesn't cite the Form D); text says "By our matching of dates". Neuralink Form D: 2017 $26,958,000; 2021 $205,899,985; 2023 D/A $323,241,676; 2025 $649,000,093; none since 2025-06-12. Gracias boards Neuralink + TBC since May 2026 (424B4 L10411–10412 p.228). Birchall listed officer + director on all 10 notices. X lease from TBC subsidiary, SpaceX Bastrop tunnels $1M 2025 (424B4 L11353–11356 p.245); Musk Industries LLC lease to xAI (L11357 p.245). Revenue "Decline to Disclose" on all 10.
 
-**FIR synthesis (not company claims), labeled "Our read" in text:** the four moves (pool, share, finance, keep) as FIR's classification; "a deliberate design, and it is effective" (supported by the companies' own word "strategy", the charter's corporate-opportunity terms and board-approved transactions; intent beyond that not claimed); "managed for the family, concentrated for everyone who depends on it"; the family frame; "governance and dependency, not money"; the shared approach to risk inferred from identical insurance wording; the two-sided 90-day flexibility; "more entangled faster than their risk factors describe".
+**Section 3 (added 11/26, Bruce asked for Optimus, vertical integration and rockets; renumbered old 3–7 to 4–8):**
+- SpaceX 424B4 p.163: "approximately 80% of Starship ... is manufactured in-house"; "Our vertical integration allows us to achieve iterative cycles in weeks, compared to years for some legacy companies." p.96: "our strategy is extreme vertical integration, “from shovels to tokens.”" p.133: "full vertical integration from on-site power generation and water reclamation to GPU deployment." p.146 (also p.155): "the future of AI will be determined by the control of the physical stack." p.14: Grok-5 "currently being trained at COLOSSUS II".
+- Terafab two-chip quote: 424B4 p.146. Macrohard "Together with Tesla, we are also developing Macrohard": p.145 (also p.8, p.85); "combine our frontier AI model with Tesla's physical AI prowess" and "cost efficient Tesla processors, a critical advantage of our vertical integration": p.171.
+- Tesla Q4 2025 update letter (8-K 1/28/26, overview): "at the system level where we identify the limiting factor"; "quickly troubleshoot bottlenecks in production"; Robotics: Gen 3 "our first design meant for mass production". Q1 2026 letter (8-K 4/22): first-generation line "designed for 1 million robots a year, will replace the Model S and Model X lines in Fremont"; "Digital Optimus ... automating digital workloads". Q2 letter (8-K 7/22): "We have decommissioned the manufacturing lines for Models S & X at our Fremont Factory". Q3 letter (8-K 10/21): "Optimus production began in Fremont on our high-volume lines"; capacity table "Texas Optimus - Construction". Letter page numbers not reliable in extracted text; cited by letter and section.
+- Tesla Q3 10-Q p.36: R&D +$2.45B / 53% (9M) "SI and other programs, such as Optimus"; p.30: "our semiconductor, Optimus and solar operations"; p.22: operational milestone 3 "1 million bots delivered" (2025 CEO Performance Award). Proxy p.37: "Optimus production and deployment" among employee equity goals. FY25 10-K p.15: "a nascent industry that has yet to develop commercially"; p.16: "there is no guarantee this business will be successful. We have yet to commercialize Bots and cannot predict how demand for Bots will develop." "No filing reports Optimus sales yet" = absence in our filings, not a company statement.
+- SpaceX Q3 10-Q p.39: Falcon launches 33 vs 43 (customer 12 vs 15, internal 21 vs 28); 9M 110 vs 124 (customer 29 vs 36, internal 81 vs 88); Starship 2 vs 1 (Q3), 3 vs 4 (9M); "To date, all Starship launches have been classified as internal." Mass to orbit 476 t vs 525 t (not used). p.40: Starlink launch costs capitalized, no inter-segment revenue; "expect to allocate a significant amount to our SI segment in the future". p.46: Space revenue $1,767M vs $1,666M; R&D $1,225M (+44.3%) for Starship; operating loss $(7)M vs $259M income; 12% = $1,767M / $14,575M (our math).
+- Risk factors: 424B4 p.16 summary first bullet (Starship); p.37 "Although we are focused on the vertical integration of our businesses, we depend on third parties to manufacture and supply certain key components"; p.38 "continue sourcing a significant portion of our compute hardware from third-party suppliers".
+- Not claimed: that Digital Optimus = Macrohard; that Grok runs in Optimus; that customer-launch decline is caused by internal demand (presented side by side only).
+
+**FIR synthesis (not company claims), labeled "Our read" in text:** the four moves (pool, share, finance, keep) as FIR's classification; "vertical integration is the most effective part of the design" and the three ways it moves risk (section 3); "the family is often its own customer"; "a deliberate design, and it is effective" (supported by the companies' own word "strategy", the charter's corporate-opportunity terms and board-approved transactions; intent beyond that not claimed); "managed for the family, concentrated for everyone who depends on it"; the family frame; "governance and dependency, not money"; the shared approach to risk inferred from identical insurance wording; the two-sided 90-day flexibility; "more entangled faster than their risk factors describe".
 
 **NOT USED:** Neuralink using Grok or SpaceX compute (no source); ownership percentages (not disclosed); Birchall's role outside the Form Ds (not in our filings); any guess at the identity of Customer A or B; stock-price, valuation or lock-up market commentary; Tesla total revenue % for Megapacks; NHTSA probes (not in Tesla filings); Cursor acquisition details; Valor 10b5-1 distribution plan; EchoStar spectrum detail beyond "spectrum purchase"; "Senior Advisor to the President" reference.
 
-**Disclosure:** Claude (Anthropic) drafted this analysis; FIR Platform uses Anthropic models. Section 4 quotes Anthropic's own filing about its SpaceX compute contract. ⚠ Bruce to double-check that passage (Anthropic rule) and decide on the in-text disclosure line (placed as in E97).
+**Disclosure:** Claude (Anthropic) drafted this analysis; FIR Platform uses Anthropic models. Section 5 quotes Anthropic's own filing about its SpaceX compute contract. ⚠ Bruce to double-check that passage (Anthropic rule) and decide on the in-text disclosure line (placed as in E97).
 
 **Pending:**
 - Bruce's review of draft 1.
