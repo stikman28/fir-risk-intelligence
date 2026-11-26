@@ -5,7 +5,7 @@
 **Sources:** Tesla, Inc. Form 10-K (fiscal 2025 and 2024), Forms 10-Q (2026 Q1–Q3), current reports (8-K) and quarterly update letters; Space Exploration Technologies Corp. (SpaceX) final prospectus (424B4, June 12, 2026), Forms 10-Q (2026 Q2–Q3), current reports (8-K) and earnings releases; Form D notices of Neuralink Corp. and The Boring Company (2017–2026); Anthropic, PBC Form S-1/A Amendment No. 2 (November 10, 2026) · threading: E97 (The Capacity Race)
 **Analysis:** FIR Risk Advisory, from SEC filings retrieved from EDGAR
 
-> DRAFT 1 (11/25) for Bruce's review. Not for publication. Open items are listed under SOURCE DATA → Pending.
+> DRAFT 2 (11/26) for Bruce's review. Not for publication. Open items are listed under SOURCE DATA → Pending.
 
 ---
 
@@ -25,7 +25,7 @@ FIR Risk Advisory | Enterprise Risk Intelligence
 
 In E97 we read big tech's filings as suppliers to everyone else. This edition applies the same lens to a family of companies. Many organizations depend on at least one of them: Starlink for connectivity, Tesla vehicles or Megapack batteries, X, the Grok AI assistant, or SpaceX compute through an AI provider that rents it.
 
-The usual approach scores each supplier on its own. These filings show why that can miss the real exposure. When suppliers share a leader, a lender and each other's products, a problem at one can reach you through another.
+The usual approach scores each supplier on its own. These filings show why that can miss how the exposure works. When suppliers share a leader, a lender and each other's products, what happens at one, good or bad, can reach you through another. And the way this family handles risk holds a lesson for any organization's own risk strategy.
 
 This is not investment analysis. We are not commenting on valuations, stock prices or the merits of a combination. We are reading these companies as suppliers and counterparties.
 
@@ -37,17 +37,17 @@ Risk is there to be managed. We work to understand it so organizations can adopt
 
 ## Bottom Line
 
-Tesla and SpaceX file separately, but their filings describe one family that manages risk by design: it pools risk under one roof, shares it between companies, finances it from inside, and keeps it rather than insuring it. It also builds the stack itself, from rockets and chips to robots. It works for the family. For everyone who depends on these companies, it means their risks move together: one CEO whose time both list as a risk, one lender with a board seat, shared products, and now two board committees studying a combination. On top of that, SpaceX's fast-growing AI business now gets half its revenue from two customers, on contracts either side can end with 90 days' notice.
+Tesla and SpaceX file separately, but their filings describe one family that manages risk by design: it pools risk under one roof, shares it between companies, finances it from inside, and keeps it rather than insuring it. It also builds the stack itself, from rockets and chips to robots. It works for the family. For everyone who depends on these companies, it means their risks move together, in good years and bad: one CEO whose time both list as a risk, one lender with a board seat, shared products, and now two board committees studying a combination. On top of that, SpaceX's fast-growing AI business now gets half its revenue from two customers, on contracts either side can end with 90 days' notice.
 
-**If you depend on more than one Musk company, score them as one concentration, not several independent suppliers.**
+**If you depend on more than one Musk company, assess them as one connected group, not several independent suppliers. Then ask whether your own organization decides which risks to keep and which to pass on, as deliberately as this family does.**
 
 ---
 
 ## The One Sentence Your Board Needs
 
-> Which of our services depend on a Musk company, and would we still be covered if something changed at all of them at once?
+> Do we see every way we depend on the Musk companies as one connected group, and have we decided, rather than defaulted, which of our own risks we keep?
 
-Boards don't need a view on Elon Musk or the companies' share prices. They can ask whether the organization knows every route through which it depends on this family (connectivity, vehicles, energy storage, AI tools, and compute behind its AI providers) and whether its continuity plans treat those routes as linked.
+Boards don't need a view on Elon Musk or the companies' share prices. They can ask whether the organization knows every route through which it depends on this family (connectivity, vehicles, energy storage, AI tools, and compute behind its AI providers) and whether its continuity plans treat those routes as linked. The second half is about the board's own house: whether keeping, sharing and transferring risk is a decision or a habit.
 
 ---
 
@@ -65,7 +65,7 @@ Most companies handle big risks the textbook way: buy insurance, spread supplier
 
 Read the filings together and four moves show up again and again.
 
-**Move 1: Pool it.** In March 2025, xAI and X were combined under one holding company. In February 2026, SpaceX acquired that company. The AI build-out, and X's legal exposure, now sit inside the same company as the rockets and Starlink. SpaceX paid for most of its third-quarter AI build with cash from its June IPO. Pooling formalizes a link that already existed: SpaceX's prospectus describes Brazil freezing Starlink's assets over violations by X, at a time when X "was not owned by us and was only affiliated with Mr. Musk."
+**Move 1: Pool it.** In March 2025, xAI and X were combined under one holding company. In February 2026, SpaceX acquired that company. The AI build-out, and X's legal exposure, now sit inside the same company as the rockets and Starlink. SpaceX paid for most of its third-quarter AI build with cash from its June IPO. Pooling formalizes a link that already existed: SpaceX's prospectus describes Brazil freezing Starlink's assets over violations by X, at a time when X "was not owned by us and was only affiliated with Mr. Musk." Pooling also puts one large customer's business in one place: the U.S. government buys launches, Starshield (a satellite network "designed specifically for government customers and national security applications") and, through xAI Gov, "access to Grok models," all from SpaceX.
 
 **Move 2: Share it.** Each company takes a piece of the others' risks, and of their upside:
 - **Tesla as investor.** Tesla agreed in January 2026 to invest $2.0 billion in xAI. After the merger, it holds SpaceX shares worth $2.9 billion at September 30.
@@ -98,9 +98,11 @@ Read the filings together and four moves show up again and again.
 
 **Our read:** this is a deliberate design, and it is effective. Each company gets something from its siblings that most companies buy from outsiders: a customer, an investor, a lender, a supplier or a distribution channel. The family keeps the premiums it would otherwise pay insurers, and it can move capital and opportunities to wherever they earn most. The results are visible in the filings: an AI business that went from $0.8 billion to $7.6 billion of quarterly revenue in a year, built with IPO cash, a director's financing and a sister company's batteries.
 
-The catch is who the design works for. Risk kept inside a family is managed for the family, but it is concentrated for everyone who depends on it. When the companies share a leader, a lender, products and a reputation, they tend to have good years together and bad years together. The money flowing between them is small, about 1% of SpaceX's capital spending in the case of Megapacks. The binding ties are governance and dependency. And when risk moves between related companies, the safeguard is the independent directors, which is why both boards' special committees and SpaceX's limits on shareholder suits matter (section 8).
+The design also changes what a counterparty is dealing with. When the companies share a leader, a lender, products and a reputation, their fortunes move together, in good years and bad. That cuts both ways for anyone who depends on them: a sister company can supply capital, demand or a product when one needs it, and a problem at one can reach the others. Whether that adds up to more risk or less depends on your situation; the filings don't settle it. The money flowing between them is small, about 1% of SpaceX's capital spending in the case of Megapacks. The binding ties are governance and dependency. And when risk moves between related companies, the safeguard is the independent directors, which is why both boards' special committees and SpaceX's limits on shareholder suits matter (section 8).
 
-**What it means for you:** a contract with one of these companies is not isolated from the others. If your organization uses Starlink, Tesla vehicles or energy storage, X or Grok, map them together. Ask what a regulatory action, a boycott or a leadership change aimed at one would do to the rest.
+**What it means for your risk strategy:** the family decides which risks to keep, pool, share or pass on. It is easy to decide by default instead: insure what is offered, and score each supplier on its own. Two checks:
+- **Your own retained risks.** List the risks your organization carries without insurance or a price on them, and decide which you mean to keep.
+- **Suppliers in groups.** When you assess a Musk company, or any supplier that belongs to a group, assess the group: who shares its leadership, lenders and products. If you use Starlink, Tesla vehicles or energy storage, X or Grok, map them together.
 
 ---
 
@@ -119,10 +121,11 @@ Musk's companies are known for vertical integration: making for themselves what 
 
 SpaceX puts the idea in one line: "the future of AI will be determined by the control of the physical stack."
 
-**The rockets: the family's own supplier.** The rocket business is now a small part of SpaceX's revenue and mostly serves the rest of the family:
+**The rockets: the family's supplier, and the government's.** The rocket business is now a small part of SpaceX's revenue. Most of its flights serve the rest of the family, and its biggest outside customer is the U.S. government:
 - **12% of revenue.** The Space segment brought in $1.77 billion in the third quarter, out of $14.6 billion. It lost $7 million from operations, against a $259 million profit a year earlier, as Starship development costs rose 44% to $1.2 billion.
+- **The government's launch provider.** About a fifth of SpaceX's 2025 revenue came from U.S. federal agencies, across all its businesses. "We are the primary launch provider for the U.S. government. In 2025, we launched 11 of 12 National Security Space Launch medium and heavy lift missions and all five U.S. crew and cargo missions to the International Space Station for NASA." Starship is NASA's Moon lander for the Artemis program. Alongside the usual government-contract risks (termination at the government's "convenience," funding approved a year at a time), SpaceX lists a less usual one: being "perceived as closely aligned with the U.S. government or military," which it says could deter some customers and foreign governments.
 - **Most flights are internal.** Falcon rockets flew 33 times in the quarter, down from 43. Twenty-one carried SpaceX's own payloads, mostly Starlink; 12 carried customers, down from 15. Over nine months, 81 of 110 Falcon launches were internal, and SpaceX classes every Starship launch so far as internal.
-- **Internal launches earn no revenue.** Their cost goes onto the balance sheet as part of the satellites. SpaceX says it allocates "a significant amount of launch capacity to our Connectivity segment, and expect[s] to allocate a significant amount to our SI segment in the future."
+- **Internal launches earn no revenue.** Their cost goes onto the balance sheet as part of the satellites. SpaceX says it allocates "a significant amount of launch capacity to our Connectivity segment, and expect[s] to allocate a significant amount to our SI segment in the future." Its prospectus is direct about the trade-off: "in order to achieve our orbital compute goals, we may prioritize our own launch payloads over additional U.S. government contracts or third-party customers."
 - **Starship is the first risk on the list.** The first item in SpaceX's risk factor summary: any failure or delay in Starship "would delay or limit our ability to execute our growth strategy, including the deployment of next-generation satellites, global satellite-to-mobile connectivity, and orbital AI compute."
 
 **Optimus: the next product on the line.** Tesla's humanoid robot went from design to factory floor during 2026:
@@ -134,12 +137,13 @@ SpaceX puts the idea in one line: "the future of AI will be determined by the co
 **Our read:** vertical integration is the most effective part of the design. It removes outside bottlenecks and lets the family move fast, and the results show in launch counts and AI revenue. But it moves risk rather than removing it, in three ways:
 1. **Internal single points of failure.** A delay in one layer reaches products in another. Starship gates satellites, phone connectivity and orbital compute. Terafab's chips are planned for both Optimus and orbital compute.
 2. **Outside suppliers still matter.** SpaceX says: "Although we are focused on the vertical integration of our businesses, we depend on third parties to manufacture and supply certain key components." It buys GPUs on purchase orders, and even with Terafab it expects "to continue sourcing a significant portion of our compute hardware from third-party suppliers."
-3. **The family is often its own customer.** When rocket and compute capacity serve Starlink and AI first, outside customers compete with sister businesses for it.
+3. **The family is often its own customer.** When rocket and compute capacity serve Starlink and AI first, outside customers, the government included, compete with sister businesses for it. SpaceX says so itself.
 
-**What it means for you:**
-- If you buy launch or compute from SpaceX, ask how your capacity is protected when its own businesses need more, and put priority terms in the contract.
-- If you are planning around humanoid robots, treat Optimus as development-stage: in production, but not yet sold, by Tesla's own account.
-- Map the stack, not just the vendor. A delay in one layer can show up in a product you buy from another company in the family.
+**What it means for your risk strategy:**
+- **Integration moves risk; it doesn't remove it.** The same holds when your organization brings work in-house or consolidates onto one platform. Know which layer everything else depends on, and plan for that one first.
+- **Know your place in the queue.** When a supplier is also its own biggest user, ask how capacity is allocated, and put priority terms in the contract. SpaceX has told you how it may choose.
+- **Map the stack, not just the vendor.** A delay in one layer can show up in a product you buy from another company in the family.
+- **Treat Optimus as development-stage** in any plan that depends on humanoid robots: in production, but not yet sold, by Tesla's own account.
 
 ---
 
@@ -180,7 +184,7 @@ We read all 40 of Tesla's risk factors and all 55 of SpaceX's, and grouped them 
 
 **Our read:** the risks converge where the cause is shared: one leader, scarce compute and power, concentrated supply, connected fleets, and a habit of carrying risk rather than insuring it. They split where the businesses differ: Tesla's are about cars on public roads and consumer demand, SpaceX's about space, AI content and control. The identical insurance wording suggests a shared approach to risk across the family.
 
-**What it means for you:** if a Tesla or SpaceX product fails and causes damage, recovery depends on the company's balance sheet and your contract, not an insurer. Check indemnity caps and your own cover. And treat a Starlink terminal, a Tesla vehicle or a Megapack on your premises as connected operational technology, updated remotely by a vendor you don't control.
+**What it means for your risk strategy:** when a supplier carries its own risk, its balance sheet stands where an insurer would. That is neither weaker nor stronger by itself, but it changes what to check: indemnity caps, the supplier's financial strength, and your own cover. And treat a Starlink terminal, a Tesla vehicle or a Megapack on your premises as connected operational technology, updated remotely by a vendor you don't control.
 
 ---
 
@@ -204,7 +208,7 @@ At full capacity that is more than $9 billion a quarter. SpaceX's total revenue 
 
 **Our read:** this is the race we described in E97, seen from the seller's side. SpaceX is paying for capacity years in advance while its largest buyers can leave within months. Both sides of the Anthropic arrangement describe the same 90-day exit, so the flexibility runs both ways. It also shows how concentrated the market has become. One AI company's computing contract, signed for a few years, can be large enough to reshape a supplier's revenue.
 
-**What it means for you:** your AI provider's computing power may come from someone else's data center, under terms that can change within a quarter. Ask your critical AI providers where their capacity comes from, how much depends on a single supplier, and what notice they would get, and give you, if it changed.
+**What it means for your risk strategy:** concentration like this is not unique to the family, and it often sits one step removed from you. Your AI provider's computing power may come from someone else's data center, under terms that can change within a quarter. Ask your critical AI providers where their capacity comes from, how much depends on a single supplier, and what notice they would get, and give you, if it changed.
 
 ---
 
@@ -218,7 +222,7 @@ The wording on financing also changed. In August, SpaceX said that if its data c
 
 **Our read:** both companies are building AI capacity at a pace their own history doesn't match. SpaceX is funding it with IPO cash now and leases from next year, and has dropped the sentence that described how it could slow down. Tesla is keeping its credit lines in reserve.
 
-**What it means for you:** if you rely on SpaceX for compute, connectivity or launch, add its commitments and financing to your supplier reviews. Its own filings say capacity can be reprioritized: the prospectus lists "prioritization of internal versus external compute usage" as a risk.
+**What it means for your risk strategy:** a supplier's capital plan is part of its risk profile. For critical suppliers in the middle of a build-out, SpaceX included, review commitments and financing alongside service terms. SpaceX's own filings say capacity can be reprioritized: the prospectus lists "prioritization of internal versus external compute usage" as a risk.
 
 ---
 
@@ -232,7 +236,7 @@ SpaceX's AI legal exposure has grown since the prospectus:
 
 **Tesla's** filings list product-liability, securities and consumer suits over driver assistance and Robotaxi, and information requests from regulators. They name no specific regulatory investigation.
 
-**What it means for you:** if your staff use Grok or X, or your vehicles carry Grok with access to email and calendars, treat it as an AI vendor with open legal questions about content and data. Put it through the same third-party review as any other AI tool connected to your systems (see INTEL-67).
+**What it means for your risk strategy:** apply one standard to every AI tool, whoever makes it. If your staff use Grok or X, or your vehicles carry Grok with access to email and calendars, treat it as an AI vendor with open legal questions about content and data. Put it through the same third-party review as any other AI tool connected to your systems (see INTEL-67).
 
 ---
 
@@ -249,24 +253,25 @@ SpaceX's AI legal exposure has grown since the prospectus:
 
 ## So What Should Organizations Actually Do?
 
-None of this means avoiding these companies. Their products lead in several markets, and many organizations depend on them for good reasons. The point is to manage the dependency as what it is: a family. Six lines for your risk register:
+None of this means avoiding these companies. Their products lead in several markets, and many organizations depend on them for good reasons. The point is to manage the dependency as what it is, a family, and to borrow the family's discipline for your own risk strategy. Seven lines for your risk register:
 
-**Now: map the family**
+**Now: decide, and map the family**
 
-1. **One concentration.** List every service you take from a Musk company (Starlink, Tesla vehicles or energy storage, X, Grok) and score them together for continuity, reputation and regulatory risk.
-2. **AI tools with access.** Where Grok or similar assistants connect to email, calendars or files, including in vehicles, include them in your third-party risk program and review them after onboarding, not only before.
+1. **Decide, don't default.** For your top risks, decide on purpose whether to keep, share or transfer each one, and record why. These companies chose to carry much of their risk themselves; your choices can differ, but they should be choices.
+2. **One connected group.** List every service you take from a Musk company (Starlink, Tesla vehicles or energy storage, X, Grok) and assess them together for continuity, reputation and regulatory exposure.
+3. **AI tools with access.** Where Grok or similar assistants connect to email, calendars or files, including in vehicles, include them in your third-party risk program and review them after onboarding, not only before.
 
 **Next: build it into contracts and reviews**
 
-3. **Your AI provider's suppliers.** Ask critical AI providers where their compute comes from, how concentrated it is, and what notice terms apply on both sides.
-4. **Exit terms.** Where you buy capacity or services on short notice terms, plan for the supplier to use them too. Ninety days is not long to move an AI workload.
-5. **Self-insured suppliers.** Check indemnity caps and your own insurance for damage from products whose makers carry the risk themselves.
+4. **Your AI provider's suppliers.** Ask critical AI providers where their compute comes from, how concentrated it is, and what notice terms apply on both sides.
+5. **Exit terms.** Where you buy capacity or services on short notice terms, plan for the supplier to use them too. Ninety days is not long to move an AI workload.
+6. **Self-insured suppliers.** Check indemnity caps and your own insurance for damage from products whose makers carry the risk themselves.
 
 **Future: watch the governance**
 
-6. **The combination.** Track the special committees and any change of control. A combination would change counterparties, contracts and concentration for every customer of both companies.
+7. **The combination.** Track the special committees and any change of control. A combination would change counterparties, contracts and concentration for every customer of both companies.
 
-The two companies file separately. Their risks don't stay separate. The best use of these filings is to make sure your own risk register doesn't treat them as strangers.
+The two companies file separately. Their risks don't stay separate. The best use of these filings is to make sure your own risk register doesn't treat them as strangers. The bigger lesson is the design itself: a deliberate choice about which risks to keep and which to pass on. Every organization can make that choice.
 
 **Coming next:** NVIDIA, the chip supplier behind most of this capacity, including SpaceX's 325,000 GPUs.
 
@@ -305,11 +310,11 @@ What we found: a family of companies that manages risk by design. It keeps risk 
 → Keep it: both companies use the identical heading, "Our insurance coverage strategy may not be adequate."
 → Build it in-house: about 80% of Starship is made in-house, 81 of 110 Falcon launches this year carried SpaceX's own payloads, and the planned chip fab would make chips for Tesla's Optimus robots and for computers in orbit.
 
-It works for the family. For everyone who depends on them, it means the risks move together. And two customers now make up 51% of SpaceX's revenue, on contracts either side can end with 90 days' notice.
+It works for the family. For everyone who depends on them, it means the risks move together, in good years and bad. And two customers now make up 51% of SpaceX's revenue, on contracts either side can end with 90 days' notice.
 
-Not investment advice. A supplier risk question: if you depend on more than one Musk company, score them as one concentration.
+Not investment advice, and not a verdict on whether these companies are riskier or safer to work with. Two takeaways: if you depend on more than one Musk company, assess them as one connected group. And ask whether your own organization decides which risks to keep, or just defaults.
 
-The question for every board: which of our services depend on a Musk company, and would we still be covered if something changed at all of them at once?
+The question for every board: do we see every way we depend on the Musk companies as one connected group, and have we decided, rather than defaulted, which of our own risks we keep?
 
 #TechnologyRisk #ThirdPartyRisk #AIRisk #RiskManagement #EnterpriseRisk #CISO #Boards
 ```
@@ -320,7 +325,7 @@ A tunnel company raised $3.2B. A rocket company booked a $561M gain.
 
 Musk's companies don't buy much insurance. They keep risk in the family: pooled, shared, financed by a director's firm, self-insured. Both filings even call it a "strategy."
 
-We read how it works.
+We read how it works, and what it teaches about risk strategy.
 
 Full edition → FIR Risk Tuesday E99
 
@@ -370,6 +375,10 @@ Christmas theme carried lightly by the title ("All Under One Tree" = one family)
 - Section 2 (11/26 rework): xAI and X under X.AI Holdings March 2025; acquired by SpaceX February 2, 2026 (Tesla DEF 14A L5338; 424B4 p.55 "We acquired xAI in February 2026"). Tesla's $2.0B agreed January 2026 (Tesla Q3 10-Q p.28). "Energy storage demand is increasingly aligned with SI infrastructure demand" (Tesla Q3-26 update letter, L12). Musk "not restricted from owning assets or engaging in businesses that compete directly or indirectly with us" (424B4 p.58); corporate-opportunity renunciation (424B4 p.59). No key-person insurance (424B4 p.59). Gracias SpaceX director "since October 2010" (424B4 L10408 p.228). Megapacks $480M vs capex $48,069M = 1.0% [computed]. SI revenue $813M → $7,560M (Q3 10-Q p.13).
 - Sidebar (research/private_cos_formd.md; raw XML filings/formd/): TBC Form D accession 0001737630-26-000003 filed 2026-09-10, first sale 2026-08-21, $3,198,599,250 sold of $3,420,699,200, 141 investors, equity + debt + options/warrants, directors Akis, Gracias, Hering; 2022 round $675,285,773 (38 investors) [computed 4.7x, "about five times"]. Musk "controlling voting interest in TBC"; SpaceX "holds certain equity interests in TBC"; $561M gain "following TBC's completion of new round of financing in September 2026" (SpaceX Q3 10-Q L931 p.32; L558 p.17). Round = gain is OUR date match (10-Q doesn't cite the Form D); text says "By our matching of dates". Neuralink Form D: 2017 $26,958,000; 2021 $205,899,985; 2023 D/A $323,241,676; 2025 $649,000,093; none since 2025-06-12. Gracias boards Neuralink + TBC since May 2026 (424B4 L10411–10412 p.228). Birchall listed officer + director on all 10 notices. X lease from TBC subsidiary, SpaceX Bastrop tunnels $1M 2025 (424B4 L11353–11356 p.245); Musk Industries LLC lease to xAI (L11357 p.245). Revenue "Decline to Disclose" on all 10.
 
+**11/26 framing change (Bruce):** don't insinuate extra risk for suppliers/customers of Musk companies ("that isn't supportable"); show the risks are interconnected and that sibling risk-sharing can arguably mitigate too; use the family design to encourage readers to be strategic about their own risk management. Applied: "What it means for you" → "What it means for your risk strategy" (lesson + neutral check), "score them as one concentration" → "assess them as one connected group", new board sentence, new action 1 "Decide, don't default" (seven actions), removed "The catch is who the design works for… concentrated for everyone" and the boycott/leadership question.
+
+**Government (added 11/26), SpaceX 424B4:** p.45 "In 2025, approximately one-fifth of our revenue was attributable to agencies within the U.S. federal government"; p.45 "in order to achieve our orbital compute goals, we may prioritize our own launch payloads over additional U.S. government contracts or third-party customers"; p.45 termination "at the government's convenience"; p.45–46 "perceived as closely aligned with the U.S. government or military. This perception could discourage certain consumers, enterprises, or foreign governments"; p.46 Congressional appropriations; p.47 party control. p.142 "We are the primary launch provider for the U.S. government. In 2025, we launched 11 of 12 National Security Space Launch (“NSSL”) medium and heavy lift missions and all five U.S. crew and cargo missions to the International Space Station for NASA"; customers named "NASA, the National Reconnaissance Office (“NRO”), Axiom Space, SES, Eutelsat, and Oneweb". p.187 "As NASA's Human Landing System for Artemis, Starship…". Definitions p.1: Starshield "a secure satellite network designed specifically for government customers and national security applications"; xAI Gov "provides government customers with access to Grok models and related tools". Q3 10-Q p.13: Connectivity "Enterprise & Government" revenue $2,127M Q3 (not split; not used). Tesla filings: government appears as regulator, incentives and regulatory credits, not as a customer (no government-contract passages found). Form Ds: nothing on government. NOT claimed: that Customer A is the U.S. government (A "relates to all three segments"; identity undisclosed).
+
 **Section 3 (added 11/26, Bruce asked for Optimus, vertical integration and rockets; renumbered old 3–7 to 4–8):**
 - SpaceX 424B4 p.163: "approximately 80% of Starship ... is manufactured in-house"; "Our vertical integration allows us to achieve iterative cycles in weeks, compared to years for some legacy companies." p.96: "our strategy is extreme vertical integration, “from shovels to tokens.”" p.133: "full vertical integration from on-site power generation and water reclamation to GPU deployment." p.146 (also p.155): "the future of AI will be determined by the control of the physical stack." p.14: Grok-5 "currently being trained at COLOSSUS II".
 - Terafab two-chip quote: 424B4 p.146. Macrohard "Together with Tesla, we are also developing Macrohard": p.145 (also p.8, p.85); "combine our frontier AI model with Tesla's physical AI prowess" and "cost efficient Tesla processors, a critical advantage of our vertical integration": p.171.
@@ -379,7 +388,7 @@ Christmas theme carried lightly by the title ("All Under One Tree" = one family)
 - Risk factors: 424B4 p.16 summary first bullet (Starship); p.37 "Although we are focused on the vertical integration of our businesses, we depend on third parties to manufacture and supply certain key components"; p.38 "continue sourcing a significant portion of our compute hardware from third-party suppliers".
 - Not claimed: that Digital Optimus = Macrohard; that Grok runs in Optimus; that customer-launch decline is caused by internal demand (presented side by side only).
 
-**FIR synthesis (not company claims), labeled "Our read" in text:** the four moves (pool, share, finance, keep) as FIR's classification; "vertical integration is the most effective part of the design" and the three ways it moves risk (section 3); "the family is often its own customer"; "a deliberate design, and it is effective" (supported by the companies' own word "strategy", the charter's corporate-opportunity terms and board-approved transactions; intent beyond that not claimed); "managed for the family, concentrated for everyone who depends on it"; the family frame; "governance and dependency, not money"; the shared approach to risk inferred from identical insurance wording; the two-sided 90-day flexibility; "more entangled faster than their risk factors describe".
+**FIR synthesis (not company claims), labeled "Our read" in text:** the four moves (pool, share, finance, keep) as FIR's classification; "vertical integration is the most effective part of the design" and the three ways it moves risk (section 3); "the family is often its own customer"; "a deliberate design, and it is effective" (supported by the companies' own word "strategy", the charter's corporate-opportunity terms and board-approved transactions; intent beyond that not claimed); "it cuts both ways" (sister support vs shared exposure; net effect explicitly not claimed); the "What it means for your risk strategy" lessons and "Decide, don't default"; the family frame; "governance and dependency, not money"; the shared approach to risk inferred from identical insurance wording; the two-sided 90-day flexibility; "more entangled faster than their risk factors describe".
 
 **NOT USED:** Neuralink using Grok or SpaceX compute (no source); ownership percentages (not disclosed); Birchall's role outside the Form Ds (not in our filings); any guess at the identity of Customer A or B; stock-price, valuation or lock-up market commentary; Tesla total revenue % for Megapacks; NHTSA probes (not in Tesla filings); Cursor acquisition details; Valor 10b5-1 distribution plan; EchoStar spectrum detail beyond "spectrum purchase"; "Senior Advisor to the President" reference.
 
