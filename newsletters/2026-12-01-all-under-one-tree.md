@@ -9,7 +9,7 @@
 
 ---
 
-# FIR Risk E99 — All Under One Tree: How Risk Moves Around Elon Musk's Companies
+# FIR Risk E99 — All Under One Tree: How Elon Musk's Companies Manage Risk as One Family
 
 ![FIR Risk E99 - All Under One Tree](images/e99-all-under-one-tree.jpg)
 
@@ -59,7 +59,7 @@ Boards don't need a view on Elon Musk or the companies' share prices. The family
 
 ---
 
-## 2. How risk moves around the family
+## 2. How the family manages risk
 
 Most companies handle big risks the textbook way: buy insurance, spread suppliers, borrow from banks. Musk's companies mostly do something else. They keep risk inside the family and move it among themselves. They don't hide it, either. Both public companies describe their approach under the same heading, word for word: "Our insurance coverage strategy may not be adequate to protect us from all business risks." The word they chose is *strategy*.
 
@@ -338,7 +338,7 @@ Full edition → FIR Risk Tuesday E99
 **Editorial Frame:**
 Bruce 11/26: highlight Musk's design as a fact observation, not promotion: "by design is pooling, sharing, transfering, and retaining risk internally rather than insuring"; asked to research the private companies via Form D and to make the edition "extra interesting". Section 2 reworked to "How risk moves around the family" with the private-side sidebar; new hook in the standfirst and social.
 Bruce 11/24: ELON Tue 12/1 (Christmas theme), NVIDIA Tue 12/8. Frame (as E97): what changed in disclosed risk and what it means for the reader's risk register; not investment commentary. Bruce 11/25 approved the ONE FAMILY theme ("much better"), asked for concentration (who are the two customers) and for a risk-factor section showing convergence vs uniqueness ("Our readers will want to understand the risk side of the companies"). Bruce 11/25: outline approved ("very solid outline").
-Christmas theme carried lightly by the title ("All Under One Tree" = one family); no holiday statistics claimed.
+Title changed 11/26 (Bruce) from "How Risk Moves Around Elon Musk's Companies" to "How Elon Musk's Companies Manage Risk as One Family"; section 2 renamed "How the family manages risk". Christmas theme carried lightly by the title ("All Under One Tree" = one family); no holiday statistics claimed.
 
 **Method:** Tesla Item 1A FY25 10-K vs FY24 10-K, diffed paragraph by paragraph (rf/tesla_10K_diff.txt; 51 changed paragraphs); 2026 10-Qs add none. SpaceX: 424B4 risk factors (pp. 28–65) + one added in Q2 10-Q (p.51); Q3 10-Q "no material changes" (p.57). Risk factors counted by heading and grouped by root cause (research/rf_matrix.md, 17 rows, every quote with line + printed page). Word counts are FIR's count of extracted text, page footers excluded.
 
