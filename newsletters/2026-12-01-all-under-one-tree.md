@@ -392,7 +392,7 @@ Title changed 11/26 (Bruce) from "How Risk Moves Around Elon Musk's Companies" t
 
 **NOT USED:** Neuralink using Grok or SpaceX compute (no source); ownership percentages (not disclosed); Birchall's role outside the Form Ds (not in our filings); any guess at the identity of Customer A or B; stock-price, valuation or lock-up market commentary; Tesla total revenue % for Megapacks; NHTSA probes (not in Tesla filings); Cursor acquisition details; Valor 10b5-1 distribution plan; EchoStar spectrum detail beyond "spectrum purchase"; "Senior Advisor to the President" reference.
 
-**Disclosure:** Claude (Anthropic) drafted this analysis; FIR Platform uses Anthropic models. Section 5 quotes Anthropic's own filing about its SpaceX compute contract. ⚠ Bruce to double-check that passage (Anthropic rule) and decide on the in-text disclosure line (placed as in E97).
+**Disclosure:** Claude (Anthropic) drafted this analysis; FIR Platform uses Anthropic models. Section 5 quotes Anthropic's own filing about its SpaceX compute contract. ✅ Bruce double-checked the passage 11/26 (Anthropic rule): Customer B framing approved (no proof B = Anthropic, not implied). In-text disclosure line kept as in E97.
 
 **Pending:**
 - Bruce's review of draft 1.
